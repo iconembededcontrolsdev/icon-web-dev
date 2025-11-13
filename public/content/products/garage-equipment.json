@@ -1,138 +1,63 @@
 {
   "id": "garage-equipment",
   "title": "Garage Equipment",
-  "description": "Comprehensive range of professional garage equipment designed for automotive workshops, service centers, and maintenance facilities.",
-  "categories": [
-    {
-      "category": "Lifting Equipment",
-      "items": [
-        {
-          "name": "Two-Post Lift",
-          "description": "Heavy-duty lifts for vehicle maintenance and repair",
-          "features": [
-            "Capacity: 3,000 kg to 6,000 kg",
-            "Symmetric and asymmetric models",
-            "Low profile design",
-            "Safety locks and auto hold system"
-          ]
-        },
-        {
-          "name": "Four-Post Lift",
-          "description": "Ideal for long-term storage and heavy-duty applications",
-          "features": [
-            "Capacity: 4,000 kg to 20,000 kg",
-            "Drive-on design",
-            "Included rolling jacks",
-            "Aluminum ramps"
-          ]
-        },
-        {
-          "name": "Scissor Lift",
-          "description": "Versatile mid-rise lifts for various applications",
-          "features": [
-            "Capacity: 3,000 kg to 5,000 kg",
-            "Low entry height",
-            "Portable models available",
-            "Wheel-free operation"
-          ]
-        }
+  "description": "High quality two wheeler ramps, pneumatic grease pumps, and manual oil dispensers. Professional tools and equipment for automotive workshops and garages.",
+  "subtitle": "High quality two wheeler ramps, pneumatic grease pumps, and manual oil dispensers. Professional tools and equipment for automotive workshops and garages.",
+  "fullDescription": "We manufacture High Quality Two Wheeler Ramp suitable for all kind of two wheeler. We also manufacture Pneumatic Grease Pump of capacity 15kg, 25kg and 50kg, and manual 2T oil dispenser. Our garage equipment is designed for professional automotive workshops and garages, providing reliable and efficient solutions for vehicle maintenance and service operations.",
+  "features": [
+    "Two Wheeler Ramp with 300kg lifting capacity",
+    "Foot operated hydraulic piston",
+    "Pneumatic Grease Pump (15kg, 25kg, 50kg)",
+    "Manual 2T Oil Dispenser",
+    "Textured sheet metal for extra grip",
+    "Zero oil spillage design",
+    "Front Tyre Holding Vice for Extra Safety while lifting",
+    "Extra Textured Sheet for centre stand support",
+    "Backside Sliding Sheet for easy rolling of two wheeler into the Lift Table",
+    "Frontside Sliding Sheet to prevent two wheeler to roll out of the Lift Table"
+  ],
+  "specifications": {
+    "twoWheelerRamp": {
+      "liftingCapacity": "300 kg",
+      "liftHeight": "850 mm",
+      "normalHeight": "150 mm",
+      "topPlatformSize": "L x B: 2000x600 mm",
+      "operationType": "Foot Operated Hydraulic Piston",
+      "oilGrade": "58 grade",
+      "features": [
+        "Textured Sheet Metal Used in Lift Table for Extra Grip and Strength",
+        "Zero Oil Spillage Design for Foot operated Hydraulic piston",
+        "Front Tyre Holding Vice for Extra Safety while lifting",
+        "Extra Textured Sheet for centre stand support",
+        "Backside Sliding Sheet for easy rolling of two wheeler into the Lift Table",
+        "Frontside Sliding Sheet to prevent two wheeler to roll out of the Lift Table",
+        "Foot Operated Hydraulic System for easy lifting"
       ]
     },
-    {
-      "category": "Wheel Service Equipment",
-      "items": [
-        {
-          "name": "Tyre Changer",
-          "description": "For efficient and safe tyre changing operations",
-          "features": [
-            "Semi-automatic operation",
-            "Alloy wheel protection",
-            "Programmable settings",
-            "Quick clamp system"
-          ]
-        },
-        {
-          "name": "Wheel Balancer",
-          "description": "Precision balancing for all types of wheels",
-          "features": [
-            "Laser alignment",
-            "Automatic measurement",
-            "Alloy wheel compatibility",
-            "Touchscreen interface"
-          ]
-        }
-      ]
+    "pneumaticGreasePump": {
+      "capacities": ["15kg", "25kg", "50kg"],
+      "output": "320 - 390 Grams/minute (Gm/min)",
+      "workingPressureRange": "4 to 10 bar",
+      "outputDeliveryHoseLength": "2.2 Meters (mtrs)",
+      "diameterOfInputOutputHose": "6 to 8 mm Black Braided Hose",
+      "type": "Portable (portability distance depends upon the length of input hose)"
     },
-    {
-      "category": "Diagnostic Equipment",
-      "items": [
-        {
-          "name": "OBD2 Scanner",
-          "description": "Advanced diagnostic tool for vehicle troubleshooting",
-          "features": [
-            "Full OBD2 functionality",
-            "Live data streaming",
-            "ECU coding",
-            "Wireless connectivity"
-          ]
-        }
-      ]
-    },
-    {
-      "category": "Workshop Tools",
-      "items": [
-        {
-          "name": "Oil Drainers",
-          "description": "Efficient oil changing systems"
-        },
-        {
-          "name": "Battery Chargers",
-          "description": "Smart charging solutions"
-        },
-        {
-          "name": "Air Compressors",
-          "description": "For pneumatic tools and inflation"
-        }
+    "manual2TOilDispenser": {
+      "storageTankCapacity": "25 liters to 50 liters with Stand",
+      "features": [
+        "Visible level Indicator at the side of storage tank",
+        "Calibrated Jar for Oil measurement",
+        "Key Protection for Tank lid"
       ]
     }
-  ],
-  "features": [
-    "Heavy-duty construction",
-    "Safety certified",
-    "Easy to operate",
-    "Low maintenance",
-    "Energy efficient"
-  ],
-  "technicalSpecifications": {
-    "powerSupply": [
-      "220-240V, 50/60Hz, Single Phase",
-      "380-440V, 50/60Hz, Three Phase"
-    ],
-    "safetyStandards": [
-      "CE Certified",
-      "ISO 9001:2015",
-      "Meets international safety standards"
-    ],
-    "warranty": "1-2 years on mechanical parts, 6 months on electrical components"
   },
   "applications": [
-    "Automotive workshops",
-    "Tyre service centers",
-    "Fleet maintenance",
-    "Car dealerships",
-    "Government workshops"
-  ],
-  "installationAndTraining": [
-    "On-site installation available",
-    "Operator training provided",
-    "Maintenance training",
-    "User manuals included"
-  ],
-  "afterSalesSupport": [
-    "Technical support",
-    "Spare parts availability",
-    "Preventive maintenance contracts",
-    "Emergency service"
+    "Automotive Workshops",
+    "Two Wheeler Service Stations",
+    "Garages",
+    "Depots",
+    "Vehicle Service Centers",
+    "Motorcycle Repair Shops"
   ],
   "images": [
     "/images/6. Garage Equipment/6a.jpeg",

@@ -1,0 +1,58 @@
+{
+  "id": "digital-nitrogen-tyre-inflator-2a",
+  "title": "Digital Nitrogen Tyre Inflator for Two Wheeler - NITROJET 2000 LCV P",
+  "description": "Digital nitrogen tyre inflator specifically designed for two wheelers with pleasant LED display.",
+  "subtitle": "For Two Wheeler",
+  "fullDescription": "Digital nitrogen tyre inflator for two wheelers. Features intelligent single digital readouts both for set pressure and tyre pressure, pleasant LED display for attractive night visibility, pressure switch for automatic nitrogen generation cut-off, and pressure gauge for nitrogen pressure indication.",
+  "modelName": "NITROJET 2000 LCV P",
+  "features": [
+    "Intelligent single digital readouts both for set pressure and tyre pressure",
+    "Pleasant LED display for attractive night visibility",
+    "Display remain at same set pressure value even after power on-off cycle",
+    "Audible and visual end of the cycle signal indicators",
+    "LED indication for the status of operation",
+    "Soft touch and durable membrane keys suitable for outdoor",
+    "Automatic tyre sensing system",
+    "Separate keys for set pressure increment and decrement",
+    "Flat key for empty or puncture tyre",
+    "25/35 key for easy front and back tyre pressure setting",
+    "Pressure switch for automatic nitrogen generation cut-off",
+    "Pressure gauge for nitrogen pressure indication",
+    "Can use for vehicle tyre range within two wheelers"
+  ],
+  "specifications": {
+    "system": "Digital microcontroller based",
+    "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+    "airSupply": "120 - 145 psi / 8 - 10bar",
+    "sensorAccuracy": "± 0.5% of full scale",
+    "n2ProductionMethod": "Pressure Swing Adsorption Method [PSA Technology]",
+    "tankCapacity": "35 liters",
+    "flowRate": "2700 lph",
+    "purity": "95-99% (adjustable)",
+    "moistureFilter": "Available",
+    "oilRemovalFilter": "Available",
+    "drainValve": "with manual drain",
+    "safetyValve": "Available",
+    "display": "Single LED display both for tyre pressure, set pressure",
+    "inputHose": "2 meter 6x4 mm heavy braided hose",
+    "outputHose": "10 mtrs 8 x5 mm Coiled PU hose with clip on Air chuck",
+    "functionalKeys": "Membrane keypad suitable for outdoor application",
+    "overPressureSafety": "Pressure switch with automatic on - off setting",
+    "errorCodes": "available",
+    "maximumOverPressure": "225 (15 kg/cm2)",
+    "pressureSettingRange": "6 to 70 psi",
+    "workingPressureRange": "0 to 70 psi",
+    "displayResolution": "1 psi",
+    "measuringResolution": "0.25 psi",
+    "dimensions": "495 x 325 x 1215 mm (pedestal), 590 x 360 x 1275 mm (with Packing)"
+  },
+  "applications": [
+    "Two Wheel Alignment Shop",
+    "Two Wheeler Service Station"
+  ],
+  "images": [
+    "/images/2. Digital Nitrogen Tyre Inflator/2A.jpeg"
+  ],
+  "mainImage": "/images/2. Digital Nitrogen Tyre Inflator/2A.jpeg"
+}
+

@@ -1,62 +1,105 @@
 {
   "id": "digital-nitrogen-tyre-inflator",
   "title": "Digital Nitrogen Tyre Inflator",
-  "description": "Advanced tyre inflation system that provides precise nitrogen filling with digital control for optimal tyre performance and longevity.",
+  "description": "Reliable and accurate electronic digital nitrogen tyre inflators. Nitrogen production based on cost-efficient PSA technology with 95-99% purity suitable for vehicle nitrogen inflation.",
+  "subtitle": "Reliable and accurate electronic digital nitrogen tyre inflators. Nitrogen production based on cost-efficient PSA technology with 95-99% purity suitable for vehicle nitrogen inflation.",
+  "fullDescription": "We are the leading Manufacturer and supplier for Electronic Digital Nitrogen Tyre Inflator all over India since the year 2007. Our Electronic Digital Nitrogen Tyre Inflator is reliable, durable and accurate, thus meet the requirement of each and every horizon related to vehicle tyre pressure inflation. Nitrogen production is based on reliable and cost efficient PSA technology. Nitrogen Purity may vary from 95-99% suitable for vehicle nitrogen purity suggestions. Our Electronic Digital Nitrogen Tyre Inflator meets the accuracy suggested by tyre manufacturer's pressure standards. Our control panel Enclosure meets the Ingress Protection standard IP65.",
   "features": [
-    "Dual functionality for both air and nitrogen inflation",
-    "Precise digital pressure control",
-    "Automatic vacuum and nitrogen inflation",
-    "Suitable for all vehicle types",
-    "Rugged construction for industrial use"
+    "PSA Technology for nitrogen generation",
+    "95-99% purity (adjustable)",
+    "Automatic vacuum cum nitrogen inflation",
+    "Pressure switch for automatic nitrogen generation cut-off",
+    "Tyre counter and error codes available",
+    "IP65 protection standard",
+    "Three digital readouts for set pressure, tyre pressure and tyre count",
+    "LCD display with LED backlight for good visibility",
+    "Display remains at same set pressure value even after power on-off cycle",
+    "Audible and visual end of cycle signal indicators",
+    "VAC key (Vacuum key) for first time nitrogen filling",
+    "Computer power chord adapter with fuse protection and switch on indicator",
+    "Pressure gauge for input air pressure indication and internal tank nitrogen pressure indication",
+    "Safety pressure relief valve available for internal tank"
   ],
   "specifications": {
-    "vacuumiser": "Automatic vacuum cum nitrogen inflation",
-    "inputHose": "2 meter 6x4mm heavy braided hose",
-    "outputHose": "10 meters PVC braided hose (14K g/cm² pressure) with round head/hand held/clip on foot connector",
-    "controlPanel": "Membrane keypad suitable for outdoor application",
-    "dimensions": {
-      "unit": "530 x 200 x 1400 mm (pedestal)",
-      "packing": "540 x 230 x 1440 mm"
-    },
-    "powerSupply": "220V AC ±10%, 1 Phase, 50Hz"
-  },
-  "nitrogenSystem": {
-    "type": "PSA (Pressure Swing Adsorption) method",
-    "purityLevels": ["95-99% pure nitrogen"],
-    "features": [
-      "Automatic nitrogen generation",
-      "Dual pressure gauge system",
-      "Safety pressure relief valve for internal tank",
-      "Four hose system for simultaneous operation"
-    ]
+    "system": "Digital microcontroller based",
+    "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+    "airSupply": "120 - 150 psi / 8 - 10bar",
+    "sensorAccuracy": "± 0.5% of full scale",
+    "n2ProductionMethod": "Pressure Swing Adsorption Method (PSA Technology)",
+    "tankCapacity": "65 liters (varies by model)",
+    "flowRate": "4500 lph (varies by model)",
+    "purity": "95-99% (adjustable)",
+    "moistureFilter": "5 micron",
+    "oilRemovalFilter": "Activated carbon",
+    "autoDrainValve": "with auto timer",
+    "safetyValve": "Available",
+    "display": "LCD display (tyre pressure, set pressure and tyre counter)",
+    "counter": "Available for number of tyres (16x2 LCD display)",
+    "vaccumiser": "Automatic vacuum cum nitrogen inflation",
+    "inputHose": "2 meter 6x4 mm heavy braided hose",
+    "outputHose": "10 mtrs 8 x5 mm Coiled PU hose with clip on Air chuck",
+    "functionalKeys": "Membrane keypad suitable for outdoor application",
+    "overPressureSafety": "Pressure switch with automatic on - off setting",
+    "errorCodes": "available",
+    "maximumOverPressure": "225 psi (15 kg/cm2)",
+    "pressureSettingRange": "6 to 150 psi (varies by model)",
+    "workingPressureRange": "0 to 150 psi (varies by model)",
+    "displayResolution": "1 psi",
+    "measuringResolution": "0.25 psi",
+    "displayBacklight": "LED backlight with automatic ON / OFF"
   },
   "applications": [
-    "Tyre Shops and Dealerships",
-    "Premium Automotive Service Centers",
-    "Racing Teams and Tracks",
-    "Fleet Management Companies",
-    "Commercial Vehicle Workshops",
-    "Mining and Construction Equipment"
+    "Fuel Station (for IOCL, BPCL, HPCL, ESSAR, RELIANCE and other leading companies)",
+    "Wheel Alignment Shop",
+    "Automotive Garage",
+    "Depot",
+    "Puncture Shop",
+    "Apartments",
+    "Commercial Parking Lot",
+    "Educational Institution",
+    "Companies",
+    "Two Wheel Alignment Shop",
+    "Two Wheeler Service Station"
   ],
-  "safetyFeatures": [
-    "Emergency Stop Protection",
-    "MCB Protection",
-    "Pressure Relief Valves",
-    "Over-pressure Protection",
-    "Thermal Overload Protection"
-  ],
-  "benefits": [
-    "Maintains tyre pressure longer than compressed air",
-    "Reduces tyre wear and extends tyre life",
-    "Improves fuel efficiency",
-    "Prevents rim rust and corrosion",
-    "More consistent tyre pressure in varying temperatures"
+  "models": [
+    {
+      "model": "NITROJET 2000 LCV P",
+      "type": "For Two Wheeler",
+      "description": "Digital nitrogen tyre inflator specifically designed for two wheelers"
+    },
+    {
+      "model": "NITROJET 1000 LCV P",
+      "type": "N2 Only option",
+      "description": "Standard digital nitrogen tyre inflator with nitrogen only option"
+    },
+    {
+      "model": "NITROJET 1000 LCV H",
+      "type": "N2 with Air option",
+      "description": "Digital nitrogen tyre inflator with both nitrogen and air input pressure option"
+    },
+    {
+      "model": "NITROJET 1000 HMV",
+      "type": "Heavy",
+      "description": "Heavy duty digital nitrogen tyre inflator for buses and trucks up to 150 psi"
+    },
+    {
+      "model": "NITROJET 1000 HMV C",
+      "type": "Heavy with Pressure Booster",
+      "description": "Heavy duty digital nitrogen tyre inflator with inbuilt pressure booster for vehicles up to 180 psi"
+    },
+    {
+      "model": "NITROJET 6000 LCV 4H",
+      "type": "Four Hose System",
+      "description": "Digital nitrogen tyre inflator with four hose system for simultaneous operation"
+    }
   ],
   "images": [
     "/images/2. Digital Nitrogen Tyre Inflator/2A.jpeg",
     "/images/2. Digital Nitrogen Tyre Inflator/2B.jpeg",
     "/images/2. Digital Nitrogen Tyre Inflator/2C.jpeg",
-    "/images/2. Digital Nitrogen Tyre Inflator/2D.jpeg"
+    "/images/2. Digital Nitrogen Tyre Inflator/2D.jpeg",
+    "/images/2. Digital Nitrogen Tyre Inflator/2E.jpeg",
+    "/images/2. Digital Nitrogen Tyre Inflator/2F.jpeg"
   ],
   "mainImage": "/images/2. Digital Nitrogen Tyre Inflator/2A.jpeg"
 }

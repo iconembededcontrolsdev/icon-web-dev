@@ -1,13 +1,9 @@
 'use client';
 
-import { useSearchParams } from 'next/navigation';
 import { useState, Suspense } from 'react';
 import Link from 'next/link';
 
-function ProductEnquiryForm() {
-  const searchParams = useSearchParams();
-  const productName = searchParams.get('product');
-  
+function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -55,28 +51,16 @@ function ProductEnquiryForm() {
         </Link>
       </div>
 
-      {/* Enquiry Form */}
+      {/* Contact Form */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="bg-white rounded-[40px] shadow-lg p-8 sm:p-12 lg:p-16">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Product Enquiry
+              Contact Us
             </h1>
-            {productName && (
-              <>
-                <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-2">
-                  {productName}
-                </h2>
-                <p className="text-lg text-gray-600">
-                  Get more information about this product
-                </p>
-              </>
-            )}
-            {!productName && (
-              <p className="text-lg md:text-xl text-gray-600">
-                Get in touch with us about our products
-              </p>
-            )}
+            <p className="text-lg md:text-xl text-gray-600">
+              Get in touch with us for any inquiries or support
+            </p>
           </div>
 
           {submitted ? (
@@ -86,7 +70,7 @@ function ProductEnquiryForm() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Enquiry Submitted!</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h3>
               <p className="text-gray-600">We'll get back to you soon.</p>
             </div>
           ) : (
@@ -145,7 +129,7 @@ function ProductEnquiryForm() {
                   disabled={isSubmitting}
                   className="w-full px-8 py-4 bg-accent text-white font-semibold rounded-full hover:bg-accent-hover transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-md hover:shadow-lg"
                 >
-                  {isSubmitting ? 'Submitting...' : 'Submit Enquiry'}
+                  {isSubmitting ? 'Submitting...' : 'Send Message'}
                 </button>
               </div>
             </form>
@@ -156,14 +140,14 @@ function ProductEnquiryForm() {
   );
 }
 
-export default function ProductEnquiry() {
+export default function Contact() {
   return (
     <Suspense fallback={
       <div className="min-h-screen bg-gray-50 pt-20 flex items-center justify-center">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-accent"></div>
       </div>
     }>
-      <ProductEnquiryForm />
+      <ContactForm />
     </Suspense>
   );
 }

@@ -1,70 +1,119 @@
 {
   "id": "air-compressor",
-  "title": "Industrial Air Compressor",
-  "description": "High-performance air compressors designed for industrial applications, providing reliable and consistent air supply for various pneumatic tools and equipment.",
+  "title": "Air Compressor",
+  "description": "Single and two-stage oil lubricated reciprocating air compressors known for reliability and performance. Preferred choice for fuel stations, automotive garages, and industrial applications.",
+  "subtitle": "Single and two-stage oil lubricated reciprocating air compressors known for reliability and performance. Preferred choice for fuel stations, automotive garages, and industrial applications.",
+  "fullDescription": "The ICON EMBEDED CONTROLS single & two stage Oil Lubricated Reciprocating air compressors are known for their reliability and performance, making them the preferred choice for industrial applications. These compressors are designed for industrial duty cycle and come with standard leak proof fittings, electrical starter with stop switch latch for safety, belt/fan guard for safety, pressure switch with differential pressure setting for automatic ON-OFF operation, drain valve under storage tank to drain water, auto drain valve option available upon customer requirement, and safety pressure relief valve for over pressure safety.",
   "features": [
-    "Robust construction for continuous operation",
-    "Energy efficient design",
-    "Low maintenance requirements",
-    "Suitable for industrial and automotive applications",
-    "Available in various capacities and configurations"
+    "Standard leak proof fittings",
+    "Electrical Starter with stop switch latch for safety",
+    "Belt/Fan Guard for Safety",
+    "Pressure Switch with Differential Pressure Setting for Automatic ON-OFF operation",
+    "Drain Valve under Storage Tank to Drain Water",
+    "Auto Drain Valve Option available upon customer requirement",
+    "Safety Pressure Relief Valve for Over Pressure Safety",
+    "Designed for Industrial Duty Cycle",
+    "Single and Two-Stage options available",
+    "Oil Lubricated Reciprocating design"
   ],
   "specifications": {
-    "powerSource": ["Electric", "Diesel"],
-    "tankCapacity": ["50L", "100L", "200L", "500L", "Custom capacities available"],
-    "pressureRange": {
-      "working": "8-10 bar (116-145 psi)",
-      "maximum": "12 bar (174 psi)"
-    },
-    "airDelivery": {
-      "cfm": ["5 CFM", "10 CFM", "15 CFM", "20+ CFM"],
-      "litersMin": ["140 LPM", "280 LPM", "425 LPM", "566+ LPM"]
-    },
-    "motorPower": ["2 HP", "3 HP", "5 HP", "7.5 HP", "10 HP", "Custom configurations available"]
+    "models": [
+      {
+        "model": "IC-109",
+        "compressorStage": "1",
+        "workingPressure": "10 kg/cm2 (145 psi)",
+        "displacement": "82 LPM (2.9 CFM)",
+        "motorRating": "1 HP (0.75 KW)",
+        "electricalSupply": "220 VAC",
+        "frequency": "50 Hz",
+        "electricalPhase": "1",
+        "typeOfStarter": "DOL",
+        "oil": "40 Grade",
+        "typeOfCooling": "Air",
+        "airOutletSize": "1/4 BSP",
+        "cutOffSwitchMax": "10 Kgf/cm2",
+        "cutOffSwitchMin": "7 Kgf/cm2",
+        "airReceiverCapacity": "110 Ltrs"
+      },
+      {
+        "model": "IC-209",
+        "compressorStage": "1",
+        "workingPressure": "10 kg/cm2 (145 psi)",
+        "displacement": "161 LPM (5.7 CFM)",
+        "motorRating": "2 HP (1.5 KW)",
+        "electricalSupply": "220 VAC",
+        "frequency": "50 Hz",
+        "electricalPhase": "1",
+        "typeOfStarter": "DOL",
+        "oil": "40 Grade",
+        "typeOfCooling": "Air",
+        "airOutletSize": "1/4 BSP",
+        "cutOffSwitchMax": "10 Kgf/cm2",
+        "cutOffSwitchMin": "7 Kgf/cm2",
+        "airReceiverCapacity": "160 Ltrs"
+      },
+      {
+        "model": "IC-312",
+        "compressorStage": "2",
+        "workingPressure": "12 kg/cm2 (175 psi)",
+        "displacement": "302 LPM (10.97 CFM)",
+        "motorRating": "3 HP (2.2 KW)",
+        "electricalSupply": "415 VAC",
+        "frequency": "50 Hz",
+        "electricalPhase": "3",
+        "typeOfStarter": "DOL",
+        "oil": "40 Grade",
+        "typeOfCooling": "Air",
+        "airOutletSize": "1/2 BSP",
+        "cutOffSwitchMax": "12 Kgf/cm2",
+        "cutOffSwitchMin": "9 Kgf/cm2",
+        "airReceiverCapacity": "220 Ltrs"
+      },
+      {
+        "model": "IC-512",
+        "compressorStage": "2",
+        "workingPressure": "12 kg/cm2 (175 psi)",
+        "displacement": "495 LPM (17.5 CFM)",
+        "motorRating": "5 HP (3.7 KW)",
+        "electricalSupply": "415 VAC",
+        "frequency": "50 Hz",
+        "electricalPhase": "3",
+        "typeOfStarter": "DOL",
+        "oil": "40 Grade",
+        "typeOfCooling": "Air",
+        "airOutletSize": "1/2 BSP",
+        "cutOffSwitchMax": "12 Kgf/cm2",
+        "cutOffSwitchMin": "9 Kgf/cm2",
+        "airReceiverCapacity": "250 Ltrs"
+      },
+      {
+        "model": "IC-1012",
+        "compressorStage": "2",
+        "workingPressure": "12 kg/cm2 (175 psi)",
+        "displacement": "985 LPM (35 CFM)",
+        "motorRating": "10 HP (7.4 KW)",
+        "electricalSupply": "415 VAC",
+        "frequency": "50 Hz",
+        "electricalPhase": "3",
+        "typeOfStarter": "DOL",
+        "oil": "40 Grade",
+        "typeOfCooling": "Air",
+        "airOutletSize": "1/2 BSP",
+        "cutOffSwitchMax": "12 Kgf/cm2",
+        "cutOffSwitchMin": "9 Kgf/cm2",
+        "airReceiverCapacity": "420/500 Ltrs"
+      }
+    ],
+    "rotationDirection": "Anti Clockwise (view from drive end)"
   },
-  "types": [
-    {
-      "type": "Reciprocating (Piston) Compressors",
-      "description": "Ideal for workshops and garages, providing high pressure for intermittent use."
-    },
-    {
-      "type": "Screw Compressors",
-      "description": "Designed for continuous operation with higher air delivery, suitable for industrial applications."
-    },
-    {
-      "type": "Oil-free Compressors",
-      "description": "For applications requiring clean, oil-free air such as food processing and pharmaceuticals."
-    }
-  ],
   "applications": [
-    "Automotive workshops",
-    "Tyre service centers",
-    "Industrial manufacturing",
-    "Construction sites",
-    "Paint shops",
-    "Dental and medical facilities",
-    "Food and beverage industry",
-    "Pharmaceutical industry"
-  ],
-  "safetyFeatures": [
-    "Pressure switch with auto start/stop",
-    "Thermal overload protection",
-    "Pressure relief valve",
-    "Low oil level shutdown (for oil-lubricated models)",
-    "Motor thermal protection"
-  ],
-  "maintenance": {
-    "daily": ["Drain moisture from tank", "Check for air leaks", "Inspect hoses and connections"],
-    "weekly": ["Check oil level (if applicable)", "Inspect air filter", "Tighten all fasteners"],
-    "monthly": ["Check safety valve operation", "Inspect pressure switch", "Clean cooling fins"],
-    "annually": ["Change oil (if applicable)", "Replace air filter element", "Inspect and replace worn parts"]
-  },
-  "accessories": [
-    "Air dryers",
-    "Air filters and regulators",
-    "Additional air receivers",
-    "Piping systems",
-    "Air tools and accessories"
+    "Fuel Station",
+    "Automotive Garages",
+    "Textile Industries",
+    "Food Processing Industries",
+    "Industrial Applications",
+    "Workshops",
+    "Service Centers"
   ],
   "images": [
     "/images/3. Air Compressor/3a.jpeg",

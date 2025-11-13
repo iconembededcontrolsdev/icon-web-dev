@@ -1,116 +1,51 @@
 {
   "id": "nitrogen-generator",
-  "title": "Nitrogen Generator (N2)",
-  "description": "Advanced Pressure Swing Adsorption (PSA) nitrogen generation systems providing high-purity nitrogen for various industrial applications including tyre inflation, food packaging, and laser cutting.",
+  "title": "Nitrogen Generator",
+  "description": "Easy to convert ordinary digital tyre inflator to digital nitrogen tyre inflator using this module. Reliable PSA method for nitrogen generation with 95-99% purity suitable for vehicle nitrogen inflation.",
+  "subtitle": "Easy to convert ordinary digital tyre inflator to digital nitrogen tyre inflator using this module. Reliable PSA method for nitrogen generation with 95-99% purity suitable for vehicle nitrogen inflation.",
+  "fullDescription": "Easy to convert ordinary digital tyre inflator to digital nitrogen tyre inflator using this module. Reliable PSA method for nitrogen generation with 95-99% purity suitable for vehicle nitrogen inflation. Air and nitrogen input pressure option available in single machine. The nitrogen generator uses Pressure Swing Adsorption (PSA) Technology for reliable and cost-efficient nitrogen generation. It comes with computer power chord adapter with fuse protection and switch on indicator, pressure switch for automatic nitrogen generation cut-off, pressure gauge for input air pressure indication and internal tank nitrogen pressure indication, safety pressure relief valve available for internal tank, and wheel base option is available to move to desired location.",
   "features": [
-    "PSA (Pressure Swing Adsorption) technology",
-    "Produces 95-99.9% pure nitrogen",
-    "Fully automatic operation",
-    "Low maintenance requirements",
-    "Energy efficient design",
-    "Compact and space-saving"
+    "PSA Technology for nitrogen generation",
+    "95-99% purity (adjustable)",
+    "Pressure switch for automatic nitrogen generation cut-off",
+    "Safety pressure relief valve",
+    "Wheel base option available",
+    "Computer power chord adapter with fuse protection",
+    "Easy conversion of ordinary digital tyre inflator to nitrogen inflator",
+    "Air and nitrogen input pressure option available in single machine",
+    "Pressure gauge for input air pressure and stored nitrogen pressure indication",
+    "Reliable PSA method for nitrogen generation"
   ],
   "specifications": {
-    "modelRange": {
-      "small": {
-        "flowRate": "5-50 Nm³/h",
-        "purity": "95-99.9%",
-        "power": "1-5 kW",
-        "pressure": "7-10 bar"
-      },
-      "medium": {
-        "flowRate": "50-200 Nm³/h",
-        "purity": "95-99.9%",
-        "power": "5-20 kW",
-        "pressure": "7-10 bar"
-      },
-      "large": {
-        "flowRate": "200-2000+ Nm³/h",
-        "purity": "95-99.9%",
-        "power": "20-200+ kW",
-        "pressure": "7-10 bar"
-      }
-    },
-    "operatingConditions": {
-      "temperature": "1-45°C",
-      "humidity": "<80% RH (non-condensing)",
-      "airQuality": "Class 3.4.2 (ISO 8573-1:2010)",
-      "dewPoint": "-40°C to -70°C (with optional dryer)"
-    }
+    "system": "Digital microcontroller based",
+    "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+    "airSupply": "120 - 150 psi / 8 - 10bar",
+    "sensorAccuracy": "± 0.5% of full scale",
+    "n2ProductionMethod": "Pressure Swing Adsorption Method (PSA Technology)",
+    "tankCapacity": "65 liters",
+    "flowRate": "4500 lph",
+    "purity": "95-99% (adjustable)",
+    "moistureFilter": "5 micron",
+    "oilRemovalFilter": "Activated carbon",
+    "autoDrainValve": "with auto timer",
+    "safetyValve": "Available",
+    "pressureGauge": "Two Pressure Gauge Indication, one for Input Air Pressure and other for Stored Nitrogen Pressure",
+    "inputHose": "2 meter 6x4 mm heavy braided hose",
+    "outputHose": "3 meter 6x4 mm heavy braided hose",
+    "functionalKeys": "Membrane keypad suitable for outdoor application",
+    "overPressureSafety": "Pressure switch with automatic on - off setting",
+    "maximumOverPressure": "225 psi (15 kg/cm2)",
+    "dimensions": "Varies depends upon customer requirement"
   },
   "applications": [
-    {
-      "industry": "Automotive",
-      "uses": [
-        "Tyre inflation",
-        "Laser cutting",
-        "Heat treatment",
-        "Tire curing"
-      ]
-    },
-    {
-      "industry": "Food & Beverage",
-      "uses": [
-        "Food packaging",
-        "Beverage dispensing",
-        "Modified atmosphere packaging (MAP)",
-        "Blanketing"
-      ]
-    },
-    {
-      "industry": "Electronics",
-      "uses": [
-        "SMT reflow ovens",
-        "Wave soldering",
-        "Selective soldering",
-        "Laser cutting"
-      ]
-    },
-    {
-      "industry": "Pharmaceutical",
-      "uses": [
-        "Blanketing",
-        "Purging",
-        "Packaging",
-        "Storage"
-      ]
-    }
-  ],
-  "benefits": [
-    "Eliminates cylinder handling and rental costs",
-    "On-demand nitrogen production",
-    "Lower operating costs compared to delivered gas",
-    "Reduced carbon footprint",
-    "Consistent gas quality and pressure",
-    "Minimal maintenance requirements"
-  ],
-  "technicalFeatures": [
-    "Advanced PLC control system",
-    "Touch screen HMI interface",
-    "Automatic purity adjustment",
-    "Remote monitoring capabilities",
-    "Energy-saving mode",
-    "Alarm and shutdown protection"
-  ],
-  "optionsAndAccessories": [
-    "Air preparation system",
-    "Nitrogen buffer tank",
-    "Purity analyzer",
-    "Flow meter",
-    "Remote monitoring system",
-    "Dual tower design for continuous operation"
-  ],
-  "maintenance": {
-    "daily": ["Check for leaks", "Monitor system pressure"],
-    "monthly": ["Inspect filters", "Check valve operation"],
-    "annually": ["Carbon molecular sieve inspection", "Complete system check"]
-  },
-  "safetyFeatures": [
-    "High/low pressure protection",
-    "Over-temperature protection",
-    "Oxygen monitoring system (optional)",
-    "Emergency stop",
-    "Automatic shutdown on fault detection"
+    "Wheel Alignment Shop",
+    "Automotive Garage",
+    "Depot",
+    "Puncture Shop",
+    "Apartments",
+    "Commercial Parking Lot",
+    "Fuel Stations",
+    "Service Centers"
   ],
   "images": [
     "/images/4. Nitrogen Generator/4a.jpeg"

@@ -1,14 +1,16 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import ProductCard from '@/components/ProductCard';
+import { useRouter } from 'next/navigation';
+import Grid2 from '@/components/Grid2';
 
 type ProductPreview = {
   id: string;
   title: string;
   description: string;
-  features: string[];
+  subtitle?: string;
+  fullDescription?: string;
+  features?: string[];
   image?: string;
   mainImage?: string;
   images?: string[];
@@ -18,26 +20,63 @@ export default function ProductsPage() {
   const [products, setProducts] = useState<ProductPreview[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
+  const router = useRouter();
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        // In a real app, you might fetch this from an API
-        const productIds = [
-          'digital-tyre-inflator',
-          'digital-nitrogen-tyre-inflator',
-          'air-compressor',
-          'nitrogen-generator',
-          'panel-board',
-          'garage-equipment'
-        ];
+        let productIds: string[] = [];
 
-        const productPromises = productIds.map(id => 
-          fetch(`/content/products/${id}.json`).then(res => res.json())
+        // First, try to get the list of all product IDs from the API
+        try {
+          const productsResponse = await fetch('/api/products');
+          if (productsResponse.ok) {
+            const data = await productsResponse.json();
+            productIds = data.products || [];
+          }
+        } catch (apiError) {
+          console.warn('API route failed, trying index.json fallback:', apiError);
+        }
+
+        // Fallback: if API failed or returned no products, try index.json
+        if (!productIds || productIds.length === 0) {
+          try {
+            const indexResponse = await fetch('/content/products/index.json');
+            if (indexResponse.ok) {
+              const indexData = await indexResponse.json();
+              productIds = indexData.products || [];
+            }
+          } catch (indexError) {
+            console.error('Failed to fetch index.json:', indexError);
+          }
+        }
+
+        if (!productIds || productIds.length === 0) {
+          console.warn('No products found');
+          setLoading(false);
+          return;
+        }
+
+        // Then fetch each product's JSON file
+        const productPromises = productIds.map((id: string) => 
+          fetch(`/content/products/${id}.json`)
+            .then(res => {
+              if (!res.ok) {
+                console.warn(`Failed to fetch product ${id}`);
+                return null;
+              }
+              return res.json();
+            })
+            .catch(error => {
+              console.error(`Error fetching product ${id}:`, error);
+              return null;
+            })
         );
 
         const productData = await Promise.all(productPromises);
-        setProducts(productData);
+        // Filter out any null values (failed fetches)
+        const validProducts = productData.filter(product => product !== null);
+        setProducts(validProducts);
       } catch (error) {
         console.error('Error fetching products:', error);
       } finally {
@@ -51,28 +90,68 @@ export default function ProductsPage() {
   const filteredProducts = products.filter(product =>
     product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     product.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    product.features.some(feature => 
+    (product.subtitle && product.subtitle.toLowerCase().includes(searchQuery.toLowerCase())) ||
+    (product.features && product.features.some(feature => 
       feature.toLowerCase().includes(searchQuery.toLowerCase())
-    )
+    ))
   );
+
+  // Convert products to GridItem format and group into pairs for 2-column grid
+  const convertToGridItems = (products: ProductPreview[]) => {
+    return products.map(product => {
+      // Use subtitle if available, otherwise use description, with fallback
+      const displayDescription = product.subtitle || product.description || product.fullDescription || '';
+      
+      return {
+        title: product.title,
+        subtitle: displayDescription,
+        description: product.fullDescription || product.description || product.subtitle || '',
+        img: product.mainImage || product.images?.[0] || '/images/placeholder.svg',
+        ctaButtons: [
+          { text: 'Learn more', link: `/products/${product.id}`, variant: 'primary' as const },
+          { text: 'Product Enquiry', link: `/products/enquiry?product=${encodeURIComponent(product.title)}`, variant: 'outline' as const }
+        ],
+        // Store id for navigation
+        id: product.id
+      } as any;
+    });
+  };
+
+  // Group products into pairs for 2-column grid
+  const groupProductsIntoPairs = (items: any[]) => {
+    const pairs: any[][] = [];
+    for (let i = 0; i < items.length; i += 2) {
+      pairs.push(items.slice(i, i + 2));
+    }
+    return pairs;
+  };
+
+  const gridItems = convertToGridItems(filteredProducts);
+  const productPairs = groupProductsIntoPairs(gridItems);
+
+  const handleProductClick = (item: any) => {
+    // Get product ID from item (stored in the converted grid item)
+    const productId = item.id || item.title.toLowerCase().replace(/\s+/g, '-');
+    router.push(`/products/${productId}`);
+  };
 
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-accent"></div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
+    <div className="min-h-screen bg-gray-50 pt-20">
+      {/* Header */}
+      <div className="w-full max-w-[1920px] mx-auto px-[40px] sm:px-[60px] lg:px-[80px] xl:px-[100px] py-[40px] sm:py-[50px] lg:py-[60px]">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
             Our Products
           </h1>
-          <p className="mt-5 max-w-3xl mx-auto text-xl text-gray-500">
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
             High-quality equipment and solutions for all your industrial needs
           </p>
         </div>
@@ -87,55 +166,29 @@ export default function ProductsPage() {
             </div>
             <input
               type="text"
-              className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="block w-full pl-10 pr-3 py-3 border-2 border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
               placeholder="Search products..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
         </div>
+      </div>
 
-        {/* Products Grid */}
-        {filteredProducts.length > 0 ? (
-          <motion.div 
-            className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
-            initial="hidden"
-            animate="show"
-            variants={{
-              hidden: { opacity: 0 },
-              show: {
-                opacity: 1,
-                transition: {
-                  staggerChildren: 0.1
-                }
-              }
-            }}
-          >
-            {filteredProducts.map((product, index) => (
-              <motion.div
-                key={product.id}
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  show: { 
-                    opacity: 1, 
-                    y: 0,
-                    transition: {
-                      duration: 0.5
-                    }
-                  }
-                }}
-              >
-                <ProductCard
-                  id={product.id}
-                  title={product.title}
-                  description={product.description}
-                  image={product.mainImage || '/images/placeholder.jpg'}
-                />
-              </motion.div>
-            ))}
-          </motion.div>
-        ) : (
-          <div className="text-center py-12">
+      {/* Products Grid - Using Grid2 component */}
+      {filteredProducts.length > 0 ? (
+        <div className="space-y-0">
+          {productPairs.map((pair, pairIndex) => (
+            <Grid2
+              key={pairIndex}
+              items={pair}
+              onItemClick={handleProductClick}
+            />
+          ))}
+        </div>
+      ) : (
+        <div className="w-full max-w-[1920px] mx-auto px-[40px] sm:px-[60px] lg:px-[80px] xl:px-[100px] pb-16">
+          <div className="text-center py-12 bg-white rounded-[40px] shadow-sm">
             <svg
               className="mx-auto h-12 w-12 text-gray-400"
               fill="none"
@@ -157,14 +210,14 @@ export default function ProductsPage() {
               <button
                 type="button"
                 onClick={() => setSearchQuery('')}
-                className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent"
               >
                 Clear search
               </button>
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }

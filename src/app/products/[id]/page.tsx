@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getProductImages } from '@/utils/productImages';
+import Grid2 from '@/components/Grid2';
 
 type ProductData = {
   id: string;
@@ -12,12 +13,23 @@ type ProductData = {
   description: string;
   subtitle?: string;
   fullDescription?: string;
+  modelName?: string;
   features?: string[];
   specifications?: Record<string, any>;
   applications?: string[];
   safetyFeatures?: string[];
   userInterface?: string[];
   images?: string[];
+  types?: Array<{
+    type: string;
+    description?: string;
+    features?: string[];
+  }>;
+  models?: Array<{
+    model: string;
+    type: string;
+    description?: string;
+  }>;
   ctaButtons?: Array<{
     text: string;
     link: string;
@@ -25,167 +37,19 @@ type ProductData = {
   }>;
 };
 
-// Product data mapping - in a real app, this would come from an API or database
-const productDataMap: Record<string, Partial<ProductData>> = {
-  'digital-tyre-inflator': {
-    id: 'digital-tyre-inflator',
-    title: 'Digital Tyre Inflator',
-    description: 'Reliable, durable and accurate electronic digital tyre inflators meeting tyre manufacturer pressure standards.',
-    subtitle: 'Reliable, durable and accurate electronic digital tyre inflators meeting tyre manufacturer pressure standards. Used by major tyre and vehicle manufacturers in their production line.',
-    fullDescription: 'Our Electronic Digital Tyre Inflator is reliable, durable and accurate, thus meet the requirement of each and every horizon related to vehicle tyre pressure inflation. Our Inflators are used by major tyre manufacturers as well as vehicle manufacturers in their production line up. Our Electronic Digital Tyre Inflator meets the accuracy suggested by tyre manufacturer\'s pressure standards. Our control panel Enclosure meets the Ingress Protection standard IP65.',
-    features: [
-      'Two digital readouts for set pressure and tyre pressure',
-      'LCD display with LED backlight for good visibility',
-      'Display remains at same set pressure value even after power on-off cycle',
-      'Audible and visual end of cycle signal indicators',
-      'Automatic tyre sensing system',
-      'IP65 protection standard'
-    ],
-    applications: [
-      'Wheel Alignment Shop',
-      'Automotive Garage',
-      'Small vehicle Depot',
-      'Puncture Shop',
-      'Apartments',
-      'Commercial Parking Lot'
-    ],
-  },
-  'digital-nitrogen-tyre-inflator': {
-    id: 'digital-nitrogen-tyre-inflator',
-    title: 'Digital Nitrogen Tyre Inflator',
-    description: 'Reliable and accurate electronic digital nitrogen tyre inflators. Nitrogen production based on cost-efficient PSA technology with 95-99% purity suitable for vehicle nitrogen inflation.',
-    subtitle: 'Reliable and accurate electronic digital nitrogen tyre inflators. Nitrogen production based on cost-efficient PSA technology with 95-99% purity suitable for vehicle nitrogen inflation.',
-    fullDescription: 'We are the leading Manufacturer and supplier for Electronic Digital Nitrogen Tyre Inflator all over India since the year 2007. Our Electronic Digital Nitrogen Tyre Inflator is reliable, durable and accurate, thus meet the requirement of each and every horizon related to vehicle tyre pressure inflation. Nitrogen production is based on reliable and cost efficient PSA technology. Nitrogen Purity may vary from 95-99% suitable for vehicle nitrogen purity suggestions.',
-    features: [
-      'PSA Technology for nitrogen generation',
-      '95-99% purity (adjustable)',
-      'Automatic vacuum cum nitrogen inflation',
-      'Pressure switch for automatic nitrogen generation cut-off',
-      'Tyre counter and error codes available',
-      'IP65 protection standard'
-    ],
-    applications: [
-      'Fuel Station',
-      'Wheel Alignment Shop',
-      'Automotive Garage',
-      'Puncture Shop',
-      'Commercial Parking Lot'
-    ],
-  },
-  'air-compressor': {
-    id: 'air-compressor',
-    title: 'Air Compressor',
-    description: 'Single and two-stage oil lubricated reciprocating air compressors known for reliability and performance.',
-    subtitle: 'Single and two-stage oil lubricated reciprocating air compressors known for reliability and performance. Preferred choice for fuel stations, automotive garages, and industrial applications.',
-    fullDescription: 'The ICON EMBEDED CONTROLS single & two stage Oil Lubricated Reciprocating air compressors are known for their reliability and performance, making them the preferred choice for industrial applications.',
-    features: [
-      'Standard leak proof fittings',
-      'Electrical Starter with stop switch latch for safety',
-      'Belt/Fan Guard for Safety',
-      'Pressure Switch with Differential Pressure Setting',
-      'Auto Drain Valve Option available',
-      'Safety Pressure Relief Valve'
-    ],
-    applications: [
-      'Fuel Station',
-      'Automotive Garages',
-      'Textile Industries',
-      'Food Processing Industries'
-    ],
-  },
-  'nitrogen-generator': {
-    id: 'nitrogen-generator',
-    title: 'Nitrogen Generator',
-    description: 'Easy to convert ordinary digital tyre inflator to digital nitrogen tyre inflator using this module.',
-    subtitle: 'Easy to convert ordinary digital tyre inflator to digital nitrogen tyre inflator using this module. Reliable PSA method for nitrogen generation with 95-99% purity suitable for vehicle nitrogen inflation.',
-    fullDescription: 'Easy to convert ordinary digital tyre inflator to digital nitrogen tyre inflator using this module. Reliable PSA method for nitrogen generation with 95-99% purity suitable for vehicle nitrogen inflation. Air and nitrogen input pressure option available in single machine.',
-    features: [
-      'PSA Technology for nitrogen generation',
-      '95-99% purity (adjustable)',
-      'Pressure switch for automatic nitrogen generation cut-off',
-      'Safety pressure relief valve',
-      'Wheel base option available',
-      'Computer power chord adapter with fuse protection'
-    ],
-    applications: [
-      'Wheel Alignment Shop',
-      'Automotive Garage',
-      'Depot',
-      'Puncture Shop',
-      'Apartments',
-      'Commercial Parking Lot'
-    ],
-  },
-  'panel-board': {
-    id: 'panel-board',
-    title: 'Panel Boards',
-    description: 'PLC Control Panels, Automatic Power Factor Control Panels, and Switch Gear Panels.',
-    subtitle: 'PLC Control Panels, Automatic Power Factor Control Panels, and Switch Gear Panels. Complete electrical solutions for automation, power factor correction, and industrial control.',
-    fullDescription: 'We provide various PLC Control panel with automation solution for Industries. We offer Automatic Power Factor Control Panel for any loads. Power factor is the ratio between the KW and the KVA drawn by an electrical load where the KW is the actual load power and the KVA is the apparent load power.',
-    features: [
-      'PLC Control Panels with automation solutions',
-      'Automatic Power Factor Control Panel',
-      'Switch Gear Panels',
-      'Custom electrical solutions',
-      'RS-232 & RS-485 compatible',
-      'Remote Panel operation available'
-    ],
-    applications: [
-      'All Kind of Industries',
-      'Hotels',
-      'Banks',
-      'Fuel Station',
-      'Shopping Mall'
-    ],
-  },
-  'garage-equipment': {
-    id: 'garage-equipment',
-    title: 'Garage Equipment',
-    description: 'High quality two wheeler ramps, pneumatic grease pumps, and manual oil dispensers.',
-    subtitle: 'High quality two wheeler ramps, pneumatic grease pumps, and manual oil dispensers. Professional tools and equipment for automotive workshops and garages.',
-    fullDescription: 'We manufacture High Quality Two Wheeler Ramp suitable for all kind of two wheeler. We also manufacture Pneumatic Grease Pump of capacity 15kg, 25kg and 50kg, and manual 2T oil dispenser.',
-    features: [
-      'Two Wheeler Ramp with 300kg lifting capacity',
-      'Foot operated hydraulic piston',
-      'Pneumatic Grease Pump (15kg, 25kg, 50kg)',
-      'Manual 2T Oil Dispenser',
-      'Textured sheet metal for extra grip',
-      'Zero oil spillage design'
-    ],
-    applications: [
-      'Automotive Workshops',
-      'Two Wheeler Service Stations',
-      'Garages',
-      'Depots'
-    ],
-  },
-};
 
 export default function ProductDetail() {
   const { id } = useParams<{ id: string }>();
   const [isExpanded, setIsExpanded] = useState(false);
   
-  // Get product data from map or try to fetch from API
-  const productData = productDataMap[id as string];
   const images = getProductImages(id as string);
   
-  // If product not in map, try to fetch from API
+  // Fetch product from JSON file
   const [product, setProduct] = useState<ProductData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (productData) {
-      setProduct({
-        ...productData,
-        images: images,
-        description: productData.subtitle || productData.description || '',
-      } as ProductData);
-      setLoading(false);
-      return;
-    }
-
-    // Fallback: try to fetch from API
     const fetchProduct = async () => {
       try {
         const response = await fetch(`/content/products/${id}.json`);
@@ -196,7 +60,8 @@ export default function ProductDetail() {
         setProduct({
           ...data,
           images: images.length > 0 ? images : data.images || [],
-        });
+          description: data.subtitle || data.description || '',
+        } as ProductData);
       } catch (err) {
         setError('Failed to load product');
         console.error(err);
@@ -311,11 +176,100 @@ export default function ProductDetail() {
               {product.specifications && Object.keys(product.specifications).length > 0 && (
                 <div>
                   <h3 className="text-2xl font-semibold text-gray-900 mb-4">Specifications</h3>
-                  <div className="space-y-3">
-                    {Object.entries(product.specifications).map(([key, value]) => (
-                      <div key={key} className="flex justify-between py-3 border-b border-gray-200">
-                        <span className="text-gray-600 text-lg">{key}</span>
-                        <span className="text-gray-900 font-medium text-lg">{String(value)}</span>
+                  <div className="space-y-4">
+                    {Object.entries(product.specifications).map(([key, value]) => {
+                      // Handle nested objects
+                      if (value && typeof value === 'object' && !Array.isArray(value)) {
+                        return (
+                          <div key={key} className="border border-gray-200 rounded-lg p-4">
+                            <h4 className="text-xl font-semibold text-gray-900 mb-3 capitalize">
+                              {key.replace(/([A-Z])/g, ' $1').trim()}
+                            </h4>
+                            <div className="space-y-2">
+                              {Object.entries(value).map(([subKey, subValue]) => {
+                                if (Array.isArray(subValue)) {
+                                  return (
+                                    <div key={subKey} className="mb-2">
+                                      <span className="font-medium text-gray-700 capitalize">
+                                        {subKey.replace(/([A-Z])/g, ' $1').trim()}: 
+                                      </span>
+                                      <ul className="mt-1 ml-4 list-disc space-y-1">
+                                        {subValue.map((item: any, idx: number) => (
+                                          <li key={idx} className="text-gray-600">{String(item)}</li>
+                                        ))}
+                                      </ul>
+                                    </div>
+                                  );
+                                } else if (subValue && typeof subValue === 'object') {
+                                  return (
+                                    <div key={subKey} className="ml-4 border-l-2 border-gray-200 pl-3">
+                                      <span className="font-medium text-gray-700 capitalize">
+                                        {subKey.replace(/([A-Z])/g, ' $1').trim()}: 
+                                      </span>
+                                      <div className="mt-1 space-y-1">
+                                        {Object.entries(subValue).map(([nestedKey, nestedValue]) => (
+                                          <div key={nestedKey} className="text-gray-600">
+                                            <span className="font-medium capitalize">
+                                              {nestedKey.replace(/([A-Z])/g, ' $1').trim()}: 
+                                            </span>
+                                            <span className="ml-2">{String(nestedValue)}</span>
+                                          </div>
+                                        ))}
+                                      </div>
+                                    </div>
+                                  );
+                                }
+                                return (
+                                  <div key={subKey} className="flex justify-between py-1">
+                                    <span className="text-gray-600 capitalize">
+                                      {subKey.replace(/([A-Z])/g, ' $1').trim()}
+                                    </span>
+                                    <span className="text-gray-900 font-medium">{String(subValue)}</span>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        );
+                      }
+                      // Handle simple key-value pairs
+                      return (
+                        <div key={key} className="flex justify-between py-3 border-b border-gray-200">
+                          <span className="text-gray-600 text-lg capitalize">
+                            {key.replace(/([A-Z])/g, ' $1').trim()}
+                          </span>
+                          <span className="text-gray-900 font-medium text-lg">{String(value)}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+
+              {/* Types (for products like Panel Board) */}
+              {product.types && Array.isArray(product.types) && product.types.length > 0 && (
+                <div>
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">Product Types</h3>
+                  <div className="space-y-6">
+                    {product.types.map((type, index) => (
+                      <div key={index} className="border border-gray-200 rounded-lg p-4">
+                        <h4 className="text-xl font-semibold text-gray-900 mb-3">{type.type}</h4>
+                        {type.description && (
+                          <p className="text-gray-700 mb-3">{type.description}</p>
+                        )}
+                        {type.features && Array.isArray(type.features) && type.features.length > 0 && (
+                          <ul className="space-y-2">
+                            {type.features.map((feature: string, featIndex: number) => (
+                              <li key={featIndex} className="flex items-start text-gray-700">
+                                <svg className="w-5 h-5 text-accent mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                       </div>
                     ))}
                   </div>
@@ -403,31 +357,60 @@ export default function ProductDetail() {
           </div>
         </div>
 
-        {/* Product Images Grid - 2 Columns */}
-        {productImages.length > 0 && (
-          <div className="bg-white rounded-[40px] shadow-lg p-8 sm:p-12 lg:p-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-              Product Images
-            </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-[12px] md:gap-[16px] lg:gap-[20px]">
-              {productImages.map((image, index) => (
-                <div 
-                  key={index}
-                  className="bg-gray-50 rounded-[30px] overflow-hidden aspect-square"
-                >
-                  <div className="relative w-full h-full">
-                    <Image
-                      src={image}
-                      alt={`${product.title} - Image ${index + 1}`}
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                </div>
+        {/* Product Images/Models as Grid2 Components */}
+        {productImages.length > 0 && (() => {
+          // Map images to models if available, otherwise use images with product descriptions
+          const imageModelPairs: Array<{ img: string; title: string; subtitle: string }> = [];
+          
+          if (product.models && product.models.length > 0 && product.models.length === productImages.length) {
+            // If we have matching number of models and images, pair them
+            productImages.forEach((image, index) => {
+              const model = product.models![index];
+              imageModelPairs.push({
+                img: image,
+                title: model.model,
+                subtitle: `${model.type ? model.type + ' - ' : ''}${model.description || ''}`
+              });
+            });
+          } else if (productImages.length === 1) {
+            // For single image products (variants), use the product's own title and description
+            imageModelPairs.push({
+              img: productImages[0],
+              title: product.title,
+              subtitle: product.subtitle || product.description || ''
+            });
+          } else {
+            // Otherwise, use images with product title and generic descriptions
+            productImages.forEach((image, index) => {
+              imageModelPairs.push({
+                img: image,
+                title: product.modelName ? `${product.modelName} - Image ${index + 1}` : `${product.title} - Image ${index + 1}`,
+                subtitle: product.subtitle || product.description || `Product image ${index + 1} of ${productImages.length}`
+              });
+            });
+          }
+
+          // Group into pairs for Grid2 (2 items per grid)
+          const pairs: Array<Array<{ img: string; title: string; subtitle: string }>> = [];
+          for (let i = 0; i < imageModelPairs.length; i += 2) {
+            pairs.push(imageModelPairs.slice(i, i + 2));
+          }
+
+          return (
+            <div className="space-y-0">
+              {pairs.map((pair, pairIndex) => (
+                <Grid2
+                  key={pairIndex}
+                  items={pair.map(item => ({
+                    title: item.title,
+                    subtitle: item.subtitle,
+                    img: item.img
+                  }))}
+                />
               ))}
             </div>
-          </div>
-        )}
+          );
+        })()}
       </div>
     </div>
   );

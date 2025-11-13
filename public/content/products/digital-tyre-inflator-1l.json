@@ -1,0 +1,50 @@
+{
+  "id": "digital-tyre-inflator-1l",
+  "title": "Digital Tube Inflation System - Airojet1000HMV C",
+  "description": "Automatic inflator for tube inflation with vacuum pressure.",
+  "subtitle": "Digital Tube Inflation System",
+  "fullDescription": "Automatic inflator for tube inflation with vacuum pressure. Features two digital readouts, LCD display with back light, tower lamp with buzzer for process and end of cycle indication, separate start and stop keys for user safety, and can customize the value within 6 to 1000 mmH2O.",
+  "modelName": "Airojet1000HMV C",
+  "features": [
+    "Two digital readouts one for set pressure and other for tube pressure",
+    "LCD display with back light to provide good visibility",
+    "Display remain at same set pressure value even at power on-off cycle",
+    "Audible and visual end of the cycle signal indicators",
+    "Tower lamp with buzzer for process and end of cycle indication",
+    "Soft touch and durable membrane keys suitable for outdoor",
+    "Separate keys for set pressure increment and decrement",
+    "Flat key for empty or vacuum tyre",
+    "25/35 key for easy tube pressure setting, can customized the value within 6 to 1000 mmH2O",
+    "Inflates the tube with vacuum pressure",
+    "Emergency stop protection",
+    "MCB protection",
+    "Separate start and stop keys for user safety",
+    "Pressure regulator with pressure gauge for input air pressure setting"
+  ],
+  "specifications": {
+    "system": "Digital microcontroller based",
+    "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+    "airInputSupply": "87 - 145 psi / 6 - 10 bar / 6.1 - 10.2 kg/cm2",
+    "sensorAccuracy": "± 0.5% of full scale",
+    "inputAirHose": "10mm x 10mtrs PU Hose with suitable fittings",
+    "inputFilter": "1/2 x 5 micron air filter with regulator suitable fittings",
+    "outputAirHose": "10mm x 10mtrs PU Hose with clip-on connector",
+    "maximumOverPressure": "150 psi (10.5 kg/cm2)",
+    "displaySettingRange": "20 to 1000 water column (mm H2O)",
+    "workingPressureRange": "0 to 1000 water column (mm H2O) - working even at vacuum pressure",
+    "displayResolution": "1 water column (mmH2O)",
+    "measuringResolution": "1 water column (mmH2O)",
+    "keypad": "Membrane Keypad suitable for outdoor application",
+    "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
+    "dimensions": "Dimension varies depends on customer requirement",
+    "note": "External storage tank is must and size may vary depends upon customer requirement"
+  },
+  "applications": [
+    "Tyre Manufacturing Unit / Company"
+  ],
+  "images": [
+    "/images/1. Digital Tyre Inflator/1L.jpeg"
+  ],
+  "mainImage": "/images/1. Digital Tyre Inflator/1L.jpeg"
+}
+

@@ -35,23 +35,23 @@ export default function Hero({
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
             {/* Title - Large and prominent */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
-              {title}
-            </h1>
-            
+          {title}
+        </h1>
+        
             {/* Subtitle */}
-            {subtitle && (
+        {subtitle && (
               <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl">
-                {subtitle}
-              </p>
-            )}
+            {subtitle}
+          </p>
+        )}
 
             {/* Buttons Row - Directly below subtitle, above image */}
-            {ctaButtons.length > 0 && (
+        {ctaButtons.length > 0 && (
               <div className="flex flex-wrap justify-center gap-4 mb-4" onClick={(e) => e.stopPropagation()}>
-                {ctaButtons.map((button, index) => (
-                  <Link
-                    key={index}
-                    href={button.link}
+            {ctaButtons.map((button, index) => (
+              <Link
+                key={index}
+                href={button.link}
                     className={`px-8 py-4 text-base font-medium rounded-full transition-all duration-200 ${
                       button.variant === 'outline'
                         ? 'border-2 border-accent text-accent hover:bg-accent/5' 
@@ -60,13 +60,13 @@ export default function Hero({
                         : button.variant === 'soft'
                         ? 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                         : 'bg-accent text-white hover:bg-accent-hover shadow-sm'
-                    }`}
-                  >
-                    {button.text}
-                  </Link>
-                ))}
-              </div>
-            )}
+                }`}
+              >
+                {button.text}
+              </Link>
+            ))}
+          </div>
+        )}
 
             {/* Large Image Area - Below buttons */}
             <div className="w-full max-w-5xl mx-auto mt-2">
@@ -81,17 +81,17 @@ export default function Hero({
                     className="object-contain w-auto h-full transition-transform duration-300 hover:scale-[1.02]"
                     priority
                   />
-                </div>
+      </div>
               ) : (
                 // Product image with aspect-square
                 <div className="relative aspect-square w-full rounded-[30px] overflow-hidden bg-gray-50">
-                  <Image
-                    src={img}
-                    alt={title}
-                    fill
-                    className="object-contain transition-transform duration-300 hover:scale-[1.02]"
-                    priority
-                  />
+          <Image
+            src={img}
+            alt={title}
+            fill
+            className="object-contain transition-transform duration-300 hover:scale-[1.02]"
+            priority
+          />
                 </div>
               )}
             </div>

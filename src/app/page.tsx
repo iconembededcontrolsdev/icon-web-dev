@@ -84,8 +84,8 @@ const showcaseData: Block[] = [
         ctaButtons: [
           { text: 'Learn more', link: '/products/digital-nitrogen-tyre-inflator', variant: 'primary' },
           { text: 'Buy', link: '/products/digital-nitrogen-tyre-inflator', variant: 'outline' }
-        ]
-      },
+    ]
+  },
       {
         id: 'air-compressor',
         title: 'Air Compressor',

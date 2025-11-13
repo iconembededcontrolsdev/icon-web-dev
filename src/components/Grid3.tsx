@@ -42,7 +42,7 @@ export default function Grid3({
         {/* Optional section title/subtitle */}
         {(title || subtitle) && (
           <div className="text-center max-w-3xl mx-auto mb-[60px]">
-            {title && (
+      {title && (
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 {title}
               </h2>
@@ -52,17 +52,17 @@ export default function Grid3({
                 {subtitle}
               </p>
             )}
-          </div>
-        )}
-        
+        </div>
+      )}
+      
         {/* 3-Box Grid with small gaps between blocks - Full width filling */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[12px] md:gap-[16px] lg:gap-[20px] w-full">
-          {items.map((item, index) => (
-            <div 
-              key={index}
+        {items.map((item, index) => (
+          <div 
+            key={index}
               className="group w-full cursor-pointer"
-              onMouseEnter={() => setHoveredItem(index)}
-              onMouseLeave={() => setHoveredItem(null)}
+            onMouseEnter={() => setHoveredItem(index)}
+            onMouseLeave={() => setHoveredItem(null)}
               onClick={() => onItemClick && onItemClick(item)}
             >
               {/* Clean card-like container with soft rounded corners (30-50px) - Full width filling */}
@@ -116,22 +116,22 @@ export default function Grid3({
                   {/* Large Image Area - Below buttons, takes up remaining space */}
                   <div className="w-full mt-2">
                     <div className="relative aspect-square w-full rounded-[30px] overflow-hidden bg-gray-50">
-                      <Image
-                        src={item.img}
-                        alt={item.title}
-                        fill
-                        className={`object-contain transition-transform duration-300 ${
+                <Image
+                  src={item.img}
+                  alt={item.title}
+                  fill
+                  className={`object-contain transition-transform duration-300 ${
                           hoveredItem === index ? 'scale-[1.02]' : ''
-                        }`}
+                  }`}
                         sizes="(max-width: 1024px) 100vw, 33vw"
-                      />
+                />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           ))}
-        </div>
+          </div>
       </div>
     </section>
   );
