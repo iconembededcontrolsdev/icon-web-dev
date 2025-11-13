@@ -1,0 +1,114 @@
+{
+  "id": "panel-board",
+  "title": "Panel Board",
+  "description": "High-quality electrical panel boards designed for industrial and commercial applications, ensuring safe and efficient power distribution and control.",
+  "types": [
+    {
+      "type": "APFC Panel",
+      "description": "Automatic Power Factor Correction panels for efficient power management and energy savings.",
+      "features": [
+        "Automatic power factor correction",
+        "Microprocessor-based controller",
+        "Capacitor bank with contactors",
+        "Current and voltage protection",
+        "Modular design for easy maintenance"
+      ]
+    },
+    {
+      "type": "Power Distribution Panel (PDP)",
+      "description": "Robust distribution boards for safe and organized power distribution.",
+      "features": [
+        "Modular design",
+        "Busbar system",
+        "Circuit protection devices",
+        "Energy metering options",
+        "Cable management system"
+      ]
+    },
+    {
+      "type": "Motor Control Center (MCC)",
+      "description": "Centralized control for multiple electric motors in industrial applications.",
+      "features": [
+        "DOL/Star-Delta starters",
+        "Variable Frequency Drives (VFD)",
+        "PLC integration",
+        "Overload and short-circuit protection",
+        "Remote monitoring capability"
+      ]
+    }
+  ],
+  "features": [
+    "Customizable as per client requirements",
+    "Compliant with IEC 61439 standards",
+    "Durable powder-coated enclosures",
+    "IP65 protection for outdoor use",
+    "Modular design for easy expansion"
+  ],
+  "technicalSpecifications": {
+    "enclosure": {
+      "material": "CRCA/SS/FRP",
+      "protection": "IP54/IP65",
+      "finish": "Powder coated (RAL 7035)",
+      "thickness": "1.6mm/2mm"
+    },
+    "busbar": {
+      "material": "Electrolytic copper",
+      "rating": "Up to 6300A",
+      "insulation": "Heat shrinkable sleeve"
+    },
+    "wiring": {
+      "standard": "IEC 60439",
+      "conductors": "Copper/Copper-clad aluminum",
+      "separation": "Segregated power and control wiring"
+    },
+    "certifications": ["IEC 61439", "IS 8623", "CE", "RoHS"]
+  },
+  "applications": [
+    "Industrial plants",
+    "Commercial buildings",
+    "Hospitals",
+    "Data centers",
+    "Shopping malls",
+    "Hotels",
+    "Educational institutions",
+    "Residential complexes"
+  ],
+  "safetyFeatures": [
+    "Short-circuit protection",
+    "Overload protection",
+    "Earth leakage protection",
+    "Surge protection",
+    "Emergency stop function",
+    "Door interlock system"
+  ],
+  "optionalFeatures": [
+    "Power monitoring system",
+    "Energy metering",
+    "Remote monitoring and control",
+    "Touch screen HMI",
+    "Automatic changeover system",
+    "Diesel generator synchronization"
+  ],
+  "maintenance": {
+    "routine": [
+      "Visual inspection of components",
+      "Tightness check of connections",
+      "Cleaning of filters and ventilation",
+      "Functional test of protection devices"
+    ],
+    "annual": [
+      "Thermal imaging",
+      "Insulation resistance test",
+      "Operation test of all mechanical parts",
+      "Verification of protection settings"
+    ]
+  },
+  "images": [
+    "/images/5. Panel Board/5a.jpeg",
+    "/images/5. Panel Board/5b.jpeg",
+    "/images/5. Panel Board/5b2.jpeg",
+    "/images/5. Panel Board/5c1.jpeg",
+    "/images/5. Panel Board/5c2.jpeg"
+  ],
+  "mainImage": "/images/5. Panel Board/5a.jpeg"
+}

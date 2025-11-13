@@ -1,0 +1,119 @@
+{
+  "id": "nitrogen-generator",
+  "title": "Nitrogen Generator (N2)",
+  "description": "Advanced Pressure Swing Adsorption (PSA) nitrogen generation systems providing high-purity nitrogen for various industrial applications including tyre inflation, food packaging, and laser cutting.",
+  "features": [
+    "PSA (Pressure Swing Adsorption) technology",
+    "Produces 95-99.9% pure nitrogen",
+    "Fully automatic operation",
+    "Low maintenance requirements",
+    "Energy efficient design",
+    "Compact and space-saving"
+  ],
+  "specifications": {
+    "modelRange": {
+      "small": {
+        "flowRate": "5-50 Nm³/h",
+        "purity": "95-99.9%",
+        "power": "1-5 kW",
+        "pressure": "7-10 bar"
+      },
+      "medium": {
+        "flowRate": "50-200 Nm³/h",
+        "purity": "95-99.9%",
+        "power": "5-20 kW",
+        "pressure": "7-10 bar"
+      },
+      "large": {
+        "flowRate": "200-2000+ Nm³/h",
+        "purity": "95-99.9%",
+        "power": "20-200+ kW",
+        "pressure": "7-10 bar"
+      }
+    },
+    "operatingConditions": {
+      "temperature": "1-45°C",
+      "humidity": "<80% RH (non-condensing)",
+      "airQuality": "Class 3.4.2 (ISO 8573-1:2010)",
+      "dewPoint": "-40°C to -70°C (with optional dryer)"
+    }
+  },
+  "applications": [
+    {
+      "industry": "Automotive",
+      "uses": [
+        "Tyre inflation",
+        "Laser cutting",
+        "Heat treatment",
+        "Tire curing"
+      ]
+    },
+    {
+      "industry": "Food & Beverage",
+      "uses": [
+        "Food packaging",
+        "Beverage dispensing",
+        "Modified atmosphere packaging (MAP)",
+        "Blanketing"
+      ]
+    },
+    {
+      "industry": "Electronics",
+      "uses": [
+        "SMT reflow ovens",
+        "Wave soldering",
+        "Selective soldering",
+        "Laser cutting"
+      ]
+    },
+    {
+      "industry": "Pharmaceutical",
+      "uses": [
+        "Blanketing",
+        "Purging",
+        "Packaging",
+        "Storage"
+      ]
+    }
+  ],
+  "benefits": [
+    "Eliminates cylinder handling and rental costs",
+    "On-demand nitrogen production",
+    "Lower operating costs compared to delivered gas",
+    "Reduced carbon footprint",
+    "Consistent gas quality and pressure",
+    "Minimal maintenance requirements"
+  ],
+  "technicalFeatures": [
+    "Advanced PLC control system",
+    "Touch screen HMI interface",
+    "Automatic purity adjustment",
+    "Remote monitoring capabilities",
+    "Energy-saving mode",
+    "Alarm and shutdown protection"
+  ],
+  "optionsAndAccessories": [
+    "Air preparation system",
+    "Nitrogen buffer tank",
+    "Purity analyzer",
+    "Flow meter",
+    "Remote monitoring system",
+    "Dual tower design for continuous operation"
+  ],
+  "maintenance": {
+    "daily": ["Check for leaks", "Monitor system pressure"],
+    "monthly": ["Inspect filters", "Check valve operation"],
+    "annually": ["Carbon molecular sieve inspection", "Complete system check"]
+  },
+  "safetyFeatures": [
+    "High/low pressure protection",
+    "Over-temperature protection",
+    "Oxygen monitoring system (optional)",
+    "Emergency stop",
+    "Automatic shutdown on fault detection"
+  ],
+  "images": [
+    "/images/4. Nitrogen Generator/4a.jpeg"
+  ],
+  "mainImage": "/images/4. Nitrogen Generator/4a.jpeg"
+}

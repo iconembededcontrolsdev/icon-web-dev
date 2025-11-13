@@ -1,0 +1,143 @@
+{
+  "id": "garage-equipment",
+  "title": "Garage Equipment",
+  "description": "Comprehensive range of professional garage equipment designed for automotive workshops, service centers, and maintenance facilities.",
+  "categories": [
+    {
+      "category": "Lifting Equipment",
+      "items": [
+        {
+          "name": "Two-Post Lift",
+          "description": "Heavy-duty lifts for vehicle maintenance and repair",
+          "features": [
+            "Capacity: 3,000 kg to 6,000 kg",
+            "Symmetric and asymmetric models",
+            "Low profile design",
+            "Safety locks and auto hold system"
+          ]
+        },
+        {
+          "name": "Four-Post Lift",
+          "description": "Ideal for long-term storage and heavy-duty applications",
+          "features": [
+            "Capacity: 4,000 kg to 20,000 kg",
+            "Drive-on design",
+            "Included rolling jacks",
+            "Aluminum ramps"
+          ]
+        },
+        {
+          "name": "Scissor Lift",
+          "description": "Versatile mid-rise lifts for various applications",
+          "features": [
+            "Capacity: 3,000 kg to 5,000 kg",
+            "Low entry height",
+            "Portable models available",
+            "Wheel-free operation"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Wheel Service Equipment",
+      "items": [
+        {
+          "name": "Tyre Changer",
+          "description": "For efficient and safe tyre changing operations",
+          "features": [
+            "Semi-automatic operation",
+            "Alloy wheel protection",
+            "Programmable settings",
+            "Quick clamp system"
+          ]
+        },
+        {
+          "name": "Wheel Balancer",
+          "description": "Precision balancing for all types of wheels",
+          "features": [
+            "Laser alignment",
+            "Automatic measurement",
+            "Alloy wheel compatibility",
+            "Touchscreen interface"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Diagnostic Equipment",
+      "items": [
+        {
+          "name": "OBD2 Scanner",
+          "description": "Advanced diagnostic tool for vehicle troubleshooting",
+          "features": [
+            "Full OBD2 functionality",
+            "Live data streaming",
+            "ECU coding",
+            "Wireless connectivity"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Workshop Tools",
+      "items": [
+        {
+          "name": "Oil Drainers",
+          "description": "Efficient oil changing systems"
+        },
+        {
+          "name": "Battery Chargers",
+          "description": "Smart charging solutions"
+        },
+        {
+          "name": "Air Compressors",
+          "description": "For pneumatic tools and inflation"
+        }
+      ]
+    }
+  ],
+  "features": [
+    "Heavy-duty construction",
+    "Safety certified",
+    "Easy to operate",
+    "Low maintenance",
+    "Energy efficient"
+  ],
+  "technicalSpecifications": {
+    "powerSupply": [
+      "220-240V, 50/60Hz, Single Phase",
+      "380-440V, 50/60Hz, Three Phase"
+    ],
+    "safetyStandards": [
+      "CE Certified",
+      "ISO 9001:2015",
+      "Meets international safety standards"
+    ],
+    "warranty": "1-2 years on mechanical parts, 6 months on electrical components"
+  },
+  "applications": [
+    "Automotive workshops",
+    "Tyre service centers",
+    "Fleet maintenance",
+    "Car dealerships",
+    "Government workshops"
+  ],
+  "installationAndTraining": [
+    "On-site installation available",
+    "Operator training provided",
+    "Maintenance training",
+    "User manuals included"
+  ],
+  "afterSalesSupport": [
+    "Technical support",
+    "Spare parts availability",
+    "Preventive maintenance contracts",
+    "Emergency service"
+  ],
+  "images": [
+    "/images/6. Garage Equipment/6a.jpeg",
+    "/images/6. Garage Equipment/6b.jpeg",
+    "/images/6. Garage Equipment/6c.jpeg"
+  ],
+  "mainImage": "/images/6. Garage Equipment/6a.jpeg"
+}

@@ -9,7 +9,7 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
-
+.next
 # testing
 /coverage
 
@@ -19,8 +19,12 @@
 
 # production
 /build
-
+/website data full home aboutus product contact final
+website data full home aboutus product contact final.docx
+website data full home aboutus product contact final.txt
+website data full home aboutus product contact final.doc
 # misc
+a.zip
 .DS_Store
 *.pem
 

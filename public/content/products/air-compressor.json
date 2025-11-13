@@ -1,0 +1,74 @@
+{
+  "id": "air-compressor",
+  "title": "Industrial Air Compressor",
+  "description": "High-performance air compressors designed for industrial applications, providing reliable and consistent air supply for various pneumatic tools and equipment.",
+  "features": [
+    "Robust construction for continuous operation",
+    "Energy efficient design",
+    "Low maintenance requirements",
+    "Suitable for industrial and automotive applications",
+    "Available in various capacities and configurations"
+  ],
+  "specifications": {
+    "powerSource": ["Electric", "Diesel"],
+    "tankCapacity": ["50L", "100L", "200L", "500L", "Custom capacities available"],
+    "pressureRange": {
+      "working": "8-10 bar (116-145 psi)",
+      "maximum": "12 bar (174 psi)"
+    },
+    "airDelivery": {
+      "cfm": ["5 CFM", "10 CFM", "15 CFM", "20+ CFM"],
+      "litersMin": ["140 LPM", "280 LPM", "425 LPM", "566+ LPM"]
+    },
+    "motorPower": ["2 HP", "3 HP", "5 HP", "7.5 HP", "10 HP", "Custom configurations available"]
+  },
+  "types": [
+    {
+      "type": "Reciprocating (Piston) Compressors",
+      "description": "Ideal for workshops and garages, providing high pressure for intermittent use."
+    },
+    {
+      "type": "Screw Compressors",
+      "description": "Designed for continuous operation with higher air delivery, suitable for industrial applications."
+    },
+    {
+      "type": "Oil-free Compressors",
+      "description": "For applications requiring clean, oil-free air such as food processing and pharmaceuticals."
+    }
+  ],
+  "applications": [
+    "Automotive workshops",
+    "Tyre service centers",
+    "Industrial manufacturing",
+    "Construction sites",
+    "Paint shops",
+    "Dental and medical facilities",
+    "Food and beverage industry",
+    "Pharmaceutical industry"
+  ],
+  "safetyFeatures": [
+    "Pressure switch with auto start/stop",
+    "Thermal overload protection",
+    "Pressure relief valve",
+    "Low oil level shutdown (for oil-lubricated models)",
+    "Motor thermal protection"
+  ],
+  "maintenance": {
+    "daily": ["Drain moisture from tank", "Check for air leaks", "Inspect hoses and connections"],
+    "weekly": ["Check oil level (if applicable)", "Inspect air filter", "Tighten all fasteners"],
+    "monthly": ["Check safety valve operation", "Inspect pressure switch", "Clean cooling fins"],
+    "annually": ["Change oil (if applicable)", "Replace air filter element", "Inspect and replace worn parts"]
+  },
+  "accessories": [
+    "Air dryers",
+    "Air filters and regulators",
+    "Additional air receivers",
+    "Piping systems",
+    "Air tools and accessories"
+  ],
+  "images": [
+    "/images/3. Air Compressor/3a.jpeg",
+    "/images/3. Air Compressor/3b.jpeg"
+  ],
+  "mainImage": "/images/3. Air Compressor/3a.jpeg"
+}

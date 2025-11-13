@@ -1,0 +1,59 @@
+{
+  "id": "digital-tyre-inflator",
+  "title": "Digital Tyre Inflator",
+  "description": "Reliable, durable and accurate digital tyre inflators meeting the requirements of every vehicle tyre pressure inflation need. Used by major tyre and vehicle manufacturers in their production lines.",
+  "features": [
+    "Meets accuracy standards suggested by tyre manufacturers",
+    "IP65 Ingress Protection rated control panel",
+    "Microcontroller-based system for precise pressure control",
+    "Suitable for all vehicle types",
+    "Durable construction for industrial use"
+  ],
+  "specifications": {
+    "display": "4 Digit 7 Segment BIG LCD with Automatic LED backlight",
+    "inputFilter": "1/4 inch x 5 micron air filter with suitable fittings",
+    "outputAirHose": "10 meters 8x5mm Coiled PU hose with clip-on Air chuck",
+    "pressureRange": {
+      "maximum": "185 psi (13 kg/cm²)",
+      "working": "0 to 100 psi",
+      "setting": "6 to 100 psi"
+    },
+    "dimensions": {
+      "unit": "415 x 210 x 1390 mm (pedestal)",
+      "packing": "425 x 250 x 1420 mm"
+    },
+    "powerSupply": "220V AC ±10%, 1 Phase, 50Hz, 5A"
+  },
+  "applications": [
+    "Tyre Shops",
+    "Vehicle Service Centers",
+    "Fleet Maintenance",
+    "Wheel Alignment Shops",
+    "Automotive Garages",
+    "Small Vehicle Depots",
+    "Puncture Shops",
+    "Apartments",
+    "Commercial Parking Lots"
+  ],
+  "safetyFeatures": [
+    "Emergency Stop Protection",
+    "MCB Protection",
+    "Separate Start and Stop keys for user safety",
+    "Pressure Regulator with Pressure Gauge for input air pressure setting"
+  ],
+  "userInterface": [
+    "LED Indication for operation status",
+    "Soft touch and durable membrane keys suitable for outdoor use",
+    "Automatic Tyre Sensing System",
+    "Separate keys for set pressure increment and decrement",
+    "Flat key for empty or puncture tyre"
+  ],
+  "images": [
+    "/images/1. Digital Tyre Inflator/1A.jpeg",
+    "/images/1. Digital Tyre Inflator/1B.jpeg",
+    "/images/1. Digital Tyre Inflator/1C.jpeg",
+    "/images/1. Digital Tyre Inflator/1D.jpeg",
+    "/images/1. Digital Tyre Inflator/1E.jpeg"
+  ],
+  "mainImage": "/images/1. Digital Tyre Inflator/1A.jpeg"
+}

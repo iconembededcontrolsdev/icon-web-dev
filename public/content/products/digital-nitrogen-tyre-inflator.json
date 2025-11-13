@@ -1,0 +1,62 @@
+{
+  "id": "digital-nitrogen-tyre-inflator",
+  "title": "Digital Nitrogen Tyre Inflator",
+  "description": "Advanced tyre inflation system that provides precise nitrogen filling with digital control for optimal tyre performance and longevity.",
+  "features": [
+    "Dual functionality for both air and nitrogen inflation",
+    "Precise digital pressure control",
+    "Automatic vacuum and nitrogen inflation",
+    "Suitable for all vehicle types",
+    "Rugged construction for industrial use"
+  ],
+  "specifications": {
+    "vacuumiser": "Automatic vacuum cum nitrogen inflation",
+    "inputHose": "2 meter 6x4mm heavy braided hose",
+    "outputHose": "10 meters PVC braided hose (14K g/cm² pressure) with round head/hand held/clip on foot connector",
+    "controlPanel": "Membrane keypad suitable for outdoor application",
+    "dimensions": {
+      "unit": "530 x 200 x 1400 mm (pedestal)",
+      "packing": "540 x 230 x 1440 mm"
+    },
+    "powerSupply": "220V AC ±10%, 1 Phase, 50Hz"
+  },
+  "nitrogenSystem": {
+    "type": "PSA (Pressure Swing Adsorption) method",
+    "purityLevels": ["95-99% pure nitrogen"],
+    "features": [
+      "Automatic nitrogen generation",
+      "Dual pressure gauge system",
+      "Safety pressure relief valve for internal tank",
+      "Four hose system for simultaneous operation"
+    ]
+  },
+  "applications": [
+    "Tyre Shops and Dealerships",
+    "Premium Automotive Service Centers",
+    "Racing Teams and Tracks",
+    "Fleet Management Companies",
+    "Commercial Vehicle Workshops",
+    "Mining and Construction Equipment"
+  ],
+  "safetyFeatures": [
+    "Emergency Stop Protection",
+    "MCB Protection",
+    "Pressure Relief Valves",
+    "Over-pressure Protection",
+    "Thermal Overload Protection"
+  ],
+  "benefits": [
+    "Maintains tyre pressure longer than compressed air",
+    "Reduces tyre wear and extends tyre life",
+    "Improves fuel efficiency",
+    "Prevents rim rust and corrosion",
+    "More consistent tyre pressure in varying temperatures"
+  ],
+  "images": [
+    "/images/2. Digital Nitrogen Tyre Inflator/2A.jpeg",
+    "/images/2. Digital Nitrogen Tyre Inflator/2B.jpeg",
+    "/images/2. Digital Nitrogen Tyre Inflator/2C.jpeg",
+    "/images/2. Digital Nitrogen Tyre Inflator/2D.jpeg"
+  ],
+  "mainImage": "/images/2. Digital Nitrogen Tyre Inflator/2A.jpeg"
+}
