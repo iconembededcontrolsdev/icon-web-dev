@@ -1,0 +1,27 @@
+{
+  "id": "panel-board-5c",
+  "title": "Electrical Control Panel",
+  "description": "Electrical Control Panel for industrial applications and power distribution.",
+  "subtitle": "Electrical Control Panel",
+  "fullDescription": "Electrical Control Panel for industrial applications and power distribution. Custom electrical solutions for various industrial requirements.",
+  "features": [
+    "Custom electrical solutions",
+    "Industrial grade components",
+    "Safe and reliable operation",
+    "Standard compliance"
+  ],
+  "specifications": {
+    "panelType": "Electrical Control Panel",
+    "application": "Industrial applications and power distribution"
+  },
+  "applications": [
+    "All Kind of Industries",
+    "Manufacturing Units",
+    "Commercial Buildings"
+  ],
+  "images": [
+    "/images/5. Panel Board/5C.jpeg"
+  ],
+  "mainImage": "/images/5. Panel Board/5C.jpeg"
+}
+
