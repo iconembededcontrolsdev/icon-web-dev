@@ -1,0 +1,72 @@
+[
+  {
+    "type": "hero",
+    "title": "iPhone 16 Pro",
+    "subtitle": "A new era begins with the most advanced iPhone ever.",
+    "img": "/images/iphone.png",
+    "link": "/buy/iphone-16-pro"
+  },
+  {
+    "type": "grid-2",
+    "items": [
+      {
+        "title": "AirPods Pro",
+        "subtitle": "Next-level noise cancellation.",
+        "img": "/images/airpods.png",
+        "link": "/airpods-pro"
+      },
+      {
+        "title": "iPad Air",
+        "subtitle": "Powerful. Colorful. Wonderful.",
+        "img": "/images/ipad-air.png",
+        "link": "/ipad-air"
+      }
+    ]
+  },
+  {
+    "type": "grid-3",
+    "items": [
+      {
+        "title": "Apple Watch Series 9",
+        "img": "/images/watch.png",
+        "link": "/watch"
+      },
+      {
+        "title": "MacBook Air",
+        "img": "/images/macbook.png",
+        "link": "/macbook-air"
+      },
+      {
+        "title": "HomePod mini",
+        "img": "/images/homepod.png",
+        "link": "/homepod-mini"
+      }
+    ]
+  },
+  {
+    "type": "carousel",
+    "title": "The latest",
+    "items": [
+      {
+        "title": "Apple TV 4K",
+        "img": "/images/apple-tv.png",
+        "link": "/tv"
+      },
+      {
+        "title": "AirTag",
+        "img": "/images/airtag.png",
+        "link": "/airtag"
+      },
+      {
+        "title": "Apple Pencil",
+        "img": "/images/pencil.png",
+        "link": "/apple-pencil"
+      },
+      {
+        "title": "MagSafe",
+        "img": "/images/magsafe.png",
+        "link": "/magsafe"
+      }
+    ]
+  }
+]

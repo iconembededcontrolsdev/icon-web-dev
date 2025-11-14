@@ -1,0 +1,47 @@
+{
+  "id": "air-compressor-ic109",
+  "title": "Air Compressor - IC-109",
+  "description": "Single stage oil lubricated reciprocating air compressor, 1 HP, suitable for light industrial applications.",
+  "subtitle": "1 HP Single Stage",
+  "fullDescription": "IC-109 is a single stage oil lubricated reciprocating air compressor with 1 HP motor rating. Known for reliability and performance, making it the preferred choice for fuel stations, automotive garages, and light industrial applications.",
+  "modelName": "IC-109",
+  "features": [
+    "Standard leak proof fittings",
+    "Electrical Starter with stop switch latch for safety",
+    "Belt/Fan Guard for Safety",
+    "Pressure Switch with Differential Pressure Setting for Automatic ON-OFF operation",
+    "Drain Valve under Storage Tank to Drain Water",
+    "Auto Drain Valve Option available upon customer requirement",
+    "Safety Pressure Relief Valve for Over Pressure Safety",
+    "Designed for Industrial Duty Cycle",
+    "Single Stage Oil Lubricated Reciprocating design"
+  ],
+  "specifications": {
+    "compressorStage": "1",
+    "workingPressure": "10 Kg/cm2 / 145 Psi",
+    "displacement": "82 LPM / 2.9 CFM",
+    "motorRating": "1 HP / 0.75 KW",
+    "rotationDirection": "Anti Clockwise (view from drive end)",
+    "electricalSupply": "220 VAC",
+    "frequency": "50 Hz",
+    "electricalPhase": "1",
+    "typeOfStarter": "DOL",
+    "oil": "40 Grade",
+    "typeOfCooling": "Air",
+    "airOutletSize": "1/4 BSP",
+    "cutOffSwitchSetPressureMax": "10 Kgf/cm2",
+    "cutOffSwitchSetPressureMin": "7 Kgf/cm2",
+    "airReceiverCapacity": "110 Ltrs"
+  },
+  "applications": [
+    "Fuel Station",
+    "Automotive Garages",
+    "Textile Industries",
+    "Food Processing Industries"
+  ],
+  "images": [
+    "/images/3. Air Compressor/IC-109.jpeg"
+  ],
+  "mainImage": "/images/3. Air Compressor/IC-109.jpeg"
+}
+

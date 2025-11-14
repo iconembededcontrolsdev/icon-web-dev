@@ -1,0 +1,59 @@
+{
+  "id": "digital-tyre-inflator-1j",
+  "title": "Digital Tyre Inflator with Inbuilt Compressor - Airojet1000LCV IC",
+  "description": "Digital tyre inflator with inbuilt compressor - no external air input needed.",
+  "subtitle": "With Inbuilt Compressor",
+  "fullDescription": "Digital tyre inflator with inbuilt compressor eliminating the need for external air input. Features two digital readouts, LCD display with back light, MCB protection, and can be used for vehicle tyre ranging from two wheeler, car and SUVs.",
+  "modelName": "Airojet1000LCV IC",
+  "features": [
+    "Two digital readouts one for set pressure and other for tyre pressure",
+    "LCD display with back light to provide good visibility",
+    "Display remain at same set pressure value even at power on-off cycle",
+    "Audible and visual end of the cycle signal indicators",
+    "LED indication for the status of operation",
+    "Soft touch and durable membrane keys suitable for outdoor",
+    "Automatic tyre sensing system",
+    "Separate keys for set pressure increment and decrement",
+    "Flat key for empty or puncture tyre",
+    "25/35 key for easy front and back tyre pressure setting",
+    "Reset key to exit out of operation at any time",
+    "MCB protection",
+    "No need for external air input (inbuilt compressor available)",
+    "Can use for vehicle tyre ranging from two wheeler, car and SUVs"
+  ],
+  "specifications": {
+    "system": "Digital microcontroller based",
+    "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 15A",
+    "sensorAccuracy": "± 0.5% of full scale",
+    "inputSupplySource": "15 A switch box with fuse and indicator within 2 meter proximity",
+    "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
+    "outputHose": "10 mtrs 8 x5 mm Coiled PU hose with clip on Air chuck",
+    "maximumOverPressure": "185 psi (13 kg/cm2)",
+    "pressureSettingRange": "6 to 100 psi",
+    "workingPressureRange": "5 to 100 psi",
+    "displayResolution": "1 psi",
+    "measuringResolution": "0.25 psi",
+    "keypad": "Membrane Keypad suitable for outdoor application",
+    "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
+    "airCompressorSpecification": {
+      "hp": "1.5 HP / 1.1 KW",
+      "tankCapacity": "45 Liters",
+      "drain": "Digital Auto Drain Valve"
+    }
+  },
+  "applications": [
+    "Wheel Alignment Shop",
+    "Automotive Garage",
+    "Depot",
+    "Puncture Shop",
+    "Apartments",
+    "Commercial Parking Lot",
+    "Educational Institution",
+    "Companies"
+  ],
+  "images": [
+    "/images/1. Digital Tyre Inflator/1J.jpeg"
+  ],
+  "mainImage": "/images/1. Digital Tyre Inflator/1J.jpeg"
+}
+
