@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "title": "Welcome to Icon Embedded Controls",
+    "subtitle": "Your trusted partner for industrial automation and control solutions",
+    "ctaText": "Explore Our Products",
+    "ctaLink": "/products",
+    "image": "/images/hero-banner.jpg"
+  },
+  "about": {
+    "title": "About Us",
+    "content": "With some brilliant products and splendid services, We - Icon Embedded Controls - have carved a niche for ourselves in both domestic as well as international markets. The range of our products includes Digital Tyre Inflator, Digital Nitrogen Tyre Inflator, Nitrogen Generator (N2), Air Compressor, Two Wheeler Ramp, Fuel level Indicator/controller, Pressure monitor, Fuel tank automation and APFC and power distribution panels and many more. We take utmost care in maintaining levels of quality in the raw materials procured, which leads to finished products of unsurpassed quality.",
+    "image": "/images/about-us.jpg"
+  },
+  "clients": {
+    "title": "Our Valued Clients",
+    "description": "We are proud to be associated with industry leaders and major corporations",
+    "clientTypes": [
+      {
+        "title": "Oil & Gas",
+        "clients": ["IOCL", "BPCL", "HPCL", "Essar", "Reliance Petroleum", "KR Fuels", "Kovai Auto Gas", "Total Gas"]
+      },
+      {
+        "title": "Tyre Manufacturers",
+        "clients": ["Bridgestone Tyres", "Michelin Tyres", "MRF Tyres", "BKT Tires", "Apollo Tyres Ltd India", "Alliance Tire Group"]
+      },
+      {
+        "title": "Automotive & Industrial",
+        "clients": ["Caterpillar India Pvt Ltd", "Mahindra & Mahindra", "L&T India", "TAFE Tractor", "Ford Motors", "Hyundai Motor India", "Satyam Mahindra", "Eicher Motors Limited", "Nissan India"]
+      },
+      {
+        "title": "Other Major Clients",
+        "clients": ["Bharatiya Reserve Bank Note Mudran (P) Ltd", "Heavy Alloy Penetrator Project", "Livia Polymers"]
+      }
+    ]
+  },
+  "products": {
+    "title": "Our Products",
+    "items": [
+      {
+        "name": "Digital Tyre Inflator",
+        "image": "/images/products/tyre-inflator.jpg"
+      },
+      {
+        "name": "Digital Nitrogen Tyre Inflator",
+        "image": "/images/products/nitrogen-inflator.jpg"
+      },
+      {
+        "name": "Nitrogen Generator (N2)",
+        "image": "/images/products/nitrogen-generator.jpg"
+      },
+      {
+        "name": "Air Compressor",
+        "image": "/images/products/air-compressor.jpg"
+      },
+      {
+        "name": "Two Wheeler Ramp",
+        "image": "/images/products/two-wheeler-ramp.jpg"
+      },
+      {
+        "name": "Fuel Level Indicator/Controller",
+        "image": "/images/products/fuel-indicator.jpg"
+      }
+    ]
+  }
+}

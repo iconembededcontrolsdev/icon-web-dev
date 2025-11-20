@@ -1,0 +1,58 @@
+{
+  "id": "digital-tyre-inflator-1h",
+  "title": "Digital Tyre Inflator Heavy for BPCL - AIROJET 6000 LCV P",
+  "description": "Heavy duty pedestal mounted digital tyre inflator for BPCL fuel stations with big LCD display.",
+  "subtitle": "Pedestal - Heavy (BPCL)",
+  "fullDescription": "Heavy duty pedestal mounted digital tyre inflator for BPCL fuel stations. Features two digital readouts, big LCD display with LED backlight, pressure unit display to identify PSI or KG/CM2, toggle key for easy set pressure value 25/35 for cars and 90/120/150 for heavy vehicles, and can be used for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck.",
+  "modelName": "AIROJET 6000 LCV P",
+  "features": [
+    "Two digital readouts one for set pressure and other for tyre pressure",
+    "Big LCD display with LED back light to provide good visibility",
+    "Pressure unit display to identify PSI or KG/CM2",
+    "Display remain at same set pressure value even after power on-off cycle",
+    "Audible and visual end of the cycle signal indicators",
+    "LED indication for the status of operation",
+    "Soft touch and durable membrane keys suitable for outdoor",
+    "Automatic tyre sensing system",
+    "Separate keys for set pressure increment and decrement",
+    "Flat key for empty or puncture tyre",
+    "Toggle key for easy set pressure value 25/35 for cars and 90/120/150 for heavy vehicles",
+    "Confirm to operate method for overpressure setvalue with display blink notification",
+    "Reset key to exit out of operation at any time",
+    "5 in 1 switch box with fuse protection and indicator",
+    "Can use for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck"
+  ],
+  "specifications": {
+    "system": "Digital microcontroller based",
+    "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+    "airInputSupply": "87 - 180 psi / 6 - 12.4 bar / 6.1 - 12.65 kg/cm2",
+    "sensorAccuracy": "± 0.5% of full scale",
+    "inputAirHose": "6mm x 2mtrs Black braider Hose with suitable fittings",
+    "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
+    "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head / hand held/clip on foot connector",
+    "maximumOverPressure": "185 psi (13 kg/cm2)",
+    "pressureSettingRange": "6 to 180 psi",
+    "workingPressureRange": "0 to 150 psi",
+    "displayResolution": "1 psi",
+    "measuringResolution": "0.25 psi",
+    "keypad": "Membrane Keypad suitable for outdoor application",
+    "display": "4 Digit 7 Segment BIG LCD with Automatic LED backlight ON & OFF",
+    "dimensions": "415 x 210 x 1390 mm (pedestal), 425 x 250 x 1420 mm (Packing)"
+  ],
+  "applications": [
+    "Fuel Station (for IOCL, BPCL, HPCL, ESSAR, RELIANCE and other leading companies)",
+    "Wheel Alignment Shop",
+    "Automotive Garage",
+    "Depot",
+    "Puncture Shop",
+    "Apartments",
+    "Commercial Parking Lot",
+    "Educational Institution",
+    "Companies"
+  ],
+  "images": [
+    "/images/1. Digital Tyre Inflator/1H.jpeg"
+  ],
+  "mainImage": "/images/1. Digital Tyre Inflator/1H.jpeg"
+}
+

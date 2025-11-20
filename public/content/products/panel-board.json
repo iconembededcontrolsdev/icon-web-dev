@@ -1,0 +1,105 @@
+{
+  "id": "panel-board",
+  "title": "Panel Boards",
+  "description": "PLC Control Panels, Automatic Power Factor Control Panels, and Switch Gear Panels. Complete electrical solutions for automation, power factor correction, and industrial control.",
+  "subtitle": "PLC Control Panels, Automatic Power Factor Control Panels, and Switch Gear Panels. Complete electrical solutions for automation, power factor correction, and industrial control.",
+  "fullDescription": "We provide various PLC Control panel with automation solution for Industries. We offer Automatic Power Factor Control Panel for any loads. Power factor is the ratio between the KW and the KVA drawn by an electrical load where the KW is the actual load power and the KVA is the apparent load power. In industry most of the load is inductive in nature which results in lagging power factor that is why there is loss and wastage of energy which results in high power bills and heavy penalties from electricity boards. If the load is uneven it is very difficult to maintain unity power factor. This drawback is overcome by using an APFC panel (Automatic Power Factor Correction Panel).",
+  "features": [
+    "PLC Control Panels with automation solutions",
+    "Automatic Power Factor Control Panel",
+    "Switch Gear Panels",
+    "Custom electrical solutions",
+    "RS-232 & RS-485 compatible",
+    "Remote Panel operation available",
+    "Diesel Tank Level Measurement using PLC Automation",
+    "Float Operated Level Transmitter with 4-20 mA output",
+    "Can customize the PLC program depends upon Tank Shape and Size",
+    "Can customize the PLC program even for various tank height",
+    "Can provide level measurement solution for various specific density liquids",
+    "Can customize the level measurement solution for boilers",
+    "Can provide complete electrical solution for the automation",
+    "Automatic or manual pump ON/OFF option available"
+  ],
+  "specifications": {
+    "plcControlPanel": {
+      "levelMeasurement": "Diesel Tank Level Measurement using PLC Automation panel and Level Sensor",
+      "floatOperatedTransmitter": "Reed chain with 4-20 mA output used for industrial level measurement solution",
+      "magentostrictiveTransmitter": "4-20 mA output for High Accuracy level measurement solution",
+      "customization": "Can customize the PLC program depends upon Tank Shape and Size, various tank height, various specific density liquids, and for boilers",
+      "communication": "RS-232 & RS-485 compatible",
+      "remoteOperation": "Remote Panel operation available upon request"
+    },
+    "apfcPanel": {
+      "description": "Automatic Power Factor Control Panel for any loads",
+      "purpose": "Overcome lagging power factor issues in industries",
+      "benefits": "Reduces power bills and penalties from electricity boards"
+    },
+    "switchGearPanel": {
+      "description": "Outdoor Power Panel for Petrol Stations",
+      "types": [
+        "Electrical Control Panel",
+        "Motor Control Panel"
+      ]
+    }
+  },
+  "applications": [
+    "All Kind of Industries",
+    "Hotels",
+    "Banks",
+    "Fuel Station",
+    "Shopping Mall",
+    "Manufacturing Industries",
+    "Process Industries",
+    "Automation Systems",
+    "Control Panels"
+  ],
+  "types": [
+    {
+      "type": "PLC Control Panel",
+      "description": "Various PLC Control panel with automation solution for Industries",
+      "features": [
+        "Diesel Tank Level Measurement using PLC Automation",
+        "Float Operated Level Transmitter (reed chain) with 4-20 mA output",
+        "Float Operated Level Transmitter (Magentostrictive) with 4-20 mA output for High Accuracy",
+        "Can customize the PLC program depends upon Tank Shape and Size",
+        "Can customize the PLC program even for various tank height",
+        "Can provide level measurement solution for various specfic density liquids",
+        "Can customize the level measurement solution for boilers",
+        "Can provide complete electrical solution for the automation",
+        "Automatic or manual pump ON/OFF option available",
+        "Remote Panel operation available upon request",
+        "RS-232 & RS-485 compatible"
+      ]
+    },
+    {
+      "type": "Automatic Power Factor Control Panel (APFC)",
+      "description": "Automatic Power Factor Control Panel for any loads to overcome lagging power factor issues",
+      "features": [
+        "Automatic power factor correction",
+        "Reduces power bills and penalties",
+        "Suitable for uneven loads",
+        "Maintains unity power factor"
+      ]
+    },
+    {
+      "type": "Switch Gear Panel",
+      "description": "Outdoor Power Panel for Petrol Stations and industrial applications",
+      "features": [
+        "Electrical Control Panel",
+        "Motor Control Panel",
+        "Outdoor rated",
+        "Suitable for fuel stations"
+      ]
+    }
+  ],
+  "images": [
+    "/images/5. Panel Board/5a.jpeg",
+    "/images/5. Panel Board/5b.jpeg",
+    "/images/5. Panel Board/5b2.jpeg",
+    "/images/5. Panel Board/5c1.jpeg",
+    "/images/5. Panel Board/5c2.jpeg",
+    "/images/5. Panel Board/5c3.jpeg",
+    "/images/5. Panel Board/5d.jpeg"
+  ],
+  "mainImage": "/images/5. Panel Board/5a.jpeg"
+}

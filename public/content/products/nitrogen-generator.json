@@ -1,0 +1,54 @@
+{
+  "id": "nitrogen-generator",
+  "title": "Nitrogen Generator",
+  "description": "Easy to convert ordinary digital tyre inflator to digital nitrogen tyre inflator using this module. Reliable PSA method for nitrogen generation with 95-99% purity suitable for vehicle nitrogen inflation.",
+  "subtitle": "Easy to convert ordinary digital tyre inflator to digital nitrogen tyre inflator using this module. Reliable PSA method for nitrogen generation with 95-99% purity suitable for vehicle nitrogen inflation.",
+  "fullDescription": "Easy to convert ordinary digital tyre inflator to digital nitrogen tyre inflator using this module. Reliable PSA method for nitrogen generation with 95-99% purity suitable for vehicle nitrogen inflation. Air and nitrogen input pressure option available in single machine. The nitrogen generator uses Pressure Swing Adsorption (PSA) Technology for reliable and cost-efficient nitrogen generation. It comes with computer power chord adapter with fuse protection and switch on indicator, pressure switch for automatic nitrogen generation cut-off, pressure gauge for input air pressure indication and internal tank nitrogen pressure indication, safety pressure relief valve available for internal tank, and wheel base option is available to move to desired location.",
+  "features": [
+    "PSA Technology for nitrogen generation",
+    "95-99% purity (adjustable)",
+    "Pressure switch for automatic nitrogen generation cut-off",
+    "Safety pressure relief valve",
+    "Wheel base option available",
+    "Computer power chord adapter with fuse protection",
+    "Easy conversion of ordinary digital tyre inflator to nitrogen inflator",
+    "Air and nitrogen input pressure option available in single machine",
+    "Pressure gauge for input air pressure and stored nitrogen pressure indication",
+    "Reliable PSA method for nitrogen generation"
+  ],
+  "specifications": {
+    "system": "Digital microcontroller based",
+    "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+    "airSupply": "120 - 150 psi / 8 - 10bar",
+    "sensorAccuracy": "± 0.5% of full scale",
+    "n2ProductionMethod": "Pressure Swing Adsorption Method (PSA Technology)",
+    "tankCapacity": "65 liters",
+    "flowRate": "4500 lph",
+    "purity": "95-99% (adjustable)",
+    "moistureFilter": "5 micron",
+    "oilRemovalFilter": "Activated carbon",
+    "autoDrainValve": "with auto timer",
+    "safetyValve": "Available",
+    "pressureGauge": "Two Pressure Gauge Indication, one for Input Air Pressure and other for Stored Nitrogen Pressure",
+    "inputHose": "2 meter 6x4 mm heavy braided hose",
+    "outputHose": "3 meter 6x4 mm heavy braided hose",
+    "functionalKeys": "Membrane keypad suitable for outdoor application",
+    "overPressureSafety": "Pressure switch with automatic on - off setting",
+    "maximumOverPressure": "225 psi (15 kg/cm2)",
+    "dimensions": "Varies depends upon customer requirement"
+  },
+  "applications": [
+    "Wheel Alignment Shop",
+    "Automotive Garage",
+    "Depot",
+    "Puncture Shop",
+    "Apartments",
+    "Commercial Parking Lot",
+    "Fuel Stations",
+    "Service Centers"
+  ],
+  "images": [
+    "/images/4. Nitrogen Generator/4a.jpeg"
+  ],
+  "mainImage": "/images/4. Nitrogen Generator/4a.jpeg"
+}

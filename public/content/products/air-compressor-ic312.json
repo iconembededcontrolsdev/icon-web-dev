@@ -1,0 +1,47 @@
+{
+  "id": "air-compressor-ic312",
+  "title": "Air Compressor - IC-312",
+  "description": "Two stage oil lubricated reciprocating air compressor, 3 HP, suitable for heavy industrial applications.",
+  "subtitle": "3 HP Two Stage",
+  "fullDescription": "IC-312 is a two stage oil lubricated reciprocating air compressor with 3 HP motor rating. Known for reliability and performance, making it the preferred choice for fuel stations, automotive garages, and heavy industrial applications.",
+  "modelName": "IC-312",
+  "features": [
+    "Standard leak proof fittings",
+    "Electrical Starter with stop switch latch for safety",
+    "Belt/Fan Guard for Safety",
+    "Pressure Switch with Differential Pressure Setting for Automatic ON-OFF operation",
+    "Drain Valve under Storage Tank to Drain Water",
+    "Auto Drain Valve Option available upon customer requirement",
+    "Safety Pressure Relief Valve for Over Pressure Safety",
+    "Designed for Industrial Duty Cycle",
+    "Two Stage Oil Lubricated Reciprocating design"
+  ],
+  "specifications": {
+    "compressorStage": "2",
+    "workingPressure": "12 Kg/cm2 / 175 Psi",
+    "displacement": "302 LPM / 10.97 CFM",
+    "motorRating": "3 HP / 2.2 KW",
+    "rotationDirection": "Anti Clockwise (view from drive end)",
+    "electricalSupply": "415 VAC",
+    "frequency": "50 Hz",
+    "electricalPhase": "3",
+    "typeOfStarter": "DOL",
+    "oil": "40 Grade",
+    "typeOfCooling": "Air",
+    "airOutletSize": "1/2 BSP",
+    "cutOffSwitchSetPressureMax": "12 Kgf/cm2",
+    "cutOffSwitchSetPressureMin": "9 Kgf/cm2",
+    "airReceiverCapacity": "220 Ltrs"
+  },
+  "applications": [
+    "Fuel Station",
+    "Automotive Garages",
+    "Textile Industries",
+    "Food Processing Industries"
+  ],
+  "images": [
+    "/images/3. Air Compressor/IC-312.jpeg"
+  ],
+  "mainImage": "/images/3. Air Compressor/IC-312.jpeg"
+}
+
