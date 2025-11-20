@@ -2,8 +2,7 @@
 
 import { useState } from 'react';
 import Hero from '@/components/Hero';
-import Grid2 from '@/components/Grid2';
-import Grid3 from '@/components/Grid3';
+import DynamicGrid from '@/components/DynamicGrid';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -14,7 +13,7 @@ interface Block {
 }
 
 const showcaseData: Block[] = [
-  // Hero Section
+  // Hero Section - Full Width
   {
     type: 'hero',
     title: 'Welcome to Icon Embedded Controls',
@@ -26,40 +25,37 @@ const showcaseData: Block[] = [
     ]
   },
   
-  // First Product - Full Width
+  // Product Categories Grid
   {
-    type: 'hero-product',
-    id: 'digital-tyre-inflator',
-    title: 'Digital Tyre Inflator',
-    subtitle: 'Reliable, durable and accurate electronic digital tyre inflators meeting tyre manufacturer pressure standards. Used by major tyre and vehicle manufacturers in their production line.',
-    img: '/images/1. Digital Tyre Inflator/1A.jpeg',
-    fullDescription: 'Our Electronic Digital Tyre Inflator is reliable, durable and accurate, thus meet the requirement of each and every horizon related to vehicle tyre pressure inflation. Our Inflators are used by major tyre manufacturers as well as vehicle manufacturers in their production line up. Our Electronic Digital Tyre Inflator meets the accuracy suggested by tyre manufacturer\'s pressure standards. Our control panel Enclosure meets the Ingress Protection standard IP65.',
-    features: [
-      'Two digital readouts for set pressure and tyre pressure',
-      'LCD display with LED backlight for good visibility',
-      'Display remains at same set pressure value even after power on-off cycle',
-      'Audible and visual end of cycle signal indicators',
-      'Automatic tyre sensing system',
-      'IP65 protection standard'
-    ],
-    applications: [
-      'Wheel Alignment Shop',
-      'Automotive Garage',
-      'Small vehicle Depot',
-      'Puncture Shop',
-      'Apartments',
-      'Commercial Parking Lot'
-    ],
-    ctaButtons: [
-      { text: 'Learn more', link: '/products/digital-tyre-inflator', variant: 'primary' },
-      { text: 'Buy', link: '/products/digital-tyre-inflator', variant: 'outline' }
-    ]
-  },
-  
-  // Next Two Products - 2-Column Grid
-  {
-    type: 'grid-2',
+    type: 'grid-3',
     items: [
+      {
+        id: 'digital-tyre-inflator',
+        title: 'Digital Tyre Inflator',
+        subtitle: 'Reliable, durable and accurate electronic digital tyre inflators meeting tyre manufacturer pressure standards. Used by major tyre and vehicle manufacturers in their production line.',
+        img: '/images/1. Digital Tyre Inflator/1A.jpeg',
+        fullDescription: 'Our Electronic Digital Tyre Inflator is reliable, durable and accurate, thus meet the requirement of each and every horizon related to vehicle tyre pressure inflation. Our Inflators are used by major tyre manufacturers as well as vehicle manufacturers in their production line up. Our Electronic Digital Tyre Inflator meets the accuracy suggested by tyre manufacturer\'s pressure standards. Our control panel Enclosure meets the Ingress Protection standard IP65.',
+        features: [
+          'Two digital readouts for set pressure and tyre pressure',
+          'LCD display with LED backlight for good visibility',
+          'Display remains at same set pressure value even after power on-off cycle',
+          'Audible and visual end of cycle signal indicators',
+          'Automatic tyre sensing system',
+          'IP65 protection standard'
+        ],
+        applications: [
+          'Wheel Alignment Shop',
+          'Automotive Garage',
+          'Small vehicle Depot',
+          'Puncture Shop',
+          'Apartments',
+          'Commercial Parking Lot'
+        ],
+        ctaButtons: [
+          { text: 'Learn more', link: '/products/digital-tyre-inflator', variant: 'primary' },
+          { text: 'Buy', link: '/products/digital-tyre-inflator', variant: 'outline' }
+        ]
+      },
       {
         id: 'digital-nitrogen-tyre-inflator',
         title: 'Digital Nitrogen Tyre Inflator',
@@ -110,35 +106,12 @@ const showcaseData: Block[] = [
           { text: 'Learn more', link: '/products/air-compressor', variant: 'primary' },
           { text: 'Buy', link: '/products/air-compressor', variant: 'outline' }
         ]
-      }
-    ]
-  },
-  
-  // Next Two Products - 2-Column Grid
-  {
-    type: 'grid-2',
-    items: [
+      },
       {
         id: 'panel-board',
         title: 'Panel Boards',
         subtitle: 'PLC Control Panels, Automatic Power Factor Control Panels, and Switch Gear Panels. Complete electrical solutions for automation, power factor correction, and industrial control.',
         img: '/images/5. Panel Board/5a.jpeg',
-        fullDescription: 'We provide various PLC Control panel with automation solution for Industries. We offer Automatic Power Factor Control Panel for any loads. Power factor is the ratio between the KW and the KVA drawn by an electrical load where the KW is the actual load power and the KVA is the apparent load power.',
-        features: [
-          'PLC Control Panels with automation solutions',
-          'Automatic Power Factor Control Panel',
-          'Switch Gear Panels',
-          'Custom electrical solutions',
-          'RS-232 & RS-485 compatible',
-          'Remote Panel operation available'
-        ],
-        applications: [
-          'All Kind of Industries',
-          'Hotels',
-          'Banks',
-          'Fuel Station',
-          'Shopping Mall'
-        ],
         ctaButtons: [
           { text: 'Learn more', link: '/products/panel-board', variant: 'primary' },
           { text: 'Buy', link: '/products/panel-board', variant: 'outline' }
@@ -149,55 +122,16 @@ const showcaseData: Block[] = [
         title: 'Nitrogen Generator',
         subtitle: 'Easy to convert ordinary digital tyre inflator to digital nitrogen tyre inflator using this module. Reliable PSA method for nitrogen generation with 95-99% purity suitable for vehicle nitrogen inflation.',
         img: '/images/4. Nitrogen Generator/4a.jpeg',
-        fullDescription: 'Easy to convert ordinary digital tyre inflator to digital nitrogen tyre inflator using this module. Reliable PSA method for nitrogen generation with 95-99% purity suitable for vehicle nitrogen inflation. Air and nitrogen input pressure option available in single machine.',
-        features: [
-          'PSA Technology for nitrogen generation',
-          '95-99% purity (adjustable)',
-          'Pressure switch for automatic nitrogen generation cut-off',
-          'Safety pressure relief valve',
-          'Wheel base option available',
-          'Computer power chord adapter with fuse protection'
-        ],
-        applications: [
-          'Wheel Alignment Shop',
-          'Automotive Garage',
-          'Depot',
-          'Puncture Shop',
-          'Apartments',
-          'Commercial Parking Lot'
-        ],
         ctaButtons: [
           { text: 'Learn more', link: '/products/nitrogen-generator', variant: 'primary' },
           { text: 'Buy', link: '/products/nitrogen-generator', variant: 'outline' }
         ]
-      }
-    ]
-  },
-  
-  // Remaining Products - 3-Column Grid
-  {
-    type: 'grid-3',
-    items: [
+      },
       {
         id: 'garage-equipment',
         title: 'Garage Equipment',
         subtitle: 'High quality two wheeler ramps, pneumatic grease pumps, and manual oil dispensers. Professional tools and equipment for automotive workshops and garages.',
         img: '/images/6. Garage Equipment/6a.jpeg',
-        fullDescription: 'We manufacture High Quality Two Wheeler Ramp suitable for all kind of two wheeler. We also manufacture Pneumatic Grease Pump of capacity 15kg, 25kg and 50kg, and manual 2T oil dispenser.',
-        features: [
-          'Two Wheeler Ramp with 300kg lifting capacity',
-          'Foot operated hydraulic piston',
-          'Pneumatic Grease Pump (15kg, 25kg, 50kg)',
-          'Manual 2T Oil Dispenser',
-          'Textured sheet metal for extra grip',
-          'Zero oil spillage design'
-        ],
-        applications: [
-          'Automotive Workshops',
-          'Two Wheeler Service Stations',
-          'Garages',
-          'Depots'
-        ],
         ctaButtons: [
           { text: 'Learn more', link: '/products/garage-equipment', variant: 'primary' },
           { text: 'Buy', link: '/products/garage-equipment', variant: 'outline' }
@@ -208,20 +142,6 @@ const showcaseData: Block[] = [
         title: 'Industrial Solutions',
         subtitle: 'Comprehensive range of industrial automation and control solutions. Custom designed panels and systems for various industrial applications.',
         img: '/images/placeholder.svg',
-        fullDescription: 'Comprehensive range of industrial automation and control solutions. Custom designed panels and systems for various industrial applications. We provide complete electrical solutions for automation, power factor correction, and industrial control.',
-        features: [
-          'Custom designed panels',
-          'Industrial automation solutions',
-          'Process control systems',
-          'Monitoring systems',
-          'Complete electrical solutions'
-        ],
-        applications: [
-          'Manufacturing Industries',
-          'Process Industries',
-          'Automation Systems',
-          'Control Panels'
-        ],
         ctaButtons: [
           { text: 'Learn more', link: '/products', variant: 'primary' },
           { text: 'Buy', link: '/products', variant: 'outline' }
@@ -232,21 +152,6 @@ const showcaseData: Block[] = [
         title: 'Automation Panels',
         subtitle: 'Advanced automation panels with PLC integration. Complete solutions for industrial automation, process control, and monitoring systems.',
         img: '/images/placeholder.svg',
-        fullDescription: 'Advanced automation panels with PLC integration. Complete solutions for industrial automation, process control, and monitoring systems. We provide various PLC Control panel with automation solution for Industries.',
-        features: [
-          'PLC integration',
-          'Advanced automation',
-          'Process control',
-          'Monitoring systems',
-          'RS-232 & RS-485 compatible',
-          'Remote operation available'
-        ],
-        applications: [
-          'Industrial Automation',
-          'Process Control',
-          'Monitoring Systems',
-          'PLC Control'
-        ],
         ctaButtons: [
           { text: 'Learn more', link: '/products', variant: 'primary' },
           { text: 'Buy', link: '/products', variant: 'outline' }
@@ -291,15 +196,8 @@ export default function Home() {
           </div>
         );
       case 'grid-2':
-        return <Grid2 
-          key={index} 
-          title={block.title}
-          subtitle={block.subtitle}
-          items={block.items}
-          onItemClick={(item) => navigateToProduct(item)}
-        />;
       case 'grid-3':
-        return <Grid3 
+        return <DynamicGrid 
           key={index} 
           title={block.title}
           subtitle={block.subtitle}

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import Grid2 from '@/components/Grid2';
+import DynamicGrid from '@/components/DynamicGrid';
 
 type ProductPreview = {
   id: string;
@@ -175,17 +175,12 @@ export default function ProductsPage() {
         </div>
       </div>
 
-      {/* Products Grid - Using Grid2 component */}
+      {/* Products Grid - Using DynamicGrid component */}
       {filteredProducts.length > 0 ? (
-        <div className="space-y-0">
-          {productPairs.map((pair, pairIndex) => (
-            <Grid2
-              key={pairIndex}
-              items={pair}
-              onItemClick={handleProductClick}
-            />
-          ))}
-        </div>
+        <DynamicGrid
+          items={gridItems}
+          onItemClick={handleProductClick}
+        />
       ) : (
         <div className="w-full max-w-[1920px] mx-auto px-[40px] sm:px-[60px] lg:px-[80px] xl:px-[100px] pb-16">
           <div className="text-center py-12 bg-white rounded-[40px] shadow-sm">

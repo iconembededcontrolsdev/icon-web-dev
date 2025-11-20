@@ -1,13 +1,12 @@
 import { ReactNode } from 'react';
 import Hero, { HeroProps } from './Hero';
-import Grid2, { Grid2Props } from './Grid2';
-import Grid3, { Grid3Props } from './Grid3';
+import DynamicGrid, { DynamicGridProps } from './DynamicGrid';
 import Carousel, { CarouselProps } from './Carousel';
 
 type BlockType = 
   | { type: 'hero' } & HeroProps
-  | { type: 'grid-2' } & Grid2Props
-  | { type: 'grid-3' } & Grid3Props
+  | { type: 'grid-2' } & DynamicGridProps
+  | { type: 'grid-3' } & DynamicGridProps
   | { type: 'carousel' } & CarouselProps;
 
 interface RenderComponentProps {
@@ -20,11 +19,9 @@ export default function RenderComponent({ block }: RenderComponentProps): ReactN
       const { type, ...heroProps } = block;
       return <Hero {...heroProps} />;
     case 'grid-2':
-      const { type: grid2Type, ...grid2Props } = block;
-      return <Grid2 {...grid2Props} />;
     case 'grid-3':
-      const { type: grid3Type, ...grid3Props } = block;
-      return <Grid3 {...grid3Props} />;
+      const { type: gridType, ...gridProps } = block;
+      return <DynamicGrid {...gridProps} />;
     case 'carousel':
       const { type: carouselType, ...carouselProps } = block;
       return <Carousel {...carouselProps} />;

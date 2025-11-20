@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Image from 'next/image';
-import { GridItem } from './Grid2';
+import { GridItem } from './DynamicGrid';
 
 export interface CarouselProps {
   items: GridItem[];

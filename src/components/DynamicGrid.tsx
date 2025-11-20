@@ -55,93 +55,77 @@ export default function DynamicGrid({
           </div>
         )}
       
-        {/* Dynamic Grid: 1 column on mobile, 3 columns on desktop */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-[6px] sm:gap-[8px] lg:gap-[12px] w-full">
-          {items.map((item, index) => (
-            <div 
-              key={item.id || index}
-              className="group w-full cursor-pointer"
-              onMouseEnter={() => setHoveredItem(index)}
-              onMouseLeave={() => setHoveredItem(null)}
-              onClick={() => onItemClick && onItemClick(item)}
-            >
-              {/* Card container */}
-              <div className="relative bg-white rounded-[40px] overflow-hidden shadow-sm h-full w-full">
-                {/* Desktop: Side-by-side layout (image | details) */}
-                <div className="hidden lg:flex h-full">
-                  {/* Image - Left half */}
-                  <div className="relative w-1/2 min-h-[400px]">
-                    <Image
-                      src={item.img}
-                      alt={item.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      sizes="(max-width: 1024px) 100vw, 33vw"
-                    />
-                  </div>
-                  
-                  {/* Details - Right half */}
-                  <div className="w-1/2 p-8 flex flex-col justify-center">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                      {item.title}
-                    </h3>
-                    
-                    {(item.subtitle || item.description) && (
-                      <p className="text-base text-gray-600 mb-6">
-                        {item.subtitle || item.description}
-                      </p>
-                    )}
+        {/* Dynamic Grid: 1 column on mobile, 2 columns on desktop (2x2 max) */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[6px] sm:gap-[8px] lg:gap-[12px] w-full">
+          {items.map((item, index) => {
+            const isLastItem = index === items.length - 1;
+            const isOddCount = items.length % 2 !== 0;
+            const shouldCenter = isLastItem && isOddCount;
 
-                    <div>
-                      <div className="inline-flex items-center px-6 py-3 text-sm font-medium rounded-full bg-accent text-white hover:bg-accent-hover shadow-sm transition-all duration-200">
-                        View All Products
-                        <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Mobile: Image with hover overlay */}
-                <div className="lg:hidden relative aspect-square w-full">
+            return (
+              <div 
+                key={item.id || index}
+                className={`group w-full cursor-pointer ${
+                  shouldCenter ? 'lg:col-span-2 lg:max-w-[50%] lg:mx-auto' : ''
+                }`}
+                onMouseEnter={() => setHoveredItem(index)}
+                onMouseLeave={() => setHoveredItem(null)}
+                onClick={() => onItemClick && onItemClick(item)}
+              >
+              {/* Card container with image stacked on top */}
+              <div className="relative bg-white rounded-[40px] overflow-hidden shadow-sm h-full w-full flex flex-col">
+                {/* Image - Top section */}
+                <div className="relative w-full aspect-[4/3]">
                   <Image
                     src={item.img}
                     alt={item.title}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="100vw"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                   />
+                </div>
+                
+                {/* Details - Bottom section */}
+                <div className="p-6 lg:p-8 flex flex-col flex-grow">
+                  <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3">
+                    {item.title}
+                  </h3>
                   
-                  {/* Overlay - Only visible on hover/tap */}
-                  <div className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30 transition-opacity duration-300 ${
-                    hoveredItem === index ? 'opacity-100' : 'opacity-0'
-                  }`}>
-                    <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
-                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                        {item.title}
-                      </h3>
-                      
-                      {(item.subtitle || item.description) && (
-                        <p className="text-base md:text-lg text-white/90 mb-6 max-w-md">
-                          {item.subtitle || item.description}
-                        </p>
-                      )}
+                  {(item.subtitle || item.description) && (
+                    <p className="text-sm lg:text-base text-gray-600 mb-6 line-clamp-3 flex-grow">
+                      {item.subtitle || item.description}
+                    </p>
+                  )}
 
-                      <div>
-                        <div className="inline-flex items-center px-6 py-3 text-sm font-medium rounded-full bg-white text-gray-900 hover:bg-gray-100 shadow-lg transition-all duration-200">
-                          View All Products
+                  {/* CTA Buttons */}
+                  {item.ctaButtons && item.ctaButtons.length > 0 && (
+                    <div className="flex flex-wrap gap-3">
+                      {item.ctaButtons.map((button, btnIndex) => (
+                        <a
+                          key={btnIndex}
+                          href={button.link}
+                          onClick={(e) => e.stopPropagation()}
+                          className={`inline-flex items-center px-4 lg:px-6 py-2 lg:py-3 text-sm font-medium rounded-full transition-all duration-200 ${
+                            button.variant === 'primary' 
+                              ? 'bg-accent text-white hover:bg-accent-hover shadow-sm' 
+                              : button.variant === 'outline'
+                              ? 'border-2 border-accent text-accent hover:bg-accent hover:text-white'
+                              : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                          }`}
+                        >
+                          {button.text}
                           <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                           </svg>
-                        </div>
-                      </div>
+                        </a>
+                      ))}
                     </div>
-                  </div>
+                  )}
                 </div>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getProductImages } from '@/utils/productImages';
-import Grid2 from '@/components/Grid2';
+import DynamicGrid from '@/components/DynamicGrid';
 
 type ProductData = {
   id: string;
@@ -390,25 +390,15 @@ export default function ProductDetail() {
             });
           }
 
-          // Group into pairs for Grid2 (2 items per grid)
-          const pairs: Array<Array<{ img: string; title: string; subtitle: string }>> = [];
-          for (let i = 0; i < imageModelPairs.length; i += 2) {
-            pairs.push(imageModelPairs.slice(i, i + 2));
-          }
 
           return (
-            <div className="space-y-0">
-              {pairs.map((pair, pairIndex) => (
-                <Grid2
-                  key={pairIndex}
-                  items={pair.map(item => ({
-                    title: item.title,
-                    subtitle: item.subtitle,
-                    img: item.img
-                  }))}
-                />
-              ))}
-            </div>
+            <DynamicGrid
+              items={imageModelPairs.map(item => ({
+                title: item.title,
+                subtitle: item.subtitle,
+                img: item.img
+              }))}
+            />
           );
         })()}
       </div>
