@@ -34,23 +34,6 @@ const showcaseData: Block[] = [
         title: 'Digital Tyre Inflator',
         subtitle: 'Reliable, durable and accurate electronic digital tyre inflators meeting tyre manufacturer pressure standards. Used by major tyre and vehicle manufacturers in their production line.',
         img: '/images/1. Digital Tyre Inflator/1A.jpeg',
-        fullDescription: 'Our Electronic Digital Tyre Inflator is reliable, durable and accurate, thus meet the requirement of each and every horizon related to vehicle tyre pressure inflation. Our Inflators are used by major tyre manufacturers as well as vehicle manufacturers in their production line up. Our Electronic Digital Tyre Inflator meets the accuracy suggested by tyre manufacturer\'s pressure standards. Our control panel Enclosure meets the Ingress Protection standard IP65.',
-        features: [
-          'Two digital readouts for set pressure and tyre pressure',
-          'LCD display with LED backlight for good visibility',
-          'Display remains at same set pressure value even after power on-off cycle',
-          'Audible and visual end of cycle signal indicators',
-          'Automatic tyre sensing system',
-          'IP65 protection standard'
-        ],
-        applications: [
-          'Wheel Alignment Shop',
-          'Automotive Garage',
-          'Small vehicle Depot',
-          'Puncture Shop',
-          'Apartments',
-          'Commercial Parking Lot'
-        ],
         ctaButtons: [
           { text: 'Learn more', link: '/products/digital-tyre-inflator', variant: 'primary' },
           { text: 'Buy', link: '/products/digital-tyre-inflator', variant: 'outline' }
@@ -61,47 +44,16 @@ const showcaseData: Block[] = [
         title: 'Digital Nitrogen Tyre Inflator',
         subtitle: 'Reliable and accurate electronic digital nitrogen tyre inflators. Nitrogen production based on cost-efficient PSA technology with 95-99% purity suitable for vehicle nitrogen inflation.',
         img: '/images/2. Digital Nitrogen Tyre Inflator/2A.jpeg',
-        fullDescription: 'We are the leading Manufacturer and supplier for Electronic Digital Nitrogen Tyre Inflator all over India since the year 2007. Our Electronic Digital Nitrogen Tyre Inflator is reliable, durable and accurate, thus meet the requirement of each and every horizon related to vehicle tyre pressure inflation. Nitrogen production is based on reliable and cost efficient PSA technology. Nitrogen Purity may vary from 95-99% suitable for vehicle nitrogen purity suggestions.',
-        features: [
-          'PSA Technology for nitrogen generation',
-          '95-99% purity (adjustable)',
-          'Automatic vacuum cum nitrogen inflation',
-          'Pressure switch for automatic nitrogen generation cut-off',
-          'Tyre counter and error codes available',
-          'IP65 protection standard'
-        ],
-        applications: [
-          'Fuel Station',
-          'Wheel Alignment Shop',
-          'Automotive Garage',
-          'Puncture Shop',
-          'Commercial Parking Lot'
-        ],
         ctaButtons: [
           { text: 'Learn more', link: '/products/digital-nitrogen-tyre-inflator', variant: 'primary' },
           { text: 'Buy', link: '/products/digital-nitrogen-tyre-inflator', variant: 'outline' }
-    ]
-  },
+        ]
+      },
       {
         id: 'air-compressor',
         title: 'Air Compressor',
         subtitle: 'Single and two-stage oil lubricated reciprocating air compressors known for reliability and performance. Preferred choice for fuel stations, automotive garages, and industrial applications.',
         img: '/images/3. Air Compressor/3a.jpeg',
-        fullDescription: 'The ICON EMBEDED CONTROLS single & two stage Oil Lubricated Reciprocating air compressors are known for their reliability and performance, making them the preferred choice for industrial applications.',
-        features: [
-          'Standard leak proof fittings',
-          'Electrical Starter with stop switch latch for safety',
-          'Belt/Fan Guard for Safety',
-          'Pressure Switch with Differential Pressure Setting',
-          'Auto Drain Valve Option available',
-          'Safety Pressure Relief Valve'
-        ],
-        applications: [
-          'Fuel Station',
-          'Automotive Garages',
-          'Textile Industries',
-          'Food Processing Industries'
-        ],
         ctaButtons: [
           { text: 'Learn more', link: '/products/air-compressor', variant: 'primary' },
           { text: 'Buy', link: '/products/air-compressor', variant: 'outline' }
@@ -210,9 +162,9 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-bg">
       {/* Navigation */}
-      <nav className="bg-white border-b border-gray-100 fixed w-full z-50">
+      <nav className="bg-card/80 backdrop-blur-md border-b border-gray-200 fixed w-full z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-20">
             <div className="flex items-center">
@@ -220,21 +172,21 @@ export default function Home() {
                 <Image 
                   src="/images/logo.png" 
                   alt="Icon Embedded Controls" 
-                  width={40} 
-                  height={40}
-                  className="object-contain"
+                  width={50}
+                  height={50}
+                  className="h-12 w-auto"
                 />
-                <span className="text-xl font-bold text-gray-900">Icon Embedded Controls</span>
+                <span className="text-xl font-bold text-primary">Icon Embedded Controls</span>
               </Link>
             </div>
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <Link href="/products" className="text-gray-700 hover:text-accent transition-colors">Products</Link>
-              <Link href="/about" className="text-gray-700 hover:text-accent transition-colors">About Us</Link>
+              <Link href="/products" className="text-primary hover:text-accent transition-colors font-medium">Products</Link>
+              <Link href="/about" className="text-primary hover:text-accent transition-colors font-medium">About Us</Link>
               <Link 
                 href="/contact" 
-                className="bg-accent text-white px-6 py-2 rounded-full hover:bg-accent/90 transition-colors"
+                className="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary-light transition-colors shadow-md"
               >
                 Contact Us
               </Link>
@@ -244,7 +196,7 @@ export default function Home() {
             <div className="md:hidden flex items-center">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-gray-700 hover:text-accent focus:outline-none"
+                className="text-primary hover:text-accent focus:outline-none"
               >
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   {isMenuOpen ? (
@@ -260,13 +212,13 @@ export default function Home() {
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-100">
+          <div className="md:hidden bg-card border-t border-gray-200">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <Link href="/products" className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md">Products</Link>
-              <Link href="/about" className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md">About Us</Link>
+              <Link href="/products" className="block px-3 py-2 text-primary hover:bg-bg rounded-md font-medium">Products</Link>
+              <Link href="/about" className="block px-3 py-2 text-primary hover:bg-bg rounded-md font-medium">About Us</Link>
               <Link 
                 href="/contact" 
-                className="block w-full text-center bg-accent text-white px-4 py-2 rounded-md hover:bg-accent/90 transition-colors"
+                className="block w-full text-center bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-light transition-colors"
               >
                 Contact Us
               </Link>
@@ -276,7 +228,7 @@ export default function Home() {
       </nav>
 
       {/* Main Content */}
-      <main className="pt-20 bg-gray-50">
+      <main className="pt-20 bg-bg">
         {showcaseData.map((block, index) => (
           <div key={index} className={index > 0 ? 'mt-0' : ''}>
             {renderBlock(block, index)}
@@ -284,41 +236,41 @@ export default function Home() {
         ))}
         
         {/* Footer */}
-        <footer className="bg-gray-50 border-t border-gray-100">
+        <footer className="bg-bg border-t border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Products</h3>
+                <h3 className="text-lg font-semibold text-primary mb-4">Products</h3>
                 <ul className="space-y-3">
-                  <li><Link href="/products/digital-tyre-inflator" className="text-gray-600 hover:text-accent transition-colors">Digital Tyre Inflator</Link></li>
-                  <li><Link href="/products/digital-nitrogen-tyre-inflator" className="text-gray-600 hover:text-accent transition-colors">Digital Nitrogen Tyre Inflator</Link></li>
-                  <li><Link href="/products/nitrogen-generator" className="text-gray-600 hover:text-accent transition-colors">Nitrogen Generator</Link></li>
-                  <li><Link href="/products/air-compressor" className="text-gray-600 hover:text-accent transition-colors">Air Compressor</Link></li>
-                  <li><Link href="/products/panel-board" className="text-gray-600 hover:text-accent transition-colors">Panel Boards</Link></li>
-                  <li><Link href="/products/garage-equipment" className="text-gray-600 hover:text-accent transition-colors">Garage Equipment</Link></li>
+                  <li><Link href="/products/digital-tyre-inflator" className="text-muted hover:text-accent transition-colors">Digital Tyre Inflator</Link></li>
+                  <li><Link href="/products/digital-nitrogen-tyre-inflator" className="text-muted hover:text-accent transition-colors">Digital Nitrogen Tyre Inflator</Link></li>
+                  <li><Link href="/products/nitrogen-generator" className="text-muted hover:text-accent transition-colors">Nitrogen Generator</Link></li>
+                  <li><Link href="/products/air-compressor" className="text-muted hover:text-accent transition-colors">Air Compressor</Link></li>
+                  <li><Link href="/products/panel-board" className="text-muted hover:text-accent transition-colors">Panel Boards</Link></li>
+                  <li><Link href="/products/garage-equipment" className="text-muted hover:text-accent transition-colors">Garage Equipment</Link></li>
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Company</h3>
+                <h3 className="text-lg font-semibold text-primary mb-4">Company</h3>
                 <ul className="space-y-3">
-                  <li><Link href="/about" className="text-gray-600 hover:text-accent transition-colors">About Us</Link></li>
-                  <li><Link href="/products" className="text-gray-600 hover:text-accent transition-colors">Our Products</Link></li>
-                  <li><Link href="/contact" className="text-gray-600 hover:text-accent transition-colors">Contact Us</Link></li>
+                  <li><Link href="/about" className="text-muted hover:text-accent transition-colors">About Us</Link></li>
+                  <li><Link href="/products" className="text-muted hover:text-accent transition-colors">Our Products</Link></li>
+                  <li><Link href="/contact" className="text-muted hover:text-accent transition-colors">Contact Us</Link></li>
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact</h3>
-                <ul className="space-y-3 text-gray-600">
+                <h3 className="text-lg font-semibold text-primary mb-4">Contact</h3>
+                <ul className="space-y-3 text-muted">
                   <li>M/S. ICON EMBEDED CONTROLS</li>
                   <li>374/2, JothiNagar 2nd Street,<br />Ramnujam Nagar Extension,<br />Uppilipalayam Post,<br />Coimbatore - 641015, TamilNadu, India</li>
                   <li className="pt-2">
-                    <Link href="/contact" className="text-accent hover:text-accent-hover transition-colors">View Full Details →</Link>
+                    <Link href="/contact" className="text-accent hover:text-accent-hover transition-colors font-medium">View Full Details →</Link>
                   </li>
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Our Valued Clients</h3>
-                <ul className="space-y-3 text-gray-600 text-sm">
+                <h3 className="text-lg font-semibold text-primary mb-4">Our Valued Clients</h3>
+                <ul className="space-y-3 text-muted text-sm">
                   <li>IOCL, BPCL, HPCL</li>
                   <li>Bridgestone, Michelin, MRF Tyres</li>
                   <li>Caterpillar, Mahindra & Mahindra</li>
@@ -327,7 +279,7 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-            <div className="mt-12 pt-8 border-t border-gray-200 text-center text-gray-500 text-sm">
+            <div className="mt-12 pt-8 border-t border-gray-200 text-center text-muted text-sm">
               <p>© {new Date().getFullYear()} Icon Embedded Controls. All rights reserved.</p>
               <p className="mt-2">Established 2007 | Coimbatore, TamilNadu, India</p>
             </div>

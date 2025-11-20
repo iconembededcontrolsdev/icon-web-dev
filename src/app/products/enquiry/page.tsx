@@ -41,12 +41,12 @@ function ProductEnquiryForm() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-20">
+    <div className="min-h-screen bg-bg pt-20">
       {/* Back Button */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <Link 
           href="/" 
-          className="inline-flex items-center text-gray-700 hover:text-accent transition-colors font-medium"
+          className="inline-flex items-center text-primary hover:text-accent transition-colors font-medium"
         >
           <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -57,23 +57,23 @@ function ProductEnquiryForm() {
 
       {/* Enquiry Form */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="bg-white rounded-[40px] shadow-lg p-8 sm:p-12 lg:p-16">
+        <div className="bg-card rounded-[40px] shadow-lg p-8 sm:p-12 lg:p-16">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
               Product Enquiry
             </h1>
             {productName && (
               <>
-                <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-2">
+                <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-2">
                   {productName}
                 </h2>
-                <p className="text-lg text-gray-600">
+                <p className="text-lg text-muted">
                   Get more information about this product
                 </p>
               </>
             )}
             {!productName && (
-              <p className="text-lg md:text-xl text-gray-600">
+              <p className="text-lg md:text-xl text-muted">
                 Get in touch with us about our products
               </p>
             )}
@@ -86,13 +86,13 @@ function ProductEnquiryForm() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Enquiry Submitted!</h3>
-              <p className="text-gray-600">We'll get back to you soon.</p>
+              <h3 className="text-2xl font-bold text-primary mb-2">Enquiry Submitted!</h3>
+              <p className="text-muted">We&apos;ll get back to you soon.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-gray-900 mb-2">
+                <label htmlFor="name" className="block text-sm font-semibold text-primary mb-2">
                   Your Name
                 </label>
                 <input
@@ -102,29 +102,29 @@ function ProductEnquiryForm() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors text-gray-900 bg-white"
+                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors text-primary bg-card"
                   placeholder="Enter your name"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-gray-900 mb-2">
+                <label htmlFor="email" className="block text-sm font-semibold text-primary mb-2">
                   Your Email
                 </label>
                 <input
                   type="email"
                   id="email"
-                  name="email"
+                  name="name"
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors text-gray-900 bg-white"
+                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors text-primary bg-card"
                   placeholder="Enter your email"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-gray-900 mb-2">
+                <label htmlFor="message" className="block text-sm font-semibold text-primary mb-2">
                   Your Message
                 </label>
                 <textarea
@@ -134,7 +134,7 @@ function ProductEnquiryForm() {
                   rows={6}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors resize-none text-gray-900 bg-white"
+                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors resize-none text-primary bg-card"
                   placeholder="Enter your message or enquiry"
                 />
               </div>
@@ -143,7 +143,7 @@ function ProductEnquiryForm() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full px-8 py-4 bg-accent text-white font-semibold rounded-full hover:bg-accent-hover transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-md hover:shadow-lg"
+                  className="w-full px-8 py-4 bg-primary text-white font-semibold rounded-full hover:bg-primary-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-md hover:shadow-lg"
                 >
                   {isSubmitting ? 'Submitting...' : 'Submit Enquiry'}
                 </button>
@@ -159,7 +159,7 @@ function ProductEnquiryForm() {
 export default function ProductEnquiry() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen bg-gray-50 pt-20 flex items-center justify-center">
+      <div className="min-h-screen bg-bg pt-20 flex items-center justify-center">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-accent"></div>
       </div>
     }>
@@ -167,4 +167,3 @@ export default function ProductEnquiry() {
     </Suspense>
   );
 }
-

@@ -43,12 +43,12 @@ export default function DynamicGrid({
         {(title || subtitle) && (
           <div className="text-center max-w-3xl mx-auto mb-[60px]">
             {title && (
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
                 {title}
               </h2>
             )}
             {subtitle && (
-              <p className="text-lg md:text-xl text-gray-600">
+              <p className="text-lg md:text-xl text-muted">
                 {subtitle}
               </p>
             )}
@@ -73,7 +73,7 @@ export default function DynamicGrid({
                 onClick={() => onItemClick && onItemClick(item)}
               >
               {/* Card container with image stacked on top */}
-              <div className="relative bg-white rounded-[40px] overflow-hidden shadow-sm h-full w-full flex flex-col">
+              <div className="relative bg-card rounded-[40px] overflow-hidden shadow-sm h-full w-full flex flex-col">
                 {/* Image - Top section */}
                 <div className="relative w-full aspect-[4/3]">
                   <Image
@@ -87,12 +87,12 @@ export default function DynamicGrid({
                 
                 {/* Details - Bottom section */}
                 <div className="p-6 lg:p-8 flex flex-col flex-grow">
-                  <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-xl lg:text-2xl font-bold text-primary mb-3">
                     {item.title}
                   </h3>
                   
                   {(item.subtitle || item.description) && (
-                    <p className="text-sm lg:text-base text-gray-600 mb-6 line-clamp-3 flex-grow">
+                    <p className="text-sm lg:text-base text-muted mb-6 line-clamp-3 flex-grow">
                       {item.subtitle || item.description}
                     </p>
                   )}
@@ -107,10 +107,10 @@ export default function DynamicGrid({
                           onClick={(e) => e.stopPropagation()}
                           className={`inline-flex items-center px-4 lg:px-6 py-2 lg:py-3 text-sm font-medium rounded-full transition-all duration-200 ${
                             button.variant === 'primary' 
-                              ? 'bg-accent text-white hover:bg-accent-hover shadow-sm' 
+                              ? 'bg-primary text-white hover:bg-primary-light shadow-md' 
                               : button.variant === 'outline'
-                              ? 'border-2 border-accent text-accent hover:bg-accent hover:text-white'
-                              : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                              ? 'border-2 border-accent text-accent hover:bg-accent hover:text-primary shadow-sm'
+                              : 'bg-accent text-primary hover:bg-accent-hover hover:text-white shadow-sm'
                           }`}
                         >
                           {button.text}
