@@ -42,7 +42,8 @@ export default function Grid2({
   return (
     <section className={`w-full ${className}`}>
       {/* Container with premium padding and gap between rows - Full width utilization */}
-      <div className="w-full max-w-[1920px] mx-auto px-[40px] sm:px-[60px] lg:px-[80px] xl:px-[100px] py-[30px] sm:py-[40px] lg:py-[50px]">
+      {/* <div className="w-full max-w-[1920px] mx-auto px-[40px] sm:px-[6px] lg:px-[10px] xl:px-[100px] py-[8px] sm:py-[12px] lg:py-[16px]">                             {/*   Change for 2 grid spacing - Minimal spacing */}
+      <div className="w-full max-w-[1920px] mx-auto px-[40px] sm:px-[6px] lg:px-[10px] xl:px-[100px] py-[0px] sm:py-[4px] lg:py-[6px]">                                 {/* Change for 2 grid spacing - No Spacing spacing */}
         {/* Optional section title/subtitle */}
         {(title || subtitle) && (
           <div className="text-center max-w-3xl mx-auto mb-[60px]">
