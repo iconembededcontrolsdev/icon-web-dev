@@ -25,58 +25,19 @@ export default function ProductsPage() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        let productIds: string[] = [];
-
-        // First, try to get the list of all product IDs from the API
-        try {
-          const productsResponse = await fetch('/api/products');
-          if (productsResponse.ok) {
-            const data = await productsResponse.json();
-            productIds = data.products || [];
-          }
-        } catch (apiError) {
-          console.warn('API route failed, trying index.json fallback:', apiError);
-        }
-
-        // Fallback: if API failed or returned no products, try index.json
-        if (!productIds || productIds.length === 0) {
-          try {
-            const indexResponse = await fetch('/content/products/index.json');
-            if (indexResponse.ok) {
-              const indexData = await indexResponse.json();
-              productIds = indexData.products || [];
-            }
-          } catch (indexError) {
-            console.error('Failed to fetch index.json:', indexError);
-          }
-        }
-
-        if (!productIds || productIds.length === 0) {
-          console.warn('No products found');
+        // Fetch from the consolidated products.json file
+        const response = await fetch('/content/products.json');
+        
+        if (!response.ok) {
+          console.error('Failed to fetch products.json');
           setLoading(false);
           return;
         }
 
-        // Then fetch each product's JSON file
-        const productPromises = productIds.map((id: string) => 
-          fetch(`/content/products/${id}.json`)
-            .then(res => {
-              if (!res.ok) {
-                console.warn(`Failed to fetch product ${id}`);
-                return null;
-              }
-              return res.json();
-            })
-            .catch(error => {
-              console.error(`Error fetching product ${id}:`, error);
-              return null;
-            })
-        );
-
-        const productData = await Promise.all(productPromises);
-        // Filter out any null values (failed fetches)
-        const validProducts = productData.filter(product => product !== null);
-        setProducts(validProducts);
+        const data = await response.json();
+        const productsData = data.products || [];
+        
+        setProducts(productsData);
       } catch (error) {
         console.error('Error fetching products:', error);
       } finally {

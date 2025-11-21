@@ -1,0 +1,1123 @@
+{
+  "products": [
+    {
+      "id": "digital-tyre-inflator",
+      "title": "Digital Tyre Inflator",
+      "description": "Reliable, durable and accurate electronic digital tyre inflators meeting tyre manufacturer pressure standards. Used by major tyre and vehicle manufacturers in their production line.",
+      "subtitle": "Reliable, durable and accurate electronic digital tyre inflators meeting tyre manufacturer pressure standards. Used by major tyre and vehicle manufacturers in their production line.",
+      "fullDescription": "We are the leading Manufacturer and supplier for Electronic Digital Tyre Inflator all over India since the year 2007. Our Electronic Digital Tyre Inflator is reliable, durable and accurate, thus meet the requirement of each and every horizon related to vehicle tyre pressure inflation. Our Inflators are used by major tyre manufacturers as well as vehicle manufacturers in their production line up. Our Electronic Digital Tyre Inflator meets the accuracy suggested by tyre manufacturer's pressure standards. Our control panel Enclosure meets the Ingress Protection standard IP65.",
+      "features": [
+        "Two digital readouts for set pressure and tyre pressure",
+        "LCD display with LED backlight for good visibility",
+        "Display remains at same set pressure value even after power on-off cycle",
+        "Audible and visual end of cycle signal indicators",
+        "Automatic tyre sensing system",
+        "IP65 protection standard",
+        "Soft touch and durable membrane keys suitable for outdoor",
+        "Separate keys for set pressure increment and decrement",
+        "Flat key for empty or puncture tyre",
+        "25/35 key for easy front and back tyre pressure setting",
+        "Reset key to exit out of operation at any time"
+      ],
+      "specifications": {
+        "system": "Digital microcontroller based",
+        "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz",
+        "airInputSupply": "87 - 145 psi / 6 - 10 bar / 6.1 - 10.2 kg/cm2",
+        "sensorAccuracy": "± 0.5% of full scale",
+        "inputAirHose": "6mm x 2mtrs Black braided Hose with suitable fittings",
+        "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
+        "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head foot connector",
+        "maximumOverPressure": "185 psi (13 kg/cm2)",
+        "pressureSettingRange": "6 to 150 psi",
+        "workingPressureRange": "0 to 100 psi",
+        "displayResolution": "1 psi",
+        "measuringResolution": "0.25 psi",
+        "keypad": "Membrane Keypad suitable for outdoor application",
+        "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
+        "dimensions": "275 x 140 x 275 mm (Control panel), 325 x 165 x 275 mm (Control panel with clamp), 435 x 315 x 435 mm (Packing)"
+      },
+      "applications": [
+        "Wheel Alignment Shop",
+        "Automotive Garage",
+        "Small vehicle Depot",
+        "Puncture Shop",
+        "Apartments",
+        "Commercial Parking Lot",
+        "Educational Institution",
+        "Companies",
+        "Fuel Station (for IOCL, BPCL, HPCL, ESSAR, RELIANCE and other leading companies)"
+      ],
+      "models": [
+        {
+          "model": "AIROJET 1000 LCV W",
+          "type": "Wall Mountable - Normal",
+          "description": "Wall Mountable - Normal digital tyre inflator with two digital readouts for set pressure and tyre pressure.",
+          "subtitle": "Wall Mountable - Normal",
+          "fullDescription": "Standard wall mountable digital tyre inflator for light commercial vehicles. Features two digital readouts, LCD display with LED backlight, automatic tyre sensing system, and can be used for vehicle tyre ranging from two wheeler, car, SUV and mini truck.",
+          "features": [
+            "Two digital readouts one for set pressure and other for tyre pressure",
+            "LCD display with LED back light to provide good visibility",
+            "Display remain at same set pressure value even after power on-off cycle",
+            "Audible and visual end of the cycle signal indicators",
+            "LED indication for the status of operation",
+            "Soft touch and durable membrane keys suitable for outdoor",
+            "Automatic tyre sensing system",
+            "Separate keys for set pressure increment and decrement",
+            "Flat key for empty or puncture tyre",
+            "25/35 key for easy front and back tyre pressure setting",
+            "Reset key to exit out of operation at any time",
+            "Can use for vehicle tyre ranging from two wheeler, car, SUV and mini truck"
+          ],
+          "specifications": {
+            "system": "Digital microcontroller based",
+            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz",
+            "airInputSupply": "87 - 145 psi / 6 - 10 bar / 6.1 - 10.2 kg/cm2",
+            "sensorAccuracy": "± 0.5% of full scale",
+            "inputAirHose": "6mm x 2mtrs Black braided Hose with suitable fittings",
+            "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
+            "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head foot connector",
+            "maximumOverPressure": "185 psi (13 kg/cm2)",
+            "pressureSettingRange": "6 to 150 psi",
+            "workingPressureRange": "0 to 100 psi",
+            "displayResolution": "1 psi",
+            "measuringResolution": "0.25 psi",
+            "keypad": "Membrane Keypad suitable for outdoor application",
+            "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
+            "dimensions": "275 x 140 x 275 mm (Control panel), 325 x 165 x 275 mm (Control panel with clamp), 435 x 315 x 435 mm (Packing)"
+          },
+          "applications": [
+            "Wheel Alignment Shop",
+            "Automotive Garage",
+            "Small vehicle Depot",
+            "Puncture Shop",
+            "Apartments",
+            "Commercial Parking Lot",
+            "Educational Institution",
+            "Companies"
+          ],
+          "images": [
+            "/images/1. Digital Tyre Inflator/1A.jpeg"
+          ]
+        },
+        {
+          "model": "AIROJET 6000 LCV W",
+          "type": "Wall Mountable - Heavy",
+          "description": "Wall Mountable - Heavy digital tyre inflator with big LCD display and pressure unit display.",
+          "subtitle": "Wall Mountable - Heavy",
+          "fullDescription": "Heavy duty wall mountable digital tyre inflator for buses and trucks. Features two digital readouts, big LCD display with LED backlight, pressure unit display to identify PSI or KG/CM2, and can be used for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck.",
+          "features": [
+            "Two digital readouts one for set pressure and other for tyre pressure",
+            "Big LCD display with LED back light to provide good visibility",
+            "Pressure unit display to identify PSI or KG/CM2",
+            "Display remain at same set pressure value even after power on-off cycle",
+            "Audible and visual end of the cycle signal indicators",
+            "LED indication for the status of operation",
+            "Soft touch and durable membrane keys suitable for outdoor",
+            "Automatic tyre sensing system",
+            "Separate keys for set pressure increment and decrement",
+            "Flat key for empty or puncture tyre",
+            "Toggle key for easy set pressure value 25/35 upto SUVs and 90/120/150 for heavy vehicles",
+            "Confirm to operate method for overpressure setvalue with display blink notification",
+            "Reset key to exit out of operation at any time",
+            "Can use for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck"
+          ],
+          "specifications": {
+            "system": "Digital microcontroller based",
+            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+            "airInputSupply": "87 - 180 psi / 6 - 12.4 bar / 6.1 - 12.65 kg/cm2",
+            "sensorAccuracy": "± 0.5% of full scale",
+            "inputAirHose": "6mm x 2mtrs Black braided Hose with suitable fittings",
+            "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
+            "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head / hand held/clip on foot connector",
+            "maximumOverPressure": "185 psi (13 kg/cm2)",
+            "pressureSettingRange": "6 to 180 psi",
+            "workingPressureRange": "0 to 180 psi",
+            "displayResolution": "1 psi",
+            "measuringResolution": "0.25 psi",
+            "keypad": "Membrane Keypad suitable for outdoor application",
+            "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
+            "dimensions": "275 x 140 x 275 mm (Control panel), 275 x 165 x 325 mm (Control panel with clamp), 435 x 315 x 435 mm (Packing)"
+          },
+          "applications": [
+            "Wheel Alignment Shop",
+            "Automotive Garage",
+            "Bus Depot / All vehicle depot",
+            "Puncture Shop",
+            "Apartments",
+            "Commercial Parking Lot",
+            "Educational Institution",
+            "Companies"
+          ],
+          "images": [
+            "/images/1. Digital Tyre Inflator/1B.jpeg"
+          ]
+        },
+        {
+          "model": "AIROJET 2000 LCV W",
+          "type": "Wall Mountable - LED",
+          "description": "Wall Mountable - LED digital tyre inflator with pleasant LED display for attractive night visibility.",
+          "subtitle": "Wall Mountable - LED",
+          "fullDescription": "LED display wall mountable digital tyre inflator with attractive night visibility and machine shade available for daylight visibility. Features intelligent single digital readouts both for set pressure and tyre pressure, and can be used for vehicle tyre ranging from two wheeler, car, SUV and mini truck.",
+          "features": [
+            "Intelligent single digital readouts both for set pressure and tyre pressure",
+            "Pleasant LED display for attractive night visibility and machine shade available for daylight visibility",
+            "Display remain at same set pressure value even after power on-off cycle",
+            "Audible and visual end of the cycle signal indicators",
+            "LED indication for the status of operation",
+            "Soft touch and durable membrane keys suitable for outdoor",
+            "Automatic tyre sensing system",
+            "Separate keys for set pressure increment and decrement",
+            "Flat key for empty or puncture tyre",
+            "25/35 key for easy front and back tyre pressure setting",
+            "Can use for vehicle tyre ranging from two wheeler, car, SUV and mini truck"
+          ],
+          "specifications": {
+            "system": "Digital microcontroller based",
+            "electricSupply": "160 - 240 VAC, 1Phase, 50 Hz",
+            "airInputSupply": "87 - 145 psi / 6 - 10 bar / 6.1 - 10.2 kg/cm2",
+            "sensorAccuracy": "± 0.5% of full scale",
+            "inputAirHose": "6mm x 2mtrs Black braider Hose with suitable fittings",
+            "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
+            "outputAirHose": "10 mtrs 8 x5 mm Coiled PU hose with clip on Air chuck",
+            "maximumOverPressure": "185 psi (13 kg/cm2)",
+            "pressureSettingRange": "6 to 100 psi",
+            "workingPressureRange": "0 to 100 psi",
+            "displayResolution": "1 psi",
+            "measuringResolution": "0.25 psi",
+            "keypad": "Membrane Keypad suitable for outdoor application",
+            "display": "4 Digit 7 Segment LED (RED)",
+            "dimensions": "275 x 110 x 275 mm (Control panel), 275 x 135 x 325 mm (Control panel with clamp), 435 x 315 x 435 mm (Packing)"
+          },
+          "applications": [
+            "Wheel Alignment Shop",
+            "Automotive Garage",
+            "Depot",
+            "Puncture Shop",
+            "Apartments",
+            "Commercial Parking Lot",
+            "Educational Institution",
+            "Companies"
+          ],
+          "images": [
+            "/images/1. Digital Tyre Inflator/1C.jpeg"
+          ]
+        },
+        {
+          "model": "AIROJET 1000 LCV P",
+          "type": "Pedestal - Normal (IOCL/BPCL)",
+          "description": "Pedestal mounted digital tyre inflator for IOCL/BPCL fuel stations with 5 in 1 switch box.",
+          "subtitle": "Pedestal - Normal (IOCL/BPCL)",
+          "fullDescription": "Pedestal mounted digital tyre inflator for fuel stations. Features two digital readouts, LCD display with LED backlight, 5 in 1 switch box with fuse protection and indicator, and can be used for vehicle tyre ranging from two wheeler, car, SUV and mini truck.",
+          "features": [
+            "Two digital readouts one for set pressure and other for tyre pressure",
+            "LCD display with LED back light to provide good visibility",
+            "Display remain at same set pressure value even after power on-off cycle",
+            "Audible and visual end of the cycle signal indicators",
+            "LED indication for the status of operation",
+            "Soft touch and durable membrane keys suitable for outdoor",
+            "Automatic tyre sensing system",
+            "Separate keys for set pressure increment and decrement",
+            "Flat key for empty or puncture tyre",
+            "25/35 key for easy front and back tyre pressure setting",
+            "Reset key to exit out of operation at any time",
+            "5 in 1 switch box with fuse protection and indicator",
+            "Can use for vehicle tyre ranging from two wheeler, car, SUV and mini truck"
+          ],
+          "specifications": {
+            "system": "Digital microcontroller based",
+            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+            "airInputSupply": "87 - 145 psi / 6 - 10 bar / 6.1 - 10.2 kg/cm2",
+            "sensorAccuracy": "± 0.5% of full scale",
+            "inputAirHose": "6mm x 2mtrs Black braider Hose with suitable fittings",
+            "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
+            "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head foot connector",
+            "maximumOverPressure": "185 psi (13 kg/cm2)",
+            "pressureSettingRange": "6 to 100 psi",
+            "workingPressureRange": "0 to 100 psi",
+            "displayResolution": "1 psi",
+            "measuringResolution": "0.25 psi",
+            "keypad": "Membrane Keypad suitable for outdoor application",
+            "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
+            "dimensions": "415 x 210 x 1390 mm (pedestal), 425 x 250 x 1420 mm (Packing)"
+          },
+          "applications": [
+            "Fuel Station (for IOCL, BPCL, HPCL, ESSAR, RELIANCE and other leading companies)",
+            "Wheel Alignment Shop",
+            "Automotive Garage",
+            "Depot",
+            "Puncture Shop",
+            "Apartments",
+            "Commercial Parking Lot",
+            "Educational Institution",
+            "Companies"
+          ],
+          "images": [
+            "/images/1. Digital Tyre Inflator/1D.jpeg"
+          ]
+        },
+        {
+          "model": "AIROJET 1000 LCV HP",
+          "type": "HPCL Pedestal - Normal",
+          "description": "HPCL canopy model pedestal mounted digital tyre inflator with 5 in 1 switch box.",
+          "subtitle": "HPCL Pedestal - Normal",
+          "fullDescription": "HPCL canopy model pedestal mounted digital tyre inflator for fuel stations. Features two digital readouts, LCD display with LED backlight, 5 in 1 switch box with fuse protection and indicator, and can be used for vehicle tyre ranging from two wheeler, car, SUV and mini truck.",
+          "features": [
+            "Two digital readouts one for set pressure and other for tyre pressure",
+            "LCD display with LED back light to provide good visibility",
+            "Display remain at same set pressure value even after power on-off cycle",
+            "Audible and visual end of the cycle signal indicators",
+            "LED indication for the status of operation",
+            "Soft touch and durable membrane keys suitable for outdoor",
+            "Automatic tyre sensing system",
+            "Separate keys for set pressure increment and decrement",
+            "Flat key for empty or puncture tyre",
+            "25/35 key for easy front and back tyre pressure setting",
+            "Reset key to exit out of operation at any time",
+            "5 in 1 switch box with fuse protection and indicator",
+            "Can use for vehicle tyre ranging from two wheeler, car, SUV and mini truck"
+          ],
+          "specifications": {
+            "system": "Digital microcontroller based",
+            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+            "airInputSupply": "87 - 145 psi / 6 - 10 bar / 6.1 - 10.2 kg/cm2",
+            "sensorAccuracy": "± 0.5% of full scale",
+            "inputAirHose": "6mm x 2mtrs Black braider Hose with suitable fittings",
+            "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
+            "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head foot connector",
+            "maximumOverPressure": "185 psi (13 kg/cm2)",
+            "pressureSettingRange": "6 to 100 psi",
+            "workingPressureRange": "0 to 100 psi",
+            "displayResolution": "1 psi",
+            "measuringResolution": "0.25 psi",
+            "keypad": "Membrane Keypad suitable for outdoor application",
+            "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
+            "dimensions": "415 x 210 x 1390 mm (pedestal), 425 x 250 x 1420 mm (Packing)"
+          },
+          "applications": [
+            "Fuel Station (for HPCL)",
+            "Wheel Alignment Shop",
+            "Automotive Garage",
+            "Depot",
+            "Puncture Shop",
+            "Apartments",
+            "Commercial Parking Lot",
+            "Educational Institution",
+            "Companies"
+          ],
+          "images": [
+            "/images/1. Digital Tyre Inflator/1F.jpeg"
+          ]
+        },
+        {
+          "model": "AIROJET 6000 LCV P",
+          "type": "Pedestal - Heavy (IOCL/BPCL)",
+          "description": "Heavy duty pedestal mounted digital tyre inflator for IOCL/BPCL fuel stations with big LCD display.",
+          "subtitle": "Pedestal - Heavy (IOCL/BPCL)",
+          "fullDescription": "Heavy duty pedestal mounted digital tyre inflator for fuel stations. Features two digital readouts, big LCD display with LED backlight, pressure unit display to identify PSI or KG/CM2, and can be used for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck.",
+          "features": [
+            "Two digital readouts one for set pressure and other for tyre pressure",
+            "Big LCD display with LED back light to provide good visibility",
+            "Pressure unit display to identify PSI or KG/CM2",
+            "Display remain at same set pressure value even after power on-off cycle",
+            "Audible and visual end of the cycle signal indicators",
+            "LED indication for the status of operation",
+            "Soft touch and durable membrane keys suitable for outdoor",
+            "Automatic tyre sensing system",
+            "Separate keys for set pressure increment and decrement",
+            "Flat key for empty or puncture tyre",
+            "Toggle key for easy set pressure value 25/35 upto SUVs and 90/120/150 for heavy vehicles",
+            "Confirm to operate method for overpressure setvalue with display blink notification",
+            "Reset key to exit out of operation at any time",
+            "5 in 1 switch box with fuse protection and indicator",
+            "Can use for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck"
+          ],
+          "specifications": {
+            "system": "Digital microcontroller based",
+            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+            "airInputSupply": "87 - 180 psi / 6 - 12.4 bar / 6.1 - 12.65 kg/cm2",
+            "sensorAccuracy": "± 0.5% of full scale",
+            "inputAirHose": "6mm x 2mtrs Black braided Hose with suitable fittings",
+            "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
+            "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head / hand held/clip on foot connector",
+            "maximumOverPressure": "185 psi (13 kg/cm2)",
+            "pressureSettingRange": "6 to 180 psi",
+            "workingPressureRange": "0 to 180 psi",
+            "displayResolution": "1 psi",
+            "measuringResolution": "0.25 psi",
+            "keypad": "Membrane Keypad suitable for outdoor application",
+            "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
+            "dimensions": "415 x 210 x 1390 mm (pedestal), 425 x 250 x 1420 mm (Packing)"
+          },
+          "applications": [
+            "Fuel Station (for IOCL, BPCL, HPCL, ESSAR, RELIANCE and other leading companies)",
+            "Wheel Alignment Shop",
+            "Automotive Garage",
+            "Bus Depot / All vehicle depot",
+            "Puncture Shop",
+            "Apartments",
+            "Commercial Parking Lot",
+            "Educational Institution",
+            "Companies"
+          ],
+          "images": [
+            "/images/1. Digital Tyre Inflator/1G.jpeg"
+          ]
+        },
+        {
+          "model": "AIROJET 6000 LCV HP",
+          "type": "HPCL Pedestal - Heavy",
+          "description": "HPCL canopy model heavy duty pedestal mounted digital tyre inflator with big LCD display.",
+          "subtitle": "HPCL Pedestal - Heavy",
+          "fullDescription": "HPCL canopy model heavy duty pedestal mounted digital tyre inflator for fuel stations. Features two digital readouts, big LCD display with LED backlight, pressure unit display to identify PSI or KG/CM2, and can be used for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck.",
+          "features": [
+            "Two digital readouts one for set pressure and other for tyre pressure",
+            "Big LCD display with LED back light to provide good visibility",
+            "Pressure unit display to identify PSI or KG/CM2",
+            "Display remain at same set pressure value even after power on-off cycle",
+            "Audible and visual end of the cycle signal indicators",
+            "LED indication for the status of operation",
+            "Soft touch and durable membrane keys suitable for outdoor",
+            "Automatic tyre sensing system",
+            "Separate keys for set pressure increment and decrement",
+            "Flat key for empty or puncture tyre",
+            "Toggle key for easy set pressure value 25/35 upto SUVs and 90/120/150 for heavy vehicles",
+            "Confirm to operate method for overpressure setvalue with display blink notification",
+            "Reset key to exit out of operation at any time",
+            "5 in 1 switch box with fuse protection and indicator",
+            "Can use for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck"
+          ],
+          "specifications": {
+            "system": "Digital microcontroller based",
+            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+            "airInputSupply": "87 - 180 psi / 6 - 12.4 bar / 6.1 - 12.65 kg/cm2",
+            "sensorAccuracy": "± 0.5% of full scale",
+            "inputAirHose": "6mm x 2mtrs Black braided Hose with suitable fittings",
+            "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
+            "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head / hand held/clip on foot connector",
+            "maximumOverPressure": "185 psi (13 kg/cm2)",
+            "pressureSettingRange": "6 to 180 psi",
+            "workingPressureRange": "0 to 180 psi",
+            "displayResolution": "1 psi",
+            "measuringResolution": "0.25 psi",
+            "keypad": "Membrane Keypad suitable for outdoor application",
+            "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
+            "dimensions": "415 x 210 x 1390 mm (pedestal), 425 x 250 x 1420 mm (Packing)"
+          },
+          "applications": [
+            "Fuel Station (for HPCL)",
+            "Wheel Alignment Shop",
+            "Automotive Garage",
+            "Bus Depot / All vehicle depot",
+            "Puncture Shop",
+            "Apartments",
+            "Commercial Parking Lot",
+            "Educational Institution",
+            "Companies"
+          ],
+          "images": [
+            "/images/1. Digital Tyre Inflator/1H.jpeg"
+          ]
+        },
+        {
+          "model": "Airojet1000LCV IC",
+          "type": "With Inbuilt Compressor",
+          "description": "Digital tyre inflator with inbuilt compressor - no external air input needed"
+        },
+        {
+          "model": "ICON PI C",
+          "type": "Digital Tube Pre Inflator",
+          "description": "Tube inflation system with timer for tyre manufacturing units"
+        },
+        {
+          "model": "Airojet1000HMV C",
+          "type": "Digital Tube Inflation System",
+          "description": "Automatic inflator for tube inflation with vacuum pressure"
+        }
+      ],
+      "images": [
+        "/images/1. Digital Tyre Inflator/1A.jpeg",
+        "/images/1. Digital Tyre Inflator/1B.jpeg",
+        "/images/1. Digital Tyre Inflator/1C.jpeg",
+        "/images/1. Digital Tyre Inflator/1D.jpeg",
+        "/images/1. Digital Tyre Inflator/1E.jpeg",
+        "/images/1. Digital Tyre Inflator/1F.jpeg",
+        "/images/1. Digital Tyre Inflator/1G.jpeg",
+        "/images/1. Digital Tyre Inflator/1H.jpeg",
+        "/images/1. Digital Tyre Inflator/1I.jpeg",
+        "/images/1. Digital Tyre Inflator/1J.jpeg",
+        "/images/1. Digital Tyre Inflator/1K.jpeg",
+        "/images/1. Digital Tyre Inflator/1L.jpeg"
+      ],
+      "mainImage": "/images/1. Digital Tyre Inflator/1A.jpeg"
+    },
+    {
+      "id": "air-compressor",
+      "title": "Air Compressor",
+      "description": "Single and two-stage oil lubricated reciprocating air compressors known for reliability and performance. Preferred choice for fuel stations, automotive garages, and industrial applications.",
+      "subtitle": "Single and two-stage oil lubricated reciprocating air compressors known for reliability and performance. Preferred choice for fuel stations, automotive garages, and industrial applications.",
+      "fullDescription": "The ICON EMBEDED CONTROLS single & two stage Oil Lubricated Reciprocating air compressors are known for their reliability and performance, making them the preferred choice for industrial applications. These compressors are designed for industrial duty cycle and come with standard leak proof fittings, electrical starter with stop switch latch for safety, belt/fan guard for safety, pressure switch with differential pressure setting for automatic ON-OFF operation, drain valve under storage tank to drain water, auto drain valve option available upon customer requirement, and safety pressure relief valve for over pressure safety.",
+      "features": [
+        "Standard leak proof fittings",
+        "Electrical Starter with stop switch latch for safety",
+        "Belt/Fan Guard for Safety",
+        "Pressure Switch with Differential Pressure Setting for Automatic ON-OFF operation",
+        "Drain Valve under Storage Tank to Drain Water",
+        "Auto Drain Valve Option available upon customer requirement",
+        "Safety Pressure Relief Valve for Over Pressure Safety",
+        "Designed for Industrial Duty Cycle",
+        "Single and Two-Stage options available",
+        "Oil Lubricated Reciprocating design"
+      ],
+      "models": [
+        {
+          "model": "IC-109",
+          "description": "Single stage oil lubricated reciprocating air compressor, 1 HP, suitable for light industrial applications.",
+          "subtitle": "1 HP Single Stage",
+          "fullDescription": "IC-109 is a single stage oil lubricated reciprocating air compressor with 1 HP motor rating. Known for reliability and performance, making it the preferred choice for fuel stations, automotive garages, and light industrial applications.",
+          "features": [
+            "Standard leak proof fittings",
+            "Electrical Starter with stop switch latch for safety",
+            "Belt/Fan Guard for Safety",
+            "Pressure Switch with Differential Pressure Setting for Automatic ON-OFF operation",
+            "Drain Valve under Storage Tank to Drain Water",
+            "Auto Drain Valve Option available upon customer requirement",
+            "Safety Pressure Relief Valve for Over Pressure Safety",
+            "Designed for Industrial Duty Cycle",
+            "Single Stage Oil Lubricated Reciprocating design"
+          ],
+          "specifications": {
+            "compressorStage": "1",
+            "workingPressure": "10 Kg/cm2 / 145 Psi",
+            "displacement": "82 LPM / 2.9 CFM",
+            "motorRating": "1 HP / 0.75 KW",
+            "rotationDirection": "Anti Clockwise (view from drive end)",
+            "electricalSupply": "220 VAC",
+            "frequency": "50 Hz",
+            "electricalPhase": "1",
+            "typeOfStarter": "DOL",
+            "oil": "40 Grade",
+            "typeOfCooling": "Air",
+            "airOutletSize": "1/4 BSP",
+            "cutOffSwitchSetPressureMax": "10 Kgf/cm2",
+            "cutOffSwitchSetPressureMin": "7 Kgf/cm2",
+            "airReceiverCapacity": "110 Ltrs"
+          },
+          "applications": [
+            "Fuel Station",
+            "Automotive Garages",
+            "Textile Industries",
+            "Food Processing Industries"
+          ],
+          "images": [
+            "/images/3. Air Compressor/IC-109.jpeg"
+          ]
+        },
+        {
+          "model": "IC-209",
+          "description": "Single stage oil lubricated reciprocating air compressor, 2 HP, suitable for medium industrial applications.",
+          "subtitle": "2 HP Single Stage",
+          "fullDescription": "IC-209 is a single stage oil lubricated reciprocating air compressor with 2 HP motor rating. Known for reliability and performance, making it the preferred choice for fuel stations, automotive garages, and medium industrial applications.",
+          "features": [
+            "Standard leak proof fittings",
+            "Electrical Starter with stop switch latch for safety",
+            "Belt/Fan Guard for Safety",
+            "Pressure Switch with Differential Pressure Setting for Automatic ON-OFF operation",
+            "Drain Valve under Storage Tank to Drain Water",
+            "Auto Drain Valve Option available upon customer requirement",
+            "Safety Pressure Relief Valve for Over Pressure Safety",
+            "Designed for Industrial Duty Cycle",
+            "Single Stage Oil Lubricated Reciprocating design"
+          ],
+          "specifications": {
+            "compressorStage": "1",
+            "workingPressure": "10 Kg/cm2 / 145 Psi",
+            "displacement": "161 LPM / 5.7 CFM",
+            "motorRating": "2 HP / 1.5 KW",
+            "rotationDirection": "Anti Clockwise (view from drive end)",
+            "electricalSupply": "220 VAC",
+            "frequency": "50 Hz",
+            "electricalPhase": "1",
+            "typeOfStarter": "DOL",
+            "oil": "40 Grade",
+            "typeOfCooling": "Air",
+            "airOutletSize": "1/4 BSP",
+            "cutOffSwitchSetPressureMax": "10 Kgf/cm2",
+            "cutOffSwitchSetPressureMin": "7 Kgf/cm2",
+            "airReceiverCapacity": "160 Ltrs"
+          },
+          "applications": [
+            "Fuel Station",
+            "Automotive Garages",
+            "Textile Industries",
+            "Food Processing Industries"
+          ],
+          "images": [
+            "/images/3. Air Compressor/IC-209.jpeg"
+          ]
+        },
+        {
+          "model": "IC-312",
+          "description": "Two stage oil lubricated reciprocating air compressor, 3 HP, suitable for heavy industrial applications.",
+          "subtitle": "3 HP Two Stage",
+          "fullDescription": "IC-312 is a two stage oil lubricated reciprocating air compressor with 3 HP motor rating. Known for reliability and performance, making it the preferred choice for fuel stations, automotive garages, and heavy industrial applications.",
+          "features": [
+            "Standard leak proof fittings",
+            "Electrical Starter with stop switch latch for safety",
+            "Belt/Fan Guard for Safety",
+            "Pressure Switch with Differential Pressure Setting for Automatic ON-OFF operation",
+            "Drain Valve under Storage Tank to Drain Water",
+            "Auto Drain Valve Option available upon customer requirement",
+            "Safety Pressure Relief Valve for Over Pressure Safety",
+            "Designed for Industrial Duty Cycle",
+            "Two Stage Oil Lubricated Reciprocating design"
+          ],
+          "specifications": {
+            "compressorStage": "2",
+            "workingPressure": "12 Kg/cm2 / 175 Psi",
+            "displacement": "302 LPM / 10.97 CFM",
+            "motorRating": "3 HP / 2.2 KW",
+            "rotationDirection": "Anti Clockwise (view from drive end)",
+            "electricalSupply": "415 VAC",
+            "frequency": "50 Hz",
+            "electricalPhase": "3",
+            "typeOfStarter": "DOL",
+            "oil": "40 Grade",
+            "typeOfCooling": "Air",
+            "airOutletSize": "1/2 BSP",
+            "cutOffSwitchSetPressureMax": "12 Kgf/cm2",
+            "cutOffSwitchSetPressureMin": "9 Kgf/cm2",
+            "airReceiverCapacity": "220 Ltrs"
+          },
+          "applications": [
+            "Fuel Station",
+            "Automotive Garages",
+            "Textile Industries",
+            "Food Processing Industries",
+            "Industrial Applications"
+          ],
+          "images": [
+            "/images/3. Air Compressor/IC-312.jpeg"
+          ]
+        },
+        {
+          "model": "IC-512",
+          "description": "Two stage oil lubricated reciprocating air compressor, 5 HP, suitable for heavy industrial applications.",
+          "subtitle": "5 HP Two Stage",
+          "fullDescription": "IC-512 is a two stage oil lubricated reciprocating air compressor with 5 HP motor rating. Known for reliability and performance, making it the preferred choice for fuel stations, automotive garages, and heavy industrial applications.",
+          "features": [
+            "Standard leak proof fittings",
+            "Electrical Starter with stop switch latch for safety",
+            "Belt/Fan Guard for Safety",
+            "Pressure Switch with Differential Pressure Setting for Automatic ON-OFF operation",
+            "Drain Valve under Storage Tank to Drain Water",
+            "Auto Drain Valve Option available upon customer requirement",
+            "Safety Pressure Relief Valve for Over Pressure Safety",
+            "Designed for Industrial Duty Cycle",
+            "Two Stage Oil Lubricated Reciprocating design"
+          ],
+          "specifications": {
+            "compressorStage": "2",
+            "workingPressure": "12 Kg/cm2 / 175 Psi",
+            "displacement": "495 LPM / 17.5 CFM",
+            "motorRating": "5 HP / 3.7 KW",
+            "rotationDirection": "Anti Clockwise (view from drive end)",
+            "electricalSupply": "415 VAC",
+            "frequency": "50 Hz",
+            "electricalPhase": "3",
+            "typeOfStarter": "DOL",
+            "oil": "40 Grade",
+            "typeOfCooling": "Air",
+            "airOutletSize": "1/2 BSP",
+            "cutOffSwitchSetPressureMax": "12 Kgf/cm2",
+            "cutOffSwitchSetPressureMin": "9 Kgf/cm2",
+            "airReceiverCapacity": "250 Ltrs"
+          },
+          "applications": [
+            "Fuel Station",
+            "Automotive Garages",
+            "Textile Industries",
+            "Food Processing Industries",
+            "Industrial Applications"
+          ],
+          "images": [
+            "/images/3. Air Compressor/IC-512.jpeg"
+          ]
+        },
+        {
+          "model": "IC-1012",
+          "description": "Two stage oil lubricated reciprocating air compressor, 10 HP, suitable for heavy industrial applications.",
+          "subtitle": "10 HP Two Stage",
+          "fullDescription": "IC-1012 is a two stage oil lubricated reciprocating air compressor with 10 HP motor rating. Known for reliability and performance, making it the preferred choice for fuel stations, automotive garages, and heavy industrial applications.",
+          "features": [
+            "Standard leak proof fittings",
+            "Electrical Starter with stop switch latch for safety",
+            "Belt/Fan Guard for Safety",
+            "Pressure Switch with Differential Pressure Setting for Automatic ON-OFF operation",
+            "Drain Valve under Storage Tank to Drain Water",
+            "Auto Drain Valve Option available upon customer requirement",
+            "Safety Pressure Relief Valve for Over Pressure Safety",
+            "Designed for Industrial Duty Cycle",
+            "Two Stage Oil Lubricated Reciprocating design"
+          ],
+          "specifications": {
+            "compressorStage": "2",
+            "workingPressure": "12 Kg/cm2 / 175 Psi",
+            "displacement": "985 LPM / 35 CFM",
+            "motorRating": "10 HP / 7.4 KW",
+            "rotationDirection": "Anti Clockwise (view from drive end)",
+            "electricalSupply": "415 VAC",
+            "frequency": "50 Hz",
+            "electricalPhase": "3",
+            "typeOfStarter": "DOL",
+            "oil": "40 Grade",
+            "typeOfCooling": "Air",
+            "airOutletSize": "1/2 BSP",
+            "cutOffSwitchSetPressureMax": "12 Kgf/cm2",
+            "cutOffSwitchSetPressureMin": "9 Kgf/cm2",
+            "airReceiverCapacity": "420/500 Ltrs"
+          },
+          "applications": [
+            "Fuel Station",
+            "Automotive Garages",
+            "Textile Industries",
+            "Food Processing Industries",
+            "Industrial Applications"
+          ],
+          "images": [
+            "/images/3. Air Compressor/IC-1012.jpeg"
+          ]
+        }
+      ],
+      "commonSpecifications": {
+        "rotationDirection": "Anti Clockwise (view from drive end)"
+      },
+      "applications": [
+        "Fuel Station",
+        "Automotive Garages",
+        "Textile Industries",
+        "Food Processing Industries",
+        "Industrial Applications",
+        "Workshops",
+        "Service Centers"
+      ],
+      "images": [
+        "/images/3. Air Compressor/3a.jpeg",
+        "/images/3. Air Compressor/3b.jpeg"
+      ],
+      "mainImage": "/images/3. Air Compressor/3a.jpeg"
+    },
+    {
+      "id": "nitrogen-generator",
+      "title": "Nitrogen Generator",
+      "description": "Easy to convert ordinary digital tyre inflator to digital nitrogen tyre inflator using this module. Reliable PSA method for nitrogen generation with 95-99% purity suitable for vehicle nitrogen inflation.",
+      "subtitle": "Easy to convert ordinary digital tyre inflator to digital nitrogen tyre inflator using this module. Reliable PSA method for nitrogen generation with 95-99% purity suitable for vehicle nitrogen inflation.",
+      "fullDescription": "Easy to convert ordinary digital tyre inflator to digital nitrogen tyre inflator using this module. Reliable PSA method for nitrogen generation with 95-99% purity suitable for vehicle nitrogen inflation. Air and nitrogen input pressure option available in single machine. The nitrogen generator uses Pressure Swing Adsorption (PSA) Technology for reliable and cost-efficient nitrogen generation. It comes with computer power chord adapter with fuse protection and switch on indicator, pressure switch for automatic nitrogen generation cut-off, pressure gauge for input air pressure indication and internal tank nitrogen pressure indication, safety pressure relief valve available for internal tank, and wheel base option is available to move to desired location.",
+      "features": [
+        "PSA Technology for nitrogen generation",
+        "95-99% purity (adjustable)",
+        "Pressure switch for automatic nitrogen generation cut-off",
+        "Safety pressure relief valve",
+        "Wheel base option available",
+        "Computer power chord adapter with fuse protection",
+        "Easy conversion of ordinary digital tyre inflator to nitrogen inflator",
+        "Air and nitrogen input pressure option available in single machine",
+        "Pressure gauge for input air pressure and stored nitrogen pressure indication",
+        "Reliable PSA method for nitrogen generation"
+      ],
+      "specifications": {
+        "system": "Digital microcontroller based",
+        "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+        "airSupply": "120 - 150 psi / 8 - 10bar",
+        "sensorAccuracy": "± 0.5% of full scale",
+        "n2ProductionMethod": "Pressure Swing Adsorption Method (PSA Technology)",
+        "tankCapacity": "65 liters",
+        "flowRate": "4500 lph",
+        "purity": "95-99% (adjustable)",
+        "moistureFilter": "5 micron",
+        "oilRemovalFilter": "Activated carbon",
+        "autoDrainValve": "with auto timer",
+        "safetyValve": "Available",
+        "pressureGauge": "Two Pressure Gauge Indication, one for Input Air Pressure and other for Stored Nitrogen Pressure",
+        "inputHose": "2 meter 6x4 mm heavy braided hose",
+        "outputHose": "3 meter 6x4 mm heavy braided hose",
+        "functionalKeys": "Membrane keypad suitable for outdoor application",
+        "overPressureSafety": "Pressure switch with automatic on - off setting",
+        "maximumOverPressure": "225 psi (15 kg/cm2)",
+        "dimensions": "Varies depends upon customer requirement"
+      },
+      "applications": [
+        "Wheel Alignment Shop",
+        "Automotive Garage",
+        "Depot",
+        "Puncture Shop",
+        "Apartments",
+        "Commercial Parking Lot",
+        "Fuel Stations",
+        "Service Centers"
+      ],
+      "images": [
+        "/images/4. Nitrogen Generator/4a.jpeg"
+      ],
+      "mainImage": "/images/4. Nitrogen Generator/4a.jpeg"
+    },
+    {
+      "id": "panel-board",
+      "title": "Panel Boards",
+      "description": "PLC Control Panels, Automatic Power Factor Control Panels, and Switch Gear Panels. Complete electrical solutions for automation, power factor correction, and industrial control.",
+      "subtitle": "PLC Control Panels, Automatic Power Factor Control Panels, and Switch Gear Panels. Complete electrical solutions for automation, power factor correction, and industrial control.",
+      "fullDescription": "We provide various PLC Control panel with automation solution for Industries. We offer Automatic Power Factor Control Panel for any loads. Power factor is the ratio between the KW and the KVA drawn by an electrical load where the KW is the actual load power and the KVA is the apparent load power. In industry most of the load is inductive in nature which results in lagging power factor that is why there is loss and wastage of energy which results in high power bills and heavy penalties from electricity boards. If the load is uneven it is very difficult to maintain unity power factor. This drawback is overcome by using an APFC panel (Automatic Power Factor Correction Panel).",
+      "features": [
+        "PLC Control Panels with automation solutions",
+        "Automatic Power Factor Control Panel",
+        "Switch Gear Panels",
+        "Custom electrical solutions",
+        "RS-232 & RS-485 compatible",
+        "Remote Panel operation available",
+        "Diesel Tank Level Measurement using PLC Automation",
+        "Float Operated Level Transmitter with 4-20 mA output",
+        "Can customize the PLC program depends upon Tank Shape and Size",
+        "Can customize the PLC program even for various tank height",
+        "Can provide level measurement solution for various specific density liquids",
+        "Can customize the level measurement solution for boilers",
+        "Can provide complete electrical solution for the automation",
+        "Automatic or manual pump ON/OFF option available"
+      ],
+      "specifications": {
+        "plcControlPanel": {
+          "levelMeasurement": "Diesel Tank Level Measurement using PLC Automation panel and Level Sensor",
+          "floatOperatedTransmitter": "Reed chain with 4-20 mA output used for industrial level measurement solution",
+          "magentostrictiveTransmitter": "4-20 mA output for High Accuracy level measurement solution",
+          "customization": "Can customize the PLC program depends upon Tank Shape and Size, various tank height, various specific density liquids, and for boilers",
+          "communication": "RS-232 & RS-485 compatible",
+          "remoteOperation": "Remote Panel operation available upon request"
+        },
+        "apfcPanel": {
+          "description": "Automatic Power Factor Control Panel for any loads",
+          "purpose": "Overcome lagging power factor issues in industries",
+          "benefits": "Reduces power bills and penalties from electricity boards"
+        },
+        "switchGearPanel": {
+          "description": "Outdoor Power Panel for Petrol Stations",
+          "types": [
+            "Electrical Control Panel",
+            "Motor Control Panel"
+          ]
+        }
+      },
+      "models": [
+        {
+          "model": "PLC Control Panel",
+          "type": "Automation Panel",
+          "description": "PLC Control panel with automation solution for Industries including diesel tank level measurement.",
+          "subtitle": "PLC Control Panel",
+          "fullDescription": "We provide various PLC Control panel with automation solution for Industries. Features diesel tank level measurement using PLC Automation panel and Level Sensor, float operated level transmitter with 4-20 mA output, customizable PLC program depends upon tank shape and size, and complete electrical solution for the automation.",
+          "features": [
+            "Float Operated Level Transmitter (reed chain) with 4-20 mA output used for industrial level measurement solution",
+            "Float Operated Level Transmitter (Magentostrictive) with 4-20 mA output for High Accuracy level measurement solution",
+            "Can customize the PLC program depends upon Tank Shape and Size",
+            "Can customize the PLC program even for various tank height",
+            "Can provide level measurement solution for various specific density liquids",
+            "Can customize the level measurement solution for boilers",
+            "Can provide complete electrical solution for the automation",
+            "Automatic or manual pump ON/OFF option available",
+            "Remote Panel operation available upon request",
+            "RS-232 & RS-485 compatible"
+          ],
+          "specifications": {
+            "plcControlPanel": "Various PLC Control panel with automation solution",
+            "levelMeasurement": "Diesel Tank Level Measurement using PLC Automation panel and Level Sensor",
+            "levelTransmitter": "Float Operated Level Transmitter with 4-20 mA output",
+            "communication": "RS-232 & RS-485 compatible",
+            "customization": "Can customize the PLC program depends upon Tank Shape and Size",
+            "pumpControl": "Automatic or manual pump ON/OFF option available",
+            "remoteOperation": "Remote Panel operation available upon request"
+          },
+          "applications": [
+            "All Kind of Industries",
+            "Fuel Station",
+            "Automotive Industries",
+            "Manufacturing Units"
+          ],
+          "images": [
+            "/images/5. Panel Board/5A.jpeg"
+          ]
+        },
+        {
+          "model": "Automatic Power Factor Control Panel",
+          "type": "APFC Panel",
+          "description": "Automatic Power Factor Control Panel for any loads to maintain unity power factor and reduce power bills.",
+          "subtitle": "APFC Panel",
+          "fullDescription": "We offer Automatic Power Factor Control Panel for any loads. Power factor is the ratio between the KW and the KVA drawn by an electrical load where the KW is the actual load power and the KVA is the apparent load power. In industry most of the load is inductive in nature which results in lagging power factor that is why there is loss and wastage of energy which results in high power bills and heavy penalties from electricity boards. If the load is uneven it is very difficult to maintain unity power factor. This drawback is overcome by using an APFC panel (Automatic Power Factor Correction Panel).",
+          "features": [
+            "Automatic Power Factor Correction",
+            "Maintains unity power factor",
+            "Reduces power bills and penalties",
+            "Suitable for uneven loads",
+            "Energy efficient solution",
+            "Reduces loss and wastage of energy"
+          ],
+          "specifications": {
+            "panelType": "Automatic Power Factor Control Panel",
+            "function": "Automatic Power Factor Correction",
+            "application": "For any loads",
+            "benefits": "Reduces power bills and heavy penalties from electricity boards"
+          },
+          "applications": [
+            "All Kind of Industries",
+            "Hotels",
+            "Bank",
+            "Fuel Station",
+            "Shopping Mall"
+          ],
+          "images": [
+            "/images/5. Panel Board/5B.jpeg"
+          ]
+        },
+        {
+          "model": "Electrical Control Panel",
+          "type": "Control Panel",
+          "description": "Electrical Control Panel for industrial applications and power distribution.",
+          "subtitle": "Electrical Control Panel",
+          "fullDescription": "Electrical Control Panel for industrial applications and power distribution. Custom electrical solutions for various industrial requirements.",
+          "features": [
+            "Custom electrical solutions",
+            "Industrial grade components",
+            "Safe and reliable operation",
+            "Standard compliance"
+          ],
+          "specifications": {
+            "panelType": "Electrical Control Panel",
+            "application": "Industrial applications and power distribution"
+          },
+          "applications": [
+            "All Kind of Industries",
+            "Manufacturing Units",
+            "Commercial Buildings"
+          ],
+          "images": [
+            "/images/5. Panel Board/5C.jpeg"
+          ]
+        }
+      ],
+      "applications": [
+        "All Kind of Industries",
+        "Hotels",
+        "Banks",
+        "Fuel Station",
+        "Shopping Mall",
+        "Manufacturing Industries",
+        "Process Industries",
+        "Automation Systems",
+        "Control Panels"
+      ],
+      "types": [
+        {
+          "type": "PLC Control Panel",
+          "description": "Various PLC Control panel with automation solution for Industries",
+          "features": [
+            "Diesel Tank Level Measurement using PLC Automation",
+            "Float Operated Level Transmitter (reed chain) with 4-20 mA output",
+            "Float Operated Level Transmitter (Magentostrictive) with 4-20 mA output for High Accuracy",
+            "Can customize the PLC program depends upon Tank Shape and Size",
+            "Can customize the PLC program even for various tank height",
+            "Can provide level measurement solution for various specfic density liquids",
+            "Can customize the level measurement solution for boilers",
+            "Can provide complete electrical solution for the automation",
+            "Automatic or manual pump ON/OFF option available",
+            "Remote Panel operation available upon request",
+            "RS-232 & RS-485 compatible"
+          ]
+        },
+        {
+          "type": "Automatic Power Factor Control Panel (APFC)",
+          "description": "Automatic Power Factor Control Panel for any loads to overcome lagging power factor issues",
+          "features": [
+            "Automatic power factor correction",
+            "Reduces power bills and penalties",
+            "Suitable for uneven loads",
+            "Maintains unity power factor"
+          ]
+        },
+        {
+          "type": "Switch Gear Panel",
+          "description": "Outdoor Power Panel for Petrol Stations and industrial applications",
+          "features": [
+            "Electrical Control Panel",
+            "Motor Control Panel",
+            "Outdoor rated",
+            "Suitable for fuel stations"
+          ]
+        }
+      ],
+      "images": [
+        "/images/5. Panel Board/5a.jpeg",
+        "/images/5. Panel Board/5b.jpeg",
+        "/images/5. Panel Board/5b2.jpeg",
+        "/images/5. Panel Board/5c1.jpeg",
+        "/images/5. Panel Board/5c2.jpeg",
+        "/images/5. Panel Board/5c3.jpeg",
+        "/images/5. Panel Board/5d.jpeg"
+      ],
+      "mainImage": "/images/5. Panel Board/5a.jpeg"
+    },
+    {
+      "id": "garage-equipment",
+      "title": "Garage Equipment",
+      "description": "High quality two wheeler ramps, pneumatic grease pumps, and manual oil dispensers. Professional tools and equipment for automotive workshops and garages.",
+      "subtitle": "High quality two wheeler ramps, pneumatic grease pumps, and manual oil dispensers. Professional tools and equipment for automotive workshops and garages.",
+      "fullDescription": "We manufacture High Quality Two Wheeler Ramp suitable for all kind of two wheeler. We also manufacture Pneumatic Grease Pump of capacity 15kg, 25kg and 50kg, and manual 2T oil dispenser. Our garage equipment is designed for professional automotive workshops and garages, providing reliable and efficient solutions for vehicle maintenance and service operations.",
+      "features": [
+        "Two Wheeler Ramp with 300kg lifting capacity",
+        "Foot operated hydraulic piston",
+        "Pneumatic Grease Pump (15kg, 25kg, 50kg)",
+        "Manual 2T Oil Dispenser",
+        "Textured sheet metal for extra grip",
+        "Zero oil spillage design",
+        "Front Tyre Holding Vice for Extra Safety while lifting",
+        "Extra Textured Sheet for centre stand support",
+        "Backside Sliding Sheet for easy rolling of two wheeler into the Lift Table",
+        "Frontside Sliding Sheet to prevent two wheeler to roll out of the Lift Table"
+      ],
+      "models": [
+        {
+          "model": "Two Wheeler Ramp",
+          "type": "Hydraulic Lift",
+          "description": "High Quality Two Wheeler Ramp suitable for all kind of two wheeler with foot operated hydraulic piston.",
+          "subtitle": "Two Wheeler Ramp",
+          "fullDescription": "We manufacture High Quality Two Wheeler Ramp suitable for all kind of two wheeler. Features textured sheet metal used in lift table for extra grip and strength, zero oil spillage design for foot operated hydraulic piston, front tyre holding vice for extra safety while lifting, and foot operated hydraulic system for easy lifting.",
+          "features": [
+            "Textured Sheet Metal Used in Lift Table for Extra Grip and Strength",
+            "Zero Oil Spillage Design for Foot operated Hydraulic piston",
+            "Front Tyre Holding Vice for Extra Safety while lifting",
+            "Extra Textured Sheet for centre stand support",
+            "Backside Sliding Sheet for easy rolling of two wheeler into the Lift Table",
+            "Frontside Sliding Sheet to prevent two wheeler to roll out of the Lift Table",
+            "Foot Operated Hydraulic System for easy lifting"
+          ],
+          "specifications": {
+            "liftingCapacity": "300 Kilogram (kg)",
+            "liftHeight": "850 Millimeter (mm)",
+            "normalHeight": "150 Millimeter (mm)",
+            "topPlatformSize": "L x B: 2000x600 Millimeter (mm)",
+            "operationType": "Foot Operated Hydraulic Piston",
+            "oilGrade": "58 grade"
+          },
+          "applications": [
+            "Two Wheeler Service Station",
+            "Automotive Garage",
+            "Two Wheeler Repair Shop"
+          ],
+          "images": [
+            "/images/6. Garage Equipment/6A.jpeg"
+          ]
+        },
+        {
+          "model": "Pneumatic Grease Pump",
+          "type": "Grease Dispensing Equipment",
+          "description": "Pneumatic Grease Pump of capacity 15kg, 25kg and 50kg for automotive and industrial applications.",
+          "subtitle": "Pneumatic Grease Pump",
+          "fullDescription": "We manufacture Pneumatic Grease Pump of capacity 15kg, 25kg and 50kg. Portable pneumatic grease pump suitable for automotive and industrial applications with high output delivery.",
+          "features": [
+            "Portable design",
+            "High output delivery",
+            "Suitable for automotive and industrial applications",
+            "Pneumatic operation"
+          ],
+          "specifications": {
+            "capacity": "15/25/50 Kilogram (kg)",
+            "output": "320 - 390 Grams/minute (Gm/min)",
+            "workingPressureRangeOfAirInlet": "4 to 10 bar",
+            "outputDeliveryHoseLength": "2.2 Meters (mtrs)",
+            "diameterOfInputAndOutputHose": "6 to 8 mm Black Braided Hose",
+            "type": "Portable (portability distance depends upon the length of input hose)"
+          },
+          "applications": [
+            "Automotive Garage",
+            "Service Station",
+            "Industrial Applications"
+          ],
+          "images": [
+            "/images/6. Garage Equipment/6B.jpeg"
+          ]
+        },
+        {
+          "model": "Manual 2T Oil Dispenser",
+          "type": "Oil Dispensing Equipment",
+          "description": "Manual 2T oil dispenser with storage tank capacity from 25 liters to 50 liters with stand.",
+          "subtitle": "Manual 2T Oil Dispenser",
+          "fullDescription": "We manufacture manual 2T oil dispenser. Features storage tank capacity from 25 liters to 50 liters with stand, visible level indicator at the side of storage tank, calibrated jar for oil measurement, and key protection for tank lid.",
+          "features": [
+            "Storage Tank Capacity from 25 liters to 50 liters with Stand",
+            "Visible level Indicator at the side of storage tank",
+            "Calibrated Jar for Oil measurement",
+            "Key Protection for Tank lid"
+          ],
+          "specifications": {
+            "storageTankCapacity": "25 liters to 50 liters",
+            "stand": "Available",
+            "levelIndicator": "Visible level Indicator at the side of storage tank",
+            "calibratedJar": "Available for Oil measurement",
+            "keyProtection": "Key Protection for Tank lid"
+          },
+          "applications": [
+            "Two Wheeler Service Station",
+            "Automotive Garage",
+            "Oil Change Service"
+          ],
+          "images": [
+            "/images/6. Garage Equipment/6C.jpeg"
+          ]
+        }
+      ],
+      "specifications": {
+        "twoWheelerRamp": {
+          "liftingCapacity": "300 kg",
+          "liftHeight": "850 mm",
+          "normalHeight": "150 mm",
+          "topPlatformSize": "L x B: 2000x600 mm",
+          "operationType": "Foot Operated Hydraulic Piston",
+          "oilGrade": "58 grade",
+          "features": [
+            "Textured Sheet Metal Used in Lift Table for Extra Grip and Strength",
+            "Zero Oil Spillage Design for Foot operated Hydraulic piston",
+            "Front Tyre Holding Vice for Extra Safety while lifting",
+            "Extra Textured Sheet for centre stand support",
+            "Backside Sliding Sheet for easy rolling of two wheeler into the Lift Table",
+            "Frontside Sliding Sheet to prevent two wheeler to roll out of the Lift Table",
+            "Foot Operated Hydraulic System for easy lifting"
+          ]
+        },
+        "pneumaticGreasePump": {
+          "capacities": ["15kg", "25kg", "50kg"],
+          "output": "320 - 390 Grams/minute (Gm/min)",
+          "workingPressureRange": "4 to 10 bar",
+          "outputDeliveryHoseLength": "2.2 Meters (mtrs)",
+          "diameterOfInputOutputHose": "6 to 8 mm Black Braided Hose",
+          "type": "Portable (portability distance depends upon the length of input hose)"
+        },
+        "manual2TOilDispenser": {
+          "storageTankCapacity": "25 liters to 50 liters with Stand",
+          "features": [
+            "Visible level Indicator at the side of storage tank",
+            "Calibrated Jar for Oil measurement",
+            "Key Protection for Tank lid"
+          ]
+        }
+      },
+      "applications": [
+        "Automotive Workshops",
+        "Two Wheeler Service Stations",
+        "Garages",
+        "Depots",
+        "Vehicle Service Centers",
+        "Motorcycle Repair Shops"
+      ],
+      "images": [
+        "/images/6. Garage Equipment/6a.jpeg",
+        "/images/6. Garage Equipment/6b.jpeg",
+        "/images/6. Garage Equipment/6c.jpeg"
+      ],
+      "mainImage": "/images/6. Garage Equipment/6a.jpeg"
+    }
+  ]
+}

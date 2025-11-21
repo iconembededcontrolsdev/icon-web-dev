@@ -4,46 +4,24 @@ import path from 'path';
 
 export async function GET() {
   try {
-    const productsDirectory = path.join(process.cwd(), 'public', 'content', 'products');
+    // Read from the consolidated products.json file
+    const productsFilePath = path.join(process.cwd(), 'public', 'content', 'products.json');
     
-    // Check if directory exists
-    if (!fs.existsSync(productsDirectory)) {
-      // Fallback: try to read from index.json
-      const indexPath = path.join(productsDirectory, 'index.json');
-      if (fs.existsSync(indexPath)) {
-        const indexData = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
-        return NextResponse.json({ products: indexData.products || [] });
-      }
+    if (!fs.existsSync(productsFilePath)) {
+      console.error('products.json not found');
       return NextResponse.json({ products: [] });
     }
 
-    // Read all files in the products directory
-    const files = fs.readdirSync(productsDirectory);
+    const fileContent = fs.readFileSync(productsFilePath, 'utf8');
+    const data = JSON.parse(fileContent);
     
-    // Filter only JSON files (excluding index.json) and extract product IDs
-    const productIds = files
-      .filter(file => file.endsWith('.json') && file !== 'index.json')
-      .map(file => file.replace('.json', ''))
-      .sort(); // Sort alphabetically for consistent ordering
-
-    return NextResponse.json({ products: productIds });
+    // Return the full products array
+    return NextResponse.json({ products: data.products || [] });
   } catch (error) {
-    console.error('Error reading products directory:', error);
-    
-    // Fallback: try to read from index.json
-    try {
-      const productsDirectory = path.join(process.cwd(), 'public', 'content', 'products');
-      const indexPath = path.join(productsDirectory, 'index.json');
-      if (fs.existsSync(indexPath)) {
-        const indexData = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
-        return NextResponse.json({ products: indexData.products || [] });
-      }
-    } catch (fallbackError) {
-      console.error('Error reading index.json fallback:', fallbackError);
-    }
+    console.error('Error reading products.json:', error);
     
     return NextResponse.json(
-      { error: 'Failed to read products directory', products: [] },
+      { error: 'Failed to read products', products: [] },
       { status: 500 }
     );
   }

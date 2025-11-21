@@ -10,9 +10,13 @@ type ProductModel = {
   model: string;
   type?: string;
   description?: string;
+  subtitle?: string;
+  fullDescription?: string;
   image?: string;
+  images?: string[];
   specifications?: Record<string, any>;
   features?: string[];
+  applications?: string[];
 };
 
 type ProductData = {
@@ -43,15 +47,26 @@ export default function ProductDetail() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`/content/products/${id}.json`);
+        // Fetch from the consolidated products.json file
+        const response = await fetch('/content/products.json');
         if (!response.ok) {
+          throw new Error('Products file not found');
+        }
+        
+        const data = await response.json();
+        const products = data.products || [];
+        
+        // Find the specific product by ID
+        const foundProduct = products.find((p: ProductData) => p.id === id);
+        
+        if (!foundProduct) {
           throw new Error('Product not found');
         }
-        const data = await response.json();
+        
         setProduct({
-          ...data,
-          images: images.length > 0 ? images : data.images || [],
-          description: data.subtitle || data.description || '',
+          ...foundProduct,
+          images: images.length > 0 ? images : foundProduct.images || [],
+          description: foundProduct.subtitle || foundProduct.description || '',
         } as ProductData);
       } catch (err) {
         setError('Failed to load product');
@@ -136,7 +151,7 @@ export default function ProductDetail() {
                 {/* Product Image */}
                 <div className="relative aspect-square w-full overflow-hidden bg-gray-100">
                   <Image
-                    src={model.image || product.images?.[0] || '/images/placeholder.svg'}
+                    src={model.images?.[0] || model.image || product.images?.[0] || '/images/placeholder.svg'}
                     alt={model.model}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -203,10 +218,10 @@ export default function ProductDetail() {
             {/* Modal Content */}
             <div className="p-8 space-y-8">
               {/* Image */}
-              {(selectedModel.image || product.images?.[0]) && (
+              {(selectedModel.images?.[0] || selectedModel.image || product.images?.[0]) && (
                 <div className="relative aspect-video w-full rounded-[20px] overflow-hidden bg-gray-100">
                   <Image
-                    src={selectedModel.image || product.images?.[0] || '/images/placeholder.svg'}
+                    src={selectedModel.images?.[0] || selectedModel.image || product.images?.[0] || '/images/placeholder.svg'}
                     alt={selectedModel.model}
                     fill
                     className="object-contain"
@@ -255,11 +270,11 @@ export default function ProductDetail() {
               )}
 
               {/* Applications */}
-              {product.applications && (
+              {(selectedModel.applications || product.applications) && (
                 <div>
                   <h3 className="text-2xl font-semibold text-primary mb-4">Applications</h3>
                   <div className="grid grid-cols-2 gap-3">
-                    {product.applications.map((app, index) => (
+                    {(selectedModel.applications || product.applications)?.map((app, index) => (
                       <div key={index} className="bg-bg rounded-lg p-4 text-center">
                         <p className="text-muted font-medium">{app}</p>
                       </div>
