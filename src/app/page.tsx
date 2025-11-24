@@ -114,7 +114,6 @@ const showcaseData: Block[] = [
 ];
 
 export default function Home() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
 
   const navigateToProduct = (product: any) => {
@@ -163,70 +162,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-bg">
-      {/* Navigation */}
-      <nav className="bg-card/80 backdrop-blur-md border-b border-gray-200 fixed w-full z-50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-20">
-            <div className="flex items-center">
-              <Link href="/" className="flex items-center space-x-3">
-                <Image 
-                  src="/images/logo.png" 
-                  alt="Icon Embedded Controls" 
-                  width={50}
-                  height={50}
-                  className="h-12 w-auto"
-                />
-                <span className="text-xl font-bold text-primary">Icon Embedded Controls</span>
-              </Link>
-            </div>
-            
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/products" className="text-primary hover:text-accent transition-colors font-medium">Products</Link>
-              <Link href="/about" className="text-primary hover:text-accent transition-colors font-medium">About Us</Link>
-              <Link 
-                href="/contact" 
-                className="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary-light transition-colors shadow-md"
-              >
-                Contact Us
-              </Link>
-            </div>
-
-            {/* Mobile menu button */}
-            <div className="md:hidden flex items-center">
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-primary hover:text-accent focus:outline-none"
-              >
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  {isMenuOpen ? (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  ) : (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                  )}
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Mobile menu */}
-        {isMenuOpen && (
-          <div className="md:hidden bg-card border-t border-gray-200">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              <Link href="/products" className="block px-3 py-2 text-primary hover:bg-bg rounded-md font-medium">Products</Link>
-              <Link href="/about" className="block px-3 py-2 text-primary hover:bg-bg rounded-md font-medium">About Us</Link>
-              <Link 
-                href="/contact" 
-                className="block w-full text-center bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-light transition-colors"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        )}
-      </nav>
-
       {/* Main Content */}
       <main className="pt-20 bg-bg">
         {showcaseData.map((block, index) => (

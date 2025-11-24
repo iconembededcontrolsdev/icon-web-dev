@@ -9,27 +9,32 @@
     --spacing-xs: 1rem;    /* 16px */
     --radius-xl: 2.5rem;   /* 40px */
     --radius-lg: 1.5rem;   /* 24px */
-    --background: #F8F9FA;
-    --foreground: #1A1A2E;
-    --accent: #C9A961;
-    --accent-hover: #B8964E;
+    --background: #FFFDD0; /* Cream */
+    --foreground: #1A1A1A; /* Dark Grey/Black */
+    --card: #FFFFFF;
+    --card-foreground: #1A1A1A;
+    --primary: #2D2D2D;
+    --primary-foreground: #FFFFFF;
+    --accent: #2D2D2D; /* Using dark grey as accent based on image buttons */
+    --accent-hover: #000000;
+    --muted: #4B5563;
+    --border: #E5E7EB;
   }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1A1A2E;
-    --foreground: #F8F9FA;
-    --accent: #C9A961;
-    --accent-hover: #B8964E;
-  }
 }
 
 body {
