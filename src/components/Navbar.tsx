@@ -27,7 +27,7 @@ export default function Navbar() {
               <div className="flex items-center gap-2">
                  {/* If you have a logo image, uncomment below and adjust width/height */}
                  {/* <div className="relative h-10 w-10">
-                    <Image src="/images/logo.png" alt="Logo" fill className="object-contain" />
+                    <Image src="/images/highres/7. Extras/logo.png" alt="Logo" fill className="object-contain" />
                  </div> */}
                  <span className="text-xl font-bold text-primary whitespace-nowrap">
                     Icon Embedded Controls

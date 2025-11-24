@@ -27,7 +27,7 @@ export default function AboutPage() {
           <div className="relative h-[400px] rounded-[40px] overflow-hidden shadow-lg bg-white p-8 flex items-center justify-center">
              {/* Placeholder for an about image or logo */}
              <Image 
-               src="/images/logo.png" 
+               src="/images/highres/7. Extras/logo.png" 
                alt="Icon Embedded Controls" 
                width={400} 
                height={400}
