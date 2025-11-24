@@ -54,14 +54,14 @@ export default function Hero({
                     href={button.link}
                     className={`px-8 py-4 rounded-full text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 ${
                       button.variant === 'primary'
-                        ? 'bg-primary text-white hover:bg-primary-light'
+                        ? 'bg-primary text-white hover:opacity-90'
                         : button.variant === 'secondary'
                         ? 'bg-accent text-primary hover:bg-accent-hover hover:text-white'
                         : button.variant === 'outline'
-                        ? 'border-2 border-accent text-accent hover:bg-accent hover:text-primary'
+                        ? 'border-2 border-accent text-accent hover:bg-accent hover:text-white'
                         : button.variant === 'soft'
                         ? 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                        : 'bg-primary text-white hover:bg-primary-light'
+                        : 'bg-primary text-white hover:opacity-90'
                     }`}
                   >
                     {button.text}
