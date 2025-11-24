@@ -44,10 +44,10 @@ export default function Carousel({ items }: CarouselProps) {
       >
         {items.map((item, idx) => (
           <SwiperSlide key={idx} className="pb-10">
-            <div className="bg-card rounded-3xl p-6 text-center h-full flex flex-col">
+            <div className="bg-card p-6 text-center h-full flex flex-col">
               <div className="relative w-full h-48 md:h-56 mb-4">
                 <Image 
-                  src={item.img} 
+                  src={item.img}
                   alt={item.title}
                   fill
                   className="object-contain"

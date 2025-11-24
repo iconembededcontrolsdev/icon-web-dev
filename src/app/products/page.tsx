@@ -11,6 +11,7 @@ type ProductPreview = {
   subtitle?: string;
   fullDescription?: string;
   features?: string[];
+  models?: any[];
   image?: string;
   mainImage?: string;
   images?: string[];
@@ -48,14 +49,27 @@ export default function ProductsPage() {
     fetchProducts();
   }, []);
 
-  const filteredProducts = products.filter(product =>
-    product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    product.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    (product.subtitle && product.subtitle.toLowerCase().includes(searchQuery.toLowerCase())) ||
-    (product.features && product.features.some(feature => 
-      feature.toLowerCase().includes(searchQuery.toLowerCase())
-    ))
-  );
+  const filteredProducts = products.filter(product => {
+    const query = searchQuery.toLowerCase();
+    
+    // Search in basic product fields
+    const matchesBasicFields = 
+      product.title.toLowerCase().includes(query) ||
+      product.description.toLowerCase().includes(query) ||
+      (product.subtitle && product.subtitle.toLowerCase().includes(query)) ||
+      (product.features && product.features.some(feature => 
+        feature.toLowerCase().includes(query)
+      ));
+    
+    // Search in models array if it exists
+    const matchesModels = product.models && product.models.some((model: any) =>
+      (model.model && model.model.toLowerCase().includes(query)) ||
+      (model.type && model.type.toLowerCase().includes(query)) ||
+      (model.description && model.description.toLowerCase().includes(query))
+    );
+    
+    return matchesBasicFields || matchesModels;
+  });
 
   // Convert products to GridItem format and group into pairs for 2-column grid
   const convertToGridItems = (products: ProductPreview[]) => {
@@ -128,7 +142,7 @@ export default function ProductsPage() {
             <input
               type="text"
               className="block w-full pl-10 pr-3 py-3 border-2 border-gray-300 rounded-lg bg-card shadow-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
-              placeholder="Search products..."
+              placeholder="Search products and models..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />

@@ -30,7 +30,7 @@ export default function ClientLogos() {
           {/* First set of logos */}
           <div className="flex items-center gap-12 mx-6">
             {LOGOS.map((logo, index) => (
-              <div key={`logo-1-${index}`} className="relative w-32 h-20 flex-shrink-0 py-20 rounded-lg overflow-hidden">
+              <div key={`logo-1-${index}`} className="relative w-32 h-20 flex-shrink-0 py-20 overflow-hidden">
                 <AdaptiveImage
                   src={logo}
                   alt={`Client Logo ${index + 1}`}
@@ -44,7 +44,7 @@ export default function ClientLogos() {
           {/* Duplicate set for seamless scrolling */}
           <div className="flex items-center gap-18 mx-6">
             {LOGOS.map((logo, index) => (
-              <div key={`logo-2-${index}`} className="relative w-32 h-20 flex-shrink-0 py-20 rounded-lg overflow-hidden">
+              <div key={`logo-2-${index}`} className="relative w-32 h-20 flex-shrink-0 py-20 overflow-hidden">
                 <AdaptiveImage
                   src={logo}
                   alt={`Client Logo ${index + 1}`}
