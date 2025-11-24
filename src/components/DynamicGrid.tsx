@@ -75,12 +75,12 @@ export default function DynamicGrid({
               {/* Card container with image stacked on top */}
               <div className="relative bg-card rounded-[40px] overflow-hidden shadow-sm h-full w-full flex flex-col">
                 {/* Image - Top section */}
-                <div className="relative w-full aspect-[4/3]">
+                <div className="relative w-full aspect-[4/3] bg-white">
                   <Image
                     src={item.img}
                     alt={item.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-contain transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>

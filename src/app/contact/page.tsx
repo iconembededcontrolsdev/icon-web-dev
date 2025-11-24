@@ -7,6 +7,7 @@ function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    category: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -24,12 +25,12 @@ function ContactForm() {
     
     // Reset form after 3 seconds
     setTimeout(() => {
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: '', email: '', category: '', message: '' });
       setSubmitted(false);
     }, 3000);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -105,6 +106,27 @@ function ContactForm() {
                   className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors text-primary bg-card"
                   placeholder="Enter your email"
                 />
+              </div>
+
+              <div>
+                <label htmlFor="category" className="block text-sm font-semibold text-primary mb-2">
+                  Category
+                </label>
+                <select
+                  id="category"
+                  name="category"
+                  required
+                  value={formData.category}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors text-primary bg-white"
+                >
+                  <option value="" className="text-gray-400">Select a category</option>
+                  <option value="general" className="text-primary">General Inquiry</option>
+                  <option value="product" className="text-primary">Product Information</option>
+                  <option value="support" className="text-primary">Technical Support</option>
+                  <option value="sales" className="text-primary">Sales</option>
+                  <option value="other" className="text-primary">Other</option>
+                </select>
               </div>
 
               <div>

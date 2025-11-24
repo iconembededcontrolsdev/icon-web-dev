@@ -212,7 +212,20 @@ export default function ProductDetail() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Left Column: Accordions */}
+          {/* Left Column: Image */}
+          <div className="bg-white rounded-[40px] p-4 shadow-sm flex items-center justify-center relative aspect-square">
+            <div className="relative w-full h-full">
+              <Image
+                src={currentImage}
+                alt={activeModel?.model || product.title}
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+          </div>
+
+          {/* Right Column: Accordions */}
           <div className="space-y-4">
             <AccordionItem 
               title="Key Features" 
@@ -269,19 +282,6 @@ export default function ProductDetail() {
               >
                 Product Enquiry
               </Link>
-            </div>
-          </div>
-
-          {/* Right Column: Image */}
-          <div className="bg-white rounded-[40px] p-8 shadow-sm min-h-[500px] flex items-center justify-center relative">
-            <div className="relative w-full h-full min-h-[400px]">
-              <Image
-                src={currentImage}
-                alt={activeModel?.model || product.title}
-                fill
-                className="object-contain"
-                priority
-              />
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Hero from '@/components/Hero';
 import DynamicGrid from '@/components/DynamicGrid';
+import ClientLogos from '@/components/ClientLogos';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -16,13 +17,13 @@ const showcaseData: Block[] = [
   // Hero Section - Full Width
   {
     type: 'hero',
-    title: 'Welcome to Icon Embedded Controls',
-    subtitle: 'With some brilliant products and splendid services, we have carved a niche for ourselves in both domestic as well as international markets. Our range includes Digital Tyre Inflator, Digital Nitrogen Tyre Inflator, Nitrogen Generator, Air Compressor, and many more.',
-    img: '/images/logo.png',
-    ctaButtons: [
-      { text: 'Learn more', link: '/about', variant: 'primary' },
-      { text: 'View Products', link: '/products', variant: 'outline' }
-    ]
+    // title: 'Welcome to Icon Embedded Controls',
+    // subtitle: 'With some brilliant products and splendid services, we have carved a niche for ourselves in both domestic as well as international markets. Our range includes Digital Tyre Inflator, Digital Nitrogen Tyre Inflator, Nitrogen Generator, Air Compressor, and many more.',
+    img: '/images/highres/7. Extras/logo.png',
+    // ctaButtons: [
+    //   { text: 'Learn more', link: '/about', variant: 'primary' },
+    //   { text: 'View Products', link: '/products', variant: 'outline' }
+    // ]
   },
   
   // Product Categories Grid
@@ -33,7 +34,7 @@ const showcaseData: Block[] = [
         id: 'digital-tyre-inflator',
         title: 'Digital Tyre Inflator',
         subtitle: 'Reliable, durable and accurate electronic digital tyre inflators meeting tyre manufacturer pressure standards. Used by major tyre and vehicle manufacturers in their production line.',
-        img: '/images/1. Digital Tyre Inflator/1A.jpeg',
+        img: '/images/highres/1. Digital Tyre Inflator/1A.jpg',
         ctaButtons: [
           { text: 'Learn more', link: '/products/digital-tyre-inflator', variant: 'primary' },
           { text: 'Buy', link: '/products/digital-tyre-inflator', variant: 'outline' }
@@ -43,7 +44,7 @@ const showcaseData: Block[] = [
         id: 'digital-nitrogen-tyre-inflator',
         title: 'Digital Nitrogen Tyre Inflator',
         subtitle: 'Reliable and accurate electronic digital nitrogen tyre inflators. Nitrogen production based on cost-efficient PSA technology with 95-99% purity suitable for vehicle nitrogen inflation.',
-        img: '/images/2. Digital Nitrogen Tyre Inflator/2A.jpeg',
+        img: '/images/highres/2. Digital Nitrogen Tyre Inflator/2A.jpg',
         ctaButtons: [
           { text: 'Learn more', link: '/products/digital-nitrogen-tyre-inflator', variant: 'primary' },
           { text: 'Buy', link: '/products/digital-nitrogen-tyre-inflator', variant: 'outline' }
@@ -53,7 +54,7 @@ const showcaseData: Block[] = [
         id: 'air-compressor',
         title: 'Air Compressor',
         subtitle: 'Single and two-stage oil lubricated reciprocating air compressors known for reliability and performance. Preferred choice for fuel stations, automotive garages, and industrial applications.',
-        img: '/images/3. Air Compressor/3a.jpeg',
+        img: '/images/highres/3. Air Compressor/3A.jpg',
         ctaButtons: [
           { text: 'Learn more', link: '/products/air-compressor', variant: 'primary' },
           { text: 'Buy', link: '/products/air-compressor', variant: 'outline' }
@@ -63,7 +64,7 @@ const showcaseData: Block[] = [
         id: 'panel-board',
         title: 'Panel Boards',
         subtitle: 'PLC Control Panels, Automatic Power Factor Control Panels, and Switch Gear Panels. Complete electrical solutions for automation, power factor correction, and industrial control.',
-        img: '/images/5. Panel Board/5a.jpeg',
+        img: '/images/highres/5. Panel Board/5A.jpg',
         ctaButtons: [
           { text: 'Learn more', link: '/products/panel-board', variant: 'primary' },
           { text: 'Buy', link: '/products/panel-board', variant: 'outline' }
@@ -73,7 +74,7 @@ const showcaseData: Block[] = [
         id: 'nitrogen-generator',
         title: 'Nitrogen Generator',
         subtitle: 'Easy to convert ordinary digital tyre inflator to digital nitrogen tyre inflator using this module. Reliable PSA method for nitrogen generation with 95-99% purity suitable for vehicle nitrogen inflation.',
-        img: '/images/4. Nitrogen Generator/4a.jpeg',
+        img: '/images/highres/4. Nitrogen Generator/4A.jpg',
         ctaButtons: [
           { text: 'Learn more', link: '/products/nitrogen-generator', variant: 'primary' },
           { text: 'Buy', link: '/products/nitrogen-generator', variant: 'outline' }
@@ -83,30 +84,10 @@ const showcaseData: Block[] = [
         id: 'garage-equipment',
         title: 'Garage Equipment',
         subtitle: 'High quality two wheeler ramps, pneumatic grease pumps, and manual oil dispensers. Professional tools and equipment for automotive workshops and garages.',
-        img: '/images/6. Garage Equipment/6a.jpeg',
+        img: '/images/highres/6. Garage Equipment/6A.jpg',
         ctaButtons: [
           { text: 'Learn more', link: '/products/garage-equipment', variant: 'primary' },
           { text: 'Buy', link: '/products/garage-equipment', variant: 'outline' }
-        ]
-      },
-      {
-        id: 'industrial-solutions',
-        title: 'Industrial Solutions',
-        subtitle: 'Comprehensive range of industrial automation and control solutions. Custom designed panels and systems for various industrial applications.',
-        img: '/images/placeholder.svg',
-        ctaButtons: [
-          { text: 'Learn more', link: '/products', variant: 'primary' },
-          { text: 'Buy', link: '/products', variant: 'outline' }
-        ]
-      },
-      {
-        id: 'automation-panels',
-        title: 'Automation Panels',
-        subtitle: 'Advanced automation panels with PLC integration. Complete solutions for industrial automation, process control, and monitoring systems.',
-        img: '/images/placeholder.svg',
-        ctaButtons: [
-          { text: 'Learn more', link: '/products', variant: 'primary' },
-          { text: 'Buy', link: '/products', variant: 'outline' }
         ]
       }
     ]
@@ -164,19 +145,26 @@ export default function Home() {
     <div className="min-h-screen bg-bg">
       {/* Main Content */}
       <main className="pt-20 bg-bg">
-        {showcaseData.map((block, index) => (
-          <div key={index} className={index > 0 ? 'mt-0' : ''}>
-            {renderBlock(block, index)}
+        {/* Hero Section */}
+        {renderBlock(showcaseData[0], 0)}
+        
+        {/* Client Logos Carousel - Moved below Hero */}
+        <ClientLogos />
+
+        {/* Remaining Blocks */}
+        {showcaseData.slice(1).map((block, index) => (
+          <div key={index + 1} className="mt-0">
+            {renderBlock(block, index + 1)}
           </div>
         ))}
         
         {/* Footer */}
-        <footer className="bg-bg border-t border-gray-200">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <footer className="bg-bg">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-gray-200">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div>
                 <h3 className="text-lg font-semibold text-primary mb-4">Products</h3>
-                <ul className="space-y-3">
+                <ul className="space-y-1">
                   <li><Link href="/products/digital-tyre-inflator" className="text-muted hover:text-accent transition-colors">Digital Tyre Inflator</Link></li>
                   <li><Link href="/products/digital-nitrogen-tyre-inflator" className="text-muted hover:text-accent transition-colors">Digital Nitrogen Tyre Inflator</Link></li>
                   <li><Link href="/products/nitrogen-generator" className="text-muted hover:text-accent transition-colors">Nitrogen Generator</Link></li>
@@ -185,17 +173,17 @@ export default function Home() {
                   <li><Link href="/products/garage-equipment" className="text-muted hover:text-accent transition-colors">Garage Equipment</Link></li>
                 </ul>
               </div>
-              <div>
+              {/* <div>
                 <h3 className="text-lg font-semibold text-primary mb-4">Company</h3>
                 <ul className="space-y-3">
                   <li><Link href="/about" className="text-muted hover:text-accent transition-colors">About Us</Link></li>
                   <li><Link href="/products" className="text-muted hover:text-accent transition-colors">Our Products</Link></li>
                   <li><Link href="/contact" className="text-muted hover:text-accent transition-colors">Contact Us</Link></li>
                 </ul>
-              </div>
+              </div> */}
               <div>
                 <h3 className="text-lg font-semibold text-primary mb-4">Contact</h3>
-                <ul className="space-y-3 text-muted">
+                <ul className="space-y-1 text-muted">
                   <li>M/S. ICON EMBEDED CONTROLS</li>
                   <li>374/2, JothiNagar 2nd Street,<br />Ramnujam Nagar Extension,<br />Uppilipalayam Post,<br />Coimbatore - 641015, TamilNadu, India</li>
                   <li className="pt-2">
@@ -203,7 +191,7 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-              <div>
+              {/* <div>
                 <h3 className="text-lg font-semibold text-primary mb-4">Our Valued Clients</h3>
                 <ul className="space-y-3 text-muted text-sm">
                   <li>IOCL, BPCL, HPCL</li>
@@ -212,7 +200,7 @@ export default function Home() {
                   <li>Apollo Tyres, BKT Tires</li>
                   <li>And many more...</li>
                 </ul>
-              </div>
+              </div> */}
             </div>
             <div className="mt-12 pt-8 border-t border-gray-200 text-center text-muted text-sm">
               <p>© {new Date().getFullYear()} Icon Embedded Controls. All rights reserved.</p>
