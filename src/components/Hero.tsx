@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import AdaptiveImage from '@/components/AdaptiveImage';
 import Link from 'next/link';
 
 export interface CTAButton {
@@ -28,9 +29,9 @@ export default function Hero({
   return (
     <section className={`w-full ${className}`}>
       {/* Container with premium padding - Full width hero with max-width centered */}
-      <div className="w-full max-w-[1920px] mx-auto px-[40px] sm:px-[60px] lg:px-[80px] xl:px-[100px] py-[40px] sm:py-[50px] lg:py-[60px]">
+      <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         {/* Clean card-like container with soft rounded corners */}
-        <div className="bg-card rounded-[40px] p-[60px] sm:p-[80px] lg:p-[100px] shadow-md">
+        <div className="bg-card rounded-[40px] p-8 sm:p-12 lg:p-16 shadow-md">
           {/* Vertical Flex Layout: Text Block at Top */}
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
             {/* Title - Large and prominent */}
@@ -74,7 +75,7 @@ export default function Hero({
             <div className="w-full max-w-5xl mx-auto mt-2">
               {img.includes('logo.png') ? (
                 // Logo with fixed height
-                <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] rounded-[30px] overflow-hidden bg-transparent flex items-center justify-center">
+                <div className="relative w-full h-[200px] md:h-[300px] lg:h-[400px] rounded-[30px] overflow-hidden bg-transparent flex items-center justify-center">
                   <Image
                     src={img}
                     alt={title}
@@ -87,7 +88,7 @@ export default function Hero({
               ) : (
                 // Product image with aspect-square
                 <div className="relative aspect-square w-full rounded-[30px] overflow-hidden bg-gray-50">
-                  <Image
+                  <AdaptiveImage
                     src={img}
                     alt={title}
                     fill

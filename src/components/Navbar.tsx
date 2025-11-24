@@ -9,7 +9,10 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  const isActive = (path: string) => pathname === path;
+  const isActive = (path: string) => {
+    if (path === '/') return pathname === '/';
+    return pathname.startsWith(path);
+  };
 
   return (
     <nav className="bg-background/80 backdrop-blur-md border-b border-gray-200 fixed w-full z-50 shadow-sm transition-colors duration-300">
@@ -34,22 +37,22 @@ export default function Navbar() {
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-4">
             <Link 
               href="/products" 
-              className={`transition-colors font-medium ${isActive('/products') ? 'text-accent' : 'text-primary hover:text-accent'}`}
+              className={`bg-transparent border border-primary px-6 py-2 rounded-full transition-all ${isActive('/products') ? 'bg-primary text-white' : 'text-primary hover:bg-primary hover:text-white'}`}
             >
               Products
             </Link>
             <Link 
               href="/about" 
-              className={`transition-colors font-medium ${isActive('/about') ? 'text-accent' : 'text-primary hover:text-accent'}`}
+              className={`bg-transparent border border-primary px-6 py-2 rounded-full transition-all ${isActive('/about') ? 'bg-primary text-white' : 'text-primary hover:bg-primary hover:text-white'}`}
             >
               About Us
             </Link>
             <Link 
               href="/contact" 
-              className="bg-transparent border border-primary text-primary px-6 py-2 rounded-full hover:bg-primary hover:text-white transition-all"
+              className={`bg-transparent border border-primary px-6 py-2 rounded-full transition-all ${isActive('/contact') ? 'bg-primary text-white' : 'text-primary hover:bg-primary hover:text-white'}`}
             >
               Contact Us
             </Link>

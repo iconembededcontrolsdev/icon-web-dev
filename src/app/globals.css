@@ -15,7 +15,7 @@
     --card-foreground: #1A1A1A;
     --primary: #2D2D2D;
     --primary-foreground: #FFFFFF;
-    --accent: #2D2D2D; /* Using dark grey as accent based on image buttons */
+    --accent: #2D2D2D;
     --accent-hover: #000000;
     --muted: #4B5563;
     --border: #E5E7EB;
@@ -45,6 +45,19 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
+
+.pause-on-hover:hover .animate-marquee {
+  animation-play-state: paused;
 }
 
 /* Hide scrollbar utility */

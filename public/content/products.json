@@ -96,7 +96,7 @@
             "Companies"
           ],
           "images": [
-            "/images/1. Digital Tyre Inflator/1A.jpeg"
+            "/images/highres/1. Digital Tyre Inflator/1A.jpg"
           ]
         },
         {
@@ -149,7 +149,7 @@
             "Companies"
           ],
           "images": [
-            "/images/1. Digital Tyre Inflator/1B.jpeg"
+            "/images/highres/1. Digital Tyre Inflator/1B.jpg"
           ]
         },
         {
@@ -199,7 +199,7 @@
             "Companies"
           ],
           "images": [
-            "/images/1. Digital Tyre Inflator/1C.jpeg"
+            "/images/highres/1. Digital Tyre Inflator/1C.jpg"
           ]
         },
         {
@@ -252,7 +252,7 @@
             "Companies"
           ],
           "images": [
-            "/images/1. Digital Tyre Inflator/1D.jpeg"
+            "/images/highres/1. Digital Tyre Inflator/1D.jpg"
           ]
         },
         {
@@ -305,7 +305,7 @@
             "Companies"
           ],
           "images": [
-            "/images/1. Digital Tyre Inflator/1F.jpeg"
+            "/images/highres/1. Digital Tyre Inflator/1F.jpg"
           ]
         },
         {
@@ -360,7 +360,7 @@
             "Companies"
           ],
           "images": [
-            "/images/1. Digital Tyre Inflator/1G.jpeg"
+            "/images/highres/1. Digital Tyre Inflator/1G.jpg"
           ]
         },
         {
@@ -415,7 +415,7 @@
             "Companies"
           ],
           "images": [
-            "/images/1. Digital Tyre Inflator/1H.jpeg"
+            "/images/highres/1. Digital Tyre Inflator/1H.jpg"
           ]
         },
         {
@@ -435,20 +435,20 @@
         }
       ],
       "images": [
-        "/images/1. Digital Tyre Inflator/1A.jpeg",
-        "/images/1. Digital Tyre Inflator/1B.jpeg",
-        "/images/1. Digital Tyre Inflator/1C.jpeg",
-        "/images/1. Digital Tyre Inflator/1D.jpeg",
-        "/images/1. Digital Tyre Inflator/1E.jpeg",
-        "/images/1. Digital Tyre Inflator/1F.jpeg",
-        "/images/1. Digital Tyre Inflator/1G.jpeg",
-        "/images/1. Digital Tyre Inflator/1H.jpeg",
-        "/images/1. Digital Tyre Inflator/1I.jpeg",
-        "/images/1. Digital Tyre Inflator/1J.jpeg",
-        "/images/1. Digital Tyre Inflator/1K.jpeg",
-        "/images/1. Digital Tyre Inflator/1L.jpeg"
+        "/images/highres/1. Digital Tyre Inflator/1A.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1B.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1C.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1D.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1E.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1F.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1G.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1H.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1I.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1J.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1K.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1L.jpg"
       ],
-      "mainImage": "/images/1. Digital Tyre Inflator/1A.jpeg"
+      "mainImage": "/images/highres/1. Digital Tyre Inflator/1A.jpg"
     },
     {
       "id": "air-compressor",
@@ -509,7 +509,7 @@
             "Food Processing Industries"
           ],
           "images": [
-            "/images/3. Air Compressor/IC-109.jpeg"
+            "/images/highres/3. Air Compressor/IC-109.jpg"
           ]
         },
         {
@@ -552,7 +552,7 @@
             "Food Processing Industries"
           ],
           "images": [
-            "/images/3. Air Compressor/IC-209.jpeg"
+            "/images/highres/3. Air Compressor/IC-209.jpg"
           ]
         },
         {
@@ -596,7 +596,7 @@
             "Industrial Applications"
           ],
           "images": [
-            "/images/3. Air Compressor/IC-312.jpeg"
+            "/images/highres/3. Air Compressor/IC-312.jpg"
           ]
         },
         {
@@ -640,7 +640,7 @@
             "Industrial Applications"
           ],
           "images": [
-            "/images/3. Air Compressor/IC-512.jpeg"
+            "/images/highres/3. Air Compressor/IC-512.jpg"
           ]
         },
         {
@@ -684,7 +684,7 @@
             "Industrial Applications"
           ],
           "images": [
-            "/images/3. Air Compressor/IC-1012.jpeg"
+            "/images/highres/3. Air Compressor/IC-1012.jpg"
           ]
         }
       ],
@@ -701,10 +701,10 @@
         "Service Centers"
       ],
       "images": [
-        "/images/3. Air Compressor/3a.jpeg",
-        "/images/3. Air Compressor/3b.jpeg"
+        "/images/highres/3. Air Compressor/3A.jpg",
+        "/images/highres/3. Air Compressor/3B.jpg"
       ],
-      "mainImage": "/images/3. Air Compressor/3a.jpeg"
+      "mainImage": "/images/highres/3. Air Compressor/3A.jpg"
     },
     {
       "id": "nitrogen-generator",
@@ -756,9 +756,9 @@
         "Service Centers"
       ],
       "images": [
-        "/images/4. Nitrogen Generator/4a.jpeg"
+        "/images/highres/4. Nitrogen Generator/4A.jpg"
       ],
-      "mainImage": "/images/4. Nitrogen Generator/4a.jpeg"
+      "mainImage": "/images/highres/4. Nitrogen Generator/4A.jpg"
     },
     {
       "id": "panel-board",
@@ -839,7 +839,7 @@
             "Manufacturing Units"
           ],
           "images": [
-            "/images/5. Panel Board/5A.jpeg"
+            "/images/highres/5. Panel Board/5A.jpg"
           ]
         },
         {
@@ -870,7 +870,7 @@
             "Shopping Mall"
           ],
           "images": [
-            "/images/5. Panel Board/5B.jpeg"
+            "/images/highres/5. Panel Board/5B.jpg"
           ]
         },
         {
@@ -895,7 +895,7 @@
             "Commercial Buildings"
           ],
           "images": [
-            "/images/5. Panel Board/5C.jpeg"
+            "/images/highres/5. Panel Board/5C.jpg"
           ]
         }
       ],
@@ -950,15 +950,15 @@
         }
       ],
       "images": [
-        "/images/5. Panel Board/5a.jpeg",
-        "/images/5. Panel Board/5b.jpeg",
-        "/images/5. Panel Board/5b2.jpeg",
-        "/images/5. Panel Board/5c1.jpeg",
-        "/images/5. Panel Board/5c2.jpeg",
-        "/images/5. Panel Board/5c3.jpeg",
-        "/images/5. Panel Board/5d.jpeg"
+        "/images/highres/5. Panel Board/5A.jpg",
+        "/images/highres/5. Panel Board/5B.jpg",
+        "/images/highres/5. Panel Board/5B2.jpeg",
+        "/images/highres/5. Panel Board/5C1.jpg",
+        "/images/highres/5. Panel Board/5C2.jpg",
+        "/images/highres/5. Panel Board/5C3.jpg",
+        "/images/highres/5. Panel Board/5D.jpg"
       ],
-      "mainImage": "/images/5. Panel Board/5a.jpeg"
+      "mainImage": "/images/highres/5. Panel Board/5A.jpg"
     },
     {
       "id": "garage-equipment",
@@ -1008,7 +1008,7 @@
             "Two Wheeler Repair Shop"
           ],
           "images": [
-            "/images/6. Garage Equipment/6A.jpeg"
+            "/images/highres/6. Garage Equipment/6A.jpg"
           ]
         },
         {
@@ -1037,7 +1037,7 @@
             "Industrial Applications"
           ],
           "images": [
-            "/images/6. Garage Equipment/6B.jpeg"
+            "/images/highres/6. Garage Equipment/6B.jpg"
           ]
         },
         {
@@ -1065,7 +1065,7 @@
             "Oil Change Service"
           ],
           "images": [
-            "/images/6. Garage Equipment/6C.jpeg"
+            "/images/highres/6. Garage Equipment/6C.jpg"
           ]
         }
       ],
@@ -1113,11 +1113,11 @@
         "Motorcycle Repair Shops"
       ],
       "images": [
-        "/images/6. Garage Equipment/6a.jpeg",
-        "/images/6. Garage Equipment/6b.jpeg",
-        "/images/6. Garage Equipment/6c.jpeg"
+        "/images/highres/6. Garage Equipment/6A.jpg",
+        "/images/highres/6. Garage Equipment/6B.jpg",
+        "/images/highres/6. Garage Equipment/6C.jpg"
       ],
-      "mainImage": "/images/6. Garage Equipment/6a.jpeg"
+      "mainImage": "/images/highres/6. Garage Equipment/6A.jpg"
     }
   ]
 }
