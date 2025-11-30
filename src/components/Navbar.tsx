@@ -25,34 +25,43 @@ export default function Navbar() {
                   I'll keep the image if it exists, otherwise just text. */}
               {/* Logo / Brand Name */}
               <div className="flex items-center gap-2">
-                 {/* If you have a logo image, uncomment below and adjust width/height */}
-                 {/* <div className="relative h-10 w-10">
+                {/* If you have a logo image, uncomment below and adjust width/height */}
+                {/* <div className="relative h-10 w-10">
                     <Image src="/images/highres/7. Extras/logo.png" alt="Logo" fill className="object-contain" />
                  </div> */}
-                 <span className="text-xl font-bold text-primary whitespace-nowrap">
-                    Icon Embedded Controls
-                 </span>
+                <span className="text-xl font-bold text-primary whitespace-nowrap">
+                  Icon Embedded Controls
+                </span>
               </div>
             </Link>
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link 
-              href="/products" 
-              className={`bg-transparent border border-primary px-6 py-2 rounded-full transition-all ${isActive('/products') ? 'bg-primary text-white' : 'text-primary hover:bg-primary hover:text-white'}`}
+            <Link
+              href="/products"
+              className={`px-6 py-2 rounded-full transition-all border border-primary ${isActive('/products')
+                  ? 'bg-primary text-white shadow-md'
+                  : 'bg-transparent text-primary hover:bg-primary/10'
+                }`}
             >
               Products
             </Link>
-            <Link 
-              href="/about" 
-              className={`bg-transparent border border-primary px-6 py-2 rounded-full transition-all ${isActive('/about') ? 'bg-primary text-white' : 'text-primary hover:bg-primary hover:text-white'}`}
+            <Link
+              href="/about"
+              className={`px-6 py-2 rounded-full transition-all border border-primary ${isActive('/about')
+                  ? 'bg-primary text-white shadow-md'
+                  : 'bg-transparent text-primary hover:bg-primary/10'
+                }`}
             >
               About Us
             </Link>
-            <Link 
-              href="/contact" 
-              className={`bg-transparent border border-primary px-6 py-2 rounded-full transition-all ${isActive('/contact') ? 'bg-primary text-white' : 'text-primary hover:bg-primary hover:text-white'}`}
+            <Link
+              href="/contact"
+              className={`px-6 py-2 rounded-full transition-all border border-primary ${isActive('/contact')
+                  ? 'bg-primary text-white shadow-md'
+                  : 'bg-transparent text-primary hover:bg-primary/10'
+                }`}
             >
               Contact Us
             </Link>
@@ -80,22 +89,22 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden bg-background border-t border-gray-200">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <Link 
-              href="/products" 
+            <Link
+              href="/products"
               className="block px-3 py-2 text-primary hover:bg-gray-100 rounded-md font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               Products
             </Link>
-            <Link 
-              href="/about" 
+            <Link
+              href="/about"
               className="block px-3 py-2 text-primary hover:bg-gray-100 rounded-md font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               About Us
             </Link>
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="block w-full text-center bg-primary text-white px-4 py-2 rounded-md hover:bg-primary/90 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
