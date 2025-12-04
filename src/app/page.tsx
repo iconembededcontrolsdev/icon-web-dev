@@ -141,9 +141,9 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-bg">
+    <div className="min-h-screen bg-background">
       {/* Main Content */}
-      <main className="pt-16 bg-bg">
+      <main className="pt-16 bg-background">
         {/* Hero Section */}
         {renderBlock(showcaseData[0], 0)}
 
@@ -155,7 +155,7 @@ export default function Home() {
         ))}
         
         {/* Footer */}
-        <footer className="bg-bg">
+        <footer className="bg-background">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-gray-200">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div>

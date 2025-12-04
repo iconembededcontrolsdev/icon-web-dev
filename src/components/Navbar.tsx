@@ -34,9 +34,6 @@ export default function Navbar() {
                 <span className="text-xl font-bold text-primary whitespace-nowrap">
                   Icon Embedded Controls
                 </span>
-                <span className="text-xl font-bold text-primary whitespace-nowrap">
-                  Icon Embedded Controls
-                </span>
               </div>
             </Link>
           </div>
