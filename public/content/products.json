@@ -201,7 +201,70 @@
           "images": [
             "/images/highres/1. Digital Tyre Inflator/1C.jpg"
           ]
-        },
+        }
+      ],
+      "images": [
+        "/images/highres/1. Digital Tyre Inflator/1A.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1B.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1C.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1E.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1I.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1J.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1K.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1L.jpg"
+      ],
+      "mainImage": "/images/highres/1. Digital Tyre Inflator/1A.jpg"
+    },
+    {
+      "id": "digital-tyre-inflator-pedestal",
+      "title": "Digital Tyre Inflator Pedestals",
+      "description": "Pedestal mounted digital tyre inflators suitable for fuel stations and heavy duty applications.",
+      "subtitle": "Pedestal mounted digital tyre inflators",
+      "fullDescription": "Our Pedestal Digital Tyre Inflators are designed for durability and ease of use in fuel stations and commercial environments. They feature large displays and robust construction.",
+      "features": [
+        "Two digital readouts one for set pressure and other for tyre pressure",
+        "LCD display with LED back light to provide good visibility",
+        "Display remain at same set pressure value even after power on-off cycle",
+        "Audible and visual end of the cycle signal indicators",
+        "LED indication for the status of operation",
+        "Soft touch and durable membrane keys suitable for outdoor",
+        "Automatic tyre sensing system",
+        "Separate keys for set pressure increment and decrement",
+        "Flat key for empty or puncture tyre",
+        "25/35 key for easy front and back tyre pressure setting",
+        "Reset key to exit out of operation at any time",
+        "5 in 1 switch box with fuse protection and indicator",
+        "Can use for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck"
+      ],
+      "specifications": {
+        "system": "Digital microcontroller based",
+        "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+        "airInputSupply": "87 - 180 psi / 6 - 12.4 bar / 6.1 - 12.65 kg/cm2",
+        "sensorAccuracy": "± 0.5% of full scale",
+        "inputAirHose": "6mm x 2mtrs Black braided Hose with suitable fittings",
+        "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
+        "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head / hand held/clip on foot connector",
+        "maximumOverPressure": "185 psi (13 kg/cm2)",
+        "pressureSettingRange": "6 to 180 psi",
+        "workingPressureRange": "0 to 180 psi",
+        "displayResolution": "1 psi",
+        "measuringResolution": "0.25 psi",
+        "keypad": "Membrane Keypad suitable for outdoor application",
+        "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
+        "dimensions": "415 x 210 x 1390 mm (pedestal), 425 x 250 x 1420 mm (Packing)"
+      },
+      "applications": [
+        "Fuel Station (for IOCL, BPCL, HPCL, ESSAR, RELIANCE and other leading companies)",
+        "Wheel Alignment Shop",
+        "Automotive Garage",
+        "Depot",
+        "Puncture Shop",
+        "Apartments",
+        "Commercial Parking Lot",
+        "Educational Institution",
+        "Companies"
+      ],
+      "models": [
         {
           "model": "AIROJET 1000 LCV P",
           "type": "Pedestal - Normal (IOCL/BPCL)",
@@ -421,25 +484,213 @@
         {
           "model": "Airojet1000LCV IC",
           "type": "With Inbuilt Compressor",
-          "description": "Digital tyre inflator with inbuilt compressor - no external air input needed"
+          "description": "Digital tyre inflator with inbuilt compressor - no external air input needed",
+          "subtitle": "Inbuilt Compressor",
+          "fullDescription": "",
+          "features": [
+            "TWO DIGITAL READOUTS ONE FOR SET PRESSURE AND OTHER FOR TYRE PRESSURE",
+            "LCD DISPLAY WITH BACK LIGHT TO PROVIDE GOOD VISIBILITY",
+            "DISPLAY REMAIN AT SAME SET PRESSURE VALUE EVEN AT POWER ON-OFF CYCLE",
+            "AUDIBLE AND VISUAL END OF THE CYCLE SIGNAL INDICATORS",
+            "LED INDICATION FOR THE STATUS OF OPERATION",
+            "SOFT TOUCH AND DURABLE MEMBRANE KEYS SUITABLE FOR OUTDOOR",
+            "AUTOMATIC TYRE SENSING SYSTEM",
+            "SEPARATE KEYS FOR SET PRESSURE INCREMENT AND DECREMENT",
+            "FLAT KEY FOR EMPTY OR PUNCTURE TYRE",
+            "25/35 KEY FOR EASYFRONT AND BACK TYRE PRESSURE SETTING",
+            "RESET KEY TO EXIT OUT OF OPERATION AT ANY TIME",
+            "MCB PROTECTION",
+            "NO NEED FOR EXTERNAL AIR INPUT ( INBUILD COMPRESSOR AVAILABLE)",
+            "CAN USE FOR VEHICLE TYRE RANGING FROM TWO WHEELER, CAR AND SUVS"
+          ],
+          "specifications": {
+            "technical": {
+              "system": "Digital microcontroller based",
+              "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 15A",
+              "sensorAccuracy": "± 0.5% of full scale",
+              "inputSupplySource": "15 A switch box with fuse and indicator within 2 meter proximity",
+              "inputFilter": "1/4\" x 5 micron air filter with suitable fittings",
+              "outputHose": "10 mtrs 8 x5 mm Coiled PU hose with clip on Air chuck",
+              "maximumOverPressure": "185 psi (13 kg/cm2)",
+              "pressureSettingRange": "6 to 100 psi",
+              "workingPressureRange": "5 to 100 Psi",
+              "displayResolution": "1 psi",
+              "measuringResolution": "0.25 psi",
+              "keypad": "Membrane Keypad suitable for outdoor application",
+              "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF"
+            }
+          },
+          "applications": [
+            "Wheel Alignment Shop",
+            "Automotive Garage",
+            "Depot",
+            "Puncture Shop",
+            "Apartments",
+            "Commercial Parking Lot",
+            "Educational Institution",
+            "Companies"
+          ],
+          "images": [
+            "/images/highres/1. Digital Tyre Inflator/1J.jpg"
+          ]
         },
         {
           "model": "ICON PI C",
           "type": "Digital Tube Pre Inflator",
-          "description": "Tube inflation system with timer for tyre manufacturing units"
+          "description": "Tube inflation system with timer for tyre manufacturing units",
+          "subtitle": "HPCL Pedestal - Heavy",
+          "fullDescription": "HPCL canopy model heavy duty pedestal mounted digital tyre inflator for fuel stations. Features two digital readouts, big LCD display with LED backlight, pressure unit display to identify PSI or KG/CM2, and can be used for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck.",
+          "features": [
+            "Two digital readouts one for set pressure and other for tyre pressure",
+            "Big LCD display with LED back light to provide good visibility",
+            "Pressure unit display to identify PSI or KG/CM2",
+            "Display remain at same set pressure value even after power on-off cycle",
+            "Audible and visual end of the cycle signal indicators",
+            "LED indication for the status of operation",
+            "Soft touch and durable membrane keys suitable for outdoor",
+            "Automatic tyre sensing system",
+            "Separate keys for set pressure increment and decrement",
+            "Flat key for empty or puncture tyre",
+            "Toggle key for easy set pressure value 25/35 upto SUVs and 90/120/150 for heavy vehicles",
+            "Confirm to operate method for overpressure setvalue with display blink notification",
+            "Reset key to exit out of operation at any time",
+            "5 in 1 switch box with fuse protection and indicator",
+            "Can use for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck"
+          ],
+          "specifications": {
+            "technical": {
+              "system": "Digital microcontroller based",
+              "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 15A",
+              "sensorAccuracy": "± 0.5 % of full scale",
+              "inputSupplySource": "15 A switch box with fuse and indicator within 2 meter proximity",
+              "inputFilter": "¼” x 5 micron air filter with suitable fittings",
+              "outputHose": "10 mtrs 8 x5 mm Coiled PU hose with clip on Air chuck",
+              "maximumOverPressure": "185 psi (13 kg/cm2)",
+              "pressureSettingRange": "6 to 100 psi",
+              "workingPressureRange": "5 to 100 Psi",
+              "displayResolution": "1 psi",
+              "measuringResolution": "0.25 psi",
+              "keypad": "Membrane Keypad suitable for outdoor application",
+              "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF"
+            },
+            "airCompressorSpecification": {
+              "hpKw": "1.5 HP/ 1.1 K.W.",
+              "tankCapacity": "45 Liters",
+              "drain": "Digital Auto Drain Valve"
+            }
+          },
+          "applications": [
+            "Fuel Station (for HPCL)",
+            "Wheel Alignment Shop",
+            "Automotive Garage",
+            "Bus Depot / All vehicle depot",
+            "Puncture Shop",
+            "Apartments",
+            "Commercial Parking Lot",
+            "Educational Institution",
+            "Companies"
+          ],
+          "images": [
+            "/images/highres/1. Digital Tyre Inflator/1K.jpg"
+          ]
         },
         {
           "model": "Airojet1000HMV C",
           "type": "Digital Tube Inflation System",
-          "description": "Automatic inflator for tube inflation with vacuum pressure"
+          "description": "Automatic inflator for tube inflation with vacuum pressure",
+          "subtitle": "HPCL Pedestal - Heavy",
+          "fullDescription": "HPCL canopy model heavy duty pedestal mounted digital tyre inflator for fuel stations. Features two digital readouts, big LCD display with LED backlight, pressure unit display to identify PSI or KG/CM2, and can be used for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck.",
+          "features": [
+            "Two digital readouts one for set pressure and other for tyre pressure",
+            "Big LCD display with LED back light to provide good visibility",
+            "Pressure unit display to identify PSI or KG/CM2",
+            "Display remain at same set pressure value even after power on-off cycle",
+            "Audible and visual end of the cycle signal indicators",
+            "LED indication for the status of operation",
+            "Soft touch and durable membrane keys suitable for outdoor",
+            "Automatic tyre sensing system",
+            "Separate keys for set pressure increment and decrement",
+            "Flat key for empty or puncture tyre",
+            "Toggle key for easy set pressure value 25/35 upto SUVs and 90/120/150 for heavy vehicles",
+            "Confirm to operate method for overpressure setvalue with display blink notification",
+            "Reset key to exit out of operation at any time",
+            "5 in 1 switch box with fuse protection and indicator",
+            "Can use for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck"
+          ],
+          "specifications": {
+            "system": "Digital microcontroller based",
+            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+            "airInputSupply": "87 - 180 psi / 6 - 10 bar / 6.1 - 10.2 kg/cm2",
+            "sensorAccuracy": "± 0.5% of full scale",
+            "inputAirHose": "10mm x 10mtrs PU Hose with suitable fittings",
+            "inputFilter": "1/2” x 5 micron air filter with regulator suitable fittings",
+            "outputAirHose": "10mm x 10mtrs PU Hose with clip-on connector",
+            "maximumOverPressure": "150 psi (10.5 kg/cm2)",
+            "pressureSettingRange": " 20 to 1000 water column (mm H2O)",
+            "workingPressureRange": "0 to 1000 water column (mm H2O)",
+            "displayResolution": "1 water column (mm H2O)",
+            "measuringResolution": "0.25 water column (mm H2O)",
+            "keypad": "Membrane Keypad suitable for outdoor application",
+            "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
+            "dimensions": "415 x 210 x 1390 mm (pedestal), 425 x 250 x 1420 mm (Packing)"
+          },
+          "applications": [
+            "TYRE MANUFACTURING UNIT / COMPANY"
+          ],
+          "images": [
+            "/images/highres/1. Digital Tyre Inflator/1L.jpg"
+          ]
+        },
+        {
+          "model": "Airojet1000HMV C",
+          "type": "Digital Tube Inflation System",
+          "description": "Automatic inflator for tube inflation with vacuum pressure",
+          "subtitle": "HPCL Pedestal - Heavy",
+          "fullDescription": "HPCL canopy model heavy duty pedestal mounted digital tyre inflator for fuel stations. Features two digital readouts, big LCD display with LED backlight, pressure unit display to identify PSI or KG/CM2, and can be used for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck.",
+          "features": [
+            "Two digital readouts one for set pressure and other for tyre pressure",
+            "Big LCD display with LED back light to provide good visibility",
+            "Pressure unit display to identify PSI or KG/CM2",
+            "Display remain at same set pressure value even after power on-off cycle",
+            "Audible and visual end of the cycle signal indicators",
+            "LED indication for the status of operation",
+            "Soft touch and durable membrane keys suitable for outdoor",
+            "Automatic tyre sensing system",
+            "Separate keys for set pressure increment and decrement",
+            "Flat key for empty or puncture tyre",
+            "Toggle key for easy set pressure value 25/35 upto SUVs and 90/120/150 for heavy vehicles",
+            "Confirm to operate method for overpressure setvalue with display blink notification",
+            "Reset key to exit out of operation at any time",
+            "5 in 1 switch box with fuse protection and indicator",
+            "Can use for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck"
+          ],
+          "specifications": {
+            "system": "Digital microcontroller based",
+            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+            "airInputSupply": "87 - 180 psi / 6 - 10 bar / 6.1 - 10.2 kg/cm2",
+            "sensorAccuracy": "± 0.5% of full scale",
+            "inputAirHose": "10mm x 10mtrs PU Hose with suitable fittings",
+            "inputFilter": "1/2” x 5 micron air filter with regulator suitable fittings",
+            "outputAirHose": "10mm x 10mtrs PU Hose with clip-on connector",
+            "maximumOverPressure": "150 psi (10.5 kg/cm2)",
+            "pressureSettingRange": " 20 to 1000 water column (mm H2O)",
+            "workingPressureRange": "0 to 1000 water column (mm H2O)",
+            "displayResolution": "1 water column (mm H2O)",
+            "measuringResolution": "0.25 water column (mm H2O)",
+            "keypad": "Membrane Keypad suitable for outdoor application",
+            "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
+            "dimensions": "415 x 210 x 1390 mm (pedestal), 425 x 250 x 1420 mm (Packing)"
+          },
+          "applications": [
+            "TYRE MANUFACTURING UNIT / COMPANY"
+          ],
+          "images": [
+            "/images/highres/1. Digital Tyre Inflator/1L.jpg"
+          ]
         }
       ],
       "images": [
-        "/images/highres/1. Digital Tyre Inflator/1A.jpg",
-        "/images/highres/1. Digital Tyre Inflator/1B.jpg",
-        "/images/highres/1. Digital Tyre Inflator/1C.jpg",
         "/images/highres/1. Digital Tyre Inflator/1D.jpg",
-        "/images/highres/1. Digital Tyre Inflator/1E.jpg",
         "/images/highres/1. Digital Tyre Inflator/1F.jpg",
         "/images/highres/1. Digital Tyre Inflator/1G.jpg",
         "/images/highres/1. Digital Tyre Inflator/1H.jpg",
@@ -448,7 +699,7 @@
         "/images/highres/1. Digital Tyre Inflator/1K.jpg",
         "/images/highres/1. Digital Tyre Inflator/1L.jpg"
       ],
-      "mainImage": "/images/highres/1. Digital Tyre Inflator/1A.jpg"
+      "mainImage": "/images/highres/1. Digital Tyre Inflator/1L.jpg"
     },
     {
       "id": "digital-nitrogen-tyre-inflator",
@@ -1418,7 +1669,11 @@
           ]
         },
         "pneumaticGreasePump": {
-          "capacities": ["15kg", "25kg", "50kg"],
+          "capacities": [
+            "15kg",
+            "25kg",
+            "50kg"
+          ],
           "output": "320 - 390 Grams/minute (Gm/min)",
           "workingPressureRange": "4 to 10 bar",
           "outputDeliveryHoseLength": "2.2 Meters (mtrs)",
@@ -1448,6 +1703,107 @@
         "/images/highres/6. Garage Equipment/6C.jpg"
       ],
       "mainImage": "/images/highres/6. Garage Equipment/6A.jpg"
+    },
+    {
+      "id": "digital-tyre-inflator",
+      "title": "Digital Tyre Inflator",
+      "description": "Reliable, durable and accurate electronic digital tyre inflators meeting tyre manufacturer pressure standards. Used by major tyre and vehicle manufacturers in their production line.",
+      "subtitle": "Reliable, durable and accurate electronic digital tyre inflators meeting tyre manufacturer pressure standards. Used by major tyre and vehicle manufacturers in their production line.",
+      "fullDescription": "We are the leading Manufacturer and supplier for Electronic Digital Tyre Inflator all over India since the year 2007. Our Electronic Digital Tyre Inflator is reliable, durable and accurate, thus meet the requirement of each and every horizon related to vehicle tyre pressure inflation. Our Inflators are used by major tyre manufacturers as well as vehicle manufacturers in their production line up. Our Electronic Digital Tyre Inflator meets the accuracy suggested by tyre manufacturer's pressure standards. Our control panel Enclosure meets the Ingress Protection standard IP65.",
+      "features": [
+        "Two digital readouts for set pressure and tyre pressure",
+        "LCD display with LED backlight for good visibility",
+        "Display remains at same set pressure value even after power on-off cycle",
+        "Audible and visual end of cycle signal indicators",
+        "Automatic tyre sensing system",
+        "IP65 protection standard",
+        "Soft touch and durable membrane keys suitable for outdoor",
+        "Separate keys for set pressure increment and decrement",
+        "Flat key for empty or puncture tyre",
+        "25/35 key for easy front and back tyre pressure setting",
+        "Reset key to exit out of operation at any time"
+      ],
+      "specifications": {
+        "system": "Digital microcontroller based",
+        "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz",
+        "airInputSupply": "87 - 145 psi / 6 - 10 bar / 6.1 - 10.2 kg/cm2",
+        "sensorAccuracy": "± 0.5% of full scale",
+        "inputAirHose": "6mm x 2mtrs Black braided Hose with suitable fittings",
+        "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
+        "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head foot connector",
+        "maximumOverPressure": "185 psi (13 kg/cm2)",
+        "pressureSettingRange": "6 to 150 psi",
+        "workingPressureRange": "0 to 100 psi",
+        "displayResolution": "1 psi",
+        "measuringResolution": "0.25 psi",
+        "keypad": "Membrane Keypad suitable for outdoor application",
+        "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
+        "dimensions": "275 x 140 x 275 mm (Control panel), 325 x 165 x 275 mm (Control panel with clamp), 435 x 315 x 435 mm (Packing)"
+      },
+      "applications": [
+        "Wheel Alignment Shop",
+        "Automotive Garage",
+        "Small vehicle Depot",
+        "Puncture Shop",
+        "Apartments",
+        "Commercial Parking Lot",
+        "Educational Institution",
+        "Companies",
+        "Fuel Station (for IOCL, BPCL, HPCL, ESSAR, RELIANCE and other leading companies)"
+      ],
+      "models": [
+        {
+          "model": "AIROJET 1000 LCV W",
+          "type": "Wall Mountable - Normal",
+          "description": "Wall Mountable - Normal digital tyre inflator with two digital readouts for set pressure and tyre pressure.",
+          "subtitle": "Wall Mountable - Normal",
+          "fullDescription": "Standard wall mountable digital tyre inflator for light commercial vehicles. Features two digital readouts, LCD display with LED backlight, automatic tyre sensing system, and can be used for vehicle tyre ranging from two wheeler, car, SUV and mini truck.",
+          "features": [
+            "Two digital readouts one for set pressure and other for tyre pressure",
+            "LCD display with LED back light to provide good visibility",
+            "Display remain at same set pressure value even after power on-off cycle",
+            "Audible and visual end of the cycle signal indicators",
+            "LED indication for the status of operation",
+            "Soft touch and durable membrane keys suitable for outdoor",
+            "Automatic tyre sensing system",
+            "Separate keys for set pressure increment and decrement",
+            "Flat key for empty or puncture tyre",
+            "25/35 key for easy front and back tyre pressure setting",
+            "Reset key to exit out of operation at any time",
+            "Can use for vehicle tyre ranging from two wheeler, car, SUV and mini truck"
+          ],
+          "specifications": {
+            "system": "Digital microcontroller based",
+            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz",
+            "airInputSupply": "87 - 145 psi / 6 - 10 bar / 6.1 - 10.2 kg/cm2",
+            "sensorAccuracy": "± 0.5% of full scale",
+            "inputAirHose": "6mm x 2mtrs Black braided Hose with suitable fittings",
+            "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
+            "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head foot connector",
+            "maximumOverPressure": "185 psi (13 kg/cm2)",
+            "pressureSettingRange": "6 to 150 psi",
+            "workingPressureRange": "0 to 100 psi",
+            "displayResolution": "1 psi",
+            "measuringResolution": "0.25 psi",
+            "keypad": "Membrane Keypad suitable for outdoor application",
+            "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
+            "dimensions": "275 x 140 x 275 mm (Control panel), 325 x 165 x 275 mm (Control panel with clamp), 435 x 315 x 435 mm (Packing)"
+          },
+          "applications": [
+            "Wheel Alignment Shop",
+            "Automotive Garage",
+            "Small vehicle Depot",
+            "Puncture Shop",
+            "Apartments",
+            "Commercial Parking Lot",
+            "Educational Institution",
+            "Companies"
+          ],
+          "images": [
+            "/images/highres/1. Digital Tyre Inflator/1A.jpg"
+          ]
+        }
+      ]
     }
   ]
 }
