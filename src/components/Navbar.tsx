@@ -16,61 +16,46 @@ export default function Navbar() {
 
   return (
     <nav className="bg-background/80 backdrop-blur-md border-b border-gray-200 fixed w-full z-50 shadow-sm transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-15">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3">
-              {/* Using a placeholder or the actual logo if available. 
-                  The image shows "Icon Embedded Controls" text. 
-                  I'll keep the image if it exists, otherwise just text. */}
-              {/* Logo / Brand Name */}
               <div className="flex items-center gap-2">
-                {/* If you have a logo image, uncomment below and adjust width/height */}
-                {/* <div className="relative h-10 w-10">
-                {/* If you have a logo image, uncomment below and adjust width/height */}
-                {/* <div className="relative h-10 w-10">
-                    <Image src="/images/highres/7. Extras/logo.png" alt="Logo" fill className="object-contain" />
-                 </div> */}
-                <span className="text-xl font-bold text-primary whitespace-nowrap">
-                  Icon Embedded Controls
-                </span>
-                <span className="text-xl font-bold text-primary whitespace-nowrap">
-                  Icon Embedded Controls
-                </span>
+                <div className="relative h-12 w-12">
+                  <Image src="/images/highres/7. Extras/logo.png" alt="Icon Embedded Controls" fill className="object-contain" />
+                </div>
+
               </div>
             </Link>
           </div>
 
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-1">
             <Link
               href="/products"
-              className={`bg-transparent border border-primary px-6 py-2 rounded-full transition-all ${
-                isActive("/products")
-                  ? "bg-primary text-white"
-                  : "text-primary hover:bg-primary hover:text-white"
-              }`}
+              className={`bg-transparent px-4 py-2 rounded-none transition-all ${isActive("/products")
+                ? "bg-primary text-white"
+                : "text-primary hover:bg-primary hover:text-white"
+                }`}
             >
               Products
             </Link>
             <Link
               href="/about"
-              className={`bg-transparent border border-primary px-6 py-2 rounded-full transition-all ${
-                isActive("/about")
-                  ? "bg-primary text-white"
-                  : "text-primary hover:bg-primary hover:text-white"
-              }`}
+              className={`bg-transparent px-4 py-2 rounded-none transition-all ${isActive("/about")
+                ? "bg-primary text-white"
+                : "text-primary hover:bg-primary hover:text-white"
+                }`}
             >
               About Us
             </Link>
             <Link
               href="/contact"
-              className={`bg-transparent border border-primary px-6 py-2 rounded-full transition-all ${
-                isActive("/contact")
-                  ? "bg-primary text-white"
-                  : "text-primary hover:bg-primary hover:text-white"
-              }`}
+              className={`bg-transparent px-4 py-2 rounded-none transition-all ${isActive("/contact")
+                ? "bg-primary text-white"
+                : "text-primary hover:bg-primary hover:text-white"
+                }`}
             >
               Contact Us
             </Link>

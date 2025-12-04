@@ -19,6 +19,8 @@ export const metadata: Metadata = {
 
 import Navbar from "@/components/Navbar";
 
+import DisableRightClick from "@/components/DisableRightClick";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,6 +31,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <DisableRightClick />
         <Navbar />
         {children}
       </body>
