@@ -17,12 +17,10 @@ const LOGOS = [
 
 export default function ClientLogos() {
   return (
-    <section className="w-full py-6 sm:py-12 lg:py-16 overflow-hidden bg-background">
-      <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-[40px] pt-4 pb-24 shadow-md overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
-        <h2 className="text-3xl font-bold text-primary">Our Trusted Clients</h2>
-        <p className="text-muted mt-2">Partnering with industry leaders across the globe</p>
+    <div className="w-full pt-8 pb-4 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6 text-center">
+        <h2 className="text-2xl font-bold text-primary">Our Trusted Clients</h2>
+        <p className="text-muted mt-1 text-sm">Partnering with industry leaders across the globe</p>
       </div>
       
       <div className="relative w-full overflow-hidden pause-on-hover">
@@ -30,7 +28,7 @@ export default function ClientLogos() {
           {/* First set of logos */}
           <div className="flex items-center gap-12 mx-6">
             {LOGOS.map((logo, index) => (
-              <div key={`logo-1-${index}`} className="relative w-32 h-20 flex-shrink-0 py-20 overflow-hidden">
+              <div key={`logo-1-${index}`} className="relative w-24 h-16 flex-shrink-0 overflow-hidden">
                 <AdaptiveImage
                   src={logo}
                   alt={`Client Logo ${index + 1}`}
@@ -42,9 +40,9 @@ export default function ClientLogos() {
           </div>
           
           {/* Duplicate set for seamless scrolling */}
-          <div className="flex items-center gap-18 mx-6">
+          <div className="flex items-center gap-12 mx-6">
             {LOGOS.map((logo, index) => (
-              <div key={`logo-2-${index}`} className="relative w-32 h-20 flex-shrink-0 py-20 overflow-hidden">
+              <div key={`logo-2-${index}`} className="relative w-24 h-16 flex-shrink-0 overflow-hidden">
                 <AdaptiveImage
                   src={logo}
                   alt={`Client Logo ${index + 1}`}
@@ -53,11 +51,9 @@ export default function ClientLogos() {
                 />
               </div>
             ))}
-              </div>
-          </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Hero from '@/components/Hero';
 import DynamicGrid from '@/components/DynamicGrid';
-import ClientLogos from '@/components/ClientLogos';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -144,12 +143,9 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-bg">
       {/* Main Content */}
-      <main className="pt-20 bg-bg">
+      <main className="pt-16 bg-bg">
         {/* Hero Section */}
         {renderBlock(showcaseData[0], 0)}
-        
-        {/* Client Logos Carousel - Moved below Hero */}
-        <ClientLogos />
 
         {/* Remaining Blocks */}
         {showcaseData.slice(1).map((block, index) => (
