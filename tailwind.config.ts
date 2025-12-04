@@ -9,16 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: '#F8F9FA',           // Soft off-white background
-        card: '#FFFFFF',          // Pure white cards
-        text: '#1A1A2E',          // Deep navy text
-        muted: '#6B7280',         // Refined gray for secondary text
-        accent: '#C9A961',        // Champagne gold accent
-        'accent-hover': '#B8964E', // Darker gold on hover
-        primary: '#1A1A2E',       // Deep navy primary
-        'primary-light': '#2D2D44', // Lighter navy
-        secondary: '#8B7355',     // Warm bronze
-        'secondary-light': '#A68968', // Light bronze
+        background: '#0a0e27',      // Deep navy blue-black
+        foreground: '#e8edf4',      // Soft white with blue tint
+        card: '#141b2d',            // Rich dark blue
+        'card-light': '#f5f7fa',    // Light gray-blue for image backgrounds
+        'card-foreground': '#f0f4f8',
+        primary: '#4f8fff',         // Vibrant sky blue
+        'primary-foreground': '#ffffff',
+        accent: '#ff6b35',          // Warm coral orange
+        'accent-hover': '#ff5722',
+        muted: '#8b96a8',           // Cool gray-blue
+        border: '#1e2842',          // Subtle blue-gray border
       },
       fontFamily: {
         sans: ['SF Pro Display', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],

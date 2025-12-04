@@ -112,14 +112,14 @@ export default function ProductsPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-bg">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-accent"></div>
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-bg pt-20">
+    <div className="min-h-screen bg-background pt-20">
       {/* Header */}
       <div className="w-full max-w-[1920px] mx-auto px-[40px] sm:px-[60px] lg:px-[80px] xl:px-[100px] py-[40px] sm:py-[50px] lg:py-[60px]">
         <div className="text-center mb-12">
@@ -141,7 +141,7 @@ export default function ProductsPage() {
             </div>
             <input
               type="text"
-              className="block w-full pl-10 pr-3 py-3 border-2 border-gray-300 rounded-lg bg-card shadow-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
+              className="block w-full pl-10 pr-3 py-3 border-2 border-border rounded-xl bg-card text-foreground shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all placeholder:text-muted"
               placeholder="Search products and models..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -158,9 +158,9 @@ export default function ProductsPage() {
         />
       ) : (
         <div className="w-full max-w-[1920px] mx-auto px-[40px] sm:px-[60px] lg:px-[80px] xl:px-[100px] pb-16">
-          <div className="text-center py-12 bg-white rounded-[40px] shadow-sm">
+          <div className="text-center py-12 bg-card rounded-[40px] shadow-lg border border-border">
             <svg
-              className="mx-auto h-12 w-12 text-gray-400"
+              className="mx-auto h-12 w-12 text-muted"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -172,15 +172,15 @@ export default function ProductsPage() {
                 d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-            <h3 className="mt-2 text-lg font-medium text-gray-900">No products found</h3>
-            <p className="mt-1 text-gray-500">
+            <h3 className="mt-2 text-lg font-medium text-foreground">No products found</h3>
+            <p className="mt-1 text-muted">
               We couldn't find any products matching your search.
             </p>
             <div className="mt-6">
               <button
                 type="button"
                 onClick={() => setSearchQuery('')}
-                className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent"
+                className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-full text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
               >
                 Clear search
               </button>

@@ -8,7 +8,7 @@ export default function AboutPage() {
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">About Us</h1>
           <p className="text-xl text-muted max-w-3xl mx-auto">
-            Leading the way in embedded control solutions since 2007.
+            Leading the way in embeded control solutions since 2007.
           </p>
         </div>
 
@@ -28,7 +28,7 @@ export default function AboutPage() {
              {/* Placeholder for an about image or logo */}
              <Image 
                src="/images/highres/7. Extras/logo.png" 
-               alt="Icon Embedded Controls" 
+               alt="Icon Embeded Controls" 
                width={400} 
                height={400}
                className="object-contain"

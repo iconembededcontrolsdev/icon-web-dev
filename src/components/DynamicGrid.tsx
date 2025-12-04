@@ -73,20 +73,20 @@ export default function DynamicGrid({
                 onClick={() => onItemClick && onItemClick(item)}
               >
               {/* Card container with image stacked on top */}
-              <div className="relative bg-card rounded-[40px] overflow-hidden shadow-sm h-full w-full flex flex-col">
-                {/* Image - Top section */}
-                <div className="relative w-full aspect-[4/3] bg-white">
+              <div className="relative bg-card rounded-[40px] overflow-hidden shadow-lg h-full w-full flex flex-col">
+                {/* Image - Top section with light background */}
+                <div className="relative w-full aspect-[4/3] bg-card-light">
                   <Image
                     src={item.img}
                     alt={item.title}
                     fill
-                    className="object-contain transition-transform duration-500 group-hover:scale-105"
+                    className="object-contain transition-transform duration-500 group-hover:scale-105 p-6"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
                 
-                {/* Details - Bottom section */}
-                <div className="p-6 lg:p-8 flex flex-col flex-grow">
+                {/* Details - Bottom section with dark background */}
+                <div className="p-6 lg:p-8 flex flex-col flex-grow bg-card">
                   <h3 className="text-xl lg:text-2xl font-bold text-primary mb-3">
                     {item.title}
                   </h3>

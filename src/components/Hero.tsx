@@ -32,7 +32,7 @@ export default function Hero({
       {/* Container with premium padding - Full width hero with max-width centered */}
       <div className="w-full max-w-[1920px] mx-auto px-1 sm:px-6 lg:px-8 py-1 sm:py-1 lg:py-1">
         {/* Clean card-like container with soft rounded corners */}
-        <div className="bg-card rounded-[40px] p-8 sm:p-5 lg:p-1 shadow-md">
+        <div className="bg-white rounded-[40px] p-8 sm:p-5 lg:p-1 shadow-md">
           {/* Vertical Flex Layout: Text Block at Top */}
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
             {/* <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-6">
@@ -88,7 +88,7 @@ export default function Hero({
                 </div>
               ) : (
                 // Product image with aspect-square
-                <div className="relative aspect-square w-full rounded-[30px] overflow-hidden bg-gray-50">
+                <div className="relative aspect-square w-full rounded-[30px] overflow-hidden bg-transparent">
                   <AdaptiveImage
                     src={img}
                     alt={title}
