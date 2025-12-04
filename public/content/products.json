@@ -1705,105 +1705,228 @@
       "mainImage": "/images/highres/6. Garage Equipment/6A.jpg"
     },
     {
-      "id": "digital-tyre-inflator",
-      "title": "Digital Tyre Inflator",
-      "description": "Reliable, durable and accurate electronic digital tyre inflators meeting tyre manufacturer pressure standards. Used by major tyre and vehicle manufacturers in their production line.",
-      "subtitle": "Reliable, durable and accurate electronic digital tyre inflators meeting tyre manufacturer pressure standards. Used by major tyre and vehicle manufacturers in their production line.",
-      "fullDescription": "We are the leading Manufacturer and supplier for Electronic Digital Tyre Inflator all over India since the year 2007. Our Electronic Digital Tyre Inflator is reliable, durable and accurate, thus meet the requirement of each and every horizon related to vehicle tyre pressure inflation. Our Inflators are used by major tyre manufacturers as well as vehicle manufacturers in their production line up. Our Electronic Digital Tyre Inflator meets the accuracy suggested by tyre manufacturer's pressure standards. Our control panel Enclosure meets the Ingress Protection standard IP65.",
+      "id": "digital-engine-oil-dispenser",
+      "title": "Digital Engine Oil Dispenser",
+      "description": "Digital engine oil dispenser with secure preset operation and precise oil measurement in litres and millilitres.",
+      "subtitle": "Digital Engine Oil Dispenser",
+      "fullDescription": "Our Digital Engine Oil Dispenser provides accurate and spill-free dispensing of engine oil with secure volume and pricing controls. Designed for professional automotive workshops and garages.",
       "features": [
-        "Two digital readouts for set pressure and tyre pressure",
-        "LCD display with LED backlight for good visibility",
-        "Display remains at same set pressure value even after power on-off cycle",
-        "Audible and visual end of cycle signal indicators",
-        "Automatic tyre sensing system",
-        "IP65 protection standard",
-        "Soft touch and durable membrane keys suitable for outdoor",
-        "Separate keys for set pressure increment and decrement",
-        "Flat key for empty or puncture tyre",
-        "25/35 key for easy front and back tyre pressure setting",
-        "Reset key to exit out of operation at any time"
+        "Saves money for both buyer and seller",
+        "Saves environment by reducing plastic usage",
+        "Almost zero spillage while dispensing",
+        "Precised volume dispensed",
+        "Rupee per litre can be securely set",
+        "Displays total volume dispensed in litres & ml",
+        "Sub total volume dispensed in litres & ml",
+        "Batch or shift wise volume can be erased",
+        "Approved by Legal Metrology"
       ],
-      "specifications": {
-        "system": "Digital microcontroller based",
-        "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz",
-        "airInputSupply": "87 - 145 psi / 6 - 10 bar / 6.1 - 10.2 kg/cm2",
-        "sensorAccuracy": "± 0.5% of full scale",
-        "inputAirHose": "6mm x 2mtrs Black braided Hose with suitable fittings",
-        "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
-        "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head foot connector",
-        "maximumOverPressure": "185 psi (13 kg/cm2)",
-        "pressureSettingRange": "6 to 150 psi",
-        "workingPressureRange": "0 to 100 psi",
-        "displayResolution": "1 psi",
-        "measuringResolution": "0.25 psi",
-        "keypad": "Membrane Keypad suitable for outdoor application",
-        "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
-        "dimensions": "275 x 140 x 275 mm (Control panel), 325 x 165 x 275 mm (Control panel with clamp), 435 x 315 x 435 mm (Packing)"
-      },
-      "applications": [
-        "Wheel Alignment Shop",
-        "Automotive Garage",
-        "Small vehicle Depot",
-        "Puncture Shop",
-        "Apartments",
-        "Commercial Parking Lot",
-        "Educational Institution",
-        "Companies",
-        "Fuel Station (for IOCL, BPCL, HPCL, ESSAR, RELIANCE and other leading companies)"
+      "compatibleBrands": [
+        "Servo",
+        "MAK Lubricants",
+        "HP Racer",
+        "Shell Lubricants"
       ],
       "models": [
         {
-          "model": "AIROJET 1000 LCV W",
-          "type": "Wall Mountable - Normal",
-          "description": "Wall Mountable - Normal digital tyre inflator with two digital readouts for set pressure and tyre pressure.",
-          "subtitle": "Wall Mountable - Normal",
-          "fullDescription": "Standard wall mountable digital tyre inflator for light commercial vehicles. Features two digital readouts, LCD display with LED backlight, automatic tyre sensing system, and can be used for vehicle tyre ranging from two wheeler, car, SUV and mini truck.",
+          "model": "ODU-501",
+          "type": "Engine Oil Dispenser",
+          "description": "Preset model digital engine oil dispenser with accurate measurement display.",
+          "subtitle": "ODU-501 Digital Engine Oil Dispenser",
+          "fullDescription": "Measures and displays engine oil volume in litres and ml, with rupee pricing and legal metrology approval.",
           "features": [
-            "Two digital readouts one for set pressure and other for tyre pressure",
-            "LCD display with LED back light to provide good visibility",
-            "Display remain at same set pressure value even after power on-off cycle",
-            "Audible and visual end of the cycle signal indicators",
-            "LED indication for the status of operation",
-            "Soft touch and durable membrane keys suitable for outdoor",
-            "Automatic tyre sensing system",
-            "Separate keys for set pressure increment and decrement",
-            "Flat key for empty or puncture tyre",
-            "25/35 key for easy front and back tyre pressure setting",
-            "Reset key to exit out of operation at any time",
-            "Can use for vehicle tyre ranging from two wheeler, car, SUV and mini truck"
+            "1” LCD for rupee display",
+            "1” LCD for qty display in ml",
+            "16×2 display with 10 digit for litres and 3 digit for ml",
+            "LED, display and buzzer indications",
+            "Membrane key switches",
+            "4 meter hydraulic hose with oil gun"
           ],
           "specifications": {
-            "system": "Digital microcontroller based",
-            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz",
-            "airInputSupply": "87 - 145 psi / 6 - 10 bar / 6.1 - 10.2 kg/cm2",
-            "sensorAccuracy": "± 0.5% of full scale",
-            "inputAirHose": "6mm x 2mtrs Black braided Hose with suitable fittings",
-            "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
-            "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head foot connector",
-            "maximumOverPressure": "185 psi (13 kg/cm2)",
-            "pressureSettingRange": "6 to 150 psi",
-            "workingPressureRange": "0 to 100 psi",
-            "displayResolution": "1 psi",
-            "measuringResolution": "0.25 psi",
-            "keypad": "Membrane Keypad suitable for outdoor application",
-            "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
-            "dimensions": "275 x 140 x 275 mm (Control panel), 325 x 165 x 275 mm (Control panel with clamp), 435 x 315 x 435 mm (Packing)"
+            "powerSupply": "230VAC at 50Hz",
+            "system": "Micro-Controller Based",
+            "operation": "Preset Model",
+            "accuracyClass": "0.5",
+            "leastCount": "5 ml",
+            "minimumMeasuredQty": "10 ml",
+            "maximumMeasuredQty": "1000 ml (for 2T Engine Oil), 5000 ml (for 4T Engine Oil)",
+            "minimumFlowrate": "500 ml per minute*",
+            "dimensions": "(540×385×1350) mm",
+            "optionsAvailable": "Single/Double Side Control & Printer Option"
           },
           "applications": [
-            "Wheel Alignment Shop",
-            "Automotive Garage",
-            "Small vehicle Depot",
-            "Puncture Shop",
-            "Apartments",
-            "Commercial Parking Lot",
-            "Educational Institution",
-            "Companies"
-          ],
-          "images": [
-            "/images/highres/1. Digital Tyre Inflator/1A.jpg"
+            "Petrol Station",
+            "CNG Gas Station",
+            "Fuel Station",
+            "Industries",
+            "Automotive Sector & Garages"
           ]
         }
-      ]
+      ],
+      "images": [
+        "/images/highres/10. Digital Engine Oil Dispenser/10A.png"
+      ],
+      "mainImage": "/images/highres/10. Digital Engine Oil Dispenser/10A.png"
+    },
+    {
+      "id": "engine-oil-changer",
+      "title": "Engine Oil Changer",
+      "description": "Pump based suction oil changer for 2T/4T engine oil removal.",
+      "subtitle": "Digital Engine Oil Suction System",
+      "fullDescription": "Designed for removing used engine oil with pump based suction and high mobility. Displays volume dispensed and supports safe and clean oil changing processes.",
+      "features": [
+        "Four wheels for mobility",
+        "Pump based suction",
+        "Low & high oil level indications",
+        "Transparent tank for visibility",
+        "Fuse protection"
+      ],
+      "models": [
+        {
+          "model": "OEU-501",
+          "type": "Oil Changer",
+          "description": "230VAC powered engine oil suction machine for 2T/4T vehicles.",
+          "subtitle": "2T/4T Engine Oil Suction",
+          "fullDescription": "Removes used engine oil securely and efficiently using pump-based suction with dual storage tanks and mobility wheels.",
+          "features": [
+            "0.5 HP AC motor",
+            "5 litre transparent tank + 65 litre MS tank",
+            "4 meter reinforced suction and delivery hose",
+            "Nylon engine inlet hose"
+          ],
+          "specifications": {
+            "Model Name": "OEU-501",
+            "Power Supply required": "230VAC at 50Hz",
+            "Suction type": "Pump based suction",
+            "Motor capacity": "0.5 H.P. AC Motor",
+            "Portability": "Four wheels for mobility",
+            "Storage Tank1": "5 Litre transparent tank",
+            "Storage Tank2": "65 Litre MS tank",
+            "Suction hose": "4 Meter reinforced hose",
+            "Delivery hose": "4 Meter reinforced hose",
+            "Engine inlet hose": "Nylon hose",
+            "Indications": "Low & high oil level",
+            "Protection": "Fuse protection",
+            "Dimensions (LxWxH) in mm": "(530x530x1100)",
+            "Application": "2T/4T Engine oil suction"
+          },
+          "applications": [
+            "Automotive Garages",
+            "Service Centers"
+          ],
+          "images": [
+            "/images/highres/11. Engine Oil Changer/11A.png"
+          ]
+        }
+      ],
+      "mainImage": "/images/highres/11. Engine Oil Changer/11A.png"
+    },
+    {
+      "id": "digital-def-adblue-dispenser",
+      "title": "Digital DEF/AdBlue Dispenser",
+      "description": "Digital diesel exhaust fluid dispenser with precise measurement, secure dispensing and legal metrology approval.",
+      "subtitle": "Diesel Exhaust Fluid Dispenser (AUS32/AdBlue)",
+      "fullDescription": "Designed for dispensing Diesel Exhaust Fluid (AUS32/AdBlue) with micro-controller based precision. Helps save plastic usage, prevent spillage, maintain accurate per-litre billing, and supports batch/shift reset. Approved by Legal Metrology for commercial usage.",
+      "features": [
+        "Saves money for both buyer and seller",
+        "Saves environment by reducing plastic usage",
+        "Almost zero spillage while dispensing",
+        "Precised volume dispensed",
+        "Proper per litre can be securely set",
+        "Displays total and sub-total volume dispensed",
+        "Batch or shift wise data can be erased",
+        "Approved by Legal Metrology",
+        "Preset micro-controller based measurement",
+        "Accurate 0.5% measurement class",
+        "Automatic cut-off nozzle",
+        "4-meter AdBlue dispensing hose",
+        "Least count 100ml",
+        "Up to 500 litres per dispensing batch",
+        "40 litres per minute output flow rate"
+      ],
+      "specifications": {
+        "Model Name": "ADU-501",
+        "Power Supply": "230VAC at 50Hz",
+        "System": "Micro-controller based preset model",
+        "Accuracy Class": "0.5",
+        "Display 1": "1” LCD for sales in rupees",
+        "Display 2": "1” LCD for QTY. in litres",
+        "Display 3": "1” LCD for rate per litre",
+        "Display 4": "16x2 display with 7 digit FRT totaliser in litres",
+        "Least Count": "100 ml",
+        "Minimum Measured Quantity": "500 ml",
+        "Maximum Measured Quantity": "500 litres",
+        "Indicators": "LED, Display and Buzzer",
+        "Switches": "Membrane keypad",
+        "Output Hose": "4 meter AdBlue hose with automatic off nozzle",
+        "Output Flow Rate": "40 litres per minute",
+        "Dimensions (LxWxH) in mm": "(740 x 280 x 1750) mm",
+        "Application Area": "Petrol stations / Diesel dispensing stations / Industrial DEF dispensing",
+        "Approval Mark": "IND/09/25/176"
+      },
+      "models": [
+        {
+          "model": "ADU-501 (IndianOil)",
+          "type": "DEF/AdBlue Dispenser",
+          "description": "Digital DEF dispensing unit used in IndianOil branded retail outlets.",
+          "applications": [
+            "Petrol bunks",
+            "DEF dispensing facilities",
+            "Industrial usage"
+          ],
+          "images": [
+            "/images/highres/9. Digital DEF/9a.png"
+          ]
+        },
+        {
+          "model": "ADU-501 (MAK-BPCL)",
+          "type": "DEF/AdBlue Dispenser",
+          "description": "DEF/AdBlue dispenser for Bharat Petroleum network featuring MAK branding.",
+          "applications": [
+            "BPCL fuel retail stations",
+            "Commercial vehicle workshops"
+          ],
+          "images": [
+            "/images/highres/9. Digital DEF/9b.png"
+          ]
+        },
+        {
+          "model": "ADU-501 (HP-DEF)",
+          "type": "DEF/AdBlue Dispenser",
+          "description": "HP-branded DEF dispenser for HPCL retail fuel stations.",
+          "applications": [
+            "HPCL fuel stations",
+            "Industrial dispensing areas"
+          ],
+          "images": [
+            "/images/highres/9. Digital DEF/9c.png"
+          ]
+        }
+      ],
+      "applications": [
+        "Petrol bunks",
+        "Diesel dispensing stations",
+        "Transport fleet yards",
+        "Industrial vehicle service centers",
+        "Commercial automotive workshops"
+      ],
+      "types": [
+        {
+          "type": "Digital DEF/AdBlue Dispenser",
+          "description": "Micro-controller based digital DEF dispensing solution",
+          "features": [
+            "Legal metrology approved",
+            "Extreme precision volume measurement",
+            "Industrial dispensing compatibility"
+          ]
+        }
+      ],
+      "images": [
+        "/images/highres/9. Digital DEF/9a.png",
+        "/images/highres/9. Digital DEF/9b.png",
+        "/images/highres/9. Digital DEF/9c.png"
+      ],
+      "mainImage": "/images/highres/9. Digital DEF/9a.png"
     }
   ]
 }

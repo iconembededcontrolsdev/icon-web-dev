@@ -32,6 +32,7 @@ type ProductData = {
   userInterface?: string[];
   images?: string[];
   models?: ProductModel[];
+  brochure?: string;
 };
 
 const brochureMap: Record<string, string> = {
@@ -39,25 +40,28 @@ const brochureMap: Record<string, string> = {
   'digital-nitrogen-tyre-inflator': '/brochures/2. Digital Nitrogen Tyre Inflator/Digital Nitrogen Tyre Inflator.pdf',
   'air-compressor': '/brochures/3. Air Compressor/Reciprocating Air Compressor.pdf',
   'garage-equipment': '/brochures/6. Garage Equipment/Hydraulic Two Wheeler Ramp.pdf',
+  'digital-def-adblue-dispenser': '/brochures/9. Digital DEF/Digital DEF- AdBlue Despenser.pdf',
+  'digital-engine-oil-dispenser': '/brochures/10. Digital Engine Oil Dispenser/Digital Engine Oil Dispenser.pdf',
+  'engine-oil-changer': '/brochures/11. Engine Oil Changer/Engine Oil Changer.pdf',
+  'digital-tyre-inflator-pedestal': '/brochures/1. Digital Tyre Inflator/Digital Tyre Inflator.pdf',
 };
 
-const AccordionItem = ({ 
-  title, 
-  isOpen, 
-  onClick, 
-  children 
-}: { 
-  title: string; 
-  isOpen: boolean; 
-  onClick: () => void; 
-  children: React.ReactNode; 
+const AccordionItem = ({
+  title,
+  isOpen,
+  onClick,
+  children
+}: {
+  title: string;
+  isOpen: boolean;
+  onClick: () => void;
+  children: React.ReactNode;
 }) => {
   return (
     <div className="border border-primary/20 rounded-[20px] overflow-hidden mb-4 bg-white/50 backdrop-blur-sm">
       <button
-        className={`w-full px-6 py-4 flex items-center justify-between transition-colors ${
-          isOpen ? 'bg-primary text-white' : 'bg-transparent text-primary hover:bg-primary/5'
-        }`}
+        className={`w-full px-6 py-4 flex items-center justify-between transition-colors ${isOpen ? 'bg-primary text-white' : 'bg-transparent text-primary hover:bg-primary/5'
+          }`}
         onClick={onClick}
       >
         <div className="flex items-center gap-3">
@@ -66,19 +70,18 @@ const AccordionItem = ({
           </div>
           <span className="font-medium text-lg">{title}</span>
         </div>
-        <svg 
-          className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
-          fill="none" 
-          viewBox="0 0 24 24" 
+        <svg
+          className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+          fill="none"
+          viewBox="0 0 24 24"
           stroke="currentColor"
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
-      <div 
-        className={`transition-all duration-300 ease-in-out overflow-hidden ${
-          isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
-        }`}
+      <div
+        className={`transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+          }`}
       >
         <div className="p-6 text-foreground border-t border-gray-100/50">
           {children}
@@ -92,9 +95,9 @@ export default function ProductDetail() {
   const { id } = useParams<{ id: string }>();
   const router = useRouter();
   const searchParams = useSearchParams();
-  
+
   const images = getProductImages(id as string);
-  
+
   const [product, setProduct] = useState<ProductData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -105,18 +108,18 @@ export default function ProductDetail() {
       try {
         const response = await fetch('/content/products.json');
         if (!response.ok) throw new Error('Products file not found');
-        
+
         const data = await response.json();
         const products = data.products || [];
         const foundProduct = products.find((p: ProductData) => p.id === id);
-        
+
         if (!foundProduct) throw new Error('Product not found');
-        
+
         const productData = {
           ...foundProduct,
           images: images.length > 0 ? images : foundProduct.images || [],
         };
-        
+
         setProduct(productData);
       } catch (err) {
         setError('Failed to load product');
@@ -168,7 +171,7 @@ export default function ProductDetail() {
     images: product.images
   }];
 
-  const brochureLink = brochureMap[id as string];
+  const brochureLink = product.brochure || brochureMap[id as string];
 
   return (
     <div className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth bg-background">
@@ -177,17 +180,17 @@ export default function ProductDetail() {
         const features = model.features || product.features || [];
         const applications = model.applications || product.applications || [];
         const specifications = model.specifications || product.specifications || {};
-        
+
         return (
-          <section 
-            key={index} 
+          <section
+            key={index}
             className="h-screen w-full snap-start flex flex-col pt-20 overflow-hidden relative"
           >
             <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col lg:flex-row gap-8 lg:gap-12 py-4 lg:py-8">
-              
+
               {/* Left Column: Image */}
-              <div className="w-full lg:w-1/2 h-[40vh] lg:h-auto flex items-center justify-center relative">
-                <div className="relative w-full h-full max-h-[600px] bg-white rounded-[40px] p-8 shadow-sm flex items-center justify-center">
+              <div className="w-full lg:w-1/2 h-[40vh] lg:h-full flex items-center justify-center relative">
+                <div className="relative w-full h-full max-h-[600px] lg:max-h-none bg-white rounded-[40px] p-8 shadow-sm flex items-center justify-center">
                   <Image
                     src={currentImage}
                     alt={model.model || product.title}
@@ -216,9 +219,9 @@ export default function ProductDetail() {
 
                   <div className="space-y-4">
                     {features.length > 0 && (
-                      <AccordionItem 
-                        title="Key Features" 
-                        isOpen={openSections[index] === 'features'} 
+                      <AccordionItem
+                        title="Key Features"
+                        isOpen={openSections[index] === 'features'}
                         onClick={() => toggleSection(index, 'features')}
                       >
                         <ul className="space-y-2">
@@ -233,9 +236,9 @@ export default function ProductDetail() {
                     )}
 
                     {applications.length > 0 && (
-                      <AccordionItem 
-                        title="Applications" 
-                        isOpen={openSections[index] === 'applications'} 
+                      <AccordionItem
+                        title="Applications"
+                        isOpen={openSections[index] === 'applications'}
                         onClick={() => toggleSection(index, 'applications')}
                       >
                         <ul className="space-y-3">
@@ -252,9 +255,9 @@ export default function ProductDetail() {
                     )}
 
                     {Object.keys(specifications).length > 0 && (
-                      <AccordionItem 
-                        title="Technical Specifications" 
-                        isOpen={openSections[index] === 'specifications'} 
+                      <AccordionItem
+                        title="Technical Specifications"
+                        isOpen={openSections[index] === 'specifications'}
                         onClick={() => toggleSection(index, 'specifications')}
                       >
                         <div className="space-y-2">
@@ -277,7 +280,7 @@ export default function ProductDetail() {
                     >
                       Product Enquiry
                     </Link>
-                    
+
                     {brochureLink && (
                       <a
                         href={brochureLink}
@@ -295,7 +298,7 @@ export default function ProductDetail() {
                 </div>
               </div>
             </div>
-            
+
             {/* Scroll Indicator (only show if not last item) */}
             {index < models.length - 1 && (
               <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-primary/50 hidden lg:block">
