@@ -114,7 +114,7 @@ function ProductEnquiryForm() {
                 <input
                   type="email"
                   id="email"
-                  name="name"
+                  name="email"
                   required
                   value={formData.email}
                   onChange={handleChange}
