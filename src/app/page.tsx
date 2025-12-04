@@ -24,7 +24,7 @@ const showcaseData: Block[] = [
     //   { text: 'View Products', link: '/products', variant: 'outline' }
     // ]
   },
-  
+
   // Product Categories Grid
   {
     type: 'grid-3',
@@ -88,6 +88,36 @@ const showcaseData: Block[] = [
           { text: 'Learn more', link: '/products/garage-equipment', variant: 'primary' },
           { text: 'Buy', link: '/products/garage-equipment', variant: 'outline' }
         ]
+      },
+      {
+        id: 'digital-def-adblue-dispenser',
+        title: 'Digital DEF/AdBlue Dispenser',
+        subtitle: 'Digital diesel exhaust fluid dispenser with precise measurement, secure dispensing and legal metrology approval.',
+        img: '/images/highres/9. Digital DEF/9a.png',
+        ctaButtons: [
+          { text: 'Learn more', link: '/products/digital-def-adblue-dispenser', variant: 'primary' },
+          { text: 'Buy', link: '/products/digital-def-adblue-dispenser', variant: 'outline' }
+        ]
+      },
+      {
+        id: 'digital-engine-oil-dispenser',
+        title: 'Digital Engine Oil Dispenser',
+        subtitle: 'Digital engine oil dispenser with secure preset operation and precise oil measurement in litres and millilitres.',
+        img: '/images/highres/10. Digital Engine Oil Dispenser/10A.png',
+        ctaButtons: [
+          { text: 'Learn more', link: '/products/digital-engine-oil-dispenser', variant: 'primary' },
+          { text: 'Buy', link: '/products/digital-engine-oil-dispenser', variant: 'outline' }
+        ]
+      },
+      {
+        id: 'engine-oil-changer',
+        title: 'Engine Oil Changer',
+        subtitle: 'Pump based suction oil changer for 2T/4T engine oil removal. Designed for removing used engine oil with pump based suction.',
+        img: '/images/highres/11. Engine Oil Changer/11A.png',
+        ctaButtons: [
+          { text: 'Learn more', link: '/products/engine-oil-changer', variant: 'primary' },
+          { text: 'Buy', link: '/products/engine-oil-changer', variant: 'outline' }
+        ]
       }
     ]
   }
@@ -104,22 +134,22 @@ export default function Home() {
   const renderBlock = (block: Block, index: number) => {
     switch (block.type) {
       case 'hero':
-        return <Hero 
-          key={index} 
-          title={block.title} 
+        return <Hero
+          key={index}
+          title={block.title}
           subtitle={block.subtitle}
           img={block.img}
           ctaButtons={block.ctaButtons}
         />;
       case 'hero-product':
         return (
-          <div 
+          <div
             key={index}
             onClick={() => navigateToProduct(block)}
             className="cursor-pointer"
           >
-            <Hero 
-              title={block.title} 
+            <Hero
+              title={block.title}
               subtitle={block.subtitle}
               img={block.img}
               ctaButtons={block.ctaButtons}
@@ -128,8 +158,8 @@ export default function Home() {
         );
       case 'grid-2':
       case 'grid-3':
-        return <DynamicGrid 
-          key={index} 
+        return <DynamicGrid
+          key={index}
           title={block.title}
           subtitle={block.subtitle}
           items={block.items}
@@ -153,11 +183,11 @@ export default function Home() {
             {renderBlock(block, index + 1)}
           </div>
         ))}
-        
+
         {/* Footer */}
         <footer className="bg-background">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-gray-200">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               <div>
                 <h3 className="text-lg font-semibold text-primary mb-4">Products</h3>
                 <ul className="space-y-1">
@@ -169,34 +199,32 @@ export default function Home() {
                   <li><Link href="/products/garage-equipment" className="text-muted hover:text-accent transition-colors">Garage Equipment</Link></li>
                 </ul>
               </div>
-              {/* <div>
-                <h3 className="text-lg font-semibold text-primary mb-4">Company</h3>
-                <ul className="space-y-3">
-                  <li><Link href="/about" className="text-muted hover:text-accent transition-colors">About Us</Link></li>
-                  <li><Link href="/products" className="text-muted hover:text-accent transition-colors">Our Products</Link></li>
-                  <li><Link href="/contact" className="text-muted hover:text-accent transition-colors">Contact Us</Link></li>
-                </ul>
-              </div> */}
+
               <div>
                 <h3 className="text-lg font-semibold text-primary mb-4">Contact</h3>
                 <ul className="space-y-1 text-muted">
-                  <li>M/S. ICON EMBEDED CONTROLS</li>
-                  <li>374/2, JothiNagar 2nd Street,<br />Ramnujam Nagar Extension,<br />Uppilipalayam Post,<br />Coimbatore - 641015, TamilNadu, India</li>
+                  <li className="font-bold text-primary">Icon Embedded Controls</li>
+                  <li>No. 374/2, Jyothi Nagar, 2nd Street,<br />Ramanuja Nagar Extension,<br />Uppilipalayam Post,<br />Coimbatore - 641015,<br />Tamil Nadu, India</li>
                   <li className="pt-2">
                     <Link href="/contact" className="text-accent hover:text-accent-hover transition-colors font-medium">View Full Details →</Link>
                   </li>
                 </ul>
               </div>
-              {/* <div>
-                <h3 className="text-lg font-semibold text-primary mb-4">Our Valued Clients</h3>
-                <ul className="space-y-3 text-muted text-sm">
-                  <li>IOCL, BPCL, HPCL</li>
-                  <li>Bridgestone, Michelin, MRF Tyres</li>
-                  <li>Caterpillar, Mahindra & Mahindra</li>
-                  <li>Apollo Tyres, BKT Tires</li>
-                  <li>And many more...</li>
-                </ul>
-              </div> */}
+
+              <div>
+                <h3 className="text-lg font-semibold text-primary mb-4">Location</h3>
+                <div className="w-full h-48 rounded-xl overflow-hidden shadow-sm border border-gray-200">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.366479768656!2d77.0096663148006!3d11.01111109216238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f971cb5%3A0x2fc1c81e183ed282!2sCoimbatore%2C%20Tamil%20Nadu%20641015!5e0!3m2!1sen!2sin!4v1629789000000!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
             </div>
             <div className="mt-12 pt-8 border-t border-gray-200 text-center text-muted text-sm">
               <p>© {new Date().getFullYear()} Icon Embeded Controls. All rights reserved.</p>

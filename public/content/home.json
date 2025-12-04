@@ -17,19 +17,49 @@
     "clientTypes": [
       {
         "title": "Oil & Gas",
-        "clients": ["IOCL", "BPCL", "HPCL", "Essar", "Reliance Petroleum", "KR Fuels", "Kovai Auto Gas", "Total Gas"]
+        "clients": [
+          "IOCL",
+          "BPCL",
+          "HPCL",
+          "Essar",
+          "Reliance Petroleum",
+          "KR Fuels",
+          "Kovai Auto Gas",
+          "Total Gas"
+        ]
       },
       {
         "title": "Tyre Manufacturers",
-        "clients": ["Bridgestone Tyres", "Michelin Tyres", "MRF Tyres", "BKT Tires", "Apollo Tyres Ltd India", "Alliance Tire Group"]
+        "clients": [
+          "Bridgestone Tyres",
+          "Michelin Tyres",
+          "MRF Tyres",
+          "BKT Tires",
+          "Apollo Tyres Ltd India",
+          "Alliance Tire Group"
+        ]
       },
       {
         "title": "Automotive & Industrial",
-        "clients": ["Caterpillar India Pvt Ltd", "Mahindra & Mahindra", "L&T India", "TAFE Tractor", "Ford Motors", "Hyundai Motor India", "Satyam Mahindra", "Eicher Motors Limited", "Nissan India"]
+        "clients": [
+          "Caterpillar India Pvt Ltd",
+          "Mahindra & Mahindra",
+          "L&T India",
+          "TAFE Tractor",
+          "Ford Motors",
+          "Hyundai Motor India",
+          "Satyam Mahindra",
+          "Eicher Motors Limited",
+          "Nissan India"
+        ]
       },
       {
         "title": "Other Major Clients",
-        "clients": ["Bharatiya Reserve Bank Note Mudran (P) Ltd", "Heavy Alloy Penetrator Project", "Livia Polymers"]
+        "clients": [
+          "Bharatiya Reserve Bank Note Mudran (P) Ltd",
+          "Heavy Alloy Penetrator Project",
+          "Livia Polymers"
+        ]
       }
     ]
   },
@@ -59,6 +89,18 @@
       {
         "name": "Fuel Level Indicator/Controller",
         "image": "/images/products/fuel-indicator.jpg"
+      },
+      {
+        "name": "Digital DEF/AdBlue Dispenser",
+        "image": "/images/highres/9. Digital DEF/9a.png"
+      },
+      {
+        "name": "Digital Engine Oil Dispenser",
+        "image": "/images/highres/10. Digital Engine Oil Dispenser/10A.png"
+      },
+      {
+        "name": "Engine Oil Changer",
+        "image": "/images/highres/11. Engine Oil Changer/11A.png"
       }
     ]
   }
