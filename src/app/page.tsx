@@ -16,7 +16,7 @@ const showcaseData: Block[] = [
   // Hero Section - Full Width
   {
     type: 'hero',
-    // title: 'Welcome to Icon Embedded Controls',
+    // title: 'Welcome to Icon Embeded Controls',
     // subtitle: 'With some brilliant products and splendid services, we have carved a niche for ourselves in both domestic as well as international markets. Our range includes Digital Tyre Inflator, Digital Nitrogen Tyre Inflator, Nitrogen Generator, Air Compressor, and many more.',
     img: '/images/highres/7. Extras/logo.png',
     // ctaButtons: [
@@ -171,9 +171,9 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-bg">
+    <div className="min-h-screen bg-background">
       {/* Main Content */}
-      <main className="pt-16 bg-bg">
+      <main className="pt-16 bg-background">
         {/* Hero Section */}
         {renderBlock(showcaseData[0], 0)}
 
@@ -185,7 +185,7 @@ export default function Home() {
         ))}
 
         {/* Footer */}
-        <footer className="bg-bg">
+        <footer className="bg-background">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-gray-200">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               <div>
@@ -227,7 +227,7 @@ export default function Home() {
               </div>
             </div>
             <div className="mt-12 pt-8 border-t border-gray-200 text-center text-muted text-sm">
-              <p>© {new Date().getFullYear()} Icon Embedded Controls. All rights reserved.</p>
+              <p>© {new Date().getFullYear()} Icon Embeded Controls. All rights reserved.</p>
               <p className="mt-2">Established 2007 | Coimbatore, TamilNadu, India</p>
             </div>
           </div>

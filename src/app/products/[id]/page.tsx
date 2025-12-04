@@ -58,17 +58,19 @@ const AccordionItem = ({
   children: React.ReactNode;
 }) => {
   return (
-    <div className="border border-primary/20 rounded-[20px] overflow-hidden mb-4 bg-white/50 backdrop-blur-sm">
+    <div className="border border-border rounded-[20px] overflow-hidden mb-4 bg-card shadow-lg">
       <button
         className={`w-full px-6 py-4 flex items-center justify-between transition-colors ${isOpen ? 'bg-primary text-white' : 'bg-transparent text-primary hover:bg-primary/5'
           }`}
         onClick={onClick}
       >
         <div className="flex items-center gap-3">
-          <div className={`flex items-center justify-center w-6 h-6 rounded-full border ${isOpen ? 'border-white' : 'border-primary'}`}>
-            <span className="text-lg leading-none mb-0.5">{isOpen ? '−' : '+'}</span>
+          <div className={`flex items-center justify-center w-7 h-7 rounded-full border-2 transition-colors ${
+            isOpen ? 'border-white bg-white/10' : 'border-primary bg-primary/5'
+          }`}>
+            <span className="text-lg leading-none font-bold">{isOpen ? '−' : '+'}</span>
           </div>
-          <span className="font-medium text-lg">{title}</span>
+          <span className="font-semibold text-lg">{title}</span>
         </div>
         <svg
           className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
@@ -83,7 +85,7 @@ const AccordionItem = ({
         className={`transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
           }`}
       >
-        <div className="p-6 text-foreground border-t border-gray-100/50">
+        <div className="p-6 text-foreground border-t border-border bg-card/50">
           {children}
         </div>
       </div>
@@ -213,7 +215,7 @@ export default function ProductDetail() {
                     )}
                   </div>
 
-                  <p className="text-gray-600 text-lg leading-relaxed">
+                  <p className="text-foreground/90 text-lg leading-relaxed">
                     {model.fullDescription || model.description || product.fullDescription}
                   </p>
 
@@ -224,11 +226,11 @@ export default function ProductDetail() {
                         isOpen={openSections[index] === 'features'}
                         onClick={() => toggleSection(index, 'features')}
                       >
-                        <ul className="space-y-2">
+                        <ul className="space-y-3">
                           {features.map((feature, idx) => (
                             <li key={idx} className="flex items-start">
-                              <span className="mr-2 text-primary">•</span>
-                              <span>{feature}</span>
+                              <span className="mr-3 text-accent font-bold text-xl">•</span>
+                              <span className="text-foreground/90">{feature}</span>
                             </li>
                           ))}
                         </ul>
@@ -243,8 +245,8 @@ export default function ProductDetail() {
                       >
                         <ul className="space-y-3">
                           {applications.map((app, idx) => (
-                            <li key={idx} className="flex items-center text-gray-700">
-                              <svg className="w-4 h-4 mr-3 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <li key={idx} className="flex items-center text-foreground/90">
+                              <svg className="w-4 h-4 mr-3 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                               </svg>
                               {app}
@@ -262,9 +264,9 @@ export default function ProductDetail() {
                       >
                         <div className="space-y-2">
                           {Object.entries(specifications).map(([key, value]) => (
-                            <div key={key} className="grid grid-cols-2 gap-4 py-2 border-b border-gray-100 last:border-0">
-                              <span className="font-medium text-gray-600 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
-                              <span className="text-gray-800">{String(value)}</span>
+                            <div key={key} className="grid grid-cols-2 gap-4 py-3 border-b border-border/30 last:border-0">
+                              <span className="font-semibold text-muted capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
+                              <span className="text-foreground">{String(value)}</span>
                             </div>
                           ))}
                         </div>

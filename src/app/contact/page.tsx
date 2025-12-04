@@ -40,7 +40,7 @@ function ContactForm() {
   };
 
   return (
-    <div className="min-h-screen bg-bg pt-20">
+    <div className="min-h-screen bg-background pt-20">
       {/* Back Button */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <Link
@@ -89,7 +89,7 @@ function ContactForm() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors text-primary bg-card"
+                  className="w-full px-4 py-3 border-2 border-border rounded-xl bg-card text-foreground focus:ring-2 focus:ring-primary focus:border-primary transition-all shadow-sm placeholder:text-muted"
                   placeholder="Enter your name"
                 />
               </div>
@@ -105,7 +105,7 @@ function ContactForm() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors text-primary bg-card"
+                  className="w-full px-4 py-3 border-2 border-border rounded-xl bg-card text-foreground focus:ring-2 focus:ring-primary focus:border-primary transition-all shadow-sm placeholder:text-muted"
                   placeholder="Enter your email"
                 />
               </div>
@@ -120,14 +120,21 @@ function ContactForm() {
                   required
                   value={formData.category}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors text-primary bg-white"
+                  className="w-full px-4 py-3 border-2 border-border rounded-xl bg-card text-foreground focus:ring-2 focus:ring-primary focus:border-primary transition-all shadow-sm cursor-pointer appearance-none"
+                  style={{
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%234f8fff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'right 0.75rem center',
+                    backgroundSize: '1.25rem 1.25rem',
+                    paddingRight: '2.5rem'
+                  }}
                 >
-                  <option value="" className="text-gray-400">Select a category</option>
-                  <option value="general" className="text-primary">General Inquiry</option>
-                  <option value="product" className="text-primary">Product Information</option>
-                  <option value="support" className="text-primary">Technical Support</option>
-                  <option value="sales" className="text-primary">Sales</option>
-                  <option value="other" className="text-primary">Other</option>
+                  <option value="" className="bg-card text-muted">Select a category</option>
+                  <option value="general" className="bg-card text-foreground">General Inquiry</option>
+                  <option value="product" className="bg-card text-foreground">Product Information</option>
+                  <option value="support" className="bg-card text-foreground">Technical Support</option>
+                  <option value="sales" className="bg-card text-foreground">Sales</option>
+                  <option value="other" className="bg-card text-foreground">Other</option>
                 </select>
               </div>
 
@@ -142,7 +149,7 @@ function ContactForm() {
                   rows={6}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors resize-none text-primary bg-card"
+                  className="w-full px-4 py-3 border-2 border-border rounded-xl bg-card text-foreground focus:ring-2 focus:ring-primary focus:border-primary transition-all shadow-sm resize-none placeholder:text-muted"
                   placeholder="Enter your message or enquiry"
                 />
               </div>
@@ -151,7 +158,7 @@ function ContactForm() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full px-8 py-4 bg-primary text-white font-semibold rounded-full hover:bg-primary-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-md hover:shadow-lg"
+                  className="w-full px-8 py-4 bg-primary text-white font-semibold rounded-full hover:opacity-90 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 >
                   {isSubmitting ? 'Submitting...' : 'Send Message'}
                 </button>
@@ -167,8 +174,8 @@ function ContactForm() {
 export default function Contact() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen bg-bg pt-20 flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-accent"></div>
+      <div className="min-h-screen bg-background pt-20 flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
       </div>
     }>
       <ContactForm />

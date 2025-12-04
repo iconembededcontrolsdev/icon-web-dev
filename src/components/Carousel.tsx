@@ -50,7 +50,7 @@ export default function Carousel({ items }: CarouselProps) {
                   src={item.img}
                   alt={item.title}
                   fill
-                  className="object-contain"
+                  className="object-contain mix-blend-multiply"
                 />
               </div>
               <h3 className="text-lg font-medium text-text mb-2">{item.title}</h3>
