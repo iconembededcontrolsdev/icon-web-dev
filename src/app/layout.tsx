@@ -37,8 +37,7 @@ export default function RootLayout({
           {children}
         </ThemeProvider>
         <DisableRightClick />
-        <Navbar />
-        {children}
+
       </body>
     </html>
   );
