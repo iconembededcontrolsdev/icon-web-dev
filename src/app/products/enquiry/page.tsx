@@ -7,7 +7,7 @@ import Link from 'next/link';
 function ProductEnquiryForm() {
   const searchParams = useSearchParams();
   const productName = searchParams.get('product');
-  
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,16 +16,18 @@ function ProductEnquiryForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
+
+    const subject = `Product Enquiry: ${productName || 'General Enquiry'}`;
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+
+    window.location.href = `mailto:shakthinandanp0712@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
     setSubmitted(true);
     setIsSubmitting(false);
-    
+
     // Reset form after 3 seconds
     setTimeout(() => {
       setFormData({ name: '', email: '', message: '' });
@@ -44,8 +46,8 @@ function ProductEnquiryForm() {
     <div className="min-h-screen bg-bg pt-20">
       {/* Back Button */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <Link 
-          href="/" 
+        <Link
+          href="/"
           className="inline-flex items-center text-primary hover:text-accent transition-colors font-medium"
         >
           <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

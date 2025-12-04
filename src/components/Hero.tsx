@@ -20,10 +20,10 @@ export interface HeroProps {
   className?: string;
 }
 
-export default function Hero({ 
-  title, 
-  subtitle, 
-  img, 
+export default function Hero({
+  title,
+  subtitle,
+  img,
   ctaButtons = [],
   className = ''
 }: HeroProps) {
@@ -99,7 +99,7 @@ export default function Hero({
                 </div>
               )}
             </div>
-            
+
             {/* Client Logos Section - Merged into Hero */}
             <div className="w-full mt-8 border-t border-gray-100">
               <ClientLogos />

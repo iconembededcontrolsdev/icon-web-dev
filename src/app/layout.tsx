@@ -20,6 +20,8 @@ export const metadata: Metadata = {
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 
+import DisableRightClick from "@/components/DisableRightClick";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,6 +36,8 @@ export default function RootLayout({
           <Navbar />
           {children}
         </ThemeProvider>
+        <DisableRightClick />
+
       </body>
     </html>
   );
