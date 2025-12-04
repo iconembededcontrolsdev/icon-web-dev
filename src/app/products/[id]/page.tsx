@@ -1,7 +1,7 @@
 'use client';
 
 import { useParams, useRouter, useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getProductImages } from '@/utils/productImages';
@@ -34,6 +34,13 @@ type ProductData = {
   models?: ProductModel[];
 };
 
+const brochureMap: Record<string, string> = {
+  'digital-tyre-inflator': '/brochures/1. Digital Tyre Inflator/Digital Tyre Inflator.pdf',
+  'digital-nitrogen-tyre-inflator': '/brochures/2. Digital Nitrogen Tyre Inflator/Digital Nitrogen Tyre Inflator.pdf',
+  'air-compressor': '/brochures/3. Air Compressor/Reciprocating Air Compressor.pdf',
+  'garage-equipment': '/brochures/6. Garage Equipment/Hydraulic Two Wheeler Ramp.pdf',
+};
+
 const AccordionItem = ({ 
   title, 
   isOpen, 
@@ -46,10 +53,10 @@ const AccordionItem = ({
   children: React.ReactNode; 
 }) => {
   return (
-    <div className="border border-primary rounded-[30px] overflow-hidden mb-4 bg-white">
+    <div className="border border-primary/20 rounded-[20px] overflow-hidden mb-4 bg-white/50 backdrop-blur-sm">
       <button
         className={`w-full px-6 py-4 flex items-center justify-between transition-colors ${
-          isOpen ? 'bg-primary text-white' : 'bg-white text-primary hover:bg-gray-50'
+          isOpen ? 'bg-primary text-white' : 'bg-transparent text-primary hover:bg-primary/5'
         }`}
         onClick={onClick}
       >
@@ -73,7 +80,7 @@ const AccordionItem = ({
           isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="p-6 bg-white text-foreground border-t border-gray-100">
+        <div className="p-6 text-foreground border-t border-gray-100/50">
           {children}
         </div>
       </div>
@@ -85,15 +92,13 @@ export default function ProductDetail() {
   const { id } = useParams<{ id: string }>();
   const router = useRouter();
   const searchParams = useSearchParams();
-  const modelParam = searchParams.get('model');
   
   const images = getProductImages(id as string);
   
   const [product, setProduct] = useState<ProductData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [activeModel, setActiveModel] = useState<ProductModel | null>(null);
-  const [openSection, setOpenSection] = useState<string>('applications');
+  const [openSections, setOpenSections] = useState<Record<string, string>>({});
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -113,14 +118,6 @@ export default function ProductDetail() {
         };
         
         setProduct(productData);
-
-        // Set active model based on URL param or default to first model
-        if (productData.models && productData.models.length > 0) {
-          const model = modelParam 
-            ? productData.models.find((m: ProductModel) => m.model === modelParam)
-            : productData.models[0];
-          setActiveModel(model || productData.models[0]);
-        }
       } catch (err) {
         setError('Failed to load product');
         console.error(err);
@@ -130,14 +127,13 @@ export default function ProductDetail() {
     };
 
     fetchProduct();
-  }, [id, modelParam]);
+  }, [id]);
 
-  const toggleSection = (section: string) => {
-    setOpenSection(openSection === section ? '' : section);
-  };
-
-  const handleModelChange = (modelName: string) => {
-    router.push(`/products/${id}?model=${encodeURIComponent(modelName)}`);
+  const toggleSection = (modelIndex: number, section: string) => {
+    setOpenSections(prev => ({
+      ...prev,
+      [modelIndex]: prev[modelIndex] === section ? '' : section
+    }));
   };
 
   if (loading) {
@@ -161,131 +157,156 @@ export default function ProductDetail() {
     );
   }
 
-  // Use active model data or fallback to product data
-  const currentData = activeModel || product;
-  const features = activeModel?.features || product.features || [];
-  const applications = activeModel?.applications || product.applications || [];
-  const specifications = activeModel?.specifications || product.specifications || {};
-  const currentImage = activeModel?.images?.[0] || activeModel?.image || product.images?.[0] || '/images/placeholder.svg';
+  const models = product.models && product.models.length > 0 ? product.models : [{
+    model: product.title,
+    type: '',
+    description: product.description,
+    fullDescription: product.fullDescription,
+    features: product.features,
+    specifications: product.specifications,
+    applications: product.applications,
+    images: product.images
+  }];
+
+  const brochureLink = brochureMap[id as string];
 
   return (
-    <div className="min-h-screen bg-background pt-24 pb-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
-        <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary mb-2">
-            {product.title}
-          </h1>
-          {activeModel && (
-            <>
-              <div className="flex flex-col md:flex-row md:items-center gap-4 mb-2">
-                <h2 className="text-2xl md:text-3xl font-medium text-gray-700">
-                  {activeModel.model}
-                </h2>
-                
-                {/* Model Selector if multiple models exist */}
-                {product.models && product.models.length > 1 && (
-                  <div className="relative inline-block">
-                    <select 
-                      value={activeModel.model}
-                      onChange={(e) => handleModelChange(e.target.value)}
-                      className="appearance-none bg-white border border-gray-300 text-gray-700 py-1 px-4 pr-8 rounded-lg leading-tight focus:outline-none focus:bg-white focus:border-primary cursor-pointer text-sm"
-                    >
-                      {product.models.map((m) => (
-                        <option key={m.model} value={m.model}>
-                          {m.model}
-                        </option>
-                      ))}
-                    </select>
-                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                      <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-                    </div>
-                  </div>
-                )}
-              </div>
+    <div className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth bg-background">
+      {models.map((model, index) => {
+        const currentImage = model.images?.[0] || model.image || product.images?.[0] || '/images/placeholder.svg';
+        const features = model.features || product.features || [];
+        const applications = model.applications || product.applications || [];
+        const specifications = model.specifications || product.specifications || {};
+        
+        return (
+          <section 
+            key={index} 
+            className="h-screen w-full snap-start flex flex-col pt-20 overflow-hidden relative"
+          >
+            <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col lg:flex-row gap-8 lg:gap-12 py-4 lg:py-8">
               
-              {activeModel.type && (
-                <p className="text-lg text-gray-600 mb-4">{activeModel.type}</p>
-              )}
-            </>
-          )}
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Left Column: Image */}
-          <div className="bg-white rounded-[40px] p-4 shadow-sm flex items-center justify-center relative aspect-square">
-            <div className="relative w-full h-full">
-              <Image
-                src={currentImage}
-                alt={activeModel?.model || product.title}
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
-          </div>
-
-          {/* Right Column: Accordions */}
-          <div className="space-y-4">
-            <AccordionItem 
-              title="Key Features" 
-              isOpen={openSection === 'features'} 
-              onClick={() => toggleSection('features')}
-            >
-              <ul className="space-y-2">
-                {features.map((feature, index) => (
-                  <li key={index} className="flex items-start">
-                    <span className="mr-2 text-primary">•</span>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </AccordionItem>
-
-            <AccordionItem 
-              title="Applications" 
-              isOpen={openSection === 'applications'} 
-              onClick={() => toggleSection('applications')}
-            >
-              <ul className="space-y-3">
-                {applications.map((app, index) => (
-                  <li key={index} className="flex items-center text-gray-700">
-                    <svg className="w-4 h-4 mr-3 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                    {app}
-                  </li>
-                ))}
-              </ul>
-            </AccordionItem>
-
-            <AccordionItem 
-              title="Technical Specifications" 
-              isOpen={openSection === 'specifications'} 
-              onClick={() => toggleSection('specifications')}
-            >
-              <div className="space-y-2">
-                {Object.entries(specifications).map(([key, value]) => (
-                  <div key={key} className="grid grid-cols-2 gap-4 py-2 border-b border-gray-100 last:border-0">
-                    <span className="font-medium text-gray-600 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
-                    <span className="text-gray-800">{String(value)}</span>
-                  </div>
-                ))}
+              {/* Left Column: Image */}
+              <div className="w-full lg:w-1/2 h-[40vh] lg:h-auto flex items-center justify-center relative">
+                <div className="relative w-full h-full max-h-[600px] bg-white rounded-[40px] p-8 shadow-sm flex items-center justify-center">
+                  <Image
+                    src={currentImage}
+                    alt={model.model || product.title}
+                    fill
+                    className="object-contain p-4"
+                    priority={index === 0}
+                  />
+                </div>
               </div>
-            </AccordionItem>
 
-            {/* Enquiry Button */}
-            <div className="mt-8">
-              <Link
-                href={`/products/enquiry?product=${encodeURIComponent(activeModel?.model || product.title)}`}
-                className="block w-full py-4 px-6 text-center border-2 border-gray-300 rounded-full text-gray-600 font-medium hover:border-primary hover:text-primary transition-colors bg-white"
-              >
-                Product Enquiry
-              </Link>
+              {/* Right Column: Details */}
+              <div className="w-full lg:w-1/2 h-full overflow-y-auto pr-2 custom-scrollbar pb-20">
+                <div className="space-y-6">
+                  <div>
+                    <h2 className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                      {model.model}
+                    </h2>
+                    {model.type && (
+                      <p className="text-xl text-accent font-medium">{model.type}</p>
+                    )}
+                  </div>
+
+                  <p className="text-gray-600 text-lg leading-relaxed">
+                    {model.fullDescription || model.description || product.fullDescription}
+                  </p>
+
+                  <div className="space-y-4">
+                    {features.length > 0 && (
+                      <AccordionItem 
+                        title="Key Features" 
+                        isOpen={openSections[index] === 'features'} 
+                        onClick={() => toggleSection(index, 'features')}
+                      >
+                        <ul className="space-y-2">
+                          {features.map((feature, idx) => (
+                            <li key={idx} className="flex items-start">
+                              <span className="mr-2 text-primary">•</span>
+                              <span>{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </AccordionItem>
+                    )}
+
+                    {applications.length > 0 && (
+                      <AccordionItem 
+                        title="Applications" 
+                        isOpen={openSections[index] === 'applications'} 
+                        onClick={() => toggleSection(index, 'applications')}
+                      >
+                        <ul className="space-y-3">
+                          {applications.map((app, idx) => (
+                            <li key={idx} className="flex items-center text-gray-700">
+                              <svg className="w-4 h-4 mr-3 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                              </svg>
+                              {app}
+                            </li>
+                          ))}
+                        </ul>
+                      </AccordionItem>
+                    )}
+
+                    {Object.keys(specifications).length > 0 && (
+                      <AccordionItem 
+                        title="Technical Specifications" 
+                        isOpen={openSections[index] === 'specifications'} 
+                        onClick={() => toggleSection(index, 'specifications')}
+                      >
+                        <div className="space-y-2">
+                          {Object.entries(specifications).map(([key, value]) => (
+                            <div key={key} className="grid grid-cols-2 gap-4 py-2 border-b border-gray-100 last:border-0">
+                              <span className="font-medium text-gray-600 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
+                              <span className="text-gray-800">{String(value)}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </AccordionItem>
+                    )}
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                    <Link
+                      href={`/products/enquiry?product=${encodeURIComponent(model.model || product.title)}`}
+                      className="flex-1 py-4 px-6 text-center bg-primary text-white rounded-full font-medium hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                    >
+                      Product Enquiry
+                    </Link>
+                    
+                    {brochureLink && (
+                      <a
+                        href={brochureLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 py-4 px-6 text-center border-2 border-primary text-primary rounded-full font-medium hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2"
+                      >
+                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                        Download Brochure
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
+            
+            {/* Scroll Indicator (only show if not last item) */}
+            {index < models.length - 1 && (
+              <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-primary/50 hidden lg:block">
+                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7-7-7m14-8l-7 7-7-7" />
+                </svg>
+              </div>
+            )}
+          </section>
+        );
+      })}
     </div>
   );
 }
