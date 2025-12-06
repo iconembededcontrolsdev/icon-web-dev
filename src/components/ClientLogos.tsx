@@ -13,6 +13,7 @@ const LOGOS = [
   '/images/highres/8. Logos/8.svg',
   '/images/highres/8. Logos/9.svg',
   '/images/highres/8. Logos/10.svg',
+  '/images/highres/8. Logos/11.svg',
 ];
 
 export default function ClientLogos() {

@@ -19,6 +19,7 @@ export const metadata: Metadata = {
 
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import FloatingCallButton from "@/components/FloatingCallButton";
 
 import DisableRightClick from "@/components/DisableRightClick";
 
@@ -35,6 +36,7 @@ export default function RootLayout({
         <ThemeProvider>
           <Navbar />
           {children}
+          <FloatingCallButton />
         </ThemeProvider>
         <DisableRightClick />
 
