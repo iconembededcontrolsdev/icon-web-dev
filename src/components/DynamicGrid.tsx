@@ -115,7 +115,7 @@ export default function DynamicGrid({
                             key={btnIndex}
                             href={button.link}
                             onClick={(e) => e.stopPropagation()}
-                            className={`inline-flex items-center px-4 lg:px-6 py-2 lg:py-3 text-sm font-medium rounded-full transition-all duration-200 ${button.variant === 'primary'
+                            className={`inline-flex items-center px-3 lg:px-4 py-1.5 lg:py-2 text-sm font-medium rounded-full transition-all duration-200 ${button.variant === 'primary'
                                 ? 'bg-primary text-white hover:opacity-90 shadow-md'
                                 : button.variant === 'outline'
                                   ? 'border-2 border-accent text-accent hover:bg-accent hover:text-white shadow-sm'

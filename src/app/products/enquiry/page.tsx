@@ -43,7 +43,7 @@ function ProductEnquiryForm() {
   };
 
   return (
-    <div className="min-h-screen bg-bg pt-20">
+    <div className="min-h-screen bg-bg pt-12">
       {/* Back Button */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <Link
@@ -161,7 +161,7 @@ function ProductEnquiryForm() {
 export default function ProductEnquiry() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen bg-bg pt-20 flex items-center justify-center">
+      <div className="min-h-screen bg-bg pt-12 flex items-center justify-center">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-accent"></div>
       </div>
     }>

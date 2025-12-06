@@ -54,7 +54,7 @@ export default function Hero({
                   <Link
                     key={index}
                     href={button.link}
-                    className={`px-8 py-4 rounded-full text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 ${
+                    className={`px-4 py-2 rounded-full text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 ${
                       button.variant === "primary"
                         ? "bg-primary text-white hover:opacity-90"
                         : button.variant === "secondary"
@@ -79,7 +79,7 @@ export default function Hero({
                 <div className="relative w-full h-[200px] md:h-[300px] lg:h-[400px] rounded-[30px] overflow-hidden bg-transparent flex items-center justify-center">
                   <Image
                     src={img}
-                    alt={title}
+                    alt={title || 'Icon Logo'}
                     width={600}
                     height={600}
                     className="object-contain w-auto h-full transition-transform duration-300 hover:scale-[1.02]"

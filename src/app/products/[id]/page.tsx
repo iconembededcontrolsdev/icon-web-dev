@@ -206,7 +206,7 @@ export default function ProductDetail() {
         return (
           <section
             key={index}
-            className="h-screen w-full snap-start flex flex-col pt-20 overflow-hidden relative"
+            className="h-screen w-full snap-start flex flex-col pt-12 overflow-hidden relative"
           >
             <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col lg:flex-row gap-8 lg:gap-12 py-4 lg:py-8">
 

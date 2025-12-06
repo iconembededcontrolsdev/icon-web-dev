@@ -1,6 +1,842 @@
 {
   "products": [
     {
+      "id": "digital-nitrogen-tyre-inflator",
+      "title": "Digital Nitrogen Tyre Inflator",
+      "description": "Reliable and accurate electronic digital nitrogen tyre inflators. Nitrogen production based on cost-efficient PSA technology with 95-99% purity suitable for vehicle nitrogen inflation.",
+      "subtitle": "Reliable and accurate electronic digital nitrogen tyre inflators. Nitrogen production based on cost-efficient PSA technology with 95-99% purity suitable for vehicle nitrogen inflation.",
+      "fullDescription": "We are the leading Manufacturer and supplier for Electronic Digital Nitrogen Tyre Inflator all over India since the year 2007. Our Electronic Digital Nitrogen Tyre Inflator is reliable, durable and accurate, thus meet the requirement of each and every horizon related to vehicle tyre pressure inflation. Nitrogen production is based on reliable and cost efficient PSA technology. Nitrogen Purity may vary from 95-99% suitable for vehicle nitrogen purity suggestions. Our Electronic Digital Nitrogen Tyre Inflator meets the accuracy suggested by tyre manufacturer's pressure standards. Our control panel Enclosure meets the Ingress Protection standard IP65.",
+      "features": [
+        "PSA Technology for nitrogen generation",
+        "95-99% purity (adjustable)",
+        "Automatic vacuum cum nitrogen inflation",
+        "Pressure switch for automatic nitrogen generation cut-off",
+        "Tyre counter and error codes available",
+        "IP65 protection standard",
+        "Three digital readouts for set pressure, tyre pressure and tyre count",
+        "LCD display with LED backlight for good visibility",
+        "Display remains at same set pressure value even after power on-off cycle",
+        "Audible and visual end of cycle signal indicators",
+        "VAC key (Vacuum key) for first time nitrogen filling",
+        "Computer power chord adapter with fuse protection and switch on indicator",
+        "Pressure gauge for input air pressure indication and internal tank nitrogen pressure indication",
+        "Safety pressure relief valve available for internal tank"
+      ],
+      "specifications": {
+        "system": "Digital microcontroller based",
+        "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+        "airSupply": "120 - 150 psi / 8 - 10bar",
+        "sensorAccuracy": "± 0.5% of full scale",
+        "n2ProductionMethod": "Pressure Swing Adsorption Method (PSA Technology)",
+        "tankCapacity": "65 liters (varies by model)",
+        "flowRate": "4500 lph (varies by model)",
+        "purity": "95-99% (adjustable)",
+        "moistureFilter": "5 micron",
+        "oilRemovalFilter": "Activated carbon",
+        "autoDrainValve": "with auto timer",
+        "safetyValve": "Available",
+        "display": "LCD display (tyre pressure, set pressure and tyre counter)",
+        "counter": "Available for number of tyres (16x2 LCD display)",
+        "vaccumiser": "Automatic vacuum cum nitrogen inflation",
+        "inputHose": "2 meter 6x4 mm heavy braided hose",
+        "outputHose": "10 mtrs 8 x5 mm Coiled PU hose with clip on Air chuck",
+        "functionalKeys": "Membrane keypad suitable for outdoor application",
+        "overPressureSafety": "Pressure switch with automatic on - off setting",
+        "errorCodes": "available",
+        "maximumOverPressure": "225 psi (15 kg/cm2)",
+        "pressureSettingRange": "6 to 150 psi (varies by model)",
+        "workingPressureRange": "0 to 150 psi (varies by model)",
+        "displayResolution": "1 psi",
+        "measuringResolution": "0.25 psi",
+        "displayBacklight": "LED backlight with automatic ON / OFF"
+      },
+      "applications": [
+        "Fuel Station (for IOCL, BPCL, HPCL, ESSAR, RELIANCE and other leading companies)",
+        "Wheel Alignment Shop",
+        "Automotive Garage",
+        "Depot",
+        "Puncture Shop",
+        "Apartments",
+        "Commercial Parking Lot",
+        "Educational Institution",
+        "Companies",
+        "Two Wheel Alignment Shop",
+        "Two Wheeler Service Station"
+      ],
+      "models": [
+        {
+          "model": "NITROJET 1000 LCV H",
+          "type": "For Two Wheeler",
+          "description": "Digital nitrogen tyre inflator specifically designed for two wheelers with pleasant LED display.",
+          "subtitle": "For Two Wheeler",
+          "fullDescription": "Digital nitrogen tyre inflator for two wheelers. Features intelligent single digital readouts both for set pressure and tyre pressure, pleasant LED display for attractive night visibility, pressure switch for automatic nitrogen generation cut-off, and pressure gauge for nitrogen pressure indication.",
+          "features": [
+            "Intelligent single digital readouts both for set pressure and tyre pressure",
+            "Pleasant LED display for attractive night visibility",
+            "Pressure switch for automatic nitrogen generation cut-off",
+            "Pressure gauge for nitrogen pressure indication",
+            "Reliable PSA method for nitrogen generation",
+            "Automatic vacuum cum nitrogen inflation",
+            "Audible and visual end of the cycle signal indicators",
+            "Can use for two wheeler tyre"
+          ],
+          "specifications": {
+            "system": "Digital microcontroller based",
+            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz",
+            "airSupply": "120 - 150 psi / 8 - 10bar",
+            "sensorAccuracy": "± 0.5% of full scale",
+            "n2ProductionMethod": "Pressure Swing Adsorption Method (PSA Technology)",
+            "tankCapacity": "65 liters",
+            "purity": "95-99% (adjustable)",
+            "display": "LED display for set pressure and tyre pressure",
+            "pressureSettingRange": "6 to 100 psi",
+            "workingPressureRange": "0 to 100 psi"
+          },
+          "applications": [
+            "Two Wheeler Service Station",
+            "Two Wheel Alignment Shop",
+            "Puncture Shop"
+          ],
+          "images": [
+            "/images/highres/2. Digital Nitrogen Tyre Inflator/2A.jpg"
+          ]
+        },
+        {
+          "model": "NITROJET 6000 LCV 4H",
+          "type": "N2 Only option",
+          "description": "Standard digital nitrogen tyre inflator with nitrogen only option featuring three digital readouts.",
+          "subtitle": "N2 Only option",
+          "fullDescription": "Digital nitrogen tyre inflator with nitrogen only option. Features three digital readouts for set pressure, tyre pressure, and tyre count & error count. Reliable PSA method for nitrogen generation with automatic vacuum cum nitrogen inflation.",
+          "features": [
+            "Three digital readouts for set pressure, tyre pressure and tyre count & error count",
+            "LCD display with LED back light to provide good visibility",
+            "Reliable PSA method for nitrogen generation",
+            "Automatic vacuum cum nitrogen inflation",
+            "Pressure switch for automatic nitrogen generation cut-off",
+            "Tyre counter and error codes available",
+            "Audible and visual end of the cycle signal indicators",
+            "VAC key (Vacuum key) for first time nitrogen filling",
+            "Can use for vehicle tyre ranging from two wheeler, car, SUV and mini truck"
+          ],
+          "specifications": {
+            "system": "Digital microcontroller based",
+            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+            "airSupply": "120 - 150 psi / 8 - 10bar",
+            "sensorAccuracy": "± 0.5% of full scale",
+            "n2ProductionMethod": "Pressure Swing Adsorption Method (PSA Technology)",
+            "tankCapacity": "65 liters",
+            "flowRate": "4500 lph",
+            "purity": "95-99% (adjustable)",
+            "display": "LCD display (tyre pressure, set pressure and tyre counter)",
+            "counter": "Available for number of tyres (16x2 LCD display)",
+            "pressureSettingRange": "6 to 100 psi",
+            "workingPressureRange": "0 to 100 psi"
+          },
+          "applications": [
+            "Fuel Station",
+            "Wheel Alignment Shop",
+            "Automotive Garage",
+            "Depot",
+            "Puncture Shop"
+          ],
+          "images": [
+            "/images/highres/2. Digital Nitrogen Tyre Inflator/2B.jpg"
+          ]
+        },
+        {
+          "model": "NITROJET 1000 HMV",
+          "type": "N2 with Air option",
+          "description": "Digital nitrogen tyre inflator with both nitrogen and air input pressure option available in single machine.",
+          "subtitle": "N2 with Air option",
+          "fullDescription": "Digital nitrogen tyre inflator with N2 with Air option. Features three digital readouts for set pressure, tyre pressure, and tyre count & error count. Reliable PSA method for nitrogen generation with air and nitrogen input pressure option available in single machine.",
+          "features": [
+            "Three digital readouts for set pressure, tyre pressure and tyre count & error count",
+            "LCD display with LED back light to provide good visibility",
+            "Reliable PSA method for nitrogen generation",
+            "Air and nitrogen input pressure option available in single machine",
+            "Automatic vacuum cum nitrogen inflation",
+            "Pressure switch for automatic nitrogen generation cut-off",
+            "Tyre counter and error codes available",
+            "Audible and visual end of the cycle signal indicators",
+            "VAC key (Vacuum key) for first time nitrogen filling",
+            "Can use for vehicle tyre ranging from two wheeler, car, SUV and mini truck"
+          ],
+          "specifications": {
+            "system": "Digital microcontroller based",
+            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+            "airSupply": "120 - 150 psi / 8 - 10bar",
+            "sensorAccuracy": "± 0.5% of full scale",
+            "n2ProductionMethod": "Pressure Swing Adsorption Method (PSA Technology)",
+            "tankCapacity": "65 liters",
+            "flowRate": "4500 lph",
+            "purity": "95-99% (adjustable)",
+            "display": "LCD display (tyre pressure, set pressure and tyre counter)",
+            "counter": "Available for number of tyres (16x2 LCD display)",
+            "pressureSettingRange": "6 to 100 psi",
+            "workingPressureRange": "0 to 100 psi"
+          },
+          "applications": [
+            "Fuel Station",
+            "Wheel Alignment Shop",
+            "Automotive Garage",
+            "Depot",
+            "Puncture Shop"
+          ],
+          "images": [
+            "/images/highres/2. Digital Nitrogen Tyre Inflator/2C.jpg"
+          ]
+        },
+        {
+          "model": "NITROJET 1000 HMV C",
+          "type": "Heavy",
+          "description": "Heavy duty digital nitrogen tyre inflator for buses and trucks up to 150 psi with external tank.",
+          "subtitle": "Heavy",
+          "fullDescription": "Heavy duty digital nitrogen tyre inflator for fuel stations and commercial applications. Features three digital readouts, external tank with pressure gauge and safety relief valve for nitrogen storage, air and nitrogen input pressure option available in single machine, and can be used for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck up to 150 PSI.",
+          "features": [
+            "Three digital readouts for set pressure, tyre pressure and tyre count & error count",
+            "LCD display with LED back light to provide good visibility",
+            "External tank with pressure gauge and safety relief valve for nitrogen storage",
+            "Reliable PSA method for nitrogen generation",
+            "Air and nitrogen input pressure option available in single machine",
+            "Automatic vacuum cum nitrogen inflation",
+            "Pressure switch for automatic nitrogen generation cut-off",
+            "Tyre counter and error codes available",
+            "Audible and visual end of the cycle signal indicators",
+            "VAC key (Vacuum key) for first time nitrogen filling",
+            "Can use for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck up to 150 PSI"
+          ],
+          "specifications": {
+            "system": "Digital microcontroller based",
+            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+            "airSupply": "120 - 150 psi / 8 - 10bar",
+            "sensorAccuracy": "± 0.5% of full scale",
+            "n2ProductionMethod": "Pressure Swing Adsorption Method (PSA Technology)",
+            "tankCapacity": "65 liters + External tank",
+            "flowRate": "4500 lph",
+            "purity": "95-99% (adjustable)",
+            "display": "LCD display (tyre pressure, set pressure and tyre counter)",
+            "counter": "Available for number of tyres (16x2 LCD display)",
+            "pressureSettingRange": "6 to 150 psi",
+            "workingPressureRange": "0 to 150 psi"
+          },
+          "applications": [
+            "Fuel Station",
+            "Bus Depot",
+            "Truck Depot",
+            "Automotive Garage",
+            "Commercial Parking Lot"
+          ],
+          "images": [
+            "/images/highres/2. Digital Nitrogen Tyre Inflator/2D.jpg"
+          ]
+        },
+        {
+          "model": "NITROJET 1000 LCV P",
+          "type": "Heavy with Pressure Booster",
+          "description": "Heavy duty digital nitrogen tyre inflator with inbuilt pressure booster for vehicles up to 180 psi.",
+          "subtitle": "Heavy with Pressure Booster",
+          "fullDescription": "Heavy duty digital nitrogen tyre inflator with inbuilt pressure booster for nitrogen storage. Features three digital readouts, external tank with pressure gauge and safety relief valve, MCB protection, and can be used for vehicle tyre ranging from SUV, mini truck, bus and truck up to 180 PSI.",
+          "features": [
+            "Three digital readouts for set pressure, tyre pressure and tyre count & error count",
+            "LCD display with LED back light to provide good visibility",
+            "Inbuilt pressure booster for nitrogen storage",
+            "External tank with pressure gauge and safety relief valve",
+            "MCB protection",
+            "Reliable PSA method for nitrogen generation",
+            "Air and nitrogen input pressure option available in single machine",
+            "Automatic vacuum cum nitrogen inflation",
+            "Pressure switch for automatic nitrogen generation cut-off",
+            "Tyre counter and error codes available",
+            "Audible and visual end of the cycle signal indicators",
+            "VAC key (Vacuum key) for first time nitrogen filling",
+            "Can use for vehicle tyre ranging from SUV, mini truck, bus and truck up to 180 PSI"
+          ],
+          "specifications": {
+            "system": "Digital microcontroller based",
+            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+            "airSupply": "120 - 150 psi / 8 - 10bar",
+            "sensorAccuracy": "± 0.5% of full scale",
+            "n2ProductionMethod": "Pressure Swing Adsorption Method (PSA Technology)",
+            "tankCapacity": "65 liters + External tank with pressure booster",
+            "flowRate": "4500 lph",
+            "purity": "95-99% (adjustable)",
+            "display": "LCD display (tyre pressure, set pressure and tyre counter)",
+            "counter": "Available for number of tyres (16x2 LCD display)",
+            "pressureSettingRange": "6 to 180 psi",
+            "workingPressureRange": "0 to 180 psi"
+          },
+          "applications": [
+            "Fuel Station",
+            "Bus Depot",
+            "Truck Depot",
+            "Heavy Vehicle Service Centers",
+            "Commercial Parking Lot"
+          ],
+          "images": [
+            "/images/highres/2. Digital Nitrogen Tyre Inflator/2E.jpg"
+          ]
+        },
+        {
+          "model": "NITROJET 2000 LCV P",
+          "type": "Four Hose System",
+          "description": "Digital nitrogen tyre inflator with four hose system for simultaneous operation on multiple vehicles.",
+          "subtitle": "Four Hose System",
+          "fullDescription": "Digital nitrogen tyre inflator with four hose system for simultaneous operation. Features two digital readouts, big LCD display, reliable PSA method for nitrogen generation, air and nitrogen input pressure option available in single machine, inbuilt pressure booster for nitrogen storage, and can be used for vehicle tyre ranging from SUV, mini truck, bus and truck up to 180 PSI.",
+          "features": [
+            "Four hose system for simultaneous operation",
+            "Two digital readouts for set pressure and tyre pressure",
+            "Big LCD display with LED back light to provide good visibility",
+            "Inbuilt pressure booster for nitrogen storage",
+            "Reliable PSA method for nitrogen generation",
+            "Air and nitrogen input pressure option available in single machine",
+            "Automatic vacuum cum nitrogen inflation",
+            "Pressure switch for automatic nitrogen generation cut-off",
+            "Audible and visual end of the cycle signal indicators",
+            "Can use for vehicle tyre ranging from SUV, mini truck, bus and truck up to 180 PSI"
+          ],
+          "specifications": {
+            "system": "Digital microcontroller based",
+            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+            "airSupply": "120 - 150 psi / 8 - 10bar",
+            "sensorAccuracy": "± 0.5% of full scale",
+            "n2ProductionMethod": "Pressure Swing Adsorption Method (PSA Technology)",
+            "tankCapacity": "65 liters + External tank with pressure booster",
+            "flowRate": "4500 lph",
+            "purity": "95-99% (adjustable)",
+            "hoseSystem": "Four hose system",
+            "display": "Big LCD display",
+            "pressureSettingRange": "6 to 180 psi",
+            "workingPressureRange": "0 to 180 psi"
+          },
+          "applications": [
+            "Fuel Station",
+            "Large Bus Depot",
+            "Large Truck Depot",
+            "Fleet Service Centers",
+            "Commercial Vehicle Service Centers"
+          ],
+          "images": [
+            "/images/highres/2. Digital Nitrogen Tyre Inflator/2F.jpg"
+          ]
+        }
+      ],
+      "images": [
+        "/images/highres/2. Digital Nitrogen Tyre Inflator/2A.jpg",
+        "/images/highres/2. Digital Nitrogen Tyre Inflator/2B.jpg",
+        "/images/highres/2. Digital Nitrogen Tyre Inflator/2C.jpg",
+        "/images/highres/2. Digital Nitrogen Tyre Inflator/2D.jpg",
+        "/images/highres/2. Digital Nitrogen Tyre Inflator/2E.jpg",
+        "/images/highres/2. Digital Nitrogen Tyre Inflator/2F.jpg"
+      ],
+      "mainImage": "/images/highres/2. Digital Nitrogen Tyre Inflator/2A.jpg"
+    },
+    {
+      "id": "digital-tyre-inflator-pedestal",
+      "title": "Digital Tyre Inflator Pedestals",
+      "description": "Pedestal mounted digital tyre inflators suitable for fuel stations and heavy duty applications.",
+      "subtitle": "Pedestal mounted digital tyre inflators",
+      "fullDescription": "Our Pedestal Digital Tyre Inflators are designed for durability and ease of use in fuel stations and commercial environments. They feature large displays and robust construction.",
+      "features": [
+        "Two digital readouts one for set pressure and other for tyre pressure",
+        "LCD display with LED back light to provide good visibility",
+        "Display remain at same set pressure value even after power on-off cycle",
+        "Audible and visual end of the cycle signal indicators",
+        "LED indication for the status of operation",
+        "Soft touch and durable membrane keys suitable for outdoor",
+        "Automatic tyre sensing system",
+        "Separate keys for set pressure increment and decrement",
+        "Flat key for empty or puncture tyre",
+        "25/35 key for easy front and back tyre pressure setting",
+        "Reset key to exit out of operation at any time",
+        "5 in 1 switch box with fuse protection and indicator",
+        "Can use for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck"
+      ],
+      "specifications": {
+        "system": "Digital microcontroller based",
+        "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+        "airInputSupply": "87 - 180 psi / 6 - 12.4 bar / 6.1 - 12.65 kg/cm2",
+        "sensorAccuracy": "± 0.5% of full scale",
+        "inputAirHose": "6mm x 2mtrs Black braided Hose with suitable fittings",
+        "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
+        "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head / hand held/clip on foot connector",
+        "maximumOverPressure": "185 psi (13 kg/cm2)",
+        "pressureSettingRange": "6 to 180 psi",
+        "workingPressureRange": "0 to 180 psi",
+        "displayResolution": "1 psi",
+        "measuringResolution": "0.25 psi",
+        "keypad": "Membrane Keypad suitable for outdoor application",
+        "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
+        "dimensions": "415 x 210 x 1390 mm (pedestal), 425 x 250 x 1420 mm (Packing)"
+      },
+      "applications": [
+        "Fuel Station (for IOCL, BPCL, HPCL, ESSAR, RELIANCE and other leading companies)",
+        "Wheel Alignment Shop",
+        "Automotive Garage",
+        "Depot",
+        "Puncture Shop",
+        "Apartments",
+        "Commercial Parking Lot",
+        "Educational Institution",
+        "Companies"
+      ],
+      "models": [
+        {
+          "model": "AIROJET 6000 LCV P",
+          "type": "Pedestal - Normal (IOCL/BPCL)",
+          "description": "Pedestal mounted digital tyre inflator for IOCL/BPCL fuel stations with 5 in 1 switch box.",
+          "subtitle": "Pedestal - Normal (IOCL/BPCL)",
+          "fullDescription": "Pedestal mounted digital tyre inflator for fuel stations. Features two digital readouts, LCD display with LED backlight, 5 in 1 switch box with fuse protection and indicator, and can be used for vehicle tyre ranging from two wheeler, car, SUV and mini truck.",
+          "features": [
+            "Two digital readouts one for set pressure and other for tyre pressure",
+            "LCD display with LED back light to provide good visibility",
+            "Display remain at same set pressure value even after power on-off cycle",
+            "Audible and visual end of the cycle signal indicators",
+            "LED indication for the status of operation",
+            "Soft touch and durable membrane keys suitable for outdoor",
+            "Automatic tyre sensing system",
+            "Separate keys for set pressure increment and decrement",
+            "Flat key for empty or puncture tyre",
+            "25/35 key for easy front and back tyre pressure setting",
+            "Reset key to exit out of operation at any time",
+            "5 in 1 switch box with fuse protection and indicator",
+            "Can use for vehicle tyre ranging from two wheeler, car, SUV and mini truck"
+          ],
+          "specifications": {
+            "system": "Digital microcontroller based",
+            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+            "airInputSupply": "87 - 145 psi / 6 - 10 bar / 6.1 - 10.2 kg/cm2",
+            "sensorAccuracy": "± 0.5% of full scale",
+            "inputAirHose": "6mm x 2mtrs Black braider Hose with suitable fittings",
+            "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
+            "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head foot connector",
+            "maximumOverPressure": "185 psi (13 kg/cm2)",
+            "pressureSettingRange": "6 to 100 psi",
+            "workingPressureRange": "0 to 100 psi",
+            "displayResolution": "1 psi",
+            "measuringResolution": "0.25 psi",
+            "keypad": "Membrane Keypad suitable for outdoor application",
+            "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
+            "dimensions": "415 x 210 x 1390 mm (pedestal), 425 x 250 x 1420 mm (Packing)"
+          },
+          "applications": [
+            "Fuel Station (for IOCL, BPCL, HPCL, ESSAR, RELIANCE and other leading companies)",
+            "Wheel Alignment Shop",
+            "Automotive Garage",
+            "Depot",
+            "Puncture Shop",
+            "Apartments",
+            "Commercial Parking Lot",
+            "Educational Institution",
+            "Companies"
+          ],
+          "images": [
+            "/images/highres/1. Digital Tyre Inflator/1D.jpg"
+          ]
+        },
+        {
+          "model": "AIROJET 6000 LCV HP",
+          "type": "HPCL Pedestal - Normal",
+          "description": "HPCL canopy model pedestal mounted digital tyre inflator with 5 in 1 switch box.",
+          "subtitle": "HPCL Pedestal - Normal",
+          "fullDescription": "HPCL canopy model pedestal mounted digital tyre inflator for fuel stations. Features two digital readouts, LCD display with LED backlight, 5 in 1 switch box with fuse protection and indicator, and can be used for vehicle tyre ranging from two wheeler, car, SUV and mini truck.",
+          "features": [
+            "Two digital readouts one for set pressure and other for tyre pressure",
+            "LCD display with LED back light to provide good visibility",
+            "Display remain at same set pressure value even after power on-off cycle",
+            "Audible and visual end of the cycle signal indicators",
+            "LED indication for the status of operation",
+            "Soft touch and durable membrane keys suitable for outdoor",
+            "Automatic tyre sensing system",
+            "Separate keys for set pressure increment and decrement",
+            "Flat key for empty or puncture tyre",
+            "25/35 key for easy front and back tyre pressure setting",
+            "Reset key to exit out of operation at any time",
+            "5 in 1 switch box with fuse protection and indicator",
+            "Can use for vehicle tyre ranging from two wheeler, car, SUV and mini truck"
+          ],
+          "specifications": {
+            "system": "Digital microcontroller based",
+            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+            "airInputSupply": "87 - 145 psi / 6 - 10 bar / 6.1 - 10.2 kg/cm2",
+            "sensorAccuracy": "± 0.5% of full scale",
+            "inputAirHose": "6mm x 2mtrs Black braider Hose with suitable fittings",
+            "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
+            "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head foot connector",
+            "maximumOverPressure": "185 psi (13 kg/cm2)",
+            "pressureSettingRange": "6 to 100 psi",
+            "workingPressureRange": "0 to 100 psi",
+            "displayResolution": "1 psi",
+            "measuringResolution": "0.25 psi",
+            "keypad": "Membrane Keypad suitable for outdoor application",
+            "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
+            "dimensions": "415 x 210 x 1390 mm (pedestal), 425 x 250 x 1420 mm (Packing)"
+          },
+          "applications": [
+            "Fuel Station (for HPCL)",
+            "Wheel Alignment Shop",
+            "Automotive Garage",
+            "Depot",
+            "Puncture Shop",
+            "Apartments",
+            "Commercial Parking Lot",
+            "Educational Institution",
+            "Companies"
+          ],
+          "images": [
+            "/images/highres/1. Digital Tyre Inflator/1F.jpg"
+          ]
+        },
+        {
+          "model": "AIROJET 1000 LCV HP",
+          "type": "Pedestal - Heavy (IOCL/BPCL)",
+          "description": "Heavy duty pedestal mounted digital tyre inflator for IOCL/BPCL fuel stations with big LCD display.",
+          "subtitle": "Pedestal - Heavy (IOCL/BPCL)",
+          "fullDescription": "Heavy duty pedestal mounted digital tyre inflator for fuel stations. Features two digital readouts, big LCD display with LED backlight, pressure unit display to identify PSI or KG/CM2, and can be used for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck.",
+          "features": [
+            "Two digital readouts one for set pressure and other for tyre pressure",
+            "Big LCD display with LED back light to provide good visibility",
+            "Pressure unit display to identify PSI or KG/CM2",
+            "Display remain at same set pressure value even after power on-off cycle",
+            "Audible and visual end of the cycle signal indicators",
+            "LED indication for the status of operation",
+            "Soft touch and durable membrane keys suitable for outdoor",
+            "Automatic tyre sensing system",
+            "Separate keys for set pressure increment and decrement",
+            "Flat key for empty or puncture tyre",
+            "Toggle key for easy set pressure value 25/35 upto SUVs and 90/120/150 for heavy vehicles",
+            "Confirm to operate method for overpressure setvalue with display blink notification",
+            "Reset key to exit out of operation at any time",
+            "5 in 1 switch box with fuse protection and indicator",
+            "Can use for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck"
+          ],
+          "specifications": {
+            "system": "Digital microcontroller based",
+            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+            "airInputSupply": "87 - 180 psi / 6 - 12.4 bar / 6.1 - 12.65 kg/cm2",
+            "sensorAccuracy": "± 0.5% of full scale",
+            "inputAirHose": "6mm x 2mtrs Black braided Hose with suitable fittings",
+            "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
+            "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head / hand held/clip on foot connector",
+            "maximumOverPressure": "185 psi (13 kg/cm2)",
+            "pressureSettingRange": "6 to 180 psi",
+            "workingPressureRange": "0 to 180 psi",
+            "displayResolution": "1 psi",
+            "measuringResolution": "0.25 psi",
+            "keypad": "Membrane Keypad suitable for outdoor application",
+            "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
+            "dimensions": "415 x 210 x 1390 mm (pedestal), 425 x 250 x 1420 mm (Packing)"
+          },
+          "applications": [
+            "Fuel Station (for IOCL, BPCL, HPCL, ESSAR, RELIANCE and other leading companies)",
+            "Wheel Alignment Shop",
+            "Automotive Garage",
+            "Bus Depot / All vehicle depot",
+            "Puncture Shop",
+            "Apartments",
+            "Commercial Parking Lot",
+            "Educational Institution",
+            "Companies"
+          ],
+          "images": [
+            "/images/highres/1. Digital Tyre Inflator/1G.jpg"
+          ]
+        },
+        {
+          "model": "AIROJET 1000 LCV P",
+          "type": "HPCL Pedestal - Heavy",
+          "description": "HPCL canopy model heavy duty pedestal mounted digital tyre inflator with big LCD display.",
+          "subtitle": "HPCL Pedestal - Heavy",
+          "fullDescription": "HPCL canopy model heavy duty pedestal mounted digital tyre inflator for fuel stations. Features two digital readouts, big LCD display with LED backlight, pressure unit display to identify PSI or KG/CM2, and can be used for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck.",
+          "features": [
+            "Two digital readouts one for set pressure and other for tyre pressure",
+            "Big LCD display with LED back light to provide good visibility",
+            "Pressure unit display to identify PSI or KG/CM2",
+            "Display remain at same set pressure value even after power on-off cycle",
+            "Audible and visual end of the cycle signal indicators",
+            "LED indication for the status of operation",
+            "Soft touch and durable membrane keys suitable for outdoor",
+            "Automatic tyre sensing system",
+            "Separate keys for set pressure increment and decrement",
+            "Flat key for empty or puncture tyre",
+            "Toggle key for easy set pressure value 25/35 upto SUVs and 90/120/150 for heavy vehicles",
+            "Confirm to operate method for overpressure setvalue with display blink notification",
+            "Reset key to exit out of operation at any time",
+            "5 in 1 switch box with fuse protection and indicator",
+            "Can use for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck"
+          ],
+          "specifications": {
+            "system": "Digital microcontroller based",
+            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+            "airInputSupply": "87 - 180 psi / 6 - 12.4 bar / 6.1 - 12.65 kg/cm2",
+            "sensorAccuracy": "± 0.5% of full scale",
+            "inputAirHose": "6mm x 2mtrs Black braided Hose with suitable fittings",
+            "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
+            "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head / hand held/clip on foot connector",
+            "maximumOverPressure": "185 psi (13 kg/cm2)",
+            "pressureSettingRange": "6 to 180 psi",
+            "workingPressureRange": "0 to 180 psi",
+            "displayResolution": "1 psi",
+            "measuringResolution": "0.25 psi",
+            "keypad": "Membrane Keypad suitable for outdoor application",
+            "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
+            "dimensions": "415 x 210 x 1390 mm (pedestal), 425 x 250 x 1420 mm (Packing)"
+          },
+          "applications": [
+            "Fuel Station (for HPCL)",
+            "Wheel Alignment Shop",
+            "Automotive Garage",
+            "Bus Depot / All vehicle depot",
+            "Puncture Shop",
+            "Apartments",
+            "Commercial Parking Lot",
+            "Educational Institution",
+            "Companies"
+          ],
+          "images": [
+            "/images/highres/1. Digital Tyre Inflator/1H.jpg"
+          ]
+        }
+      ],
+      "images": [
+        "/images/highres/1. Digital Tyre Inflator/1D.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1F.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1G.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1H.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1I.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1J.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1K.jpg",
+        "/images/highres/1. Digital Tyre Inflator/1L.jpg"
+      ],
+      "mainImage": "/images/highres/1. Digital Tyre Inflator/1D.jpg"
+    },
+    {
+      "id": "digital-engine-oil-dispenser",
+      "title": "Digital Engine Oil Dispenser",
+      "description": "Digital engine oil dispenser with secure preset operation and precise oil measurement in litres and millilitres.",
+      "subtitle": "Digital Engine Oil Dispenser",
+      "fullDescription": "Our Digital Engine Oil Dispenser provides accurate and spill-free dispensing of engine oil with secure volume and pricing controls. Designed for professional automotive workshops and garages.",
+      "features": [
+        "Saves money for both buyer and seller",
+        "Saves environment by reducing plastic usage",
+        "Almost zero spillage while dispensing",
+        "Precised volume dispensed",
+        "Rupee per litre can be securely set",
+        "Displays total volume dispensed in litres & ml",
+        "Sub total volume dispensed in litres & ml",
+        "Batch or shift wise volume can be erased",
+        "Approved by Legal Metrology"
+      ],
+      "compatibleBrands": [
+        "Servo",
+        "MAK Lubricants",
+        "HP Racer",
+        "Shell Lubricants"
+      ],
+      "models": [
+        {
+          "model": "Digital 2T Engine Oil Dispenser with thermal printers",
+          "type": "Engine Oil Dispenser",
+          "description": "Preset model digital engine oil dispenser with accurate measurement display.",
+          "subtitle": "ODU-501 Digital Engine Oil Dispenser",
+          "fullDescription": "Measures and displays engine oil volume in litres and ml, with rupee pricing and legal metrology approval.",
+          "features": [
+            "1” LCD for rupee display",
+            "1” LCD for qty display in ml",
+            "16×2 display with 10 digit for litres and 3 digit for ml",
+            "LED, display and buzzer indications",
+            "Membrane key switches",
+            "4 meter hydraulic hose with oil gun"
+          ],
+          "specifications": {
+            "powerSupply": "230VAC at 50Hz",
+            "system": "Micro-Controller Based",
+            "operation": "Preset Model",
+            "accuracyClass": "0.5",
+            "leastCount": "5 ml",
+            "minimumMeasuredQty": "10 ml",
+            "maximumMeasuredQty": "1000 ml (for 2T Engine Oil), 5000 ml (for 4T Engine Oil)",
+            "minimumFlowrate": "500 ml per minute*",
+            "dimensions": "(540×385×1350) mm",
+            "optionsAvailable": "Single/Double Side Control & Printer Option"
+          },
+          "applications": [
+            "Petrol Station",
+            "CNG Gas Station",
+            "Fuel Station",
+            "Industries",
+            "Automotive Sector & Garages"
+          ],"images": [
+        "/images/highres/10. Digital Engine Oil Dispenser/10A.png"
+      ]
+        },
+        {
+          "model": "Digital 4T Engine Oil Dispenser with thermal printers",
+          "type": "Engine Oil Dispenser",
+          "description": "Preset model digital engine oil dispenser with accurate measurement display.",
+          "subtitle": "ODU-501 Digital Engine Oil Dispenser",
+          "fullDescription": "Measures and displays engine oil volume in litres and ml, with rupee pricing and legal metrology approval.",
+          "features": [
+            "1” LCD for rupee display",
+            "1” LCD for qty display in ml",
+            "16×2 display with 10 digit for litres and 3 digit for ml",
+            "LED, display and buzzer indications",
+            "Membrane key switches",
+            "4 meter hydraulic hose with oil gun"
+          ],
+          "specifications": {
+            "powerSupply": "230VAC at 50Hz",
+            "system": "Micro-Controller Based",
+            "operation": "Preset Model",
+            "accuracyClass": "0.5",
+            "leastCount": "5 ml",
+            "minimumMeasuredQty": "10 ml",
+            "maximumMeasuredQty": "1000 ml (for 2T Engine Oil), 5000 ml (for 4T Engine Oil)",
+            "minimumFlowrate": "500 ml per minute*",
+            "dimensions": "(540×385×1350) mm",
+            "optionsAvailable": "Single/Double Side Control & Printer Option"
+          },
+          "applications": [
+            "Petrol Station",
+            "CNG Gas Station",
+            "Fuel Station",
+            "Industries",
+            "Automotive Sector & Garages"
+          ],"images": [
+        "/images/highres/10. Digital Engine Oil Dispenser/10A.png"
+      ]
+        },
+        {
+          "model": "Digital 2T Engine Oil Dispenser single side operation",
+          "type": "Engine Oil Dispenser",
+          "description": "Preset model digital engine oil dispenser with accurate measurement display.",
+          "subtitle": "ODU-501 Digital Engine Oil Dispenser",
+          "fullDescription": "Measures and displays engine oil volume in litres and ml, with rupee pricing and legal metrology approval.",
+          "features": [
+            "1” LCD for rupee display",
+            "1” LCD for qty display in ml",
+            "16×2 display with 10 digit for litres and 3 digit for ml",
+            "LED, display and buzzer indications",
+            "Membrane key switches",
+            "4 meter hydraulic hose with oil gun"
+          ],
+          "specifications": {
+            "powerSupply": "230VAC at 50Hz",
+            "system": "Micro-Controller Based",
+            "operation": "Preset Model",
+            "accuracyClass": "0.5",
+            "leastCount": "5 ml",
+            "minimumMeasuredQty": "10 ml",
+            "maximumMeasuredQty": "1000 ml (for 2T Engine Oil), 5000 ml (for 4T Engine Oil)",
+            "minimumFlowrate": "500 ml per minute*",
+            "dimensions": "(540×385×1350) mm",
+            "optionsAvailable": "Single/Double Side Control & Printer Option"
+          },
+          "applications": [
+            "Petrol Station",
+            "CNG Gas Station",
+            "Fuel Station",
+            "Industries",
+            "Automotive Sector & Garages"
+          ],"images": [
+        "/images/highres/10. Digital Engine Oil Dispenser/10A.png"
+      ]
+        },
+        {
+          "model": "Digital 2T Engine Oil Dispenser double side operation",
+          "type": "Engine Oil Dispenser",
+          "description": "Preset model digital engine oil dispenser with accurate measurement display.",
+          "subtitle": "ODU-501 Digital Engine Oil Dispenser",
+          "fullDescription": "Measures and displays engine oil volume in litres and ml, with rupee pricing and legal metrology approval.",
+          "features": [
+            "1” LCD for rupee display",
+            "1” LCD for qty display in ml",
+            "16×2 display with 10 digit for litres and 3 digit for ml",
+            "LED, display and buzzer indications",
+            "Membrane key switches",
+            "4 meter hydraulic hose with oil gun"
+          ],
+          "specifications": {
+            "powerSupply": "230VAC at 50Hz",
+            "system": "Micro-Controller Based",
+            "operation": "Preset Model",
+            "accuracyClass": "0.5",
+            "leastCount": "5 ml",
+            "minimumMeasuredQty": "10 ml",
+            "maximumMeasuredQty": "1000 ml (for 2T Engine Oil), 5000 ml (for 4T Engine Oil)",
+            "minimumFlowrate": "500 ml per minute*",
+            "dimensions": "(540×385×1350) mm",
+            "optionsAvailable": "Single/Double Side Control & Printer Option"
+          },
+          "applications": [
+            "Petrol Station",
+            "CNG Gas Station",
+            "Fuel Station",
+            "Industries",
+            "Automotive Sector & Garages"
+          ],"images": [
+        "/images/highres/10. Digital Engine Oil Dispenser/10A.png"
+      ]
+        }
+      ],
+      "images": [
+        "/images/highres/10. Digital Engine Oil Dispenser/10A.png"
+      ],
+      "mainImage": "/images/highres/10. Digital Engine Oil Dispenser/10A.png"
+    },
+    {
+      "id": "engine-oil-changer",
+      "title": "Engine Oil Changer",
+      "description": "Pump based suction oil changer for 2T/4T engine oil removal.",
+      "subtitle": "Digital Engine Oil Suction System",
+      "fullDescription": "Designed for removing used engine oil with pump based suction and high mobility. Displays volume dispensed and supports safe and clean oil changing processes.",
+      "features": [
+        "Four wheels for mobility",
+        "Pump based suction",
+        "Low & high oil level indications",
+        "Transparent tank for visibility",
+        "Fuse protection"
+      ],
+      "models": [
+        {
+          "model": "OEU-501",
+          "type": "Oil Changer",
+          "description": "230VAC powered engine oil suction machine for 2T/4T vehicles.",
+          "subtitle": "2T/4T Engine Oil Suction",
+          "fullDescription": "Removes used engine oil securely and efficiently using pump-based suction with dual storage tanks and mobility wheels.",
+          "features": [
+            "0.5 HP AC motor",
+            "5 litre transparent tank + 65 litre MS tank",
+            "4 meter reinforced suction and delivery hose",
+            "Nylon engine inlet hose"
+          ],
+          "specifications": {
+            "Model Name": "OEU-501",
+            "Power Supply required": "230VAC at 50Hz",
+            "Suction type": "Pump based suction",
+            "Motor capacity": "0.5 H.P. AC Motor",
+            "Portability": "Four wheels for mobility",
+            "Storage Tank1": "5 Litre transparent tank",
+            "Storage Tank2": "65 Litre MS tank",
+            "Suction hose": "4 Meter reinforced hose",
+            "Delivery hose": "4 Meter reinforced hose",
+            "Engine inlet hose": "Nylon hose",
+            "Indications": "Low & high oil level",
+            "Protection": "Fuse protection",
+            "Dimensions (LxWxH) in mm": "(530x530x1100)",
+            "Application": "2T/4T Engine oil suction"
+          },
+          "applications": [
+            "Automotive Garages",
+            "Service Centers"
+          ],
+          "images": [
+            "/images/highres/11. Engine Oil Changer/11A.png"
+          ]
+        }
+      ],
+      "mainImage": "/images/highres/11. Engine Oil Changer/11A.png"
+    },
+    {
       "id": "digital-tyre-inflator",
       "title": "Digital Tyre Inflator",
       "description": "Reliable, durable and accurate electronic digital tyre inflators meeting tyre manufacturer pressure standards. Used by major tyre and vehicle manufacturers in their production line.",
@@ -49,7 +885,7 @@
       ],
       "models": [
         {
-          "model": "AIROJET 1000 LCV W",
+          "model": "AIROJET 2000 LCV W",
           "type": "Wall Mountable - Normal",
           "description": "Wall Mountable - Normal digital tyre inflator with two digital readouts for set pressure and tyre pressure.",
           "subtitle": "Wall Mountable - Normal",
@@ -216,820 +1052,111 @@
       "mainImage": "/images/highres/1. Digital Tyre Inflator/1A.jpg"
     },
     {
-      "id": "digital-tyre-inflator-pedestal",
-      "title": "Digital Tyre Inflator Pedestals",
-      "description": "Pedestal mounted digital tyre inflators suitable for fuel stations and heavy duty applications.",
-      "subtitle": "Pedestal mounted digital tyre inflators",
-      "fullDescription": "Our Pedestal Digital Tyre Inflators are designed for durability and ease of use in fuel stations and commercial environments. They feature large displays and robust construction.",
+      "id": "digital-def-adblue-dispenser",
+      "title": "Digital DEF/AdBlue Dispenser",
+      "description": "Digital diesel exhaust fluid dispenser with precise measurement, secure dispensing and legal metrology approval.",
+      "subtitle": "Diesel Exhaust Fluid Dispenser (AUS32/AdBlue)",
+      "fullDescription": "Designed for dispensing Diesel Exhaust Fluid (AUS32/AdBlue) with micro-controller based precision. Helps save plastic usage, prevent spillage, maintain accurate per-litre billing, and supports batch/shift reset. Approved by Legal Metrology for commercial usage.",
       "features": [
-        "Two digital readouts one for set pressure and other for tyre pressure",
-        "LCD display with LED back light to provide good visibility",
-        "Display remain at same set pressure value even after power on-off cycle",
-        "Audible and visual end of the cycle signal indicators",
-        "LED indication for the status of operation",
-        "Soft touch and durable membrane keys suitable for outdoor",
-        "Automatic tyre sensing system",
-        "Separate keys for set pressure increment and decrement",
-        "Flat key for empty or puncture tyre",
-        "25/35 key for easy front and back tyre pressure setting",
-        "Reset key to exit out of operation at any time",
-        "5 in 1 switch box with fuse protection and indicator",
-        "Can use for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck"
+        "Saves money for both buyer and seller",
+        "Saves environment by reducing plastic usage",
+        "Almost zero spillage while dispensing",
+        "Precised volume dispensed",
+        "Proper per litre can be securely set",
+        "Displays total and sub-total volume dispensed",
+        "Batch or shift wise data can be erased",
+        "Approved by Legal Metrology",
+        "Preset micro-controller based measurement",
+        "Accurate 0.5% measurement class",
+        "Automatic cut-off nozzle",
+        "4-meter AdBlue dispensing hose",
+        "Least count 100ml",
+        "Up to 500 litres per dispensing batch",
+        "40 litres per minute output flow rate"
       ],
       "specifications": {
-        "system": "Digital microcontroller based",
-        "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
-        "airInputSupply": "87 - 180 psi / 6 - 12.4 bar / 6.1 - 12.65 kg/cm2",
-        "sensorAccuracy": "± 0.5% of full scale",
-        "inputAirHose": "6mm x 2mtrs Black braided Hose with suitable fittings",
-        "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
-        "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head / hand held/clip on foot connector",
-        "maximumOverPressure": "185 psi (13 kg/cm2)",
-        "pressureSettingRange": "6 to 180 psi",
-        "workingPressureRange": "0 to 180 psi",
-        "displayResolution": "1 psi",
-        "measuringResolution": "0.25 psi",
-        "keypad": "Membrane Keypad suitable for outdoor application",
-        "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
-        "dimensions": "415 x 210 x 1390 mm (pedestal), 425 x 250 x 1420 mm (Packing)"
+        "Model Name": "ADU-501",
+        "Power Supply": "230VAC at 50Hz",
+        "System": "Micro-controller based preset model",
+        "Accuracy Class": "0.5",
+        "Display 1": "1” LCD for sales in rupees",
+        "Display 2": "1” LCD for QTY. in litres",
+        "Display 3": "1” LCD for rate per litre",
+        "Display 4": "16x2 display with 7 digit FRT totaliser in litres",
+        "Least Count": "100 ml",
+        "Minimum Measured Quantity": "500 ml",
+        "Maximum Measured Quantity": "500 litres",
+        "Indicators": "LED, Display and Buzzer",
+        "Switches": "Membrane keypad",
+        "Output Hose": "4 meter AdBlue hose with automatic off nozzle",
+        "Output Flow Rate": "40 litres per minute",
+        "Dimensions (LxWxH) in mm": "(740 x 280 x 1750) mm",
+        "Application Area": "Petrol stations / Diesel dispensing stations / Industrial DEF dispensing",
+        "Approval Mark": "IND/09/25/176"
       },
-      "applications": [
-        "Fuel Station (for IOCL, BPCL, HPCL, ESSAR, RELIANCE and other leading companies)",
-        "Wheel Alignment Shop",
-        "Automotive Garage",
-        "Depot",
-        "Puncture Shop",
-        "Apartments",
-        "Commercial Parking Lot",
-        "Educational Institution",
-        "Companies"
-      ],
       "models": [
         {
-          "model": "AIROJET 1000 LCV P",
-          "type": "Pedestal - Normal (IOCL/BPCL)",
-          "description": "Pedestal mounted digital tyre inflator for IOCL/BPCL fuel stations with 5 in 1 switch box.",
-          "subtitle": "Pedestal - Normal (IOCL/BPCL)",
-          "fullDescription": "Pedestal mounted digital tyre inflator for fuel stations. Features two digital readouts, LCD display with LED backlight, 5 in 1 switch box with fuse protection and indicator, and can be used for vehicle tyre ranging from two wheeler, car, SUV and mini truck.",
-          "features": [
-            "Two digital readouts one for set pressure and other for tyre pressure",
-            "LCD display with LED back light to provide good visibility",
-            "Display remain at same set pressure value even after power on-off cycle",
-            "Audible and visual end of the cycle signal indicators",
-            "LED indication for the status of operation",
-            "Soft touch and durable membrane keys suitable for outdoor",
-            "Automatic tyre sensing system",
-            "Separate keys for set pressure increment and decrement",
-            "Flat key for empty or puncture tyre",
-            "25/35 key for easy front and back tyre pressure setting",
-            "Reset key to exit out of operation at any time",
-            "5 in 1 switch box with fuse protection and indicator",
-            "Can use for vehicle tyre ranging from two wheeler, car, SUV and mini truck"
-          ],
-          "specifications": {
-            "system": "Digital microcontroller based",
-            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
-            "airInputSupply": "87 - 145 psi / 6 - 10 bar / 6.1 - 10.2 kg/cm2",
-            "sensorAccuracy": "± 0.5% of full scale",
-            "inputAirHose": "6mm x 2mtrs Black braider Hose with suitable fittings",
-            "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
-            "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head foot connector",
-            "maximumOverPressure": "185 psi (13 kg/cm2)",
-            "pressureSettingRange": "6 to 100 psi",
-            "workingPressureRange": "0 to 100 psi",
-            "displayResolution": "1 psi",
-            "measuringResolution": "0.25 psi",
-            "keypad": "Membrane Keypad suitable for outdoor application",
-            "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
-            "dimensions": "415 x 210 x 1390 mm (pedestal), 425 x 250 x 1420 mm (Packing)"
-          },
+          "model": "ADU-501 (IndianOil)",
+          "type": "DEF/AdBlue Dispenser",
+          "description": "Digital DEF dispensing unit used in IndianOil branded retail outlets.",
           "applications": [
-            "Fuel Station (for IOCL, BPCL, HPCL, ESSAR, RELIANCE and other leading companies)",
-            "Wheel Alignment Shop",
-            "Automotive Garage",
-            "Depot",
-            "Puncture Shop",
-            "Apartments",
-            "Commercial Parking Lot",
-            "Educational Institution",
-            "Companies"
+            "Petrol bunks",
+            "DEF dispensing facilities",
+            "Industrial usage"
           ],
           "images": [
-            "/images/highres/1. Digital Tyre Inflator/1D.jpg"
+            "/images/highres/9. Digital DEF/9a.png"
           ]
         },
         {
-          "model": "AIROJET 1000 LCV HP",
-          "type": "HPCL Pedestal - Normal",
-          "description": "HPCL canopy model pedestal mounted digital tyre inflator with 5 in 1 switch box.",
-          "subtitle": "HPCL Pedestal - Normal",
-          "fullDescription": "HPCL canopy model pedestal mounted digital tyre inflator for fuel stations. Features two digital readouts, LCD display with LED backlight, 5 in 1 switch box with fuse protection and indicator, and can be used for vehicle tyre ranging from two wheeler, car, SUV and mini truck.",
-          "features": [
-            "Two digital readouts one for set pressure and other for tyre pressure",
-            "LCD display with LED back light to provide good visibility",
-            "Display remain at same set pressure value even after power on-off cycle",
-            "Audible and visual end of the cycle signal indicators",
-            "LED indication for the status of operation",
-            "Soft touch and durable membrane keys suitable for outdoor",
-            "Automatic tyre sensing system",
-            "Separate keys for set pressure increment and decrement",
-            "Flat key for empty or puncture tyre",
-            "25/35 key for easy front and back tyre pressure setting",
-            "Reset key to exit out of operation at any time",
-            "5 in 1 switch box with fuse protection and indicator",
-            "Can use for vehicle tyre ranging from two wheeler, car, SUV and mini truck"
-          ],
-          "specifications": {
-            "system": "Digital microcontroller based",
-            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
-            "airInputSupply": "87 - 145 psi / 6 - 10 bar / 6.1 - 10.2 kg/cm2",
-            "sensorAccuracy": "± 0.5% of full scale",
-            "inputAirHose": "6mm x 2mtrs Black braider Hose with suitable fittings",
-            "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
-            "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head foot connector",
-            "maximumOverPressure": "185 psi (13 kg/cm2)",
-            "pressureSettingRange": "6 to 100 psi",
-            "workingPressureRange": "0 to 100 psi",
-            "displayResolution": "1 psi",
-            "measuringResolution": "0.25 psi",
-            "keypad": "Membrane Keypad suitable for outdoor application",
-            "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
-            "dimensions": "415 x 210 x 1390 mm (pedestal), 425 x 250 x 1420 mm (Packing)"
-          },
+          "model": "ADU-501 (MAK-BPCL)",
+          "type": "DEF/AdBlue Dispenser",
+          "description": "DEF/AdBlue dispenser for Bharat Petroleum network featuring MAK branding.",
           "applications": [
-            "Fuel Station (for HPCL)",
-            "Wheel Alignment Shop",
-            "Automotive Garage",
-            "Depot",
-            "Puncture Shop",
-            "Apartments",
-            "Commercial Parking Lot",
-            "Educational Institution",
-            "Companies"
+            "BPCL fuel retail stations",
+            "Commercial vehicle workshops"
           ],
           "images": [
-            "/images/highres/1. Digital Tyre Inflator/1F.jpg"
+            "/images/highres/9. Digital DEF/9b.png"
           ]
         },
         {
-          "model": "AIROJET 6000 LCV P",
-          "type": "Pedestal - Heavy (IOCL/BPCL)",
-          "description": "Heavy duty pedestal mounted digital tyre inflator for IOCL/BPCL fuel stations with big LCD display.",
-          "subtitle": "Pedestal - Heavy (IOCL/BPCL)",
-          "fullDescription": "Heavy duty pedestal mounted digital tyre inflator for fuel stations. Features two digital readouts, big LCD display with LED backlight, pressure unit display to identify PSI or KG/CM2, and can be used for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck.",
-          "features": [
-            "Two digital readouts one for set pressure and other for tyre pressure",
-            "Big LCD display with LED back light to provide good visibility",
-            "Pressure unit display to identify PSI or KG/CM2",
-            "Display remain at same set pressure value even after power on-off cycle",
-            "Audible and visual end of the cycle signal indicators",
-            "LED indication for the status of operation",
-            "Soft touch and durable membrane keys suitable for outdoor",
-            "Automatic tyre sensing system",
-            "Separate keys for set pressure increment and decrement",
-            "Flat key for empty or puncture tyre",
-            "Toggle key for easy set pressure value 25/35 upto SUVs and 90/120/150 for heavy vehicles",
-            "Confirm to operate method for overpressure setvalue with display blink notification",
-            "Reset key to exit out of operation at any time",
-            "5 in 1 switch box with fuse protection and indicator",
-            "Can use for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck"
-          ],
-          "specifications": {
-            "system": "Digital microcontroller based",
-            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
-            "airInputSupply": "87 - 180 psi / 6 - 12.4 bar / 6.1 - 12.65 kg/cm2",
-            "sensorAccuracy": "± 0.5% of full scale",
-            "inputAirHose": "6mm x 2mtrs Black braided Hose with suitable fittings",
-            "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
-            "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head / hand held/clip on foot connector",
-            "maximumOverPressure": "185 psi (13 kg/cm2)",
-            "pressureSettingRange": "6 to 180 psi",
-            "workingPressureRange": "0 to 180 psi",
-            "displayResolution": "1 psi",
-            "measuringResolution": "0.25 psi",
-            "keypad": "Membrane Keypad suitable for outdoor application",
-            "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
-            "dimensions": "415 x 210 x 1390 mm (pedestal), 425 x 250 x 1420 mm (Packing)"
-          },
+          "model": "ADU-501 (HP-DEF)",
+          "type": "DEF/AdBlue Dispenser",
+          "description": "HP-branded DEF dispenser for HPCL retail fuel stations.",
           "applications": [
-            "Fuel Station (for IOCL, BPCL, HPCL, ESSAR, RELIANCE and other leading companies)",
-            "Wheel Alignment Shop",
-            "Automotive Garage",
-            "Bus Depot / All vehicle depot",
-            "Puncture Shop",
-            "Apartments",
-            "Commercial Parking Lot",
-            "Educational Institution",
-            "Companies"
+            "HPCL fuel stations",
+            "Industrial dispensing areas"
           ],
           "images": [
-            "/images/highres/1. Digital Tyre Inflator/1G.jpg"
+            "/images/highres/9. Digital DEF/9c.png"
           ]
-        },
+        }
+      ],
+      "applications": [
+        "Petrol bunks",
+        "Diesel dispensing stations",
+        "Transport fleet yards",
+        "Industrial vehicle service centers",
+        "Commercial automotive workshops"
+      ],
+      "types": [
         {
-          "model": "AIROJET 6000 LCV HP",
-          "type": "HPCL Pedestal - Heavy",
-          "description": "HPCL canopy model heavy duty pedestal mounted digital tyre inflator with big LCD display.",
-          "subtitle": "HPCL Pedestal - Heavy",
-          "fullDescription": "HPCL canopy model heavy duty pedestal mounted digital tyre inflator for fuel stations. Features two digital readouts, big LCD display with LED backlight, pressure unit display to identify PSI or KG/CM2, and can be used for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck.",
+          "type": "Digital DEF/AdBlue Dispenser",
+          "description": "Micro-controller based digital DEF dispensing solution",
           "features": [
-            "Two digital readouts one for set pressure and other for tyre pressure",
-            "Big LCD display with LED back light to provide good visibility",
-            "Pressure unit display to identify PSI or KG/CM2",
-            "Display remain at same set pressure value even after power on-off cycle",
-            "Audible and visual end of the cycle signal indicators",
-            "LED indication for the status of operation",
-            "Soft touch and durable membrane keys suitable for outdoor",
-            "Automatic tyre sensing system",
-            "Separate keys for set pressure increment and decrement",
-            "Flat key for empty or puncture tyre",
-            "Toggle key for easy set pressure value 25/35 upto SUVs and 90/120/150 for heavy vehicles",
-            "Confirm to operate method for overpressure setvalue with display blink notification",
-            "Reset key to exit out of operation at any time",
-            "5 in 1 switch box with fuse protection and indicator",
-            "Can use for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck"
-          ],
-          "specifications": {
-            "system": "Digital microcontroller based",
-            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
-            "airInputSupply": "87 - 180 psi / 6 - 12.4 bar / 6.1 - 12.65 kg/cm2",
-            "sensorAccuracy": "± 0.5% of full scale",
-            "inputAirHose": "6mm x 2mtrs Black braided Hose with suitable fittings",
-            "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
-            "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head / hand held/clip on foot connector",
-            "maximumOverPressure": "185 psi (13 kg/cm2)",
-            "pressureSettingRange": "6 to 180 psi",
-            "workingPressureRange": "0 to 180 psi",
-            "displayResolution": "1 psi",
-            "measuringResolution": "0.25 psi",
-            "keypad": "Membrane Keypad suitable for outdoor application",
-            "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
-            "dimensions": "415 x 210 x 1390 mm (pedestal), 425 x 250 x 1420 mm (Packing)"
-          },
-          "applications": [
-            "Fuel Station (for HPCL)",
-            "Wheel Alignment Shop",
-            "Automotive Garage",
-            "Bus Depot / All vehicle depot",
-            "Puncture Shop",
-            "Apartments",
-            "Commercial Parking Lot",
-            "Educational Institution",
-            "Companies"
-          ],
-          "images": [
-            "/images/highres/1. Digital Tyre Inflator/1H.jpg"
-          ]
-        },
-        {
-          "model": "Airojet1000LCV IC",
-          "type": "With Inbuilt Compressor",
-          "description": "Digital tyre inflator with inbuilt compressor - no external air input needed",
-          "subtitle": "Inbuilt Compressor",
-          "fullDescription": "",
-          "features": [
-            "TWO DIGITAL READOUTS ONE FOR SET PRESSURE AND OTHER FOR TYRE PRESSURE",
-            "LCD DISPLAY WITH BACK LIGHT TO PROVIDE GOOD VISIBILITY",
-            "DISPLAY REMAIN AT SAME SET PRESSURE VALUE EVEN AT POWER ON-OFF CYCLE",
-            "AUDIBLE AND VISUAL END OF THE CYCLE SIGNAL INDICATORS",
-            "LED INDICATION FOR THE STATUS OF OPERATION",
-            "SOFT TOUCH AND DURABLE MEMBRANE KEYS SUITABLE FOR OUTDOOR",
-            "AUTOMATIC TYRE SENSING SYSTEM",
-            "SEPARATE KEYS FOR SET PRESSURE INCREMENT AND DECREMENT",
-            "FLAT KEY FOR EMPTY OR PUNCTURE TYRE",
-            "25/35 KEY FOR EASYFRONT AND BACK TYRE PRESSURE SETTING",
-            "RESET KEY TO EXIT OUT OF OPERATION AT ANY TIME",
-            "MCB PROTECTION",
-            "NO NEED FOR EXTERNAL AIR INPUT ( INBUILD COMPRESSOR AVAILABLE)",
-            "CAN USE FOR VEHICLE TYRE RANGING FROM TWO WHEELER, CAR AND SUVS"
-          ],
-          "specifications": {
-            "technical": {
-              "system": "Digital microcontroller based",
-              "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 15A",
-              "sensorAccuracy": "± 0.5% of full scale",
-              "inputSupplySource": "15 A switch box with fuse and indicator within 2 meter proximity",
-              "inputFilter": "1/4\" x 5 micron air filter with suitable fittings",
-              "outputHose": "10 mtrs 8 x5 mm Coiled PU hose with clip on Air chuck",
-              "maximumOverPressure": "185 psi (13 kg/cm2)",
-              "pressureSettingRange": "6 to 100 psi",
-              "workingPressureRange": "5 to 100 Psi",
-              "displayResolution": "1 psi",
-              "measuringResolution": "0.25 psi",
-              "keypad": "Membrane Keypad suitable for outdoor application",
-              "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF"
-            }
-          },
-          "applications": [
-            "Wheel Alignment Shop",
-            "Automotive Garage",
-            "Depot",
-            "Puncture Shop",
-            "Apartments",
-            "Commercial Parking Lot",
-            "Educational Institution",
-            "Companies"
-          ],
-          "images": [
-            "/images/highres/1. Digital Tyre Inflator/1J.jpg"
-          ]
-        },
-        {
-          "model": "ICON PI C",
-          "type": "Digital Tube Pre Inflator",
-          "description": "Tube inflation system with timer for tyre manufacturing units",
-          "subtitle": "HPCL Pedestal - Heavy",
-          "fullDescription": "HPCL canopy model heavy duty pedestal mounted digital tyre inflator for fuel stations. Features two digital readouts, big LCD display with LED backlight, pressure unit display to identify PSI or KG/CM2, and can be used for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck.",
-          "features": [
-            "Two digital readouts one for set pressure and other for tyre pressure",
-            "Big LCD display with LED back light to provide good visibility",
-            "Pressure unit display to identify PSI or KG/CM2",
-            "Display remain at same set pressure value even after power on-off cycle",
-            "Audible and visual end of the cycle signal indicators",
-            "LED indication for the status of operation",
-            "Soft touch and durable membrane keys suitable for outdoor",
-            "Automatic tyre sensing system",
-            "Separate keys for set pressure increment and decrement",
-            "Flat key for empty or puncture tyre",
-            "Toggle key for easy set pressure value 25/35 upto SUVs and 90/120/150 for heavy vehicles",
-            "Confirm to operate method for overpressure setvalue with display blink notification",
-            "Reset key to exit out of operation at any time",
-            "5 in 1 switch box with fuse protection and indicator",
-            "Can use for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck"
-          ],
-          "specifications": {
-            "technical": {
-              "system": "Digital microcontroller based",
-              "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 15A",
-              "sensorAccuracy": "± 0.5 % of full scale",
-              "inputSupplySource": "15 A switch box with fuse and indicator within 2 meter proximity",
-              "inputFilter": "¼” x 5 micron air filter with suitable fittings",
-              "outputHose": "10 mtrs 8 x5 mm Coiled PU hose with clip on Air chuck",
-              "maximumOverPressure": "185 psi (13 kg/cm2)",
-              "pressureSettingRange": "6 to 100 psi",
-              "workingPressureRange": "5 to 100 Psi",
-              "displayResolution": "1 psi",
-              "measuringResolution": "0.25 psi",
-              "keypad": "Membrane Keypad suitable for outdoor application",
-              "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF"
-            },
-            "airCompressorSpecification": {
-              "hpKw": "1.5 HP/ 1.1 K.W.",
-              "tankCapacity": "45 Liters",
-              "drain": "Digital Auto Drain Valve"
-            }
-          },
-          "applications": [
-            "Fuel Station (for HPCL)",
-            "Wheel Alignment Shop",
-            "Automotive Garage",
-            "Bus Depot / All vehicle depot",
-            "Puncture Shop",
-            "Apartments",
-            "Commercial Parking Lot",
-            "Educational Institution",
-            "Companies"
-          ],
-          "images": [
-            "/images/highres/1. Digital Tyre Inflator/1K.jpg"
-          ]
-        },
-        {
-          "model": "Airojet1000HMV C",
-          "type": "Digital Tube Inflation System",
-          "description": "Automatic inflator for tube inflation with vacuum pressure",
-          "subtitle": "HPCL Pedestal - Heavy",
-          "fullDescription": "HPCL canopy model heavy duty pedestal mounted digital tyre inflator for fuel stations. Features two digital readouts, big LCD display with LED backlight, pressure unit display to identify PSI or KG/CM2, and can be used for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck.",
-          "features": [
-            "Two digital readouts one for set pressure and other for tyre pressure",
-            "Big LCD display with LED back light to provide good visibility",
-            "Pressure unit display to identify PSI or KG/CM2",
-            "Display remain at same set pressure value even after power on-off cycle",
-            "Audible and visual end of the cycle signal indicators",
-            "LED indication for the status of operation",
-            "Soft touch and durable membrane keys suitable for outdoor",
-            "Automatic tyre sensing system",
-            "Separate keys for set pressure increment and decrement",
-            "Flat key for empty or puncture tyre",
-            "Toggle key for easy set pressure value 25/35 upto SUVs and 90/120/150 for heavy vehicles",
-            "Confirm to operate method for overpressure setvalue with display blink notification",
-            "Reset key to exit out of operation at any time",
-            "5 in 1 switch box with fuse protection and indicator",
-            "Can use for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck"
-          ],
-          "specifications": {
-            "system": "Digital microcontroller based",
-            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
-            "airInputSupply": "87 - 180 psi / 6 - 10 bar / 6.1 - 10.2 kg/cm2",
-            "sensorAccuracy": "± 0.5% of full scale",
-            "inputAirHose": "10mm x 10mtrs PU Hose with suitable fittings",
-            "inputFilter": "1/2” x 5 micron air filter with regulator suitable fittings",
-            "outputAirHose": "10mm x 10mtrs PU Hose with clip-on connector",
-            "maximumOverPressure": "150 psi (10.5 kg/cm2)",
-            "pressureSettingRange": " 20 to 1000 water column (mm H2O)",
-            "workingPressureRange": "0 to 1000 water column (mm H2O)",
-            "displayResolution": "1 water column (mm H2O)",
-            "measuringResolution": "0.25 water column (mm H2O)",
-            "keypad": "Membrane Keypad suitable for outdoor application",
-            "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
-            "dimensions": "415 x 210 x 1390 mm (pedestal), 425 x 250 x 1420 mm (Packing)"
-          },
-          "applications": [
-            "TYRE MANUFACTURING UNIT / COMPANY"
-          ],
-          "images": [
-            "/images/highres/1. Digital Tyre Inflator/1L.jpg"
-          ]
-        },
-        {
-          "model": "Airojet1000HMV C",
-          "type": "Digital Tube Inflation System",
-          "description": "Automatic inflator for tube inflation with vacuum pressure",
-          "subtitle": "HPCL Pedestal - Heavy",
-          "fullDescription": "HPCL canopy model heavy duty pedestal mounted digital tyre inflator for fuel stations. Features two digital readouts, big LCD display with LED backlight, pressure unit display to identify PSI or KG/CM2, and can be used for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck.",
-          "features": [
-            "Two digital readouts one for set pressure and other for tyre pressure",
-            "Big LCD display with LED back light to provide good visibility",
-            "Pressure unit display to identify PSI or KG/CM2",
-            "Display remain at same set pressure value even after power on-off cycle",
-            "Audible and visual end of the cycle signal indicators",
-            "LED indication for the status of operation",
-            "Soft touch and durable membrane keys suitable for outdoor",
-            "Automatic tyre sensing system",
-            "Separate keys for set pressure increment and decrement",
-            "Flat key for empty or puncture tyre",
-            "Toggle key for easy set pressure value 25/35 upto SUVs and 90/120/150 for heavy vehicles",
-            "Confirm to operate method for overpressure setvalue with display blink notification",
-            "Reset key to exit out of operation at any time",
-            "5 in 1 switch box with fuse protection and indicator",
-            "Can use for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck"
-          ],
-          "specifications": {
-            "system": "Digital microcontroller based",
-            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
-            "airInputSupply": "87 - 180 psi / 6 - 10 bar / 6.1 - 10.2 kg/cm2",
-            "sensorAccuracy": "± 0.5% of full scale",
-            "inputAirHose": "10mm x 10mtrs PU Hose with suitable fittings",
-            "inputFilter": "1/2” x 5 micron air filter with regulator suitable fittings",
-            "outputAirHose": "10mm x 10mtrs PU Hose with clip-on connector",
-            "maximumOverPressure": "150 psi (10.5 kg/cm2)",
-            "pressureSettingRange": " 20 to 1000 water column (mm H2O)",
-            "workingPressureRange": "0 to 1000 water column (mm H2O)",
-            "displayResolution": "1 water column (mm H2O)",
-            "measuringResolution": "0.25 water column (mm H2O)",
-            "keypad": "Membrane Keypad suitable for outdoor application",
-            "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
-            "dimensions": "415 x 210 x 1390 mm (pedestal), 425 x 250 x 1420 mm (Packing)"
-          },
-          "applications": [
-            "TYRE MANUFACTURING UNIT / COMPANY"
-          ],
-          "images": [
-            "/images/highres/1. Digital Tyre Inflator/1L.jpg"
+            "Legal metrology approved",
+            "Extreme precision volume measurement",
+            "Industrial dispensing compatibility"
           ]
         }
       ],
       "images": [
-        "/images/highres/1. Digital Tyre Inflator/1D.jpg",
-        "/images/highres/1. Digital Tyre Inflator/1F.jpg",
-        "/images/highres/1. Digital Tyre Inflator/1G.jpg",
-        "/images/highres/1. Digital Tyre Inflator/1H.jpg",
-        "/images/highres/1. Digital Tyre Inflator/1I.jpg",
-        "/images/highres/1. Digital Tyre Inflator/1J.jpg",
-        "/images/highres/1. Digital Tyre Inflator/1K.jpg",
-        "/images/highres/1. Digital Tyre Inflator/1L.jpg"
+        "/images/highres/9. Digital DEF/9a.png",
+        "/images/highres/9. Digital DEF/9b.png",
+        "/images/highres/9. Digital DEF/9c.png"
       ],
-      "mainImage": "/images/highres/1. Digital Tyre Inflator/1L.jpg"
-    },
-    {
-      "id": "digital-nitrogen-tyre-inflator",
-      "title": "Digital Nitrogen Tyre Inflator",
-      "description": "Reliable and accurate electronic digital nitrogen tyre inflators. Nitrogen production based on cost-efficient PSA technology with 95-99% purity suitable for vehicle nitrogen inflation.",
-      "subtitle": "Reliable and accurate electronic digital nitrogen tyre inflators. Nitrogen production based on cost-efficient PSA technology with 95-99% purity suitable for vehicle nitrogen inflation.",
-      "fullDescription": "We are the leading Manufacturer and supplier for Electronic Digital Nitrogen Tyre Inflator all over India since the year 2007. Our Electronic Digital Nitrogen Tyre Inflator is reliable, durable and accurate, thus meet the requirement of each and every horizon related to vehicle tyre pressure inflation. Nitrogen production is based on reliable and cost efficient PSA technology. Nitrogen Purity may vary from 95-99% suitable for vehicle nitrogen purity suggestions. Our Electronic Digital Nitrogen Tyre Inflator meets the accuracy suggested by tyre manufacturer's pressure standards. Our control panel Enclosure meets the Ingress Protection standard IP65.",
-      "features": [
-        "PSA Technology for nitrogen generation",
-        "95-99% purity (adjustable)",
-        "Automatic vacuum cum nitrogen inflation",
-        "Pressure switch for automatic nitrogen generation cut-off",
-        "Tyre counter and error codes available",
-        "IP65 protection standard",
-        "Three digital readouts for set pressure, tyre pressure and tyre count",
-        "LCD display with LED backlight for good visibility",
-        "Display remains at same set pressure value even after power on-off cycle",
-        "Audible and visual end of cycle signal indicators",
-        "VAC key (Vacuum key) for first time nitrogen filling",
-        "Computer power chord adapter with fuse protection and switch on indicator",
-        "Pressure gauge for input air pressure indication and internal tank nitrogen pressure indication",
-        "Safety pressure relief valve available for internal tank"
-      ],
-      "specifications": {
-        "system": "Digital microcontroller based",
-        "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
-        "airSupply": "120 - 150 psi / 8 - 10bar",
-        "sensorAccuracy": "± 0.5% of full scale",
-        "n2ProductionMethod": "Pressure Swing Adsorption Method (PSA Technology)",
-        "tankCapacity": "65 liters (varies by model)",
-        "flowRate": "4500 lph (varies by model)",
-        "purity": "95-99% (adjustable)",
-        "moistureFilter": "5 micron",
-        "oilRemovalFilter": "Activated carbon",
-        "autoDrainValve": "with auto timer",
-        "safetyValve": "Available",
-        "display": "LCD display (tyre pressure, set pressure and tyre counter)",
-        "counter": "Available for number of tyres (16x2 LCD display)",
-        "vaccumiser": "Automatic vacuum cum nitrogen inflation",
-        "inputHose": "2 meter 6x4 mm heavy braided hose",
-        "outputHose": "10 mtrs 8 x5 mm Coiled PU hose with clip on Air chuck",
-        "functionalKeys": "Membrane keypad suitable for outdoor application",
-        "overPressureSafety": "Pressure switch with automatic on - off setting",
-        "errorCodes": "available",
-        "maximumOverPressure": "225 psi (15 kg/cm2)",
-        "pressureSettingRange": "6 to 150 psi (varies by model)",
-        "workingPressureRange": "0 to 150 psi (varies by model)",
-        "displayResolution": "1 psi",
-        "measuringResolution": "0.25 psi",
-        "displayBacklight": "LED backlight with automatic ON / OFF"
-      },
-      "applications": [
-        "Fuel Station (for IOCL, BPCL, HPCL, ESSAR, RELIANCE and other leading companies)",
-        "Wheel Alignment Shop",
-        "Automotive Garage",
-        "Depot",
-        "Puncture Shop",
-        "Apartments",
-        "Commercial Parking Lot",
-        "Educational Institution",
-        "Companies",
-        "Two Wheel Alignment Shop",
-        "Two Wheeler Service Station"
-      ],
-      "models": [
-        {
-          "model": "NITROJET 2000 LCV P",
-          "type": "For Two Wheeler",
-          "description": "Digital nitrogen tyre inflator specifically designed for two wheelers with pleasant LED display.",
-          "subtitle": "For Two Wheeler",
-          "fullDescription": "Digital nitrogen tyre inflator for two wheelers. Features intelligent single digital readouts both for set pressure and tyre pressure, pleasant LED display for attractive night visibility, pressure switch for automatic nitrogen generation cut-off, and pressure gauge for nitrogen pressure indication.",
-          "features": [
-            "Intelligent single digital readouts both for set pressure and tyre pressure",
-            "Pleasant LED display for attractive night visibility",
-            "Pressure switch for automatic nitrogen generation cut-off",
-            "Pressure gauge for nitrogen pressure indication",
-            "Reliable PSA method for nitrogen generation",
-            "Automatic vacuum cum nitrogen inflation",
-            "Audible and visual end of the cycle signal indicators",
-            "Can use for two wheeler tyre"
-          ],
-          "specifications": {
-            "system": "Digital microcontroller based",
-            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz",
-            "airSupply": "120 - 150 psi / 8 - 10bar",
-            "sensorAccuracy": "± 0.5% of full scale",
-            "n2ProductionMethod": "Pressure Swing Adsorption Method (PSA Technology)",
-            "tankCapacity": "65 liters",
-            "purity": "95-99% (adjustable)",
-            "display": "LED display for set pressure and tyre pressure",
-            "pressureSettingRange": "6 to 100 psi",
-            "workingPressureRange": "0 to 100 psi"
-          },
-          "applications": [
-            "Two Wheeler Service Station",
-            "Two Wheel Alignment Shop",
-            "Puncture Shop"
-          ],
-          "images": [
-            "/images/highres/2. Digital Nitrogen Tyre Inflator/2A.jpg"
-          ]
-        },
-        {
-          "model": "NITROJET 1000 LCV P",
-          "type": "N2 Only option",
-          "description": "Standard digital nitrogen tyre inflator with nitrogen only option featuring three digital readouts.",
-          "subtitle": "N2 Only option",
-          "fullDescription": "Digital nitrogen tyre inflator with nitrogen only option. Features three digital readouts for set pressure, tyre pressure, and tyre count & error count. Reliable PSA method for nitrogen generation with automatic vacuum cum nitrogen inflation.",
-          "features": [
-            "Three digital readouts for set pressure, tyre pressure and tyre count & error count",
-            "LCD display with LED back light to provide good visibility",
-            "Reliable PSA method for nitrogen generation",
-            "Automatic vacuum cum nitrogen inflation",
-            "Pressure switch for automatic nitrogen generation cut-off",
-            "Tyre counter and error codes available",
-            "Audible and visual end of the cycle signal indicators",
-            "VAC key (Vacuum key) for first time nitrogen filling",
-            "Can use for vehicle tyre ranging from two wheeler, car, SUV and mini truck"
-          ],
-          "specifications": {
-            "system": "Digital microcontroller based",
-            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
-            "airSupply": "120 - 150 psi / 8 - 10bar",
-            "sensorAccuracy": "± 0.5% of full scale",
-            "n2ProductionMethod": "Pressure Swing Adsorption Method (PSA Technology)",
-            "tankCapacity": "65 liters",
-            "flowRate": "4500 lph",
-            "purity": "95-99% (adjustable)",
-            "display": "LCD display (tyre pressure, set pressure and tyre counter)",
-            "counter": "Available for number of tyres (16x2 LCD display)",
-            "pressureSettingRange": "6 to 100 psi",
-            "workingPressureRange": "0 to 100 psi"
-          },
-          "applications": [
-            "Fuel Station",
-            "Wheel Alignment Shop",
-            "Automotive Garage",
-            "Depot",
-            "Puncture Shop"
-          ],
-          "images": [
-            "/images/highres/2. Digital Nitrogen Tyre Inflator/2B.jpg"
-          ]
-        },
-        {
-          "model": "NITROJET 1000 LCV H",
-          "type": "N2 with Air option",
-          "description": "Digital nitrogen tyre inflator with both nitrogen and air input pressure option available in single machine.",
-          "subtitle": "N2 with Air option",
-          "fullDescription": "Digital nitrogen tyre inflator with N2 with Air option. Features three digital readouts for set pressure, tyre pressure, and tyre count & error count. Reliable PSA method for nitrogen generation with air and nitrogen input pressure option available in single machine.",
-          "features": [
-            "Three digital readouts for set pressure, tyre pressure and tyre count & error count",
-            "LCD display with LED back light to provide good visibility",
-            "Reliable PSA method for nitrogen generation",
-            "Air and nitrogen input pressure option available in single machine",
-            "Automatic vacuum cum nitrogen inflation",
-            "Pressure switch for automatic nitrogen generation cut-off",
-            "Tyre counter and error codes available",
-            "Audible and visual end of the cycle signal indicators",
-            "VAC key (Vacuum key) for first time nitrogen filling",
-            "Can use for vehicle tyre ranging from two wheeler, car, SUV and mini truck"
-          ],
-          "specifications": {
-            "system": "Digital microcontroller based",
-            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
-            "airSupply": "120 - 150 psi / 8 - 10bar",
-            "sensorAccuracy": "± 0.5% of full scale",
-            "n2ProductionMethod": "Pressure Swing Adsorption Method (PSA Technology)",
-            "tankCapacity": "65 liters",
-            "flowRate": "4500 lph",
-            "purity": "95-99% (adjustable)",
-            "display": "LCD display (tyre pressure, set pressure and tyre counter)",
-            "counter": "Available for number of tyres (16x2 LCD display)",
-            "pressureSettingRange": "6 to 100 psi",
-            "workingPressureRange": "0 to 100 psi"
-          },
-          "applications": [
-            "Fuel Station",
-            "Wheel Alignment Shop",
-            "Automotive Garage",
-            "Depot",
-            "Puncture Shop"
-          ],
-          "images": [
-            "/images/highres/2. Digital Nitrogen Tyre Inflator/2C.jpg"
-          ]
-        },
-        {
-          "model": "NITROJET 1000 HMV",
-          "type": "Heavy",
-          "description": "Heavy duty digital nitrogen tyre inflator for buses and trucks up to 150 psi with external tank.",
-          "subtitle": "Heavy",
-          "fullDescription": "Heavy duty digital nitrogen tyre inflator for fuel stations and commercial applications. Features three digital readouts, external tank with pressure gauge and safety relief valve for nitrogen storage, air and nitrogen input pressure option available in single machine, and can be used for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck up to 150 PSI.",
-          "features": [
-            "Three digital readouts for set pressure, tyre pressure and tyre count & error count",
-            "LCD display with LED back light to provide good visibility",
-            "External tank with pressure gauge and safety relief valve for nitrogen storage",
-            "Reliable PSA method for nitrogen generation",
-            "Air and nitrogen input pressure option available in single machine",
-            "Automatic vacuum cum nitrogen inflation",
-            "Pressure switch for automatic nitrogen generation cut-off",
-            "Tyre counter and error codes available",
-            "Audible and visual end of the cycle signal indicators",
-            "VAC key (Vacuum key) for first time nitrogen filling",
-            "Can use for vehicle tyre ranging from two wheeler, car, SUV, mini truck, bus and truck up to 150 PSI"
-          ],
-          "specifications": {
-            "system": "Digital microcontroller based",
-            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
-            "airSupply": "120 - 150 psi / 8 - 10bar",
-            "sensorAccuracy": "± 0.5% of full scale",
-            "n2ProductionMethod": "Pressure Swing Adsorption Method (PSA Technology)",
-            "tankCapacity": "65 liters + External tank",
-            "flowRate": "4500 lph",
-            "purity": "95-99% (adjustable)",
-            "display": "LCD display (tyre pressure, set pressure and tyre counter)",
-            "counter": "Available for number of tyres (16x2 LCD display)",
-            "pressureSettingRange": "6 to 150 psi",
-            "workingPressureRange": "0 to 150 psi"
-          },
-          "applications": [
-            "Fuel Station",
-            "Bus Depot",
-            "Truck Depot",
-            "Automotive Garage",
-            "Commercial Parking Lot"
-          ],
-          "images": [
-            "/images/highres/2. Digital Nitrogen Tyre Inflator/2D.jpg"
-          ]
-        },
-        {
-          "model": "NITROJET 1000 HMV C",
-          "type": "Heavy with Pressure Booster",
-          "description": "Heavy duty digital nitrogen tyre inflator with inbuilt pressure booster for vehicles up to 180 psi.",
-          "subtitle": "Heavy with Pressure Booster",
-          "fullDescription": "Heavy duty digital nitrogen tyre inflator with inbuilt pressure booster for nitrogen storage. Features three digital readouts, external tank with pressure gauge and safety relief valve, MCB protection, and can be used for vehicle tyre ranging from SUV, mini truck, bus and truck up to 180 PSI.",
-          "features": [
-            "Three digital readouts for set pressure, tyre pressure and tyre count & error count",
-            "LCD display with LED back light to provide good visibility",
-            "Inbuilt pressure booster for nitrogen storage",
-            "External tank with pressure gauge and safety relief valve",
-            "MCB protection",
-            "Reliable PSA method for nitrogen generation",
-            "Air and nitrogen input pressure option available in single machine",
-            "Automatic vacuum cum nitrogen inflation",
-            "Pressure switch for automatic nitrogen generation cut-off",
-            "Tyre counter and error codes available",
-            "Audible and visual end of the cycle signal indicators",
-            "VAC key (Vacuum key) for first time nitrogen filling",
-            "Can use for vehicle tyre ranging from SUV, mini truck, bus and truck up to 180 PSI"
-          ],
-          "specifications": {
-            "system": "Digital microcontroller based",
-            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
-            "airSupply": "120 - 150 psi / 8 - 10bar",
-            "sensorAccuracy": "± 0.5% of full scale",
-            "n2ProductionMethod": "Pressure Swing Adsorption Method (PSA Technology)",
-            "tankCapacity": "65 liters + External tank with pressure booster",
-            "flowRate": "4500 lph",
-            "purity": "95-99% (adjustable)",
-            "display": "LCD display (tyre pressure, set pressure and tyre counter)",
-            "counter": "Available for number of tyres (16x2 LCD display)",
-            "pressureSettingRange": "6 to 180 psi",
-            "workingPressureRange": "0 to 180 psi"
-          },
-          "applications": [
-            "Fuel Station",
-            "Bus Depot",
-            "Truck Depot",
-            "Heavy Vehicle Service Centers",
-            "Commercial Parking Lot"
-          ],
-          "images": [
-            "/images/highres/2. Digital Nitrogen Tyre Inflator/2E.jpg"
-          ]
-        },
-        {
-          "model": "NITROJET 6000 LCV 4H",
-          "type": "Four Hose System",
-          "description": "Digital nitrogen tyre inflator with four hose system for simultaneous operation on multiple vehicles.",
-          "subtitle": "Four Hose System",
-          "fullDescription": "Digital nitrogen tyre inflator with four hose system for simultaneous operation. Features two digital readouts, big LCD display, reliable PSA method for nitrogen generation, air and nitrogen input pressure option available in single machine, inbuilt pressure booster for nitrogen storage, and can be used for vehicle tyre ranging from SUV, mini truck, bus and truck up to 180 PSI.",
-          "features": [
-            "Four hose system for simultaneous operation",
-            "Two digital readouts for set pressure and tyre pressure",
-            "Big LCD display with LED back light to provide good visibility",
-            "Inbuilt pressure booster for nitrogen storage",
-            "Reliable PSA method for nitrogen generation",
-            "Air and nitrogen input pressure option available in single machine",
-            "Automatic vacuum cum nitrogen inflation",
-            "Pressure switch for automatic nitrogen generation cut-off",
-            "Audible and visual end of the cycle signal indicators",
-            "Can use for vehicle tyre ranging from SUV, mini truck, bus and truck up to 180 PSI"
-          ],
-          "specifications": {
-            "system": "Digital microcontroller based",
-            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
-            "airSupply": "120 - 150 psi / 8 - 10bar",
-            "sensorAccuracy": "± 0.5% of full scale",
-            "n2ProductionMethod": "Pressure Swing Adsorption Method (PSA Technology)",
-            "tankCapacity": "65 liters + External tank with pressure booster",
-            "flowRate": "4500 lph",
-            "purity": "95-99% (adjustable)",
-            "hoseSystem": "Four hose system",
-            "display": "Big LCD display",
-            "pressureSettingRange": "6 to 180 psi",
-            "workingPressureRange": "0 to 180 psi"
-          },
-          "applications": [
-            "Fuel Station",
-            "Large Bus Depot",
-            "Large Truck Depot",
-            "Fleet Service Centers",
-            "Commercial Vehicle Service Centers"
-          ],
-          "images": [
-            "/images/highres/2. Digital Nitrogen Tyre Inflator/2F.jpg"
-          ]
-        }
-      ],
-      "images": [
-        "/images/highres/2. Digital Nitrogen Tyre Inflator/2A.jpg",
-        "/images/highres/2. Digital Nitrogen Tyre Inflator/2B.jpg",
-        "/images/highres/2. Digital Nitrogen Tyre Inflator/2C.jpg",
-        "/images/highres/2. Digital Nitrogen Tyre Inflator/2D.jpg",
-        "/images/highres/2. Digital Nitrogen Tyre Inflator/2E.jpg",
-        "/images/highres/2. Digital Nitrogen Tyre Inflator/2F.jpg"
-      ],
-      "mainImage": "/images/highres/2. Digital Nitrogen Tyre Inflator/2A.jpg"
+      "mainImage": "/images/highres/9. Digital DEF/9a.png"
     },
     {
       "id": "air-compressor",
@@ -1177,7 +1304,7 @@
             "Industrial Applications"
           ],
           "images": [
-            "/images/highres/3. Air Compressor/3C.jpg"
+            "/images/highres/3. Air Compressor/3B.jpg"
           ]
         },
         {
@@ -1221,7 +1348,7 @@
             "Industrial Applications"
           ],
           "images": [
-            "/images/highres/3. Air Compressor/3D.jpg"
+            "/images/highres/3. Air Compressor/3B.jpg"
           ]
         },
         {
@@ -1265,7 +1392,7 @@
             "Industrial Applications"
           ],
           "images": [
-            "/images/highres/3. Air Compressor/3E.jpg"
+            "/images/highres/3. Air Compressor/3B.jpg"
           ]
         }
       ],
@@ -1339,7 +1466,8 @@
       "images": [
         "/images/highres/4. Nitrogen Generator/4A.jpg"
       ],
-      "mainImage": "/images/highres/4. Nitrogen Generator/4A.jpg"
+      "mainImage": "/images/highres/4. Nitrogen Generator/4A.jpg",
+      "models": []
     },
     {
       "id": "panel-board",
@@ -1703,230 +1831,6 @@
         "/images/highres/6. Garage Equipment/6C.jpg"
       ],
       "mainImage": "/images/highres/6. Garage Equipment/6A.jpg"
-    },
-    {
-      "id": "digital-engine-oil-dispenser",
-      "title": "Digital Engine Oil Dispenser",
-      "description": "Digital engine oil dispenser with secure preset operation and precise oil measurement in litres and millilitres.",
-      "subtitle": "Digital Engine Oil Dispenser",
-      "fullDescription": "Our Digital Engine Oil Dispenser provides accurate and spill-free dispensing of engine oil with secure volume and pricing controls. Designed for professional automotive workshops and garages.",
-      "features": [
-        "Saves money for both buyer and seller",
-        "Saves environment by reducing plastic usage",
-        "Almost zero spillage while dispensing",
-        "Precised volume dispensed",
-        "Rupee per litre can be securely set",
-        "Displays total volume dispensed in litres & ml",
-        "Sub total volume dispensed in litres & ml",
-        "Batch or shift wise volume can be erased",
-        "Approved by Legal Metrology"
-      ],
-      "compatibleBrands": [
-        "Servo",
-        "MAK Lubricants",
-        "HP Racer",
-        "Shell Lubricants"
-      ],
-      "models": [
-        {
-          "model": "ODU-501",
-          "type": "Engine Oil Dispenser",
-          "description": "Preset model digital engine oil dispenser with accurate measurement display.",
-          "subtitle": "ODU-501 Digital Engine Oil Dispenser",
-          "fullDescription": "Measures and displays engine oil volume in litres and ml, with rupee pricing and legal metrology approval.",
-          "features": [
-            "1” LCD for rupee display",
-            "1” LCD for qty display in ml",
-            "16×2 display with 10 digit for litres and 3 digit for ml",
-            "LED, display and buzzer indications",
-            "Membrane key switches",
-            "4 meter hydraulic hose with oil gun"
-          ],
-          "specifications": {
-            "powerSupply": "230VAC at 50Hz",
-            "system": "Micro-Controller Based",
-            "operation": "Preset Model",
-            "accuracyClass": "0.5",
-            "leastCount": "5 ml",
-            "minimumMeasuredQty": "10 ml",
-            "maximumMeasuredQty": "1000 ml (for 2T Engine Oil), 5000 ml (for 4T Engine Oil)",
-            "minimumFlowrate": "500 ml per minute*",
-            "dimensions": "(540×385×1350) mm",
-            "optionsAvailable": "Single/Double Side Control & Printer Option"
-          },
-          "applications": [
-            "Petrol Station",
-            "CNG Gas Station",
-            "Fuel Station",
-            "Industries",
-            "Automotive Sector & Garages"
-          ]
-        }
-      ],
-      "images": [
-        "/images/highres/10. Digital Engine Oil Dispenser/10A.png"
-      ],
-      "mainImage": "/images/highres/10. Digital Engine Oil Dispenser/10A.png"
-    },
-    {
-      "id": "engine-oil-changer",
-      "title": "Engine Oil Changer",
-      "description": "Pump based suction oil changer for 2T/4T engine oil removal.",
-      "subtitle": "Digital Engine Oil Suction System",
-      "fullDescription": "Designed for removing used engine oil with pump based suction and high mobility. Displays volume dispensed and supports safe and clean oil changing processes.",
-      "features": [
-        "Four wheels for mobility",
-        "Pump based suction",
-        "Low & high oil level indications",
-        "Transparent tank for visibility",
-        "Fuse protection"
-      ],
-      "models": [
-        {
-          "model": "OEU-501",
-          "type": "Oil Changer",
-          "description": "230VAC powered engine oil suction machine for 2T/4T vehicles.",
-          "subtitle": "2T/4T Engine Oil Suction",
-          "fullDescription": "Removes used engine oil securely and efficiently using pump-based suction with dual storage tanks and mobility wheels.",
-          "features": [
-            "0.5 HP AC motor",
-            "5 litre transparent tank + 65 litre MS tank",
-            "4 meter reinforced suction and delivery hose",
-            "Nylon engine inlet hose"
-          ],
-          "specifications": {
-            "Model Name": "OEU-501",
-            "Power Supply required": "230VAC at 50Hz",
-            "Suction type": "Pump based suction",
-            "Motor capacity": "0.5 H.P. AC Motor",
-            "Portability": "Four wheels for mobility",
-            "Storage Tank1": "5 Litre transparent tank",
-            "Storage Tank2": "65 Litre MS tank",
-            "Suction hose": "4 Meter reinforced hose",
-            "Delivery hose": "4 Meter reinforced hose",
-            "Engine inlet hose": "Nylon hose",
-            "Indications": "Low & high oil level",
-            "Protection": "Fuse protection",
-            "Dimensions (LxWxH) in mm": "(530x530x1100)",
-            "Application": "2T/4T Engine oil suction"
-          },
-          "applications": [
-            "Automotive Garages",
-            "Service Centers"
-          ],
-          "images": [
-            "/images/highres/11. Engine Oil Changer/11A.png"
-          ]
-        }
-      ],
-      "mainImage": "/images/highres/11. Engine Oil Changer/11A.png"
-    },
-    {
-      "id": "digital-def-adblue-dispenser",
-      "title": "Digital DEF/AdBlue Dispenser",
-      "description": "Digital diesel exhaust fluid dispenser with precise measurement, secure dispensing and legal metrology approval.",
-      "subtitle": "Diesel Exhaust Fluid Dispenser (AUS32/AdBlue)",
-      "fullDescription": "Designed for dispensing Diesel Exhaust Fluid (AUS32/AdBlue) with micro-controller based precision. Helps save plastic usage, prevent spillage, maintain accurate per-litre billing, and supports batch/shift reset. Approved by Legal Metrology for commercial usage.",
-      "features": [
-        "Saves money for both buyer and seller",
-        "Saves environment by reducing plastic usage",
-        "Almost zero spillage while dispensing",
-        "Precised volume dispensed",
-        "Proper per litre can be securely set",
-        "Displays total and sub-total volume dispensed",
-        "Batch or shift wise data can be erased",
-        "Approved by Legal Metrology",
-        "Preset micro-controller based measurement",
-        "Accurate 0.5% measurement class",
-        "Automatic cut-off nozzle",
-        "4-meter AdBlue dispensing hose",
-        "Least count 100ml",
-        "Up to 500 litres per dispensing batch",
-        "40 litres per minute output flow rate"
-      ],
-      "specifications": {
-        "Model Name": "ADU-501",
-        "Power Supply": "230VAC at 50Hz",
-        "System": "Micro-controller based preset model",
-        "Accuracy Class": "0.5",
-        "Display 1": "1” LCD for sales in rupees",
-        "Display 2": "1” LCD for QTY. in litres",
-        "Display 3": "1” LCD for rate per litre",
-        "Display 4": "16x2 display with 7 digit FRT totaliser in litres",
-        "Least Count": "100 ml",
-        "Minimum Measured Quantity": "500 ml",
-        "Maximum Measured Quantity": "500 litres",
-        "Indicators": "LED, Display and Buzzer",
-        "Switches": "Membrane keypad",
-        "Output Hose": "4 meter AdBlue hose with automatic off nozzle",
-        "Output Flow Rate": "40 litres per minute",
-        "Dimensions (LxWxH) in mm": "(740 x 280 x 1750) mm",
-        "Application Area": "Petrol stations / Diesel dispensing stations / Industrial DEF dispensing",
-        "Approval Mark": "IND/09/25/176"
-      },
-      "models": [
-        {
-          "model": "ADU-501 (IndianOil)",
-          "type": "DEF/AdBlue Dispenser",
-          "description": "Digital DEF dispensing unit used in IndianOil branded retail outlets.",
-          "applications": [
-            "Petrol bunks",
-            "DEF dispensing facilities",
-            "Industrial usage"
-          ],
-          "images": [
-            "/images/highres/9. Digital DEF/9a.png"
-          ]
-        },
-        {
-          "model": "ADU-501 (MAK-BPCL)",
-          "type": "DEF/AdBlue Dispenser",
-          "description": "DEF/AdBlue dispenser for Bharat Petroleum network featuring MAK branding.",
-          "applications": [
-            "BPCL fuel retail stations",
-            "Commercial vehicle workshops"
-          ],
-          "images": [
-            "/images/highres/9. Digital DEF/9b.png"
-          ]
-        },
-        {
-          "model": "ADU-501 (HP-DEF)",
-          "type": "DEF/AdBlue Dispenser",
-          "description": "HP-branded DEF dispenser for HPCL retail fuel stations.",
-          "applications": [
-            "HPCL fuel stations",
-            "Industrial dispensing areas"
-          ],
-          "images": [
-            "/images/highres/9. Digital DEF/9c.png"
-          ]
-        }
-      ],
-      "applications": [
-        "Petrol bunks",
-        "Diesel dispensing stations",
-        "Transport fleet yards",
-        "Industrial vehicle service centers",
-        "Commercial automotive workshops"
-      ],
-      "types": [
-        {
-          "type": "Digital DEF/AdBlue Dispenser",
-          "description": "Micro-controller based digital DEF dispensing solution",
-          "features": [
-            "Legal metrology approved",
-            "Extreme precision volume measurement",
-            "Industrial dispensing compatibility"
-          ]
-        }
-      ],
-      "images": [
-        "/images/highres/9. Digital DEF/9a.png",
-        "/images/highres/9. Digital DEF/9b.png",
-        "/images/highres/9. Digital DEF/9c.png"
-      ],
-      "mainImage": "/images/highres/9. Digital DEF/9a.png"
     }
   ]
 }

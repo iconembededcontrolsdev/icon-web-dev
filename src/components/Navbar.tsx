@@ -7,16 +7,16 @@ import { usePathname } from 'next/navigation';
 import { useTheme } from '@/contexts/ThemeContext';
 
 const PRODUCTS = [
-  { id: 'digital-tyre-inflator', title: 'Digital Tyre Inflator' },
-  { id: 'digital-tyre-inflator-pedestal', title: 'Digital Tyre Inflator Pedestals' },
   { id: 'digital-nitrogen-tyre-inflator', title: 'Digital Nitrogen Tyre Inflator' },
+  { id: 'digital-tyre-inflator-pedestal', title: 'Digital Tyre Inflator Pedestals' },
+  { id: 'digital-engine-oil-dispenser', title: 'Digital Engine Oil Dispenser' },
+  { id: 'engine-oil-changer', title: 'Engine Oil Changer' },
+  { id: 'digital-tyre-inflator', title: 'Digital Tyre Inflator' },
+  { id: 'digital-def-adblue-dispenser', title: 'Digital DEF/AdBlue Dispenser' },
   { id: 'air-compressor', title: 'Air Compressor' },
   { id: 'nitrogen-generator', title: 'Nitrogen Generator' },
   { id: 'panel-board', title: 'Panel Boards' },
   { id: 'garage-equipment', title: 'Garage Equipment' },
-  { id: 'digital-engine-oil-dispenser', title: 'Digital Engine Oil Dispenser' },
-  { id: 'engine-oil-changer', title: 'Engine Oil Changer' },
-  { id: 'digital-def-adblue-dispenser', title: 'Digital DEF/AdBlue Dispenser' },
 ];
 
 export default function Navbar() {
@@ -47,16 +47,16 @@ export default function Navbar() {
       }`}
       onMouseLeave={() => setIsProductsOpen(false)}
     >
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+      <div className="max-w-5xl mx-auto px-2">
+        <div className="flex justify-between items-center h-12">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <div className="relative h-10 w-auto">
+              <div className="relative h-11 w-auto">
                 <Image 
                   src="/images/highres/8. Logos/logo.png" 
                   alt="Icon Embedded Controls" 
-                  width={90}
-                  height={40}
+                  width={108}
+                  height={44}
                   className="object-contain" 
                 />
               </div>
@@ -71,7 +71,7 @@ export default function Navbar() {
             >
               <Link
                 href="/products"
-                className={`bg-transparent px-4 py-2 rounded-none transition-all flex items-center gap-1 ${
+                className={`bg-transparent px-2 py-1 rounded-none transition-all flex items-center gap-1 ${
                   isActive("/products")
                     ? "bg-primary text-white"
                     : "text-white hover:bg-primary hover:text-white"
@@ -91,10 +91,10 @@ export default function Navbar() {
               {/* Dropdown Menu */}
               {isProductsOpen && (
                 <div 
-                  className="fixed left-0 right-0 top-[80px] bg-black/95 backdrop-blur-xl border-b border-white/10 shadow-2xl pointer-events-auto animate-in fade-in slide-in-from-top-2 duration-200"
+                  className="fixed left-0 right-0 top-[48px] bg-black/95 backdrop-blur-xl border-b border-white/10 shadow-2xl pointer-events-auto animate-in fade-in slide-in-from-top-2 duration-200"
                 >
-                  <div className="max-w-6xl mx-auto px-8 py-8">
-                    <div className="grid grid-cols-3 gap-x-8 gap-y-1">
+                  <div className="max-w-6xl mx-auto px-4 py-4">
+                    <div className="grid grid-cols-3 gap-x-4 gap-y-1">
                       {PRODUCTS.map((product, index) => (
                         <Link
                           key={product.id}
@@ -114,7 +114,7 @@ export default function Navbar() {
             
             <Link
               href="/about"
-              className={`border border-white px-6 py-2 rounded-full transition-all ${
+              className={`border border-white px-3 py-1 rounded-full transition-all ${
                 isActive("/about")
                   ? "bg-white text-black"
                   : "bg-transparent text-white hover:bg-white hover:text-black"
@@ -124,7 +124,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/contact"
-              className={`border border-white px-6 py-2 rounded-full transition-all ${
+              className={`border border-white px-3 py-1 rounded-full transition-all ${
                 isActive("/contact")
                   ? "bg-white text-black"
                   : "bg-transparent text-white hover:bg-white hover:text-black"

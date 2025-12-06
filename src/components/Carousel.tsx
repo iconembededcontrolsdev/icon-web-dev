@@ -40,7 +40,7 @@ export default function Carousel({ items }: CarouselProps) {
             slidesPerView: 3,
           },
         }}
-        className="py-4"
+        className="py-2"
       >
         {items.map((item, idx) => (
           <SwiperSlide key={idx} className="pb-10">

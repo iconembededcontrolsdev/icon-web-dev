@@ -15,7 +15,7 @@ interface ProductBenefitsProps {
 export default function ProductBenefits({ title = "BENEFITS", benefits, className = '' }: ProductBenefitsProps) {
   return (
     <section className={`w-full py-12 bg-white ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-2">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
           {title}
         </h2>

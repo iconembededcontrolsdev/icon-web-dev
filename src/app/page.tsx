@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Hero from '@/components/Hero';
 import DynamicGrid from '@/components/DynamicGrid';
+import ClientLogos from '@/components/ClientLogos';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -30,16 +31,6 @@ const showcaseData: Block[] = [
     type: 'grid-3',
     items: [
       {
-        id: 'digital-tyre-inflator',
-        title: 'Digital Tyre Inflator',
-        subtitle: 'Reliable, durable and accurate electronic digital tyre inflators meeting tyre manufacturer pressure standards. Used by major tyre and vehicle manufacturers in their production line.',
-        img: '/images/highres/1. Digital Tyre Inflator/1A.jpg',
-        ctaButtons: [
-          { text: 'Learn more', link: '/products/digital-tyre-inflator', variant: 'primary' },
-          { text: 'Buy', link: '/products/digital-tyre-inflator', variant: 'outline' }
-        ]
-      },
-      {
         id: 'digital-nitrogen-tyre-inflator',
         title: 'Digital Nitrogen Tyre Inflator',
         subtitle: 'Reliable and accurate electronic digital nitrogen tyre inflators. Nitrogen production based on cost-efficient PSA technology with 95-99% purity suitable for vehicle nitrogen inflation.',
@@ -50,53 +41,13 @@ const showcaseData: Block[] = [
         ]
       },
       {
-        id: 'air-compressor',
-        title: 'Air Compressor',
-        subtitle: 'Single and two-stage oil lubricated reciprocating air compressors known for reliability and performance. Preferred choice for fuel stations, automotive garages, and industrial applications.',
-        img: '/images/highres/3. Air Compressor/3A.jpg',
+        id: 'digital-tyre-inflator-pedestal',
+        title: 'Digital Tyre Inflator Pedestals',
+        subtitle: 'Durable pedestal mounted digital tyre inflators for professional workshops and service stations.',
+        img: '/images/highres/1. Digital Tyre Inflator/1E.jpg',
         ctaButtons: [
-          { text: 'Learn more', link: '/products/air-compressor', variant: 'primary' },
-          { text: 'Buy', link: '/products/air-compressor', variant: 'outline' }
-        ]
-      },
-      {
-        id: 'panel-board',
-        title: 'Panel Boards',
-        subtitle: 'PLC Control Panels, Automatic Power Factor Control Panels, and Switch Gear Panels. Complete electrical solutions for automation, power factor correction, and industrial control.',
-        img: '/images/highres/5. Panel Board/5A.jpg',
-        ctaButtons: [
-          { text: 'Learn more', link: '/products/panel-board', variant: 'primary' },
-          { text: 'Buy', link: '/products/panel-board', variant: 'outline' }
-        ]
-      },
-      {
-        id: 'nitrogen-generator',
-        title: 'Nitrogen Generator',
-        subtitle: 'Easy to convert ordinary digital tyre inflator to digital nitrogen tyre inflator using this module. Reliable PSA method for nitrogen generation with 95-99% purity suitable for vehicle nitrogen inflation.',
-        img: '/images/highres/4. Nitrogen Generator/4A.jpg',
-        ctaButtons: [
-          { text: 'Learn more', link: '/products/nitrogen-generator', variant: 'primary' },
-          { text: 'Buy', link: '/products/nitrogen-generator', variant: 'outline' }
-        ]
-      },
-      {
-        id: 'garage-equipment',
-        title: 'Garage Equipment',
-        subtitle: 'High quality two wheeler ramps, pneumatic grease pumps, and manual oil dispensers. Professional tools and equipment for automotive workshops and garages.',
-        img: '/images/highres/6. Garage Equipment/6A.jpg',
-        ctaButtons: [
-          { text: 'Learn more', link: '/products/garage-equipment', variant: 'primary' },
-          { text: 'Buy', link: '/products/garage-equipment', variant: 'outline' }
-        ]
-      },
-      {
-        id: 'digital-def-adblue-dispenser',
-        title: 'Digital DEF/AdBlue Dispenser',
-        subtitle: 'Digital diesel exhaust fluid dispenser with precise measurement, secure dispensing and legal metrology approval.',
-        img: '/images/highres/9. Digital DEF/9a.png',
-        ctaButtons: [
-          { text: 'Learn more', link: '/products/digital-def-adblue-dispenser', variant: 'primary' },
-          { text: 'Buy', link: '/products/digital-def-adblue-dispenser', variant: 'outline' }
+          { text: 'Learn more', link: '/products/digital-tyre-inflator-pedestal', variant: 'primary' },
+          { text: 'Buy', link: '/products/digital-tyre-inflator-pedestal', variant: 'outline' }
         ]
       },
       {
@@ -117,6 +68,66 @@ const showcaseData: Block[] = [
         ctaButtons: [
           { text: 'Learn more', link: '/products/engine-oil-changer', variant: 'primary' },
           { text: 'Buy', link: '/products/engine-oil-changer', variant: 'outline' }
+        ]
+      },
+      {
+        id: 'digital-tyre-inflator',
+        title: 'Digital Tyre Inflator',
+        subtitle: 'Reliable, durable and accurate electronic digital tyre inflators meeting tyre manufacturer pressure standards. Used by major tyre and vehicle manufacturers in their production line.',
+        img: '/images/highres/1. Digital Tyre Inflator/1A.jpg',
+        ctaButtons: [
+          { text: 'Learn more', link: '/products/digital-tyre-inflator', variant: 'primary' },
+          { text: 'Buy', link: '/products/digital-tyre-inflator', variant: 'outline' }
+        ]
+      },
+      {
+        id: 'digital-def-adblue-dispenser',
+        title: 'Digital DEF/AdBlue Dispenser',
+        subtitle: 'Digital diesel exhaust fluid dispenser with precise measurement, secure dispensing and legal metrology approval.',
+        img: '/images/highres/9. Digital DEF/9a.png',
+        ctaButtons: [
+          { text: 'Learn more', link: '/products/digital-def-adblue-dispenser', variant: 'primary' },
+          { text: 'Buy', link: '/products/digital-def-adblue-dispenser', variant: 'outline' }
+        ]
+      },
+      {
+        id: 'air-compressor',
+        title: 'Air Compressor',
+        subtitle: 'Single and two-stage oil lubricated reciprocating air compressors known for reliability and performance. Preferred choice for fuel stations, automotive garages, and industrial applications.',
+        img: '/images/highres/3. Air Compressor/3A.jpg',
+        ctaButtons: [
+          { text: 'Learn more', link: '/products/air-compressor', variant: 'primary' },
+          { text: 'Buy', link: '/products/air-compressor', variant: 'outline' }
+        ]
+      },
+      {
+        id: 'nitrogen-generator',
+        title: 'Nitrogen Generator',
+        subtitle: 'Easy to convert ordinary digital tyre inflator to digital nitrogen tyre inflator using this module. Reliable PSA method for nitrogen generation with 95-99% purity suitable for vehicle nitrogen inflation.',
+        img: '/images/highres/4. Nitrogen Generator/4A.jpg',
+        ctaButtons: [
+          { text: 'Learn more', link: '/products/nitrogen-generator', variant: 'primary' },
+          { text: 'Buy', link: '/products/nitrogen-generator', variant: 'outline' }
+        ]
+      },
+      {
+        id: 'panel-board',
+        title: 'Panel Boards',
+        subtitle: 'PLC Control Panels, Automatic Power Factor Control Panels, and Switch Gear Panels. Complete electrical solutions for automation, power factor correction, and industrial control.',
+        img: '/images/highres/5. Panel Board/5A.jpg',
+        ctaButtons: [
+          { text: 'Learn more', link: '/products/panel-board', variant: 'primary' },
+          { text: 'Buy', link: '/products/panel-board', variant: 'outline' }
+        ]
+      },
+      {
+        id: 'garage-equipment',
+        title: 'Garage Equipment',
+        subtitle: 'High quality two wheeler ramps, pneumatic grease pumps, and manual oil dispensers. Professional tools and equipment for automotive workshops and garages.',
+        img: '/images/highres/6. Garage Equipment/6A.jpg',
+        ctaButtons: [
+          { text: 'Learn more', link: '/products/garage-equipment', variant: 'primary' },
+          { text: 'Buy', link: '/products/garage-equipment', variant: 'outline' }
         ]
       }
     ]
@@ -173,7 +184,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Main Content */}
-      <main className="pt-16 bg-background">
+      <main className="pt-12 bg-background">
         {/* Hero Section */}
         {renderBlock(showcaseData[0], 0)}
 
@@ -185,6 +196,9 @@ export default function Home() {
           </div>
         ))}
         </div>
+
+        {/* Client Logos Carousel */}
+        <ClientLogos />
 
         {/* Footer */}
         <footer className="bg-background">

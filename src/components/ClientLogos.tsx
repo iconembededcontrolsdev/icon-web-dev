@@ -1,6 +1,7 @@
 'use client';
 
-import AdaptiveImage from './AdaptiveImage';
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const LOGOS = [
   '/images/highres/8. Logos/1.svg',
@@ -13,46 +14,54 @@ const LOGOS = [
   '/images/highres/8. Logos/8.svg',
   '/images/highres/8. Logos/9.svg',
   '/images/highres/8. Logos/10.svg',
-  '/images/highres/8. Logos/11.svg',
+  '/images/highres/8. Logos/11.png',
 ];
 
 export default function ClientLogos() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setScrollPosition((prev) => {
+        const newPos = (prev + 1) % (LOGOS.length * 120);
+        return newPos;
+      });
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="w-full pt-8 pb-4 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6 text-center">
+    <div className="w-screen relative left-[calc(-50vw+50%)] ml-0 mr-0 bg-background py-8">
+      <div className="text-center mb-6">
         <h2 className="text-2xl font-bold text-primary">Our Trusted Clients</h2>
         <p className="text-muted mt-1 text-sm">Partnering with industry leaders across the globe</p>
       </div>
-      
-      <div className="relative w-full overflow-hidden pause-on-hover">
-        <div className="flex animate-marquee whitespace-nowrap">
-          {/* First set of logos */}
-          <div className="flex items-center gap-12 mx-6">
-            {LOGOS.map((logo, index) => (
-              <div key={`logo-1-${index}`} className="relative w-24 h-16 flex-shrink-0 overflow-hidden">
-                <AdaptiveImage
+
+      <div className="relative w-full overflow-hidden">
+        <div
+          className="flex gap-12 px-8"
+          style={{
+            transform: `translateX(-${scrollPosition}px)`,
+            transition: 'none',
+          }}
+        >
+          {[...Array(3)].map((_, setIndex) =>
+            LOGOS.map((logo, index) => (
+              <div
+                key={`logo-${setIndex}-${index}`}
+                className="relative w-32 h-20 flex-shrink-0"
+              >
+                <Image
                   src={logo}
                   alt={`Client Logo ${index + 1}`}
                   fill
                   className="object-contain"
+                  unoptimized
                 />
               </div>
-            ))}
-          </div>
-          
-          {/* Duplicate set for seamless scrolling */}
-          <div className="flex items-center gap-12 mx-6">
-            {LOGOS.map((logo, index) => (
-              <div key={`logo-2-${index}`} className="relative w-24 h-16 flex-shrink-0 overflow-hidden">
-                <AdaptiveImage
-                  src={logo}
-                  alt={`Client Logo ${index + 1}`}
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            ))}
-          </div>
+            ))
+          )}
         </div>
       </div>
     </div>
