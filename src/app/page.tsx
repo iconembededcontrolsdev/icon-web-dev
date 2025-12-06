@@ -178,11 +178,13 @@ export default function Home() {
         {renderBlock(showcaseData[0], 0)}
 
         {/* Remaining Blocks */}
+        <div className="mt-1">
         {showcaseData.slice(1).map((block, index) => (
           <div key={index + 1} className="mt-0">
             {renderBlock(block, index + 1)}
           </div>
         ))}
+        </div>
 
         {/* Footer */}
         <footer className="bg-background">

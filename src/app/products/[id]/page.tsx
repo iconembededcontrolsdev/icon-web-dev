@@ -5,6 +5,14 @@ import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getProductImages } from '@/utils/productImages';
+import ProductBenefits, { 
+  MileageIcon, 
+  TyreHeatIcon, 
+  MaintenanceIcon, 
+  TyreLifeIcon, 
+  CleanIcon, 
+  TyrePressureIcon 
+} from '@/components/ProductBenefits';
 
 type ProductModel = {
   model: string;
@@ -175,6 +183,18 @@ export default function ProductDetail() {
 
   const brochureLink = product.brochure || brochureMap[id as string];
 
+  // Nitrogen benefits configuration
+  const nitrogenBenefits = [
+    { icon: <MileageIcon />, title: "More Mileage" },
+    { icon: <TyreHeatIcon />, title: "Prevents Tyre Over Heat" },
+    { icon: <MaintenanceIcon />, title: "Maintenance Repair" },
+    { icon: <TyreLifeIcon />, title: "Increased Tyre Life" },
+    { icon: <CleanIcon />, title: "100 % Dry and Clean" },
+    { icon: <TyrePressureIcon />, title: "Consistent Tyre Pressure" }
+  ];
+
+  const isNitrogenProduct = id === 'digital-nitrogen-tyre-inflator' || id === 'nitrogen-generator';
+
   return (
     <div className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth bg-background">
       {models.map((model, index) => {
@@ -297,6 +317,16 @@ export default function ProductDetail() {
                       </a>
                     )}
                   </div>
+
+                  {/* Nitrogen Benefits Section */}
+                  {isNitrogenProduct && index === 0 && (
+                    <div className="mt-8 -mx-6 sm:-mx-8">
+                      <ProductBenefits 
+                        title="BENEFITS OF ICON NITROGEN"
+                        benefits={nitrogenBenefits}
+                      />
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

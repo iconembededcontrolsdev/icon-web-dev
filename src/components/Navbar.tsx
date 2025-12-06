@@ -41,12 +41,15 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`fixed w-full z-50 shadow-sm transition-all duration-300 ${
-      isScrolled ? 'bg-black/70 backdrop-blur-md border-b border-white/10' : 'bg-black border-b border-gray-800'
-    }`}>
+    <nav 
+      className={`fixed w-full z-50 shadow-sm transition-all duration-300 ${
+        isScrolled ? 'bg-black/70 backdrop-blur-md border-b border-white/10' : 'bg-black border-b border-gray-800'
+      }`}
+      onMouseLeave={() => setIsProductsOpen(false)}
+    >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex items-center justify-center flex-1 md:flex-initial">
+          <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <div className="relative h-10 w-auto">
                 <Image 
@@ -62,10 +65,12 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
-            <div className="relative">
-              <button
-                onMouseEnter={() => setIsProductsOpen(true)}
-                onMouseLeave={() => setIsProductsOpen(false)}
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsProductsOpen(true)}
+            >
+              <Link
+                href="/products"
                 className={`bg-transparent px-4 py-2 rounded-none transition-all flex items-center gap-1 ${
                   isActive("/products")
                     ? "bg-primary text-white"
@@ -81,26 +86,27 @@ export default function Navbar() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
-              </button>
+              </Link>
               
               {/* Dropdown Menu */}
               {isProductsOpen && (
                 <div 
-                  className="absolute top-full left-0 mt-1 w-72 bg-black/95 backdrop-blur-md border border-white/20 rounded-lg shadow-2xl overflow-hidden"
-                  onMouseEnter={() => setIsProductsOpen(true)}
-                  onMouseLeave={() => setIsProductsOpen(false)}
+                  className="fixed left-0 right-0 top-[80px] bg-black/95 backdrop-blur-xl border-b border-white/10 shadow-2xl pointer-events-auto animate-in fade-in slide-in-from-top-2 duration-200"
                 >
-                  <div className="py-2 max-h-96 overflow-y-auto">
-                    {PRODUCTS.map((product) => (
-                      <Link
-                        key={product.id}
-                        href={`/products/${product.id}`}
-                        className="block px-4 py-2 text-sm text-white hover:bg-primary transition-colors"
-                        onClick={() => setIsProductsOpen(false)}
-                      >
-                        {product.title}
-                      </Link>
-                    ))}
+                  <div className="max-w-6xl mx-auto px-8 py-8">
+                    <div className="grid grid-cols-3 gap-x-8 gap-y-1">
+                      {PRODUCTS.map((product, index) => (
+                        <Link
+                          key={product.id}
+                          href={`/products/${product.id}`}
+                          className="text-sm text-gray-300 hover:text-white transition-colors py-2 animate-in fade-in slide-in-from-left-2 duration-200"
+                          style={{ animationDelay: `${index * 20}ms` }}
+                          onClick={() => setIsProductsOpen(false)}
+                        >
+                          {product.title}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 </div>
               )}
@@ -208,14 +214,15 @@ export default function Navbar() {
                 onClick={() => setIsProductsOpen(!isProductsOpen)}
                 className="w-full flex items-center justify-between px-3 py-2 text-white hover:bg-white/10 rounded-md font-medium"
               >
-                <span>Products</span>
+                <span className="flex-grow text-left">Products</span>
                 <svg 
-                  className={`w-4 h-4 transition-transform duration-200 ${isProductsOpen ? 'rotate-180' : ''}`} 
+                  className={`w-5 h-5 flex-shrink-0 transition-transform duration-200 ${isProductsOpen ? 'rotate-180' : ''}`} 
                   fill="none" 
                   viewBox="0 0 24 24" 
                   stroke="currentColor"
+                  strokeWidth={2}
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
               

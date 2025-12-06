@@ -38,7 +38,7 @@ export default function DynamicGrid({
   return (
     <section className={`w-full ${className}`}>
       {/* Container with premium padding */}
-      <div className="w-full max-w-[1920px] mx-auto px-[40px] sm:px-[60px] lg:px-[80px] xl:px-[100px] py-[0px] sm:py-[4px] lg:py-[6px]">
+      <div className="w-full mx-auto px-0 py-0">
         {/* Optional section title/subtitle */}
         {(title || subtitle) && (
           <div className="text-center max-w-3xl mx-auto mb-[60px]">
@@ -56,7 +56,7 @@ export default function DynamicGrid({
         )}
 
         {/* Dynamic Grid: 1 column on mobile, 2 columns on desktop (2x2 max) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[6px] sm:gap-[8px] lg:gap-[12px] w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[4px] w-full">
           {items.map((item, index) => {
             const isLastItem = index === items.length - 1;
             const isOddCount = items.length % 2 !== 0;
@@ -72,7 +72,7 @@ export default function DynamicGrid({
                 onClick={() => onItemClick && onItemClick(item)}
               >
                 {/* Card container with image stacked on top */}
-                <div className="relative bg-card rounded-[40px] overflow-hidden shadow-sm h-full w-full flex flex-col">
+                <div className="relative bg-card rounded-[12px] overflow-hidden shadow-sm h-full w-full flex flex-col">
                   {/* Image - Top section */}
                   <div className="relative w-full aspect-[4/3] bg-white">
                     <Image
@@ -86,9 +86,20 @@ export default function DynamicGrid({
 
                   {/* Details - Bottom section */}
                   <div className="p-6 lg:p-8 flex flex-col flex-grow">
-                    <h3 className="text-xl lg:text-2xl font-bold text-primary mb-3">
-                      {item.title}
-                    </h3>
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="relative w-10 h-10 flex-shrink-0 flex items-center justify-center">
+                        <Image
+                          src="/images/lowres/logo.png"
+                          alt="Icon Logo"
+                          width={40}
+                          height={40}
+                          className="object-contain"
+                        />
+                      </div>
+                      <h3 className="text-xl lg:text-2xl font-bold text-primary">
+                        {item.title}
+                      </h3>
+                    </div>
 
                     {(item.subtitle || item.description) && (
                       <p className="text-sm lg:text-base text-muted mb-6 line-clamp-3 flex-grow">

@@ -38,9 +38,20 @@ export default function ProductCard({ id, title, description, image }: ProductCa
           </motion.div>
         </div>
         <div className="p-6 flex-1 flex flex-col">
-          <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
-            {title}
-          </h3>
+          <div className="flex items-center gap-3 mb-3">
+            <div className="relative w-10 h-10 flex-shrink-0 flex items-center justify-center">
+              <Image
+                src="/images/lowres/logo.png"
+                alt="Icon Logo"
+                width={40}
+                height={40}
+                className="object-contain"
+              />
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors flex-1">
+              {title}
+            </h3>
+          </div>
           <p className="mt-2 text-gray-600 line-clamp-2">
             {description}
           </p>
