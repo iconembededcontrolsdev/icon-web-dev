@@ -61,7 +61,7 @@ function ProductEnquiryForm() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="bg-card rounded-[40px] shadow-lg p-8 sm:p-12 lg:p-16">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
               Product Enquiry
             </h1>
             {productName && (
@@ -69,13 +69,13 @@ function ProductEnquiryForm() {
                 <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-2">
                   {productName}
                 </h2>
-                <p className="text-lg text-muted">
+                <p className="text-base md:text-lg text-muted">
                   Get more information about this product
                 </p>
               </>
             )}
             {!productName && (
-              <p className="text-lg md:text-xl text-muted">
+              <p className="text-base md:text-lg text-muted">
                 Get in touch with us about our products
               </p>
             )}
@@ -94,7 +94,7 @@ function ProductEnquiryForm() {
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-primary mb-2">
+                <label htmlFor="name" className="block text-sm md:text-base font-semibold text-primary mb-2">
                   Your Name
                 </label>
                 <input
@@ -110,7 +110,7 @@ function ProductEnquiryForm() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-primary mb-2">
+                <label htmlFor="email" className="block text-sm md:text-base font-semibold text-primary mb-2">
                   Your Email
                 </label>
                 <input
@@ -126,7 +126,7 @@ function ProductEnquiryForm() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-primary mb-2">
+                <label htmlFor="message" className="block text-sm md:text-base font-semibold text-primary mb-2">
                   Your Message
                 </label>
                 <textarea

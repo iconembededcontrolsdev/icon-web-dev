@@ -230,11 +230,11 @@ export default function ProductDetail() {
                       {model.model}
                     </h2>
                     {model.type && (
-                      <p className="text-xl text-accent font-medium">{model.type}</p>
+                      <p className="text-lg md:text-xl text-accent font-medium">{model.type}</p>
                     )}
                   </div>
 
-                  <p className="text-foreground/90 text-lg leading-relaxed">
+                  <p className="text-foreground/90 text-base md:text-lg leading-relaxed">
                     {model.fullDescription || model.description || product.fullDescription}
                   </p>
 
@@ -248,8 +248,8 @@ export default function ProductDetail() {
                         <ul className="space-y-3">
                           {features.map((feature, idx) => (
                             <li key={idx} className="flex items-start">
-                              <span className="mr-3 text-accent font-bold text-xl">•</span>
-                              <span className="text-foreground/90">{feature}</span>
+                              <span className="mr-3 text-accent font-bold text-lg md:text-xl">•</span>
+                              <span className="text-sm md:text-base text-foreground/90">{feature}</span>
                             </li>
                           ))}
                         </ul>
@@ -264,7 +264,7 @@ export default function ProductDetail() {
                       >
                         <ul className="space-y-3">
                           {applications.map((app, idx) => (
-                            <li key={idx} className="flex items-center text-foreground/90">
+                            <li key={idx} className="flex items-center text-sm md:text-base text-foreground/90">
                               <svg className="w-4 h-4 mr-3 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                               </svg>
@@ -284,8 +284,8 @@ export default function ProductDetail() {
                         <div className="space-y-2">
                           {Object.entries(specifications).map(([key, value]) => (
                             <div key={key} className="grid grid-cols-2 gap-4 py-3 border-b border-border/30 last:border-0">
-                              <span className="font-semibold text-muted capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
-                              <span className="text-foreground">{String(value)}</span>
+                              <span className="font-semibold text-sm md:text-base text-muted capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
+                              <span className="text-sm md:text-base text-foreground">{String(value)}</span>
                             </div>
                           ))}
                         </div>

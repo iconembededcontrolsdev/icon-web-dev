@@ -87,7 +87,7 @@ export default function DynamicGrid({
                       {/* Left: Benefits & Details */}
                       <div className="w-full lg:w-1/2 p-8 lg:p-16 flex flex-col justify-center bg-card z-10">
                         <div className="flex items-center gap-4 mb-8">
-                          <div className="relative w-20 h-20 flex-shrink-0 flex items-center justify-center">
+                          <div className="relative w-16 h-16 lg:w-20 lg:h-20 flex-shrink-0 flex items-center justify-center">
                             <Image
                               src="/images/lowres/logo.png"
                               alt="Icon Logo"
@@ -96,14 +96,14 @@ export default function DynamicGrid({
                               className="object-contain"
                             />
                           </div>
-                          <h3 className="text-3xl lg:text-5xl font-bold text-primary">
+                          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">
                             {item.title}
                           </h3>
                         </div>
 
-                        <div className="mb-10 flex-grow">
-                          <h4 className="text-lg font-bold text-accent mb-6 uppercase tracking-wider">Benefits of Nitrogen</h4>
-                          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
+                        <div className="mb-8 flex-grow">
+                          <h4 className="text-base font-bold text-accent mb-4 uppercase tracking-wider">Benefits of Nitrogen</h4>
+                          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
                             {item.benefits.map((benefit, idx) => {
                               let Icon = null;
                               if (benefit.includes('Mileage')) Icon = MileageIcon;
@@ -114,8 +114,8 @@ export default function DynamicGrid({
                               else if (benefit.includes('Pressure')) Icon = TyrePressureIcon;
 
                               return (
-                                <li key={idx} className="flex items-center text-base lg:text-lg text-muted group">
-                                  <div className="w-10 h-10 mr-4 text-accent flex-shrink-0">
+                                <li key={idx} className="flex items-center text-sm md:text-base text-muted group">
+                                  <div className="w-8 h-8 mr-3 text-accent flex-shrink-0">
                                     {Icon && <Icon />}
                                   </div>
                                   <span className="font-medium">{benefit}</span>
@@ -126,7 +126,7 @@ export default function DynamicGrid({
                         </div>
 
                         {(item.subtitle || item.description) && (
-                          <p className="text-lg text-muted mb-8">
+                          <p className="text-base md:text-lg text-muted mb-8">
                             {item.subtitle || item.description}
                           </p>
                         )}
@@ -139,7 +139,7 @@ export default function DynamicGrid({
                                 key={btnIndex}
                                 href={button.link}
                                 onClick={(e) => e.stopPropagation()}
-                                className={`inline-flex items-center px-8 py-4 text-lg font-medium rounded-full transition-all duration-200 ${button.variant === 'primary'
+                                className={`inline-flex items-center px-6 py-3 text-base font-medium rounded-full transition-all duration-200 ${button.variant === 'primary'
                                   ? 'bg-primary text-white hover:opacity-90 shadow-lg hover:shadow-xl transform hover:-translate-y-1'
                                   : button.variant === 'outline'
                                     ? 'border-2 border-accent text-accent hover:bg-accent hover:text-white shadow-md'
@@ -215,7 +215,7 @@ export default function DynamicGrid({
                                 key={btnIndex}
                                 href={button.link}
                                 onClick={(e) => e.stopPropagation()}
-                                className={`inline-flex items-center px-3 lg:px-4 py-1.5 lg:py-2 text-sm font-medium rounded-full transition-all duration-200 ${button.variant === 'primary'
+                                className={`inline-flex items-center px-4 py-2 text-sm md:text-base font-medium rounded-full transition-all duration-200 ${button.variant === 'primary'
                                   ? 'bg-primary text-white hover:opacity-90 shadow-md'
                                   : button.variant === 'outline'
                                     ? 'border-2 border-accent text-accent hover:bg-accent hover:text-white shadow-sm'

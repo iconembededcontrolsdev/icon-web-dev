@@ -3,13 +3,14 @@
 import { useState } from 'react';
 import Hero from '@/components/Hero';
 import DynamicGrid from '@/components/DynamicGrid';
+import NitrogenShowcase from '@/components/NitrogenShowcase';
 import ClientLogos from '@/components/ClientLogos';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 interface Block {
-  type: 'hero' | 'grid-2' | 'grid-3' | 'hero-product';
+  type: 'hero' | 'grid-2' | 'grid-3' | 'hero-product' | 'nitrogen-showcase';
   [key: string]: any;
 }
 
@@ -26,28 +27,15 @@ const showcaseData: Block[] = [
     // ]
   },
 
+  // Nitrogen Showcase
+  {
+    type: 'nitrogen-showcase'
+  },
+
   // Product Categories Grid
   {
     type: 'grid-3',
     items: [
-      {
-        id: 'digital-nitrogen-tyre-inflator',
-        title: 'Digital Nitrogen Tyre Inflator',
-        subtitle: 'Reliable and accurate electronic digital nitrogen tyre inflators. Nitrogen production based on cost-efficient PSA technology with 95-99% purity suitable for vehicle nitrogen inflation.',
-        img: '/images/highres/2. Digital Nitrogen Tyre Inflator/2A.jpg',
-        benefits: [
-          'More Mileage',
-          'Prevents Tyre Over Heat',
-          'Maintenance Repair',
-          'Increased Tyre Life',
-          '100 % Dry and Clean',
-          'Consistent Tyre Pressure'
-        ],
-        ctaButtons: [
-          { text: 'Learn more', link: '/products/digital-nitrogen-tyre-inflator', variant: 'primary' },
-          { text: 'Buy', link: '/products/digital-nitrogen-tyre-inflator', variant: 'outline' }
-        ]
-      },
       {
         id: 'digital-tyre-inflator-pedestal',
         title: 'Digital Tyre Inflator (Pedestal)',
@@ -184,6 +172,8 @@ export default function Home() {
           items={block.items}
           onItemClick={(item) => navigateToProduct(item)}
         />;
+      case 'nitrogen-showcase':
+        return <NitrogenShowcase key={index} />;
       default:
         return null;
     }
