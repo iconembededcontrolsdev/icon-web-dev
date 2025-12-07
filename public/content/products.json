@@ -66,85 +66,6 @@
       "models": [
         {
           "model": "NITROJET 1000 LCV H",
-          "type": "For Two Wheeler",
-          "description": "Digital nitrogen tyre inflator specifically designed for two wheelers with pleasant LED display.",
-          "subtitle": "For Two Wheeler",
-          "fullDescription": "Digital nitrogen tyre inflator for two wheelers. Features intelligent single digital readouts both for set pressure and tyre pressure, pleasant LED display for attractive night visibility, pressure switch for automatic nitrogen generation cut-off, and pressure gauge for nitrogen pressure indication.",
-          "features": [
-            "Intelligent single digital readouts both for set pressure and tyre pressure",
-            "Pleasant LED display for attractive night visibility",
-            "Pressure switch for automatic nitrogen generation cut-off",
-            "Pressure gauge for nitrogen pressure indication",
-            "Reliable PSA method for nitrogen generation",
-            "Automatic vacuum cum nitrogen inflation",
-            "Audible and visual end of the cycle signal indicators",
-            "Can use for two wheeler tyre"
-          ],
-          "specifications": {
-            "system": "Digital microcontroller based",
-            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz",
-            "airSupply": "120 - 150 psi / 8 - 10bar",
-            "sensorAccuracy": "± 0.5% of full scale",
-            "n2ProductionMethod": "Pressure Swing Adsorption Method (PSA Technology)",
-            "tankCapacity": "65 liters",
-            "purity": "95-99% (adjustable)",
-            "display": "LED display for set pressure and tyre pressure",
-            "pressureSettingRange": "6 to 100 psi",
-            "workingPressureRange": "0 to 100 psi"
-          },
-          "applications": [
-            "Two Wheeler Service Station",
-            "Two Wheel Alignment Shop",
-            "Puncture Shop"
-          ],
-          "images": [
-            "/images/highres/2. Digital Nitrogen Tyre Inflator/2A.jpg"
-          ]
-        },
-        {
-          "model": "NITROJET 6000 LCV 4H",
-          "type": "N2 Only option",
-          "description": "Standard digital nitrogen tyre inflator with nitrogen only option featuring three digital readouts.",
-          "subtitle": "N2 Only option",
-          "fullDescription": "Digital nitrogen tyre inflator with nitrogen only option. Features three digital readouts for set pressure, tyre pressure, and tyre count & error count. Reliable PSA method for nitrogen generation with automatic vacuum cum nitrogen inflation.",
-          "features": [
-            "Three digital readouts for set pressure, tyre pressure and tyre count & error count",
-            "LCD display with LED back light to provide good visibility",
-            "Reliable PSA method for nitrogen generation",
-            "Automatic vacuum cum nitrogen inflation",
-            "Pressure switch for automatic nitrogen generation cut-off",
-            "Tyre counter and error codes available",
-            "Audible and visual end of the cycle signal indicators",
-            "VAC key (Vacuum key) for first time nitrogen filling",
-            "Can use for vehicle tyre ranging from two wheeler, car, SUV and mini truck"
-          ],
-          "specifications": {
-            "system": "Digital microcontroller based",
-            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
-            "airSupply": "120 - 150 psi / 8 - 10bar",
-            "sensorAccuracy": "± 0.5% of full scale",
-            "n2ProductionMethod": "Pressure Swing Adsorption Method (PSA Technology)",
-            "tankCapacity": "65 liters",
-            "flowRate": "4500 lph",
-            "purity": "95-99% (adjustable)",
-            "display": "LCD display (tyre pressure, set pressure and tyre counter)",
-            "counter": "Available for number of tyres (16x2 LCD display)",
-            "pressureSettingRange": "6 to 100 psi",
-            "workingPressureRange": "0 to 100 psi"
-          },
-          "applications": [
-            "Fuel Station",
-            "Wheel Alignment Shop",
-            "Automotive Garage",
-            "Depot",
-            "Puncture Shop"
-          ],
-          "images": [
-            "/images/highres/2. Digital Nitrogen Tyre Inflator/2B.jpg"
-          ]
-        },
-        {
-          "model": "NITROJET 1000 HMV",
           "type": "N2 with Air option",
           "description": "Digital nitrogen tyre inflator with both nitrogen and air input pressure option available in single machine.",
           "subtitle": "N2 with Air option",
@@ -187,7 +108,50 @@
           ]
         },
         {
-          "model": "NITROJET 1000 HMV C",
+          "model": "NITROJET 6000 LCV 4H",
+          "type": "Four Hose System",
+          "description": "Digital nitrogen tyre inflator with four hose system for simultaneous operation on multiple vehicles.",
+          "subtitle": "Four Hose System",
+          "fullDescription": "Digital nitrogen tyre inflator with four hose system for simultaneous operation. Features two digital readouts, big LCD display, reliable PSA method for nitrogen generation, air and nitrogen input pressure option available in single machine, inbuilt pressure booster for nitrogen storage, and can be used for vehicle tyre ranging from SUV, mini truck, bus and truck up to 180 PSI.",
+          "features": [
+            "Four hose system for simultaneous operation",
+            "Two digital readouts for set pressure and tyre pressure",
+            "Big LCD display with LED back light to provide good visibility",
+            "Inbuilt pressure booster for nitrogen storage",
+            "Reliable PSA method for nitrogen generation",
+            "Air and nitrogen input pressure option available in single machine",
+            "Automatic vacuum cum nitrogen inflation",
+            "Pressure switch for automatic nitrogen generation cut-off",
+            "Audible and visual end of the cycle signal indicators",
+            "Can use for vehicle tyre ranging from SUV, mini truck, bus and truck up to 180 PSI"
+          ],
+          "specifications": {
+            "system": "Digital microcontroller based",
+            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+            "airSupply": "120 - 150 psi / 8 - 10bar",
+            "sensorAccuracy": "± 0.5% of full scale",
+            "n2ProductionMethod": "Pressure Swing Adsorption Method (PSA Technology)",
+            "tankCapacity": "65 liters + External tank with pressure booster",
+            "flowRate": "4500 lph",
+            "purity": "95-99% (adjustable)",
+            "hoseSystem": "Four hose system",
+            "display": "Big LCD display",
+            "pressureSettingRange": "6 to 180 psi",
+            "workingPressureRange": "0 to 180 psi"
+          },
+          "applications": [
+            "Fuel Station",
+            "Large Bus Depot",
+            "Large Truck Depot",
+            "Fleet Service Centers",
+            "Commercial Vehicle Service Centers"
+          ],
+          "images": [
+            "/images/highres/2. Digital Nitrogen Tyre Inflator/2F.jpg"
+          ]
+        },
+        {
+          "model": "NITROJET 1000 HMV",
           "type": "Heavy",
           "description": "Heavy duty digital nitrogen tyre inflator for buses and trucks up to 150 psi with external tank.",
           "subtitle": "Heavy",
@@ -231,7 +195,7 @@
           ]
         },
         {
-          "model": "NITROJET 1000 LCV P",
+          "model": "NITROJET 1000 HMV C",
           "type": "Heavy with Pressure Booster",
           "description": "Heavy duty digital nitrogen tyre inflator with inbuilt pressure booster for vehicles up to 180 psi.",
           "subtitle": "Heavy with Pressure Booster",
@@ -277,22 +241,21 @@
           ]
         },
         {
-          "model": "NITROJET 2000 LCV P",
-          "type": "Four Hose System",
-          "description": "Digital nitrogen tyre inflator with four hose system for simultaneous operation on multiple vehicles.",
-          "subtitle": "Four Hose System",
-          "fullDescription": "Digital nitrogen tyre inflator with four hose system for simultaneous operation. Features two digital readouts, big LCD display, reliable PSA method for nitrogen generation, air and nitrogen input pressure option available in single machine, inbuilt pressure booster for nitrogen storage, and can be used for vehicle tyre ranging from SUV, mini truck, bus and truck up to 180 PSI.",
+          "model": "NITROJET 1000 LCV P",
+          "type": "N2 Only option",
+          "description": "Standard digital nitrogen tyre inflator with nitrogen only option featuring three digital readouts.",
+          "subtitle": "N2 Only option",
+          "fullDescription": "Digital nitrogen tyre inflator with nitrogen only option. Features three digital readouts for set pressure, tyre pressure, and tyre count & error count. Reliable PSA method for nitrogen generation with automatic vacuum cum nitrogen inflation.",
           "features": [
-            "Four hose system for simultaneous operation",
-            "Two digital readouts for set pressure and tyre pressure",
-            "Big LCD display with LED back light to provide good visibility",
-            "Inbuilt pressure booster for nitrogen storage",
+            "Three digital readouts for set pressure, tyre pressure and tyre count & error count",
+            "LCD display with LED back light to provide good visibility",
             "Reliable PSA method for nitrogen generation",
-            "Air and nitrogen input pressure option available in single machine",
             "Automatic vacuum cum nitrogen inflation",
             "Pressure switch for automatic nitrogen generation cut-off",
+            "Tyre counter and error codes available",
             "Audible and visual end of the cycle signal indicators",
-            "Can use for vehicle tyre ranging from SUV, mini truck, bus and truck up to 180 PSI"
+            "VAC key (Vacuum key) for first time nitrogen filling",
+            "Can use for vehicle tyre ranging from two wheeler, car, SUV and mini truck"
           ],
           "specifications": {
             "system": "Digital microcontroller based",
@@ -300,23 +263,60 @@
             "airSupply": "120 - 150 psi / 8 - 10bar",
             "sensorAccuracy": "± 0.5% of full scale",
             "n2ProductionMethod": "Pressure Swing Adsorption Method (PSA Technology)",
-            "tankCapacity": "65 liters + External tank with pressure booster",
+            "tankCapacity": "65 liters",
             "flowRate": "4500 lph",
             "purity": "95-99% (adjustable)",
-            "hoseSystem": "Four hose system",
-            "display": "Big LCD display",
-            "pressureSettingRange": "6 to 180 psi",
-            "workingPressureRange": "0 to 180 psi"
+            "display": "LCD display (tyre pressure, set pressure and tyre counter)",
+            "counter": "Available for number of tyres (16x2 LCD display)",
+            "pressureSettingRange": "6 to 100 psi",
+            "workingPressureRange": "0 to 100 psi"
           },
           "applications": [
             "Fuel Station",
-            "Large Bus Depot",
-            "Large Truck Depot",
-            "Fleet Service Centers",
-            "Commercial Vehicle Service Centers"
+            "Wheel Alignment Shop",
+            "Automotive Garage",
+            "Depot",
+            "Puncture Shop"
           ],
           "images": [
-            "/images/highres/2. Digital Nitrogen Tyre Inflator/2F.jpg"
+            "/images/highres/2. Digital Nitrogen Tyre Inflator/2B.jpg"
+          ]
+        },
+        {
+          "model": "NITROJET 2000 LCV P",
+          "type": "For Two Wheeler",
+          "description": "Digital nitrogen tyre inflator specifically designed for two wheelers with pleasant LED display.",
+          "subtitle": "For Two Wheeler",
+          "fullDescription": "Digital nitrogen tyre inflator for two wheelers. Features intelligent single digital readouts both for set pressure and tyre pressure, pleasant LED display for attractive night visibility, pressure switch for automatic nitrogen generation cut-off, and pressure gauge for nitrogen pressure indication.",
+          "features": [
+            "Intelligent single digital readouts both for set pressure and tyre pressure",
+            "Pleasant LED display for attractive night visibility",
+            "Pressure switch for automatic nitrogen generation cut-off",
+            "Pressure gauge for nitrogen pressure indication",
+            "Reliable PSA method for nitrogen generation",
+            "Automatic vacuum cum nitrogen inflation",
+            "Audible and visual end of the cycle signal indicators",
+            "Can use for two wheeler tyre"
+          ],
+          "specifications": {
+            "system": "Digital microcontroller based",
+            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz",
+            "airSupply": "120 - 150 psi / 8 - 10bar",
+            "sensorAccuracy": "± 0.5% of full scale",
+            "n2ProductionMethod": "Pressure Swing Adsorption Method (PSA Technology)",
+            "tankCapacity": "65 liters",
+            "purity": "95-99% (adjustable)",
+            "display": "LED display for set pressure and tyre pressure",
+            "pressureSettingRange": "6 to 100 psi",
+            "workingPressureRange": "0 to 100 psi"
+          },
+          "applications": [
+            "Two Wheeler Service Station",
+            "Two Wheel Alignment Shop",
+            "Puncture Shop"
+          ],
+          "images": [
+            "/images/highres/2. Digital Nitrogen Tyre Inflator/2A.jpg"
           ]
         }
       ],
@@ -665,9 +665,10 @@
             "Fuel Station",
             "Industries",
             "Automotive Sector & Garages"
-          ],"images": [
-        "/images/highres/10. Digital Engine Oil Dispenser/10A.png"
-      ]
+          ],
+          "images": [
+            "/images/highres/10. Digital Engine Oil Dispenser/10A.png"
+          ]
         },
         {
           "model": "Digital 4T Engine Oil Dispenser with thermal printers",
@@ -701,9 +702,10 @@
             "Fuel Station",
             "Industries",
             "Automotive Sector & Garages"
-          ],"images": [
-        "/images/highres/10. Digital Engine Oil Dispenser/10A.png"
-      ]
+          ],
+          "images": [
+            "/images/highres/10. Digital Engine Oil Dispenser/10A.png"
+          ]
         },
         {
           "model": "Digital 2T Engine Oil Dispenser single side operation",
@@ -737,9 +739,10 @@
             "Fuel Station",
             "Industries",
             "Automotive Sector & Garages"
-          ],"images": [
-        "/images/highres/10. Digital Engine Oil Dispenser/10A.png"
-      ]
+          ],
+          "images": [
+            "/images/highres/10. Digital Engine Oil Dispenser/10A.png"
+          ]
         },
         {
           "model": "Digital 2T Engine Oil Dispenser double side operation",
@@ -773,9 +776,10 @@
             "Fuel Station",
             "Industries",
             "Automotive Sector & Garages"
-          ],"images": [
-        "/images/highres/10. Digital Engine Oil Dispenser/10A.png"
-      ]
+          ],
+          "images": [
+            "/images/highres/10. Digital Engine Oil Dispenser/10A.png"
+          ]
         }
       ],
       "images": [

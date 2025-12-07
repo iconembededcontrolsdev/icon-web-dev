@@ -22,9 +22,8 @@ export default function FloatingCallButton() {
   return (
     <button
       onClick={handleCall}
-      className={`fixed bottom-8 right-8 z-40 bg-primary text-white p-4 rounded-full shadow-2xl hover:bg-primary/90 transition-all duration-300 transform hover:scale-110 flex items-center gap-3 group ${
-        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0 pointer-events-none'
-      }`}
+      className={`fixed bottom-8 right-8 z-40 bg-accent text-white p-4 rounded-full shadow-2xl hover:bg-accent-hover transition-all duration-300 transform hover:scale-110 flex items-center gap-3 group ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0 pointer-events-none'
+        }`}
       aria-label="Call us"
     >
       <svg

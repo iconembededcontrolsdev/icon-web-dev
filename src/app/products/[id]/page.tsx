@@ -5,13 +5,13 @@ import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getProductImages } from '@/utils/productImages';
-import ProductBenefits, { 
-  MileageIcon, 
-  TyreHeatIcon, 
-  MaintenanceIcon, 
-  TyreLifeIcon, 
-  CleanIcon, 
-  TyrePressureIcon 
+import ProductBenefits, {
+  MileageIcon,
+  TyreHeatIcon,
+  MaintenanceIcon,
+  TyreLifeIcon,
+  CleanIcon,
+  TyrePressureIcon
 } from '@/components/ProductBenefits';
 
 type ProductModel = {
@@ -73,9 +73,8 @@ const AccordionItem = ({
         onClick={onClick}
       >
         <div className="flex items-center gap-3">
-          <div className={`flex items-center justify-center w-7 h-7 rounded-full border-2 transition-colors ${
-            isOpen ? 'border-white bg-white/10' : 'border-primary bg-primary/5'
-          }`}>
+          <div className={`flex items-center justify-center w-7 h-7 rounded-full border-2 transition-colors ${isOpen ? 'border-white bg-white/10' : 'border-primary bg-primary/5'
+            }`}>
             <span className="text-lg leading-none font-bold">{isOpen ? '−' : '+'}</span>
           </div>
           <span className="font-semibold text-lg">{title}</span>
@@ -318,15 +317,7 @@ export default function ProductDetail() {
                     )}
                   </div>
 
-                  {/* Nitrogen Benefits Section */}
-                  {isNitrogenProduct && index === 0 && (
-                    <div className="mt-8 -mx-6 sm:-mx-8">
-                      <ProductBenefits 
-                        title="BENEFITS OF ICON NITROGEN"
-                        benefits={nitrogenBenefits}
-                      />
-                    </div>
-                  )}
+
                 </div>
               </div>
             </div>

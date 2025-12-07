@@ -32,7 +32,7 @@ export default function ClientLogos() {
   }, []);
 
   return (
-    <div className="w-screen relative left-[calc(-50vw+50%)] ml-0 mr-0 bg-background py-8">
+    <div className="w-full max-w-7xl mx-auto py-8">
       <div className="text-center mb-6">
         <h2 className="text-2xl font-bold text-primary">Our Trusted Clients</h2>
         <p className="text-muted mt-1 text-sm">Partnering with industry leaders across the globe</p>

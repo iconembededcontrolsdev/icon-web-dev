@@ -41,10 +41,9 @@ export default function Navbar() {
   };
 
   return (
-    <nav 
-      className={`fixed w-full z-50 shadow-sm transition-all duration-300 ${
-        isScrolled ? 'bg-black/70 backdrop-blur-md border-b border-white/10' : 'bg-black border-b border-gray-800'
-      }`}
+    <nav
+      className={`fixed w-full z-50 shadow-sm transition-all duration-300 ${isScrolled ? 'bg-gray-800/90 backdrop-blur-md border-b border-white/10' : 'bg-gray-800 border-b border-gray-700'
+        }`}
       onMouseLeave={() => setIsProductsOpen(false)}
     >
       <div className="max-w-5xl mx-auto px-2">
@@ -52,12 +51,12 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <div className="relative h-11 w-auto">
-                <Image 
-                  src="/images/highres/8. Logos/logo.png" 
-                  alt="Icon Embedded Controls" 
+                <Image
+                  src="/images/highres/8. Logos/logo.png"
+                  alt="Icon Embedded Controls"
                   width={108}
                   height={44}
-                  className="object-contain" 
+                  className="object-contain"
                 />
               </div>
             </Link>
@@ -65,32 +64,31 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
-            <div 
+            <div
               className="relative"
               onMouseEnter={() => setIsProductsOpen(true)}
             >
               <Link
                 href="/products"
-                className={`bg-transparent px-2 py-1 rounded-none transition-all flex items-center gap-1 ${
-                  isActive("/products")
-                    ? "bg-primary text-white"
-                    : "text-white hover:bg-primary hover:text-white"
-                }`}
+                className={`bg-transparent px-2 py-1 rounded-none transition-all flex items-center gap-1 ${isActive("/products")
+                  ? "bg-primary text-white"
+                  : "text-white hover:bg-primary hover:text-white"
+                  }`}
               >
                 Products
-                <svg 
-                  className={`w-4 h-4 transition-transform duration-200 ${isProductsOpen ? 'rotate-180' : ''}`} 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
+                <svg
+                  className={`w-4 h-4 transition-transform duration-200 ${isProductsOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </Link>
-              
+
               {/* Dropdown Menu */}
               {isProductsOpen && (
-                <div 
+                <div
                   className="fixed left-0 right-0 top-[48px] bg-black/95 backdrop-blur-xl border-b border-white/10 shadow-2xl pointer-events-auto animate-in fade-in slide-in-from-top-2 duration-200"
                 >
                   <div className="max-w-6xl mx-auto px-4 py-4">
@@ -111,32 +109,30 @@ export default function Navbar() {
                 </div>
               )}
             </div>
-            
+
             <Link
               href="/about"
-              className={`border border-white px-3 py-1 rounded-full transition-all ${
-                isActive("/about")
-                  ? "bg-white text-black"
-                  : "bg-transparent text-white hover:bg-white hover:text-black"
-              }`}
+              className={`px-3 py-1 rounded-full transition-all ${isActive("/about")
+                ? "bg-white text-black"
+                : "bg-transparent text-white hover:bg-white hover:text-black"
+                }`}
             >
               About Us
             </Link>
             <Link
               href="/contact"
-              className={`border border-white px-3 py-1 rounded-full transition-all ${
-                isActive("/contact")
-                  ? "bg-white text-black"
-                  : "bg-transparent text-white hover:bg-white hover:text-black"
-              }`}
+              className={`px-3 py-1 rounded-full transition-all ${isActive("/contact")
+                ? "bg-white text-black"
+                : "bg-transparent text-white hover:bg-white hover:text-black"
+                }`}
             >
               Contact Us
             </Link>
-            
+
             {/* Theme Toggle Button */}
             <button
               onClick={toggleTheme}
-              className="p-2.5 rounded-full border-2 border-white hover:bg-white hover:text-black transition-all duration-300 group"
+              className="p-2.5 rounded-full hover:bg-white hover:text-black transition-all duration-300 group"
               aria-label="Toggle theme"
             >
               {theme === 'light' ? (
@@ -207,7 +203,7 @@ export default function Navbar() {
                 )}
               </div>
             </button>
-            
+
             {/* Products Dropdown - Mobile */}
             <div className="space-y-1">
               <button
@@ -215,17 +211,17 @@ export default function Navbar() {
                 className="w-full flex items-center justify-between px-3 py-2 text-white hover:bg-white/10 rounded-md font-medium"
               >
                 <span className="flex-grow text-left">Products</span>
-                <svg 
-                  className={`w-5 h-5 flex-shrink-0 transition-transform duration-200 ${isProductsOpen ? 'rotate-180' : ''}`} 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
+                <svg
+                  className={`w-5 h-5 flex-shrink-0 transition-transform duration-200 ${isProductsOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  viewBox="0 0 24 24"
                   stroke="currentColor"
                   strokeWidth={2}
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              
+
               {isProductsOpen && (
                 <div className="ml-4 space-y-1 max-h-64 overflow-y-auto">
                   {PRODUCTS.map((product) => (
@@ -244,7 +240,7 @@ export default function Navbar() {
                 </div>
               )}
             </div>
-            
+
             <Link
               href="/about"
               className="block px-3 py-2 text-white hover:bg-white/10 rounded-md font-medium"

@@ -19,7 +19,7 @@ const showcaseData: Block[] = [
     type: 'hero',
     // title: 'Welcome to Icon Embeded Controls',
     // subtitle: 'With some brilliant products and splendid services, we have carved a niche for ourselves in both domestic as well as international markets. Our range includes Digital Tyre Inflator, Digital Nitrogen Tyre Inflator, Nitrogen Generator, Air Compressor, and many more.',
-    img: '/images/highres/7. Extras/logo.png',
+    img: '/images/highres/8. Logos/logo.png',
     // ctaButtons: [
     //   { text: 'Learn more', link: '/about', variant: 'primary' },
     //   { text: 'View Products', link: '/products', variant: 'outline' }
@@ -33,8 +33,16 @@ const showcaseData: Block[] = [
       {
         id: 'digital-nitrogen-tyre-inflator',
         title: 'Digital Nitrogen Tyre Inflator',
-        subtitle: 'Reliable and accurate electronic digital nitrogen tyre inflators. Nitrogen production based on cost-efficient PSA technology with 95-99% purity suitable for vehicle nitrogen inflation.',
+        subtitle: 'Models: NITROJET 1000 LCV H, NITROJET 6000 LCV 4H, NITROJET 1000 HMV, NITROJET 1000 HMV C, NITROJET 1000 LCV P, NITROJET 2000 LCV P.',
         img: '/images/highres/2. Digital Nitrogen Tyre Inflator/2A.jpg',
+        benefits: [
+          'More Mileage',
+          'Prevents Tyre Over Heat',
+          'Maintenance Repair',
+          'Increased Tyre Life',
+          '100 % Dry and Clean',
+          'Consistent Tyre Pressure'
+        ],
         ctaButtons: [
           { text: 'Learn more', link: '/products/digital-nitrogen-tyre-inflator', variant: 'primary' },
           { text: 'Buy', link: '/products/digital-nitrogen-tyre-inflator', variant: 'outline' }
@@ -42,8 +50,8 @@ const showcaseData: Block[] = [
       },
       {
         id: 'digital-tyre-inflator-pedestal',
-        title: 'Digital Tyre Inflator Pedestals',
-        subtitle: 'Durable pedestal mounted digital tyre inflators for professional workshops and service stations.',
+        title: 'Digital Tyre Inflator (Pedestal)',
+        subtitle: 'Models: AIROJET 6000 LCV P, AIROJET 6000 LCV HP, AIROJET 1000 LCV HP, AIROJET 1000 LCV P.',
         img: '/images/highres/1. Digital Tyre Inflator/1E.jpg',
         ctaButtons: [
           { text: 'Learn more', link: '/products/digital-tyre-inflator-pedestal', variant: 'primary' },
@@ -53,7 +61,7 @@ const showcaseData: Block[] = [
       {
         id: 'digital-engine-oil-dispenser',
         title: 'Digital Engine Oil Dispenser',
-        subtitle: 'Digital engine oil dispenser with secure preset operation and precise oil measurement in litres and millilitres.',
+        subtitle: 'Models: Digital 2T/4T with thermal printers, Single/Double side operation.',
         img: '/images/highres/10. Digital Engine Oil Dispenser/10A.png',
         ctaButtons: [
           { text: 'Learn more', link: '/products/digital-engine-oil-dispenser', variant: 'primary' },
@@ -63,7 +71,7 @@ const showcaseData: Block[] = [
       {
         id: 'engine-oil-changer',
         title: 'Engine Oil Changer',
-        subtitle: 'Pump based suction oil changer for 2T/4T engine oil removal. Designed for removing used engine oil with pump based suction.',
+        subtitle: 'Pump based suction oil changer for 2T/4T engine oil removal.',
         img: '/images/highres/11. Engine Oil Changer/11A.png',
         ctaButtons: [
           { text: 'Learn more', link: '/products/engine-oil-changer', variant: 'primary' },
@@ -72,8 +80,8 @@ const showcaseData: Block[] = [
       },
       {
         id: 'digital-tyre-inflator',
-        title: 'Digital Tyre Inflator',
-        subtitle: 'Reliable, durable and accurate electronic digital tyre inflators meeting tyre manufacturer pressure standards. Used by major tyre and vehicle manufacturers in their production line.',
+        title: 'Digital Tyre Inflator (Wall Mountable)',
+        subtitle: 'Models: AIROJET 2000 LCV W and 5 other models (6 total).',
         img: '/images/highres/1. Digital Tyre Inflator/1A.jpg',
         ctaButtons: [
           { text: 'Learn more', link: '/products/digital-tyre-inflator', variant: 'primary' },
@@ -83,7 +91,7 @@ const showcaseData: Block[] = [
       {
         id: 'digital-def-adblue-dispenser',
         title: 'Digital DEF/AdBlue Dispenser',
-        subtitle: 'Digital diesel exhaust fluid dispenser with precise measurement, secure dispensing and legal metrology approval.',
+        subtitle: 'Digital diesel exhaust fluid dispenser with precise measurement and secure dispensing.',
         img: '/images/highres/9. Digital DEF/9a.png',
         ctaButtons: [
           { text: 'Learn more', link: '/products/digital-def-adblue-dispenser', variant: 'primary' },
@@ -93,7 +101,7 @@ const showcaseData: Block[] = [
       {
         id: 'air-compressor',
         title: 'Air Compressor',
-        subtitle: 'Single and two-stage oil lubricated reciprocating air compressors known for reliability and performance. Preferred choice for fuel stations, automotive garages, and industrial applications.',
+        subtitle: 'Single and two-stage oil lubricated reciprocating air compressors.',
         img: '/images/highres/3. Air Compressor/3A.jpg',
         ctaButtons: [
           { text: 'Learn more', link: '/products/air-compressor', variant: 'primary' },
@@ -103,7 +111,7 @@ const showcaseData: Block[] = [
       {
         id: 'nitrogen-generator',
         title: 'Nitrogen Generator',
-        subtitle: 'Easy to convert ordinary digital tyre inflator to digital nitrogen tyre inflator using this module. Reliable PSA method for nitrogen generation with 95-99% purity suitable for vehicle nitrogen inflation.',
+        subtitle: 'Reliable PSA method for nitrogen generation with 95-99% purity.',
         img: '/images/highres/4. Nitrogen Generator/4A.jpg',
         ctaButtons: [
           { text: 'Learn more', link: '/products/nitrogen-generator', variant: 'primary' },
@@ -113,7 +121,7 @@ const showcaseData: Block[] = [
       {
         id: 'panel-board',
         title: 'Panel Boards',
-        subtitle: 'PLC Control Panels, Automatic Power Factor Control Panels, and Switch Gear Panels. Complete electrical solutions for automation, power factor correction, and industrial control.',
+        subtitle: 'PLC Control Panels, Automatic Power Factor Control Panels, and Switch Gear Panels.',
         img: '/images/highres/5. Panel Board/5A.jpg',
         ctaButtons: [
           { text: 'Learn more', link: '/products/panel-board', variant: 'primary' },
@@ -123,7 +131,7 @@ const showcaseData: Block[] = [
       {
         id: 'garage-equipment',
         title: 'Garage Equipment',
-        subtitle: 'High quality two wheeler ramps, pneumatic grease pumps, and manual oil dispensers. Professional tools and equipment for automotive workshops and garages.',
+        subtitle: 'High quality two wheeler ramps, pneumatic grease pumps, and manual oil dispensers.',
         img: '/images/highres/6. Garage Equipment/6A.jpg',
         ctaButtons: [
           { text: 'Learn more', link: '/products/garage-equipment', variant: 'primary' },
@@ -188,29 +196,35 @@ export default function Home() {
         {/* Hero Section */}
         {renderBlock(showcaseData[0], 0)}
 
+        {/* Client Logos Carousel */}
+
+
         {/* Remaining Blocks */}
         <div className="mt-1">
-        {showcaseData.slice(1).map((block, index) => (
-          <div key={index + 1} className="mt-0">
-            {renderBlock(block, index + 1)}
-          </div>
-        ))}
+          {showcaseData.slice(1).map((block, index) => (
+            <div key={index + 1} className="mt-0">
+              {renderBlock(block, index + 1)}
+            </div>
+          ))}
         </div>
 
-        {/* Client Logos Carousel */}
-        <ClientLogos />
+
 
         {/* Footer */}
         <footer className="bg-background">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-gray-200">
+          <div className="w-full px-4 sm:px-6 lg:px-8 py-16 border-t border-gray-200">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div>
                 <h3 className="text-lg font-semibold text-primary mb-4">Products</h3>
                 <ul className="space-y-1">
-                  <li><Link href="/products/digital-tyre-inflator" className="text-muted hover:text-accent transition-colors">Digital Tyre Inflator</Link></li>
                   <li><Link href="/products/digital-nitrogen-tyre-inflator" className="text-muted hover:text-accent transition-colors">Digital Nitrogen Tyre Inflator</Link></li>
-                  <li><Link href="/products/nitrogen-generator" className="text-muted hover:text-accent transition-colors">Nitrogen Generator</Link></li>
+                  <li><Link href="/products/digital-tyre-inflator-pedestal" className="text-muted hover:text-accent transition-colors">Digital Tyre Inflator (Pedestal)</Link></li>
+                  <li><Link href="/products/digital-engine-oil-dispenser" className="text-muted hover:text-accent transition-colors">Digital Engine Oil Dispenser</Link></li>
+                  <li><Link href="/products/engine-oil-changer" className="text-muted hover:text-accent transition-colors">Engine Oil Changer</Link></li>
+                  <li><Link href="/products/digital-tyre-inflator" className="text-muted hover:text-accent transition-colors">Digital Tyre Inflator (Wall Mountable)</Link></li>
+                  <li><Link href="/products/digital-def-adblue-dispenser" className="text-muted hover:text-accent transition-colors">Digital DEF/AdBlue Dispenser</Link></li>
                   <li><Link href="/products/air-compressor" className="text-muted hover:text-accent transition-colors">Air Compressor</Link></li>
+                  <li><Link href="/products/nitrogen-generator" className="text-muted hover:text-accent transition-colors">Nitrogen Generator</Link></li>
                   <li><Link href="/products/panel-board" className="text-muted hover:text-accent transition-colors">Panel Boards</Link></li>
                   <li><Link href="/products/garage-equipment" className="text-muted hover:text-accent transition-colors">Garage Equipment</Link></li>
                 </ul>
@@ -257,16 +271,16 @@ export default function Home() {
 
               <div className="flex flex-col items-center md:items-end">
                 <div className="relative w-40 h-16 mb-4">
-                  <Image 
-                    src="/images/highres/8. Logos/logo.png" 
-                    alt="Icon Embedded Controls" 
+                  <Image
+                    src="/images/highres/8. Logos/logo.png"
+                    alt="Icon Embedded Controls"
                     fill
-                    className="object-contain" 
+                    className="object-contain"
                   />
                 </div>
                 <div className="w-full h-48 rounded-xl overflow-hidden shadow-sm border border-gray-200">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.366479768656!2d77.0096663148006!3d11.01111109216238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f971cb5%3A0x2fc1c81e183ed282!2sCoimbatore%2C%20Tamil%20Nadu%20641015!5e0!3m2!1sen!2sin!4v1629789000000!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.284721862546!2d77.02629303656019!3d11.019608060235385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85765ea8ff1e3%3A0x297b424b515ef933!2sIcon%20Embeded%20Controls!5e0!3m2!1sen!2sin!4v1765110091224!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
