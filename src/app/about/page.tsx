@@ -16,23 +16,23 @@ export default function AboutPage() {
           <div className="space-y-6">
             <h2 className="text-3xl font-bold text-primary">Our Story</h2>
             <p className="text-lg text-muted leading-relaxed">
-              We are the leading Manufacturer and supplier for Electronic Digital Tyre Inflator all over India since the year 2007. 
+              We are the leading Manufacturer and supplier for Electronic Digital Tyre Inflator all over India since the year 2007.
               Our Electronic Digital Tyre Inflator is reliable, durable and accurate, thus meeting the requirement of each and every horizon related to vehicle tyre pressure inflation.
             </p>
             <p className="text-lg text-muted leading-relaxed">
-              Our Inflators are used by major tyre manufacturers as well as vehicle manufacturers in their production line up. 
+              Our Inflators are used by major tyre manufacturers as well as vehicle manufacturers in their production line up.
               Our Electronic Digital Tyre Inflator meets the accuracy suggested by tyre manufacturer's pressure standards.
             </p>
           </div>
           <div className="relative h-[400px] rounded-[40px] overflow-hidden shadow-lg bg-white p-8 flex items-center justify-center">
-             {/* Placeholder for an about image or logo */}
-             <Image 
-               src="/images/highres/7. Extras/logo.png" 
-               alt="Icon Embeded Controls" 
-               width={400} 
-               height={400}
-               className="object-contain"
-             />
+            {/* Placeholder for an about image or logo */}
+            <Image
+              src="/images/highres/8. Logos/logo.png"
+              alt="Icon Embeded Controls"
+              width={400}
+              height={400}
+              className="object-contain"
+            />
           </div>
         </div>
 
