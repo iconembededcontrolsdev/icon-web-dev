@@ -33,7 +33,7 @@ const showcaseData: Block[] = [
       {
         id: 'digital-nitrogen-tyre-inflator',
         title: 'Digital Nitrogen Tyre Inflator',
-        subtitle: 'Models: NITROJET 1000 LCV H, NITROJET 6000 LCV 4H, NITROJET 1000 HMV, NITROJET 1000 HMV C, NITROJET 1000 LCV P, NITROJET 2000 LCV P.',
+        subtitle: 'Reliable and accurate electronic digital nitrogen tyre inflators. Nitrogen production based on cost-efficient PSA technology with 95-99% purity suitable for vehicle nitrogen inflation.',
         img: '/images/highres/2. Digital Nitrogen Tyre Inflator/2A.jpg',
         benefits: [
           'More Mileage',
@@ -51,7 +51,7 @@ const showcaseData: Block[] = [
       {
         id: 'digital-tyre-inflator-pedestal',
         title: 'Digital Tyre Inflator (Pedestal)',
-        subtitle: 'Models: AIROJET 6000 LCV P, AIROJET 6000 LCV HP, AIROJET 1000 LCV HP, AIROJET 1000 LCV P.',
+        subtitle: 'Pedestal mounted digital tyre inflators suitable for fuel stations and heavy duty applications.',
         img: '/images/highres/1. Digital Tyre Inflator/1E.jpg',
         ctaButtons: [
           { text: 'Learn more', link: '/products/digital-tyre-inflator-pedestal', variant: 'primary' },
@@ -61,7 +61,7 @@ const showcaseData: Block[] = [
       {
         id: 'digital-engine-oil-dispenser',
         title: 'Digital Engine Oil Dispenser',
-        subtitle: 'Models: Digital 2T/4T with thermal printers, Single/Double side operation.',
+        subtitle: 'Digital engine oil dispenser with secure preset operation and precise oil measurement in litres and millilitres.',
         img: '/images/highres/10. Digital Engine Oil Dispenser/10A.png',
         ctaButtons: [
           { text: 'Learn more', link: '/products/digital-engine-oil-dispenser', variant: 'primary' },
@@ -81,7 +81,7 @@ const showcaseData: Block[] = [
       {
         id: 'digital-tyre-inflator',
         title: 'Digital Tyre Inflator (Wall Mountable)',
-        subtitle: 'Models: AIROJET 2000 LCV W and 5 other models (6 total).',
+        subtitle: 'Reliable and accurate electronic digital tyre inflators for fuel stations and garages. Features automatic tyre sensing and high-speed inflation.',
         img: '/images/highres/1. Digital Tyre Inflator/1A.jpg',
         ctaButtons: [
           { text: 'Learn more', link: '/products/digital-tyre-inflator', variant: 'primary' },
@@ -101,7 +101,7 @@ const showcaseData: Block[] = [
       {
         id: 'air-compressor',
         title: 'Air Compressor',
-        subtitle: 'Single and two-stage oil lubricated reciprocating air compressors.',
+        subtitle: 'Single and two-stage oil lubricated reciprocating air compressors designed for low maintenance and high efficiency.',
         img: '/images/highres/3. Air Compressor/3A.jpg',
         ctaButtons: [
           { text: 'Learn more', link: '/products/air-compressor', variant: 'primary' },
@@ -111,7 +111,7 @@ const showcaseData: Block[] = [
       {
         id: 'nitrogen-generator',
         title: 'Nitrogen Generator',
-        subtitle: 'Reliable PSA method for nitrogen generation with 95-99% purity.',
+        subtitle: 'Industrial grade nitrogen generators using PSA technology for high purity nitrogen production.',
         img: '/images/highres/4. Nitrogen Generator/4A.jpg',
         ctaButtons: [
           { text: 'Learn more', link: '/products/nitrogen-generator', variant: 'primary' },
@@ -121,7 +121,7 @@ const showcaseData: Block[] = [
       {
         id: 'panel-board',
         title: 'Panel Boards',
-        subtitle: 'PLC Control Panels, Automatic Power Factor Control Panels, and Switch Gear Panels.',
+        subtitle: 'Custom designed PLC Control Panels, APFC Panels, and Switch Gear Panels for industrial automation.',
         img: '/images/highres/5. Panel Board/5A.jpg',
         ctaButtons: [
           { text: 'Learn more', link: '/products/panel-board', variant: 'primary' },
@@ -131,7 +131,7 @@ const showcaseData: Block[] = [
       {
         id: 'garage-equipment',
         title: 'Garage Equipment',
-        subtitle: 'High quality two wheeler ramps, pneumatic grease pumps, and manual oil dispensers.',
+        subtitle: 'Essential garage equipment including two wheeler ramps, pneumatic grease pumps, and manual oil dispensers.',
         img: '/images/highres/6. Garage Equipment/6A.jpg',
         ctaButtons: [
           { text: 'Learn more', link: '/products/garage-equipment', variant: 'primary' },
