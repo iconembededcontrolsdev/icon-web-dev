@@ -75,7 +75,7 @@ const AccordionItem = ({
         <div className="flex items-center gap-3">
           <div className={`flex items-center justify-center w-7 h-7 rounded-full border-2 transition-colors ${isOpen ? 'border-white bg-white/10' : 'border-primary bg-primary/5'
             }`}>
-            <span className="text-lg leading-none font-bold">{isOpen ? '−' : '+'}</span>
+            <span className="text-lg leading-none font-bold" style={{ marginTop: '-2px' }}>{isOpen ? '-' : '+'}</span>
           </div>
           <span className="font-semibold text-base">{title}</span>
         </div>
