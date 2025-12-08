@@ -77,7 +77,7 @@ const AccordionItem = ({
             }`}>
             <span className="text-lg leading-none font-bold">{isOpen ? '−' : '+'}</span>
           </div>
-          <span className="font-semibold text-lg">{title}</span>
+          <span className="font-semibold text-base">{title}</span>
         </div>
         <svg
           className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
@@ -226,15 +226,15 @@ export default function ProductDetail() {
               <div className="w-full lg:w-1/2 h-full overflow-y-auto pr-2 custom-scrollbar pb-20">
                 <div className="space-y-6">
                   <div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                    <h2 className="text-2xl md:text-3xl font-bold text-primary mb-2">
                       {model.model}
                     </h2>
                     {model.type && (
-                      <p className="text-lg md:text-xl text-accent font-medium">{model.type}</p>
+                      <p className="text-base md:text-lg text-accent font-medium">{model.type}</p>
                     )}
                   </div>
 
-                  <p className="text-foreground/90 text-base md:text-lg leading-relaxed">
+                  <p className="text-foreground/90 text-sm md:text-base leading-relaxed">
                     {model.fullDescription || model.description || product.fullDescription}
                   </p>
 
@@ -248,8 +248,8 @@ export default function ProductDetail() {
                         <ul className="space-y-3">
                           {features.map((feature, idx) => (
                             <li key={idx} className="flex items-start">
-                              <span className="mr-3 text-accent font-bold text-lg md:text-xl">•</span>
-                              <span className="text-sm md:text-base text-foreground/90">{feature}</span>
+                              <span className="mr-3 text-accent font-bold text-lg">•</span>
+                              <span className="text-sm text-foreground/90">{feature}</span>
                             </li>
                           ))}
                         </ul>
@@ -264,7 +264,7 @@ export default function ProductDetail() {
                       >
                         <ul className="space-y-3">
                           {applications.map((app, idx) => (
-                            <li key={idx} className="flex items-center text-sm md:text-base text-foreground/90">
+                            <li key={idx} className="flex items-center text-sm text-foreground/90">
                               <svg className="w-4 h-4 mr-3 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                               </svg>
@@ -284,8 +284,8 @@ export default function ProductDetail() {
                         <div className="space-y-2">
                           {Object.entries(specifications).map(([key, value]) => (
                             <div key={key} className="grid grid-cols-2 gap-4 py-3 border-b border-border/30 last:border-0">
-                              <span className="font-semibold text-sm md:text-base text-muted capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
-                              <span className="text-sm md:text-base text-foreground">{String(value)}</span>
+                              <span className="font-semibold text-sm text-muted capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
+                              <span className="text-sm text-foreground">{String(value)}</span>
                             </div>
                           ))}
                         </div>
@@ -297,7 +297,7 @@ export default function ProductDetail() {
                   <div className="flex flex-col sm:flex-row gap-4 pt-4">
                     <Link
                       href={`/products/enquiry?product=${encodeURIComponent(model.model || product.title)}`}
-                      className="flex-1 py-4 px-6 text-center bg-primary text-white rounded-full font-medium hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                      className="flex-1 py-3 px-6 text-center bg-primary text-white rounded-full text-sm font-medium hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                     >
                       Product Enquiry
                     </Link>
@@ -307,7 +307,7 @@ export default function ProductDetail() {
                         href={brochureLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 py-4 px-6 text-center border-2 border-primary text-primary rounded-full font-medium hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2"
+                        className="flex-1 py-3 px-6 text-center border-2 border-primary text-primary rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2"
                       >
                         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
