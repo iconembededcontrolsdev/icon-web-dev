@@ -63,6 +63,11 @@ export const metadata: Metadata = {
     description: "Leading manufacturer of digital tyre inflators, nitrogen generators, air compressors, and industrial equipment.",
     images: ["/images/highres/8. Logos/logo.png"],
   },
+  icons: {
+    icon: '/images/highres/8. Logos/logo.png',
+    shortcut: '/images/highres/8. Logos/logo.png',
+    apple: '/images/highres/8. Logos/logo.png',
+  },
   robots: {
     index: true,
     follow: true,

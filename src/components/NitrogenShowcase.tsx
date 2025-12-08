@@ -61,7 +61,7 @@ export default function NitrogenShowcase() {
                     <div className="w-full lg:w-1/2 relative bg-white flex items-center justify-center p-8 lg:p-12 h-[50vh] lg:h-full lg:order-2">
                         <div className="relative w-full h-full">
                             <Image
-                                src="/images/highres/2. Digital Nitrogen Tyre Inflator/2A.jpg"
+                                src="/images/highres/2. Digital Nitrogen Tyre Inflator/2C.jpg"
                                 alt="Digital Nitrogen Tyre Inflator"
                                 fill
                                 className="object-contain" // removed hover scale for cleanliness

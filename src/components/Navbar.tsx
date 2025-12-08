@@ -89,7 +89,7 @@ export default function Navbar() {
               {/* Dropdown Menu */}
               {isProductsOpen && (
                 <div
-                  className="fixed left-0 right-0 top-[48px] bg-black/95 backdrop-blur-xl border-b border-white/10 shadow-2xl pointer-events-auto animate-in fade-in slide-in-from-top-2 duration-200"
+                  className="fixed left-0 right-0 top-[48px] bg-gray-800/95 backdrop-blur-xl border-b border-white/10 shadow-2xl pointer-events-auto animate-in fade-in slide-in-from-top-2 duration-200"
                 >
                   <div className="max-w-6xl mx-auto px-4 py-4">
                     <div className="grid grid-cols-3 gap-x-4 gap-y-1">
