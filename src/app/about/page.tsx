@@ -25,6 +25,9 @@ export const metadata: Metadata = {
     title: "About Icon Embedded Controls - Digital Tyre Inflator Manufacturer",
     description: "Leading manufacturer of digital tyre inflators and industrial equipment since 2007.",
   },
+  alternates: {
+    canonical: '/about',
+  },
 };
 
 

@@ -74,6 +74,12 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-IN': '/en-IN',
+    },
+  },
   verification: {
     // Add your verification codes here when you get them
     google: '',

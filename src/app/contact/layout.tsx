@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     title: "Contact Icon Embedded Controls",
     description: "Get in touch for digital tyre inflators and industrial equipment inquiries.",
   },
+  alternates: {
+    canonical: '/contact',
+  },
 };
 
 export default function ContactLayout({

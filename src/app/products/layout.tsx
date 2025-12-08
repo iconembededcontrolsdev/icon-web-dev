@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     title: "Industrial Equipment Products - Icon Embedded Controls",
     description: "Browse our complete range of industrial equipment and solutions.",
   },
+  alternates: {
+    canonical: '/products',
+  },
 };
 
 export default function ProductsLayout({
