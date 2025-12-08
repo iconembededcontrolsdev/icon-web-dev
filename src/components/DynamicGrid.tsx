@@ -102,7 +102,19 @@ export default function DynamicGrid({
                         </div>
 
                         <div className="mb-8 flex-grow">
-                          <h4 className="text-base font-bold text-accent mb-4 uppercase tracking-wider">Benefits of Nitrogen</h4>
+                          <div className="flex items-center gap-2 mb-4">
+                            <h4 className="text-base font-bold text-accent uppercase tracking-wider">Benefits of</h4>
+                            <div className="relative w-12 h-12">
+                              <Image
+                                src="/images/highres/8. Logos/logo.png"
+                                alt="Icon Logo"
+                                fill
+                                className="object-contain"
+                                unoptimized
+                              />
+                            </div>
+                            <h4 className="text-base font-bold text-accent uppercase tracking-wider">Nitrogen</h4>
+                          </div>
                           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
                             {item.benefits.map((benefit, idx) => {
                               let Icon = null;

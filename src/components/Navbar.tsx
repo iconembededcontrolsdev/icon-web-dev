@@ -182,7 +182,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-black/95 border-t border-white/20">
+        <div className="md:hidden bg-gray-800/95 border-t border-white/20">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {/* Theme Toggle - Mobile */}
             <button

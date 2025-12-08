@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import {
     MileageIcon,
     TyreHeatIcon,
@@ -11,6 +12,7 @@ import {
 } from './ProductBenefits';
 
 export default function NitrogenShowcase() {
+    const router = useRouter();
     const benefits = [
         'More Mileage',
         'Prevents Tyre Over Heat',
@@ -28,7 +30,10 @@ export default function NitrogenShowcase() {
     return (
         <section className="w-full mb-1">
             <div className="w-full mx-auto">
-                <div className="relative bg-card rounded-[12px] overflow-hidden shadow-sm w-full flex flex-col lg:flex-row min-h-screen lg:h-screen">
+                <div
+                    onClick={() => router.push('/products/digital-nitrogen-tyre-inflator')}
+                    className="relative bg-card rounded-[12px] overflow-hidden shadow-sm w-full flex flex-col lg:flex-row min-h-screen lg:h-screen cursor-pointer transition-transform hover:scale-[1.01] duration-300"
+                >
 
                     {/* Image Section - First on Mobile, Right on Desktop */}
                     {/* On Mobile: Order 1 (default html order). On Desktop: Order 2 (swapped manually or using flex-row-reverse if needed, but here we want Content Left/Image Right on Desktop)
@@ -88,7 +93,19 @@ export default function NitrogenShowcase() {
                         </div>
 
                         <div className="mb-8 flex-grow">
-                            <h4 className="text-base font-bold text-accent mb-4 uppercase tracking-wider">Benefits of Nitrogen</h4>
+                            <div className="flex items-center gap-2 mb-4">
+                                <h4 className="text-base font-bold text-accent uppercase tracking-wider">Benefits of</h4>
+                                <div className="relative w-12 h-12">
+                                    <Image
+                                        src="/images/highres/8. Logos/logo.png"
+                                        alt="Icon Logo"
+                                        fill
+                                        className="object-contain"
+                                        unoptimized
+                                    />
+                                </div>
+                                <h4 className="text-base font-bold text-accent uppercase tracking-wider">Nitrogen</h4>
+                            </div>
                             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
                                 {benefits.map((benefit, idx) => {
                                     let Icon = null;
@@ -136,6 +153,6 @@ export default function NitrogenShowcase() {
 
                 </div>
             </div>
-        </section>
+        </section >
     );
 }
