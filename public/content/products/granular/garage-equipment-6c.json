@@ -1,0 +1,30 @@
+{
+  "id": "garage-equipment-6c",
+  "title": "Manual 2T Oil Dispenser",
+  "description": "Manual 2T oil dispenser with storage tank capacity from 25 liters to 50 liters with stand.",
+  "subtitle": "Manual 2T Oil Dispenser",
+  "fullDescription": "We manufacture manual 2T oil dispenser. Features storage tank capacity from 25 liters to 50 liters with stand, visible level indicator at the side of storage tank, calibrated jar for oil measurement, and key protection for tank lid.",
+  "features": [
+    "Storage Tank Capacity from 25 liters to 50 liters with Stand",
+    "Visible level Indicator at the side of storage tank",
+    "Calibrated Jar for Oil measurement",
+    "Key Protection for Tank lid"
+  ],
+  "specifications": {
+    "storageTankCapacity": "25 liters to 50 liters",
+    "stand": "Available",
+    "levelIndicator": "Visible level Indicator at the side of storage tank",
+    "calibratedJar": "Available for Oil measurement",
+    "keyProtection": "Key Protection for Tank lid"
+  },
+  "applications": [
+    "Two Wheeler Service Station",
+    "Automotive Garage",
+    "Oil Change Service"
+  ],
+  "images": [
+    "/images/6. Garage Equipment/6C.jpeg"
+  ],
+  "mainImage": "/images/6. Garage Equipment/6C.jpeg"
+}
+
