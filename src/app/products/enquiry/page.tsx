@@ -3,6 +3,7 @@
 import { useSearchParams } from 'next/navigation';
 import { useState, Suspense } from 'react';
 import Link from 'next/link';
+import { countryCodes } from '@/data/countryCodes';
 
 function ProductEnquiryForm() {
   const searchParams = useSearchParams();
@@ -11,6 +12,8 @@ function ProductEnquiryForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    countryCode: '+91',
+    phone: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -20,7 +23,15 @@ function ProductEnquiryForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+
     setError('');
+
+    // Phone validation
+    if (!/^\d{7,15}$/.test(formData.phone)) {
+      setError('Please enter a valid phone number (7-15 digits)');
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
       const response = await fetch('/api/send-email', {
@@ -45,7 +56,7 @@ function ProductEnquiryForm() {
 
       // Reset form after 5 seconds
       setTimeout(() => {
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({ name: '', email: '', countryCode: '+91', phone: '', message: '' });
         setSubmitted(false);
       }, 5000);
     } catch (err) {
@@ -61,6 +72,15 @@ function ProductEnquiryForm() {
       [e.target.name]: e.target.value
     });
   };
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value.replace(/\D/g, '');
+    setFormData({
+      ...formData,
+      phone: value
+    });
+  };
+
 
   return (
     <div className="min-h-screen bg-bg pt-12">
@@ -143,6 +163,49 @@ function ProductEnquiryForm() {
                   className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors text-primary bg-card"
                   placeholder="Enter your email"
                 />
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div className="sm:col-span-1">
+                  <label htmlFor="countryCode" className="block text-sm md:text-base font-semibold text-primary mb-2">
+                    Country Code
+                  </label>
+                  <select
+                    id="countryCode"
+                    name="countryCode"
+                    value={formData.countryCode}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors text-primary bg-card appearance-none"
+                    style={{
+                      backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'right 0.75rem center',
+                      backgroundSize: '1.25rem 1.25rem',
+                      paddingRight: '2.5rem'
+                    }}
+                  >
+                    {countryCodes.map((country) => (
+                      <option key={country.code} value={country.dial_code}>
+                        {country.name} ({country.dial_code})
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div className="sm:col-span-2">
+                  <label htmlFor="phone" className="block text-sm md:text-base font-semibold text-primary mb-2">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    value={formData.phone}
+                    onChange={handlePhoneChange}
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors text-primary bg-card"
+                    placeholder="Enter your phone number"
+                  />
+                </div>
               </div>
 
               <div>
