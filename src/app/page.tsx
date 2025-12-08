@@ -8,6 +8,8 @@ import ClientLogos from '@/components/ClientLogos';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import StructuredData from '@/components/StructuredData';
+import { generateOrganizationSchema, organizationData } from '@/utils/seo';
 
 interface Block {
   type: 'hero' | 'grid-2' | 'grid-3' | 'hero-product' | 'nitrogen-showcase';
@@ -181,6 +183,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* SEO Structured Data */}
+      <StructuredData data={generateOrganizationSchema(organizationData)} />
+      
       {/* Main Content */}
       <main className="pt-12 bg-background">
         {/* Hero Section */}
