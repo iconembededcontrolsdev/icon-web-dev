@@ -22,6 +22,18 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Validate environment variables
+    if (!process.env.SMTP_USER || !process.env.SMTP_PASSWORD) {
+      console.error('SMTP credentials not configured. Please set SMTP_USER and SMTP_PASSWORD in your environment variables.');
+      return NextResponse.json(
+        { 
+          error: 'Email service not configured. Please contact the administrator.',
+          details: 'SMTP credentials are missing'
+        },
+        { status: 500 }
+      );
+    }
+
     // Create transporter
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST || 'smtp.gmail.com',
