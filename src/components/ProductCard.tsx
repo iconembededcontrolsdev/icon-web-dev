@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -13,19 +13,13 @@ interface ProductCardProps {
 
 export default function ProductCard({ id, title, description, image }: ProductCardProps) {
   return (
-    <motion.div 
-      className="group relative overflow-hidden bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 h-full flex flex-col"
-      whileHover={{ 
-        y: -5,
-        transition: { duration: 0.3, ease: "easeOut" }
-      }}
+    <div 
+      className="group relative overflow-hidden bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col"
     >
       <Link href={`/products/${id}`} className="block h-full">
         <div className="h-64 relative overflow-hidden">
-          <motion.div
+          <div
             className="h-full w-full"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
           >
             <Image
               src={image}
@@ -35,7 +29,7 @@ export default function ProductCard({ id, title, description, image }: ProductCa
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               priority
             />
-          </motion.div>
+          </div>
         </div>
         <div className="p-6 flex-1 flex flex-col">
           <div className="flex items-center gap-3 mb-3">
@@ -65,6 +59,6 @@ export default function ProductCard({ id, title, description, image }: ProductCa
           </div>
         </div>
       </Link>
-    </motion.div>
+    </div>
   );
 }

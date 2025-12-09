@@ -1,6 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google"; // eslint-disable-line
 import "./globals.css";
+import ThemeScript from "@/components/ThemeScript"; // eslint-disable-line
+import Navbar from "@/components/Navbar"; // eslint-disable-line
+import { ThemeProvider } from "@/contexts/ThemeContext"; // eslint-disable-line
+import FloatingCallButton from "@/components/FloatingCallButton";
+import DisableRightClick from "@/components/DisableRightClick";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -102,11 +107,7 @@ export const metadata: Metadata = {
   },
 };
 
-import Navbar from "@/components/Navbar";
-import { ThemeProvider } from "@/contexts/ThemeContext";
-import FloatingCallButton from "@/components/FloatingCallButton";
 
-import DisableRightClick from "@/components/DisableRightClick";
 
 export default function RootLayout({
   children,
@@ -119,6 +120,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#2563eb" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <ThemeScript />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

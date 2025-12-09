@@ -4,6 +4,9 @@ const nextConfig: NextConfig = {
   // Required for Netlify deployment
   output: 'standalone',
   
+  // Enable gzip compression for production
+  compress: true,
+  
   // Image optimization
   images: {
     formats: ['image/webp'],
