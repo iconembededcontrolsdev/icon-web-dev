@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import AdaptiveImage from '@/components/AdaptiveImage';
+
 import Link from 'next/link';
 import ClientLogos from '@/components/ClientLogos';
 
@@ -89,12 +89,13 @@ export default function Hero({
               ) : (
                 // Product image with aspect-square
                 <div className="relative aspect-square w-full rounded-[30px] overflow-hidden bg-transparent">
-                  <AdaptiveImage
+                  <Image
                     src={img}
                     alt={title}
                     fill
                     className="object-contain transition-transform duration-300 hover:scale-[1.02]"
                     priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
               )}

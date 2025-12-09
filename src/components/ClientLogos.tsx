@@ -1,6 +1,5 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const LOGOS = [
@@ -18,50 +17,34 @@ const LOGOS = [
 ];
 
 export default function ClientLogos() {
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setScrollPosition((prev) => {
-        const newPos = (prev + 1) % (LOGOS.length * 120);
-        return newPos;
-      });
-    }, 50);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <div className="w-full max-w-7xl mx-auto py-8">
-      <div className="text-center mb-6">
+    <div className="w-full max-w-7xl mx-auto py-8 overflow-hidden pointer-events-none">
+      <div className="text-center mb-6 pointer-events-auto">
         <h2 className="text-2xl font-bold text-primary">Our Trusted Clients</h2>
         <p className="text-muted mt-1 text-sm">Partnering with industry leaders across the globe</p>
       </div>
 
-      <div className="relative w-full overflow-hidden">
-        <div
-          className="flex gap-12 px-8"
-          style={{
-            transform: `translateX(-${scrollPosition}px)`,
-            transition: 'none',
-          }}
-        >
-          {[...Array(3)].map((_, setIndex) =>
-            LOGOS.map((logo, index) => (
-              <div
-                key={`logo-${setIndex}-${index}`}
-                className="relative w-32 h-20 flex-shrink-0"
-              >
-                <Image
-                  src={logo}
-                  alt={`Client Logo ${index + 1}`}
-                  fill
-                  className="object-contain"
-                  unoptimized
-                />
-              </div>
-            ))
-          )}
+      <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_128px,black_calc(100%-128px),transparent)]">
+        <div className="flex gap-12 w-max animate-marquee hover:pause-on-hover">
+          {/* We render the logos 3 times to ensure smooth infinite scrolling without gaps */}
+          {[...Array(3)].map((_, setIndex) => (
+            <div key={setIndex} className="flex gap-12 items-center">
+              {LOGOS.map((logo, index) => (
+                <div
+                  key={`logo-${setIndex}-${index}`}
+                  className="relative w-32 h-20 flex-shrink-0 transition-all duration-300 transform hover:scale-110"
+                >
+                  <Image
+                    src={logo}
+                    alt={`Client Logo ${index + 1}`}
+                    fill
+                    className="object-contain"
+                    sizes="128px"
+                  />
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </div>

@@ -182,14 +182,16 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-gray-800/95 border-t border-white/20">
-          <div className="px-2 pt-2 pb-3 space-y-1">
+        <div className="md:hidden bg-gray-800/95 backdrop-blur-xl border-t border-white/20 h-[calc(100vh-48px)] overflow-y-auto pb-20">
+          <div className="px-4 pt-4 pb-6 space-y-2">
+            
             {/* Theme Toggle - Mobile */}
             <button
               onClick={toggleTheme}
-              className="w-full flex items-center justify-between px-3 py-2 text-white hover:bg-white/10 rounded-md font-medium border border-white/30 mb-2"
+              className="w-full flex items-center justify-between px-4 py-3 text-white hover:bg-white/10 active:bg-white/20 rounded-xl font-medium border border-white/20 mb-4 transition-colors"
+              aria-label="Toggle theme"
             >
-              <span>Theme</span>
+              <span className="text-base font-medium">Theme</span>
               <div className="flex items-center gap-2">
                 <span className="text-sm text-gray-300">{theme === 'light' ? 'Light' : 'Dark'}</span>
                 {theme === 'light' ? (
@@ -208,9 +210,9 @@ export default function Navbar() {
             <div className="space-y-1">
               <button
                 onClick={() => setIsProductsOpen(!isProductsOpen)}
-                className="w-full flex items-center justify-between px-3 py-2 text-white hover:bg-white/10 rounded-md font-medium"
+                className="w-full flex items-center justify-between px-4 py-3 text-white hover:bg-white/10 active:bg-white/20 rounded-xl font-medium transition-colors"
               >
-                <span className="flex-grow text-left">Products</span>
+                <span className="flex-grow text-left text-base">Products</span>
                 <svg
                   className={`w-5 h-5 flex-shrink-0 transition-transform duration-200 ${isProductsOpen ? 'rotate-180' : ''}`}
                   fill="none"
@@ -223,12 +225,12 @@ export default function Navbar() {
               </button>
 
               {isProductsOpen && (
-                <div className="ml-4 space-y-1 max-h-64 overflow-y-auto">
+                <div className="ml-4 space-y-1 pl-4 border-l border-white/10">
                   {PRODUCTS.map((product) => (
                     <Link
                       key={product.id}
                       href={`/products/${product.id}`}
-                      className="block px-3 py-2 text-sm text-gray-300 hover:bg-white/10 rounded-md"
+                      className="block px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-white/5 active:bg-white/10 rounded-lg transition-colors"
                       onClick={() => {
                         setIsMenuOpen(false);
                         setIsProductsOpen(false);
@@ -243,18 +245,21 @@ export default function Navbar() {
 
             <Link
               href="/about"
-              className="block px-3 py-2 text-white hover:bg-white/10 rounded-md font-medium"
+              className="block px-4 py-3 text-white hover:bg-white/10 active:bg-white/20 rounded-xl font-medium text-base transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               About Us
             </Link>
-            <Link
-              href="/contact"
-              className="block w-full text-center bg-white text-black px-4 py-2 rounded-md hover:bg-gray-200 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contact Us
-            </Link>
+            
+            <div className="pt-4">
+              <Link
+                href="/contact"
+                className="block w-full text-center bg-white text-black px-6 py-4 rounded-xl font-bold hover:bg-gray-100 active:scale-95 transition-all text-base shadow-lg"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
         </div>
       )}

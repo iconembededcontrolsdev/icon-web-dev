@@ -93,20 +93,20 @@ export default function NitrogenShowcase() {
                         </div>
 
                         <div className="mb-8 flex-grow">
-                            <div className="flex items-center gap-2 mb-4">
-                                <h4 className="text-base font-bold text-accent uppercase tracking-wider">Benefits of</h4>
-                                <div className="relative w-12 h-12">
+                            <div className="flex items-center justify-start gap-1 mb-6 flex-wrap leading-none">
+                                <h4 className="text-sm md:text-base font-bold text-accent uppercase tracking-wider whitespace-nowrap">BENEFITS OF</h4>
+                                <div className="relative w-16 h-6">
                                     <Image
                                         src="/images/highres/8. Logos/logo.png"
                                         alt="Icon Logo"
                                         fill
                                         className="object-contain"
-                                        unoptimized
+                                        sizes="64px"
                                     />
                                 </div>
-                                <h4 className="text-base font-bold text-accent uppercase tracking-wider">Nitrogen</h4>
+                                <h4 className="text-sm md:text-base font-bold text-accent uppercase tracking-wider whitespace-nowrap">NITROGEN</h4>
                             </div>
-                            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
+                            <ul className="grid grid-cols-2 gap-x-2 gap-y-4">
                                 {benefits.map((benefit, idx) => {
                                     let Icon = null;
                                     if (benefit.includes('Mileage')) Icon = MileageIcon;
@@ -117,8 +117,8 @@ export default function NitrogenShowcase() {
                                     else if (benefit.includes('Pressure')) Icon = TyrePressureIcon;
 
                                     return (
-                                        <li key={idx} className="flex items-center text-sm md:text-base text-muted group">
-                                            <div className="w-8 h-8 mr-3 text-accent flex-shrink-0">
+                                        <li key={idx} className="flex items-start text-xs sm:text-sm md:text-base text-muted group leading-tight">
+                                            <div className="w-6 h-6 sm:w-8 sm:h-8 mr-2 text-accent flex-shrink-0 mt-0.5">
                                                 {Icon && <Icon />}
                                             </div>
                                             <span className="font-medium">{benefit}</span>
