@@ -2,6 +2,7 @@
 
 import { useState, Suspense } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { countryCodes } from '@/data/countryCodes';
 
 function ContactForm() {
@@ -94,6 +95,15 @@ function ContactForm() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="bg-card rounded-[40px] shadow-lg p-8 sm:p-12 lg:p-16">
           <div className="text-center mb-12">
+            <div className="relative w-32 h-32 mx-auto mb-6">
+              <Image
+                src="/images/highres/8. Logos/logo.png"
+                alt="Icon Embedded Controls"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
               Contact Us
             </h1>

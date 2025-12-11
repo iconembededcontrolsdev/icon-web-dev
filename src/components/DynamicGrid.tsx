@@ -65,7 +65,7 @@ export default function DynamicGrid({
         )}
 
         {/* Dynamic Grid: 1 column on mobile, 2 columns on desktop (2x2 max) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[4px] w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
           {items.map((item, index) => {
             const totalSlots = items.reduce((acc, curr) => acc + (curr.benefits ? 2 : 1), 0);
             const isLastItem = index === items.length - 1;

@@ -28,7 +28,7 @@ export default function NitrogenShowcase() {
     ];
 
     return (
-        <section className="w-full mb-1">
+        <section className="w-full mb-4">
             <div className="w-full mx-auto">
                 <div
                     onClick={() => router.push('/products/digital-nitrogen-tyre-inflator')}

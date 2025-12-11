@@ -430,7 +430,7 @@
             "Companies"
           ],
           "images": [
-            "/images/highres/1. Digital Tyre Inflator/1D.jpg"
+            "/images/highres/1. Digital Tyre Inflator/12A.jpg"
           ]
         },
         {
@@ -483,7 +483,7 @@
             "Companies"
           ],
           "images": [
-            "/images/highres/1. Digital Tyre Inflator/1F.jpg"
+            "/images/highres/1. Digital Tyre Inflator/12B.jpg"
           ]
         },
         {
@@ -538,7 +538,7 @@
             "Companies"
           ],
           "images": [
-            "/images/highres/1. Digital Tyre Inflator/1G.jpg"
+            "/images/highres/1. Digital Tyre Inflator/12C.jpg"
           ]
         },
         {
@@ -602,7 +602,6 @@
         "/images/highres/1. Digital Tyre Inflator/1F.jpg",
         "/images/highres/1. Digital Tyre Inflator/1G.jpg",
         "/images/highres/1. Digital Tyre Inflator/1H.jpg",
-        "/images/highres/1. Digital Tyre Inflator/1I.jpg",
         "/images/highres/1. Digital Tyre Inflator/1J.jpg",
         "/images/highres/1. Digital Tyre Inflator/1K.jpg",
         "/images/highres/1. Digital Tyre Inflator/1L.jpg"
@@ -839,7 +838,8 @@
         }
       ],
       "mainImage": "/images/highres/11. Engine Oil Changer/11A.png"
-    },{
+    },
+    {
       "id": "digital-tyre-inflator",
       "title": "Digital Tyre Inflator",
       "description": "Reliable, durable and accurate electronic digital tyre inflators meeting tyre manufacturer pressure standards. Used by major tyre and vehicle manufacturers in their production line.",
@@ -1046,8 +1046,6 @@
         "/images/highres/1. Digital Tyre Inflator/1A.jpg",
         "/images/highres/1. Digital Tyre Inflator/1B.jpg",
         "/images/highres/1. Digital Tyre Inflator/1C.jpg",
-        "/images/highres/1. Digital Tyre Inflator/1E.jpg",
-        "/images/highres/1. Digital Tyre Inflator/1I.jpg",
         "/images/highres/1. Digital Tyre Inflator/1J.jpg",
         "/images/highres/1. Digital Tyre Inflator/1K.jpg",
         "/images/highres/1. Digital Tyre Inflator/1L.jpg"

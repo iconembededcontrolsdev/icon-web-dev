@@ -1,14 +1,16 @@
 'use client';
 
 import { useSearchParams } from 'next/navigation';
-import { useState, Suspense } from 'react';
+import { useState, Suspense, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { countryCodes } from '@/data/countryCodes';
 
 function ProductEnquiryForm() {
   const searchParams = useSearchParams();
   const productName = searchParams.get('product');
 
+  const [productImage, setProductImage] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,6 +18,37 @@ function ProductEnquiryForm() {
     phone: '',
     message: ''
   });
+
+  useEffect(() => {
+    if (!productName) return;
+
+    const fetchProductImage = async () => {
+      try {
+        const response = await fetch('/content/products.json');
+        if (response.ok) {
+          const data = await response.json();
+          // Search in products and their models
+          for (const p of data.products) {
+            if (p.title === productName || p.id === productName) {
+              setProductImage(p.images?.[0] || null);
+              return;
+            }
+            if (p.models) {
+              const model = p.models.find((m: any) => m.model === productName);
+              if (model) {
+                setProductImage(model.image || model.images?.[0] || p.images?.[0] || null);
+                return;
+              }
+            }
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching product image:', error);
+      }
+    };
+
+    fetchProductImage();
+  }, [productName]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
@@ -101,9 +134,26 @@ function ProductEnquiryForm() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="bg-card rounded-[40px] shadow-lg p-8 sm:p-12 lg:p-16">
           <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
-              Product Enquiry
-            </h1>
+            {productImage && (
+              <div className="relative w-48 h-48 mx-auto mb-6 bg-white rounded-2xl p-4 shadow-sm">
+                <Image
+                  src={productImage}
+                  alt={productName || 'Product'}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            )}
+            {!productImage && (
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+                Product Enquiry
+              </h1>
+            )}
+            {productImage && (
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+                {productName ? 'Product Enquiry' : 'Product Enquiry'}
+              </h1>
+            )}
             {productName && (
               <>
                 <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-2">
