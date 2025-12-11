@@ -30,11 +30,22 @@ function ProductEnquiryForm() {
 
     setError("");
 
-    // Phone validation
-    if (!/^\d{7,15}$/.test(formData.phone)) {
-      setError("Please enter a valid phone number (7-15 digits)");
-      setIsSubmitting(false);
-      return;
+    // Validate based on chosen contact method
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^\d{7,15}$/;
+
+    if (contactMethod === "phone") {
+      if (!phoneRegex.test(formData.phone)) {
+        setError("Please enter a valid phone number (7-15 digits)");
+        setIsSubmitting(false);
+        return;
+      }
+    } else {
+      if (!formData.email || !emailRegex.test(formData.email)) {
+        setError("Please enter a valid email address");
+        setIsSubmitting(false);
+        return;
+      }
     }
 
     try {
@@ -100,12 +111,12 @@ function ProductEnquiryForm() {
   };
 
   return (
-    <div className="min-h-screen bg-bg pt-12">
+    <div className="min-h-screen bg-background pt-12">
       {/* Back Button */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <Link
           href="/products"
-          className="inline-flex items-center text-primary hover:text-accent transition-colors font-medium"
+          className="inline-flex items-center text-primary hover:text-accent transition-colors font-medium relative z-10"
         >
           <svg
             className="w-5 h-5 mr-2"
@@ -339,11 +350,13 @@ function ProductEnquiryForm() {
 
 export default function ProductEnquiry() {
   return (
-    <Suspense fallback={
-      <div className="min-h-screen bg-bg pt-12 flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-accent"></div>
-      </div>
-    }>
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-background pt-12 flex items-center justify-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-accent"></div>
+        </div>
+      }
+    >
       <ProductEnquiryForm />
     </Suspense>
   );

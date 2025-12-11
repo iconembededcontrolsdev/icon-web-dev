@@ -30,12 +30,14 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://iconembededcontrols.com'),
+  metadataBase: new URL("https://iconembededcontrols.com"),
   title: {
-    default: "Icon Embedded Controls - Industrial Equipment & Digital Tyre Inflators",
-    template: "%s | Icon Embedded Controls"
+    default:
+      "Icon Embedded Controls - Industrial Equipment & Digital Tyre Inflators",
+    template: "%s | Icon Embedded Controls",
   },
-  description: "Leading manufacturer of digital tyre inflators, nitrogen generators, air compressors, and industrial equipment. Serving fuel stations, garages, and industries across India and internationally.",
+  description:
+    "Leading manufacturer of digital tyre inflators, nitrogen generators, air compressors, and industrial equipment. Serving fuel stations, garages, and industries across India and internationally.",
   keywords: [
     "digital tyre inflator",
     "nitrogen tyre inflator",
@@ -48,7 +50,7 @@ export const metadata: Metadata = {
     "digital engine oil dispenser",
     "DEF AdBlue dispenser",
     "industrial equipment India",
-    "Coimbatore industrial equipment"
+    "Coimbatore industrial equipment",
   ],
   authors: [{ name: "Icon Embedded Controls" }],
   creator: "Icon Embedded Controls",
@@ -63,27 +65,31 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://iconembededcontrols.com",
     siteName: "Icon Embedded Controls",
-    title: "Icon Embedded Controls - Industrial Equipment & Digital Tyre Inflators",
-    description: "Leading manufacturer of digital tyre inflators, nitrogen generators, air compressors, and industrial equipment. Serving fuel stations, garages, and industries.",
+    title:
+      "Icon Embedded Controls - Industrial Equipment & Digital Tyre Inflators",
+    description:
+      "Leading manufacturer of digital tyre inflators, nitrogen generators, air compressors, and industrial equipment. Serving fuel stations, garages, and industries.",
     images: [
       {
         url: "/images/highres/8. Logos/logo.png",
         width: 1200,
         height: 630,
-        alt: "Icon Embedded Controls Logo"
-      }
+        alt: "Icon Embedded Controls Logo",
+      },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Icon Embedded Controls - Industrial Equipment & Digital Tyre Inflators",
-    description: "Leading manufacturer of digital tyre inflators, nitrogen generators, air compressors, and industrial equipment.",
+    title:
+      "Icon Embedded Controls - Industrial Equipment & Digital Tyre Inflators",
+    description:
+      "Leading manufacturer of digital tyre inflators, nitrogen generators, air compressors, and industrial equipment.",
     images: ["/images/highres/8. Logos/logo.png"],
   },
   icons: {
-    icon: '/site_icon.svg',
-    shortcut: '/site_icon.svg',
-    apple: '/site_icon.svg',
+    icon: "/site_icon.svg",
+    shortcut: "/site_icon.svg",
+    apple: "/site_icon.svg",
   },
   robots: {
     index: true,
@@ -91,23 +97,21 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   alternates: {
-    canonical: '/',
+    canonical: "/",
     languages: {
-      'en-IN': '/en-IN',
+      "en-IN": "/en-IN",
     },
   },
   verification: {
-    google: '',
+    google: "tofT2lz_IlPj6f9JUhMGBuirdokA3CKcacWDEp4q4IM",
   },
 };
-
-
 
 export default function RootLayout({
   children,
@@ -117,6 +121,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta
+          name="google-site-verification"
+          content="tofT2lz_IlPj6f9JUhMGBuirdokA3CKcacWDEp4q4IM"
+        />
         <meta name="theme-color" content="#2563eb" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />

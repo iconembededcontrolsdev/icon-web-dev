@@ -315,6 +315,22 @@ export default function Navbar() {
               About Us
             </Link>
 
+            <Link
+              href="/"
+              className="block px-4 py-3 text-white hover:bg-white/10 active:bg-white/20 rounded-xl font-medium text-base transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home
+            </Link>
+
+            <Link
+              href="/about"
+              className="block px-4 py-3 text-white hover:bg-white/10 active:bg-white/20 rounded-xl font-medium text-base transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About Us
+            </Link>
+
             <div className="pt-4">
               <Link
                 href="/contact"
