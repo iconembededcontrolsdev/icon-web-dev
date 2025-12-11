@@ -50,37 +50,46 @@ export async function POST(request: NextRequest) {
       from: `"${name}" <${process.env.SMTP_FROM || process.env.SMTP_USER}>`,
       to: process.env.COMPANY_EMAIL || process.env.SMTP_USER,
       replyTo: email,
-      subject: product 
-        ? `Product Enquiry: ${product} - From ${name}` 
+      subject: product
+        ? `Product Enquiry: ${product} - From ${name}`
         : `New Enquiry: ${category} - From ${name}`,
       html: `
         <!DOCTYPE html>
         <html>
           <head>
             <style>
-              body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; }
-              .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-              .header { background: linear-gradient(135deg, #4f8fff 0%, #3366cc 100%); color: white; padding: 30px; border-radius: 10px 10px 0 0; text-align: center; }
-              .content { background: #f9f9f9; padding: 30px; border-radius: 0 0 10px 10px; }
-              .field { margin-bottom: 20px; }
-              .label { font-weight: bold; color: #4f8fff; margin-bottom: 5px; }
-              .value { background: white; padding: 10px; border-radius: 5px; border-left: 3px solid #4f8fff; }
-              .product-highlight { background: linear-gradient(135deg, #4f8fff 0%, #3366cc 100%); color: white; padding: 15px; border-radius: 10px; margin-bottom: 20px; text-align: center; }
-              .footer { text-align: center; margin-top: 20px; color: #666; font-size: 12px; }
+              body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; }
+              .container { max-width: 600px; margin: 0 auto; padding: 0; }
+              .header { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: white; padding: 40px 30px; border-radius: 12px 12px 0 0; text-align: center; }
+              .header h1 { margin: 0; font-size: 28px; font-weight: 600; }
+              .content { background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%); padding: 35px 30px; border-radius: 0 0 12px 12px; }
+              .field { margin-bottom: 22px; }
+              .label { font-weight: 600; color: #1e293b; margin-bottom: 8px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+              .value { background: white; padding: 12px 14px; border-radius: 8px; border-left: 4px solid #2563eb; border: 1px solid #e2e8f0; border-left: 4px solid #2563eb; }
+              .value a { color: #2563eb; text-decoration: none; }
+              .value a:hover { text-decoration: underline; }
+              .product-highlight { background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); color: white; padding: 20px; border-radius: 10px; margin-bottom: 22px; text-align: center; }
+              .product-highlight h2 { margin: 0; font-size: 22px; font-weight: 600; }
+              .product-highlight p { margin: 5px 0 0 0; opacity: 0.95; font-size: 14px; }
+              .footer { text-align: center; margin-top: 25px; color: #64748b; font-size: 12px; padding-top: 20px; border-top: 1px solid #e2e8f0; }
             </style>
           </head>
           <body>
             <div class="container">
               <div class="header">
-                <h1>${product ? '🎯 Product Enquiry!' : 'New Enquiry Received'}</h1>
+                <h1>${product ? "🎯 Product Enquiry!" : "New Enquiry Received"}</h1>
               </div>
               <div class="content">
-                ${product ? `
+                ${
+                  product
+                    ? `
                   <div class="product-highlight">
                     <h2 style="margin: 0; font-size: 24px;">📦 ${product}</h2>
                     <p style="margin: 5px 0 0 0; opacity: 0.9;">Customer is interested in this product</p>
                   </div>
-                ` : ''}
+                `
+                    : ""
+                }
                 <div class="field">
                   <div class="label">From:</div>
                   <div class="value">${name}</div>
@@ -95,7 +104,7 @@ export async function POST(request: NextRequest) {
                 </div>
                 <div class="field">
                   <div class="label">Message:</div>
-                  <div class="value">${message.replace(/\n/g, '<br>')}</div>
+                  <div class="value">${message.replace(/\n/g, "<br>")}</div>
                 </div>
                 <div class="footer">
                   <p>This is an automated message from your website contact form.</p>
@@ -110,20 +119,24 @@ export async function POST(request: NextRequest) {
 
     // Confirmation email to user
     const mailOptionsToUser = {
-      from: `"${process.env.COMPANY_NAME || 'Company'}" <${process.env.SMTP_FROM || process.env.SMTP_USER}>`,
+      from: `"${process.env.COMPANY_NAME || "Company"}" <${process.env.SMTP_FROM || process.env.SMTP_USER}>`,
       to: email,
-      subject: 'Thank you for contacting us!',
+      subject: "Thank you for contacting us!",
       html: `
         <!DOCTYPE html>
         <html>
           <head>
             <style>
-              body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; }
-              .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-              .header { background: linear-gradient(135deg, #4f8fff 0%, #3366cc 100%); color: white; padding: 30px; border-radius: 10px 10px 0 0; text-align: center; }
-              .content { background: #f9f9f9; padding: 30px; border-radius: 0 0 10px 10px; }
-              .highlight { background: white; padding: 15px; border-radius: 5px; border-left: 3px solid #4f8fff; margin: 20px 0; }
-              .footer { text-align: center; margin-top: 20px; color: #666; font-size: 12px; }
+              body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; }
+              .container { max-width: 600px; margin: 0 auto; padding: 0; }
+              .header { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: white; padding: 40px 30px; border-radius: 12px 12px 0 0; text-align: center; }
+              .header h1 { margin: 0; font-size: 28px; font-weight: 600; }
+              .content { background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%); padding: 35px 30px; border-radius: 0 0 12px 12px; }
+              .highlight { background: white; padding: 18px; border-radius: 8px; border-left: 4px solid #2563eb; border: 1px solid #e2e8f0; border-left: 4px solid #2563eb; margin: 22px 0; line-height: 1.8; }
+              .highlight strong { color: #1e293b; }
+              .footer { text-align: center; margin-top: 25px; color: #64748b; font-size: 12px; padding-top: 20px; border-top: 1px solid #e2e8f0; }
+              .cta-button { display: inline-block; background: #2563eb; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 15px; }
+              p { margin: 14px 0; color: #475569; }
             </style>
           </head>
           <body>
@@ -133,17 +146,17 @@ export async function POST(request: NextRequest) {
               </div>
               <div class="content">
                 <p>Dear ${name},</p>
-                <p>We have received your ${product ? 'product enquiry' : 'enquiry'} and appreciate you taking the time to contact us.</p>
+                <p>We have received your ${product ? "product enquiry" : "enquiry"} and appreciate you taking the time to contact us.</p>
                 <div class="highlight">
                   <strong>Your Enquiry Summary:</strong><br><br>
-                  ${product ? `<strong>Product:</strong> ${product}<br>` : ''}
+                  ${product ? `<strong>Product:</strong> ${product}<br>` : ""}
                   <strong>Category:</strong> ${category}<br>
                   <strong>Message:</strong><br>
-                  ${message.replace(/\n/g, '<br>')}
+                  ${message.replace(/\n/g, "<br>")}
                 </div>
                 <p>Our team will review your message and get back to you as soon as possible.</p>
                 <p>If you have any urgent concerns, please don't hesitate to contact us directly.</p>
-                <p>Best regards,<br><strong>${process.env.COMPANY_NAME || 'Our Team'}</strong></p>
+                <p>Best regards,<br><strong>${process.env.COMPANY_NAME || "Our Team"}</strong></p>
                 <div class="footer">
                   <p>This is an automated confirmation email. Please do not reply to this email.</p>
                 </div>

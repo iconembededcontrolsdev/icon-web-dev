@@ -111,18 +111,19 @@ export default function ProductDetail() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [openSections, setOpenSections] = useState<Record<string, string>>({});
+  const [imageIndex, setImageIndex] = useState<Record<number, number>>({});
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch('/content/products.json');
-        if (!response.ok) throw new Error('Products file not found');
+        const response = await fetch("/content/products.json");
+        if (!response.ok) throw new Error("Products file not found");
 
         const data = await response.json();
         const products = data.products || [];
         const foundProduct = products.find((p: ProductData) => p.id === id);
 
-        if (!foundProduct) throw new Error('Product not found');
+        if (!foundProduct) throw new Error("Product not found");
 
         const productData = {
           ...foundProduct,
@@ -131,7 +132,7 @@ export default function ProductDetail() {
 
         setProduct(productData);
       } catch (err) {
-        setError('Failed to load product');
+        setError("Failed to load product");
         console.error(err);
       } finally {
         setLoading(false);
@@ -142,9 +143,9 @@ export default function ProductDetail() {
   }, [id]);
 
   const toggleSection = (modelIndex: number, section: string) => {
-    setOpenSections(prev => ({
+    setOpenSections((prev) => ({
       ...prev,
-      [modelIndex]: prev[modelIndex] === section ? '' : section
+      [modelIndex]: prev[modelIndex] === section ? "" : section,
     }));
   };
 
@@ -160,7 +161,9 @@ export default function ProductDetail() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background">
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-primary mb-4">Product not found</h2>
+          <h2 className="text-2xl font-bold text-primary mb-4">
+            Product not found
+          </h2>
           <Link href="/products" className="text-primary hover:underline">
             ← Back to Products
           </Link>
@@ -169,16 +172,21 @@ export default function ProductDetail() {
     );
   }
 
-  const models = product.models && product.models.length > 0 ? product.models : [{
-    model: product.title,
-    type: '',
-    description: product.description,
-    fullDescription: product.fullDescription,
-    features: product.features,
-    specifications: product.specifications,
-    applications: product.applications,
-    images: product.images
-  }];
+  const models =
+    product.models && product.models.length > 0
+      ? product.models
+      : [
+          {
+            model: product.title,
+            type: "",
+            description: product.description,
+            fullDescription: product.fullDescription,
+            features: product.features,
+            specifications: product.specifications,
+            applications: product.applications,
+            images: product.images,
+          },
+        ];
 
   const brochureLink = product.brochure || brochureMap[id as string];
 
@@ -189,18 +197,42 @@ export default function ProductDetail() {
     { icon: <MaintenanceIcon />, title: "Maintenance Repair" },
     { icon: <TyreLifeIcon />, title: "Increased Tyre Life" },
     { icon: <CleanIcon />, title: "100 % Dry and Clean" },
-    { icon: <TyrePressureIcon />, title: "Consistent Tyre Pressure" }
+    { icon: <TyrePressureIcon />, title: "Consistent Tyre Pressure" },
   ];
 
-  const isNitrogenProduct = id === 'digital-nitrogen-tyre-inflator' || id === 'nitrogen-generator';
+  const isNitrogenProduct =
+    id === "digital-nitrogen-tyre-inflator" || id === "nitrogen-generator";
 
   return (
     <div className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth bg-background">
       {models.map((model, index) => {
-        const currentImage = model.images?.[0] || model.image || product.images?.[0] || '/images/placeholder.svg';
+        const modelImages =
+          model.images && model.images.length > 0
+            ? model.images
+            : model.image
+              ? [model.image]
+              : product.images || ["/images/placeholder.svg"];
+        const currentImageIdx = imageIndex[index] ?? 0;
+        const currentImage = modelImages[currentImageIdx];
         const features = model.features || product.features || [];
         const applications = model.applications || product.applications || [];
-        const specifications = model.specifications || product.specifications || {};
+        const specifications =
+          model.specifications || product.specifications || {};
+
+        const handleNextImage = () => {
+          setImageIndex((prev) => ({
+            ...prev,
+            [index]: (prev[index] ?? 0 + 1) % modelImages.length,
+          }));
+        };
+
+        const handlePrevImage = () => {
+          setImageIndex((prev) => ({
+            ...prev,
+            [index]:
+              (prev[index] ?? 0 - 1 + modelImages.length) % modelImages.length,
+          }));
+        };
 
         return (
           <section
@@ -208,17 +240,87 @@ export default function ProductDetail() {
             className="h-screen w-full snap-start flex flex-col pt-12 overflow-hidden relative"
           >
             <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col lg:flex-row gap-8 lg:gap-12 py-4 lg:py-8">
-
-              {/* Left Column: Image */}
+              {/* Left Column: Image Carousel */}
               <div className="w-full lg:w-1/2 h-[40vh] lg:h-full flex items-center justify-center relative">
                 <div className="relative w-full h-full max-h-[600px] lg:max-h-none bg-white rounded-[40px] p-8 shadow-sm flex items-center justify-center">
                   <Image
                     src={currentImage}
-                    alt={model.model || product.title}
+                    alt={`${model.model || product.title} - Image ${currentImageIdx + 1}`}
                     fill
                     className="object-contain p-4"
                     priority={index === 0}
                   />
+
+                  {/* Image Navigation */}
+                  {modelImages.length > 1 && (
+                    <>
+                      <button
+                        onClick={handlePrevImage}
+                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-primary/80 hover:bg-primary text-white p-2 rounded-full transition-colors z-10"
+                        aria-label="Previous image"
+                      >
+                        <svg
+                          className="w-5 h-5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M15 19l-7-7 7-7"
+                          />
+                        </svg>
+                      </button>
+
+                      <button
+                        onClick={handleNextImage}
+                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-primary/80 hover:bg-primary text-white p-2 rounded-full transition-colors z-10"
+                        aria-label="Next image"
+                      >
+                        <svg
+                          className="w-5 h-5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 5l7 7-7 7"
+                          />
+                        </svg>
+                      </button>
+
+                      {/* Image Counter */}
+                      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        {currentImageIdx + 1} / {modelImages.length}
+                      </div>
+
+                      {/* Image Indicators */}
+                      <div className="absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-2">
+                        {modelImages.map((_, idx) => (
+                          <button
+                            key={idx}
+                            onClick={() =>
+                              setImageIndex((prev) => ({
+                                ...prev,
+                                [index]: idx,
+                              }))
+                            }
+                            className={`w-2 h-2 rounded-full transition-all ${
+                              idx === currentImageIdx
+                                ? "bg-primary w-6"
+                                : "bg-primary/40 hover:bg-primary/60"
+                            }`}
+                            aria-label={`Go to image ${idx + 1}`}
+                          />
+                        ))}
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
 
@@ -230,26 +332,34 @@ export default function ProductDetail() {
                       {model.model}
                     </h2>
                     {model.type && (
-                      <p className="text-base md:text-lg text-accent font-medium">{model.type}</p>
+                      <p className="text-base md:text-lg text-accent font-medium">
+                        {model.type}
+                      </p>
                     )}
                   </div>
 
                   <p className="text-foreground/90 text-sm md:text-base leading-relaxed">
-                    {model.fullDescription || model.description || product.fullDescription}
+                    {model.fullDescription ||
+                      model.description ||
+                      product.fullDescription}
                   </p>
 
                   <div className="space-y-4">
                     {features.length > 0 && (
                       <AccordionItem
                         title="Key Features"
-                        isOpen={openSections[index] === 'features'}
-                        onClick={() => toggleSection(index, 'features')}
+                        isOpen={openSections[index] === "features"}
+                        onClick={() => toggleSection(index, "features")}
                       >
                         <ul className="space-y-3">
                           {features.map((feature, idx) => (
                             <li key={idx} className="flex items-start">
-                              <span className="mr-3 text-accent font-bold text-lg">•</span>
-                              <span className="text-sm text-foreground/90">{feature}</span>
+                              <span className="mr-3 text-accent font-bold text-lg">
+                                •
+                              </span>
+                              <span className="text-sm text-foreground/90">
+                                {feature}
+                              </span>
                             </li>
                           ))}
                         </ul>
@@ -259,14 +369,27 @@ export default function ProductDetail() {
                     {applications.length > 0 && (
                       <AccordionItem
                         title="Applications"
-                        isOpen={openSections[index] === 'applications'}
-                        onClick={() => toggleSection(index, 'applications')}
+                        isOpen={openSections[index] === "applications"}
+                        onClick={() => toggleSection(index, "applications")}
                       >
                         <ul className="space-y-3">
                           {applications.map((app, idx) => (
-                            <li key={idx} className="flex items-center text-sm text-foreground/90">
-                              <svg className="w-4 h-4 mr-3 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            <li
+                              key={idx}
+                              className="flex items-center text-sm text-foreground/90"
+                            >
+                              <svg
+                                className="w-4 h-4 mr-3 text-accent"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M9 5l7 7-7 7"
+                                />
                               </svg>
                               {app}
                             </li>
@@ -278,16 +401,25 @@ export default function ProductDetail() {
                     {Object.keys(specifications).length > 0 && (
                       <AccordionItem
                         title="Technical Specifications"
-                        isOpen={openSections[index] === 'specifications'}
-                        onClick={() => toggleSection(index, 'specifications')}
+                        isOpen={openSections[index] === "specifications"}
+                        onClick={() => toggleSection(index, "specifications")}
                       >
                         <div className="space-y-2">
-                          {Object.entries(specifications).map(([key, value]) => (
-                            <div key={key} className="grid grid-cols-2 gap-4 py-3 border-b border-border/30 last:border-0">
-                              <span className="font-semibold text-sm text-muted capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
-                              <span className="text-sm text-foreground">{String(value)}</span>
-                            </div>
-                          ))}
+                          {Object.entries(specifications).map(
+                            ([key, value]) => (
+                              <div
+                                key={key}
+                                className="grid grid-cols-2 gap-4 py-3 border-b border-border/30 last:border-0"
+                              >
+                                <span className="font-semibold text-sm text-muted capitalize">
+                                  {key.replace(/([A-Z])/g, " $1").trim()}
+                                </span>
+                                <span className="text-sm text-foreground">
+                                  {String(value)}
+                                </span>
+                              </div>
+                            )
+                          )}
                         </div>
                       </AccordionItem>
                     )}
@@ -309,15 +441,23 @@ export default function ProductDetail() {
                         rel="noopener noreferrer"
                         className="flex-1 py-3 px-6 text-center border-2 border-primary text-primary rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2"
                       >
-                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        <svg
+                          className="w-5 h-5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                          />
                         </svg>
                         Download Brochure
                       </a>
                     )}
                   </div>
-
-
                 </div>
               </div>
             </div>
@@ -325,8 +465,18 @@ export default function ProductDetail() {
             {/* Scroll Indicator (only show if not last item) */}
             {index < models.length - 1 && (
               <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-primary/50 hidden lg:block">
-                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7-7-7m14-8l-7 7-7-7" />
+                <svg
+                  className="w-8 h-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 14l-7 7-7-7m14-8l-7 7-7-7"
+                  />
                 </svg>
               </div>
             )}

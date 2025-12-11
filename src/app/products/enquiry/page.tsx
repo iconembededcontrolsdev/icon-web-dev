@@ -3,104 +3,143 @@
 import { useSearchParams } from 'next/navigation';
 import { useState, Suspense } from 'react';
 import Link from 'next/link';
-import { countryCodes } from '@/data/countryCodes';
+import Image from "next/image";
+import { countryCodes } from "@/data/countryCodes";
 
 function ProductEnquiryForm() {
   const searchParams = useSearchParams();
-  const productName = searchParams.get('product');
+  const productName = searchParams.get("product");
 
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    countryCode: '+91',
-    phone: '',
-    message: ''
+    name: "",
+    email: "",
+    countryCode: "+91",
+    phone: "",
+    message: "",
   });
+  const [contactMethod, setContactMethod] = useState<"phone" | "email">(
+    "email"
+  );
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    setError('');
+    setError("");
 
     // Phone validation
     if (!/^\d{7,15}$/.test(formData.phone)) {
-      setError('Please enter a valid phone number (7-15 digits)');
+      setError("Please enter a valid phone number (7-15 digits)");
       setIsSubmitting(false);
       return;
     }
 
     try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
+      const response = await fetch("/api/send-email", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           ...formData,
-          category: 'product',
-          product: productName || 'General Product Enquiry'
+          category: "product",
+          product: productName || "General Product Enquiry",
         }),
       });
 
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || 'Failed to send enquiry');
+        throw new Error(data.error || "Failed to send enquiry");
       }
 
       setSubmitted(true);
 
       // Reset form after 5 seconds
       setTimeout(() => {
-        setFormData({ name: '', email: '', countryCode: '+91', phone: '', message: '' });
+        setFormData({
+          name: "",
+          email: "",
+          countryCode: "+91",
+          phone: "",
+          message: "",
+        });
         setSubmitted(false);
       }, 5000);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to send enquiry. Please try again.');
+      setError(
+        err instanceof Error
+          ? err.message
+          : "Failed to send enquiry. Please try again."
+      );
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value.replace(/\D/g, '');
+    const value = e.target.value.replace(/\D/g, "");
     setFormData({
       ...formData,
-      phone: value
+      phone: value,
     });
   };
-
 
   return (
     <div className="min-h-screen bg-bg pt-12">
       {/* Back Button */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <Link
-          href="/"
+          href="/products"
           className="inline-flex items-center text-primary hover:text-accent transition-colors font-medium"
         >
-          <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          <svg
+            className="w-5 h-5 mr-2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
+            />
           </svg>
-          Back to Home
+          Back to Products
         </Link>
       </div>
 
       {/* Enquiry Form */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="bg-card rounded-[40px] shadow-lg p-8 sm:p-12 lg:p-16">
+          {/* Branding Header */}
           <div className="text-center mb-12">
+            <div className="flex justify-center mb-6">
+              <div className="relative h-16 w-auto">
+                <Image
+                  src="/images/lowres/Logos/logo.png"
+                  alt="Icon Embedded Controls"
+                  width={120}
+                  height={48}
+                  className="object-contain"
+                />
+              </div>
+            </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
               Product Enquiry
             </h1>
@@ -124,17 +163,67 @@ function ProductEnquiryForm() {
           {submitted ? (
             <div className="text-center py-12">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 mb-4">
-                <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                <svg
+                  className="w-8 h-8 text-green-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-primary mb-2">Enquiry Submitted!</h3>
+              <h3 className="text-2xl font-bold text-primary mb-2">
+                Enquiry Submitted!
+              </h3>
               <p className="text-muted">We&apos;ll get back to you soon.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Contact Method Selection */}
+              <div className="bg-primary/5 p-4 rounded-xl border-2 border-primary/20 mb-4">
+                <p className="text-sm font-semibold text-primary mb-3">
+                  How would you like us to contact you?
+                </p>
+                <div className="flex gap-4">
+                  <label className="flex items-center cursor-pointer">
+                    <input
+                      type="radio"
+                      name="contactMethod"
+                      value="email"
+                      checked={contactMethod === "email"}
+                      onChange={(e) =>
+                        setContactMethod(e.target.value as "email" | "phone")
+                      }
+                      className="w-4 h-4 text-primary"
+                    />
+                    <span className="ml-2 text-foreground">Via Email</span>
+                  </label>
+                  <label className="flex items-center cursor-pointer">
+                    <input
+                      type="radio"
+                      name="contactMethod"
+                      value="phone"
+                      checked={contactMethod === "phone"}
+                      onChange={(e) =>
+                        setContactMethod(e.target.value as "email" | "phone")
+                      }
+                      className="w-4 h-4 text-primary"
+                    />
+                    <span className="ml-2 text-foreground">Via Phone</span>
+                  </label>
+                </div>
+              </div>
+
               <div>
-                <label htmlFor="name" className="block text-sm md:text-base font-semibold text-primary mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm md:text-base font-semibold text-primary mb-2"
+                >
                   Your Name
                 </label>
                 <input
@@ -150,7 +239,10 @@ function ProductEnquiryForm() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm md:text-base font-semibold text-primary mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm md:text-base font-semibold text-primary mb-2"
+                >
                   Your Email
                 </label>
                 <input
@@ -167,7 +259,10 @@ function ProductEnquiryForm() {
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="sm:col-span-1">
-                  <label htmlFor="countryCode" className="block text-sm md:text-base font-semibold text-primary mb-2">
+                  <label
+                    htmlFor="countryCode"
+                    className="block text-sm md:text-base font-semibold text-primary mb-2"
+                  >
                     Country Code
                   </label>
                   <select
@@ -178,10 +273,10 @@ function ProductEnquiryForm() {
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent transition-colors text-primary bg-card appearance-none"
                     style={{
                       backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
-                      backgroundRepeat: 'no-repeat',
-                      backgroundPosition: 'right 0.75rem center',
-                      backgroundSize: '1.25rem 1.25rem',
-                      paddingRight: '2.5rem'
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "right 0.75rem center",
+                      backgroundSize: "1.25rem 1.25rem",
+                      paddingRight: "2.5rem",
                     }}
                   >
                     {countryCodes.map((country) => (
@@ -192,7 +287,10 @@ function ProductEnquiryForm() {
                   </select>
                 </div>
                 <div className="sm:col-span-2">
-                  <label htmlFor="phone" className="block text-sm md:text-base font-semibold text-primary mb-2">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm md:text-base font-semibold text-primary mb-2"
+                  >
                     Phone Number
                   </label>
                   <input
@@ -209,7 +307,10 @@ function ProductEnquiryForm() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm md:text-base font-semibold text-primary mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm md:text-base font-semibold text-primary mb-2"
+                >
                   Your Message
                 </label>
                 <textarea
@@ -236,7 +337,7 @@ function ProductEnquiryForm() {
                   disabled={isSubmitting}
                   className="w-full px-8 py-4 bg-primary text-white font-semibold rounded-full hover:bg-primary-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-md hover:shadow-lg"
                 >
-                  {isSubmitting ? 'Sending...' : 'Submit Enquiry'}
+                  {isSubmitting ? "Sending..." : "Submit Enquiry"}
                 </button>
               </div>
             </form>

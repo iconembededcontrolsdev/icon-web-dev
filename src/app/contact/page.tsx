@@ -2,6 +2,7 @@
 
 import { useState, Suspense } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { countryCodes } from '@/data/countryCodes';
 
 function ContactForm() {
@@ -13,6 +14,7 @@ function ContactForm() {
     category: '',
     message: ''
   });
+  const [contactMethod, setContactMethod] = useState<'phone' | 'email'>('email');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
@@ -93,7 +95,19 @@ function ContactForm() {
       {/* Contact Form */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="bg-card rounded-[40px] shadow-lg p-8 sm:p-12 lg:p-16">
+          {/* Branding Header */}
           <div className="text-center mb-12">
+            <div className="flex justify-center mb-6">
+              <div className="relative h-16 w-auto">
+                <Image
+                  src="/images/lowres/Logos/logo.png"
+                  alt="Icon Embedded Controls"
+                  width={120}
+                  height={48}
+                  className="object-contain"
+                />
+              </div>
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
               Contact Us
             </h1>
@@ -114,6 +128,35 @@ function ContactForm() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Contact Method Selection */}
+              <div className="bg-primary/5 p-4 rounded-xl border-2 border-primary/20 mb-4">
+                <p className="text-sm font-semibold text-primary mb-3">How would you like us to contact you?</p>
+                <div className="flex gap-4">
+                  <label className="flex items-center cursor-pointer">
+                    <input
+                      type="radio"
+                      name="contactMethod"
+                      value="email"
+                      checked={contactMethod === 'email'}
+                      onChange={(e) => setContactMethod(e.target.value as 'email' | 'phone')}
+                      className="w-4 h-4 text-primary"
+                    />
+                    <span className="ml-2 text-foreground">Via Email</span>
+                  </label>
+                  <label className="flex items-center cursor-pointer">
+                    <input
+                      type="radio"
+                      name="contactMethod"
+                      value="phone"
+                      checked={contactMethod === 'phone'}
+                      onChange={(e) => setContactMethod(e.target.value as 'email' | 'phone')}
+                      className="w-4 h-4 text-primary"
+                    />
+                    <span className="ml-2 text-foreground">Via Phone</span>
+                  </label>
+                </div>
+              </div>
+
               <div>
                 <label htmlFor="name" className="block text-sm font-semibold text-primary mb-2">
                   Your Name
@@ -233,15 +276,7 @@ function ContactForm() {
                 />
               </div>
 
-              {error && (
-                <div className="p-4 bg-red-50 border-2 border-red-200 rounded-xl">
-                  <p className="text-red-600 text-sm font-medium">{error}</p>
-                </div>
-              )}
 
-              <div className="pt-4">
-                <button
-                  type="submit"
                   disabled={isSubmitting}
                   className="w-full px-8 py-4 bg-primary text-white font-semibold rounded-full hover:opacity-90 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 >

@@ -42,20 +42,23 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-50 shadow-sm transition-all duration-300 ${isScrolled ? 'bg-gray-800/90 backdrop-blur-md border-b border-white/10' : 'bg-gray-800 border-b border-gray-700'
-        }`}
+      className={`fixed w-full z-50 shadow-sm transition-all duration-300 ${
+        isScrolled
+          ? "bg-gray-800/90 backdrop-blur-md border-b border-white/10"
+          : "bg-gray-800 border-b border-gray-700"
+      }`}
       onMouseLeave={() => setIsProductsOpen(false)}
     >
       <div className="max-w-5xl mx-auto px-2">
         <div className="flex justify-between items-center h-12">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <div className="relative h-11 w-auto">
+              <div className="relative h-9 w-auto">
                 <Image
-                  src="/images/highres/8. Logos/logo.png"
+                  src="/images/lowres/Logos/logo.png"
                   alt="Icon Embedded Controls"
-                  width={108}
-                  height={44}
+                  width={80}
+                  height={32}
                   className="object-contain"
                 />
               </div>
@@ -70,27 +73,31 @@ export default function Navbar() {
             >
               <Link
                 href="/products"
-                className={`bg-transparent px-2 py-1 rounded-none transition-all flex items-center gap-1 ${isActive("/products")
-                  ? "bg-primary text-white"
-                  : "text-white hover:bg-primary hover:text-white"
-                  }`}
+                className={`bg-transparent px-2 py-1 rounded-none transition-all flex items-center gap-1 ${
+                  isActive("/products")
+                    ? "bg-primary text-white"
+                    : "text-white hover:bg-primary hover:text-white"
+                }`}
               >
                 Products
                 <svg
-                  className={`w-4 h-4 transition-transform duration-200 ${isProductsOpen ? 'rotate-180' : ''}`}
+                  className={`w-4 h-4 transition-transform duration-200 ${isProductsOpen ? "rotate-180" : ""}`}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </Link>
 
               {/* Dropdown Menu */}
               {isProductsOpen && (
-                <div
-                  className="fixed left-0 right-0 top-[48px] bg-gray-800/95 backdrop-blur-xl border-b border-white/10 shadow-2xl pointer-events-auto animate-in fade-in slide-in-from-top-2 duration-200"
-                >
+                <div className="fixed left-0 right-0 top-[48px] bg-gray-800/95 backdrop-blur-xl border-b border-white/10 shadow-2xl pointer-events-auto animate-in fade-in slide-in-from-top-2 duration-200">
                   <div className="max-w-6xl mx-auto px-4 py-4">
                     <div className="grid grid-cols-3 gap-x-4 gap-y-1">
                       {PRODUCTS.map((product, index) => (
@@ -112,19 +119,21 @@ export default function Navbar() {
 
             <Link
               href="/about"
-              className={`px-3 py-1 rounded-full transition-all ${isActive("/about")
-                ? "bg-white text-black"
-                : "bg-transparent text-white hover:bg-white hover:text-black"
-                }`}
+              className={`px-3 py-1 rounded-full transition-all ${
+                isActive("/about")
+                  ? "bg-white text-black"
+                  : "bg-transparent text-white hover:bg-white hover:text-black"
+              }`}
             >
               About Us
             </Link>
             <Link
               href="/contact"
-              className={`px-3 py-1 rounded-full transition-all ${isActive("/contact")
-                ? "bg-white text-black"
-                : "bg-transparent text-white hover:bg-white hover:text-black"
-                }`}
+              className={`px-3 py-1 rounded-full transition-all ${
+                isActive("/contact")
+                  ? "bg-white text-black"
+                  : "bg-transparent text-white hover:bg-white hover:text-black"
+              }`}
             >
               Contact Us
             </Link>
@@ -135,13 +144,33 @@ export default function Navbar() {
               className="p-2.5 rounded-full hover:bg-white hover:text-black transition-all duration-300 group"
               aria-label="Toggle theme"
             >
-              {theme === 'light' ? (
-                <svg className="w-5 h-5 text-white group-hover:text-black transition-transform group-hover:rotate-180 duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+              {theme === "light" ? (
+                <svg
+                  className="w-5 h-5 text-white group-hover:text-black transition-transform group-hover:rotate-180 duration-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                  />
                 </svg>
               ) : (
-                <svg className="w-5 h-5 text-white group-hover:text-black transition-transform group-hover:rotate-180 duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                <svg
+                  className="w-5 h-5 text-white group-hover:text-black transition-transform group-hover:rotate-180 duration-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                  />
                 </svg>
               )}
             </button>
@@ -184,7 +213,6 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden bg-gray-800/95 backdrop-blur-xl border-t border-white/20 h-[calc(100vh-48px)] overflow-y-auto pb-20">
           <div className="px-4 pt-4 pb-6 space-y-2">
-            
             {/* Theme Toggle - Mobile */}
             <button
               onClick={toggleTheme}
@@ -193,14 +221,36 @@ export default function Navbar() {
             >
               <span className="text-base font-medium">Theme</span>
               <div className="flex items-center gap-2">
-                <span className="text-sm text-gray-300">{theme === 'light' ? 'Light' : 'Dark'}</span>
-                {theme === 'light' ? (
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                <span className="text-sm text-gray-300">
+                  {theme === "light" ? "Light" : "Dark"}
+                </span>
+                {theme === "light" ? (
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                    />
                   </svg>
                 ) : (
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                    />
                   </svg>
                 )}
               </div>
@@ -214,13 +264,17 @@ export default function Navbar() {
               >
                 <span className="flex-grow text-left text-base">Products</span>
                 <svg
-                  className={`w-5 h-5 flex-shrink-0 transition-transform duration-200 ${isProductsOpen ? 'rotate-180' : ''}`}
+                  className={`w-5 h-5 flex-shrink-0 transition-transform duration-200 ${isProductsOpen ? "rotate-180" : ""}`}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   strokeWidth={2}
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
 
@@ -250,7 +304,7 @@ export default function Navbar() {
             >
               About Us
             </Link>
-            
+
             <div className="pt-4">
               <Link
                 href="/contact"
