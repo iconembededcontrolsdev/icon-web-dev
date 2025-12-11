@@ -1,104 +1,33 @@
-'use client';
+import { Metadata } from 'next';
+import fs from 'fs/promises';
+import path from 'path';
+import ProductDetailsClient, { ProductData } from '@/components/ProductDetailsClient';
+import StructuredData from '@/components/StructuredData';
+import { generateProductSchema } from '@/utils/seo';
 
-import { useParams, useRouter, useSearchParams } from 'next/navigation';
-import { useEffect, useState, useRef } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { getProductImages } from '@/utils/productImages';
-import ProductBenefits, {
-  MileageIcon,
-  TyreHeatIcon,
-  MaintenanceIcon,
-  TyreLifeIcon,
-  CleanIcon,
-  TyrePressureIcon
-} from '@/components/ProductBenefits';
+async function getProducts(): Promise<ProductData[]> {
+  try {
+    const filePath = path.join(process.cwd(), 'public', 'content', 'products.json');
+    const fileContent = await fs.readFile(filePath, 'utf-8');
+    const data = await JSON.parse(fileContent);
+    return data.products || [];
+  } catch (error) {
+    console.error('Error reading products.json:', error);
+    return [];
+  }
+}
 
-type ProductModel = {
-  model: string;
-  type?: string;
-  description?: string;
-  subtitle?: string;
-  fullDescription?: string;
-  image?: string;
-  images?: string[];
-  specifications?: Record<string, any>;
-  features?: string[];
-  applications?: string[];
-};
+async function getProduct(id: string): Promise<ProductData | null> {
+  const products = await getProducts();
+  return products.find(p => p.id === id) || null;
+}
 
-type ProductData = {
-  id: string;
-  title: string;
-  description: string;
-  subtitle?: string;
-  fullDescription?: string;
-  features?: string[];
-  specifications?: Record<string, any>;
-  applications?: string[];
-  safetyFeatures?: string[];
-  userInterface?: string[];
-  images?: string[];
-  models?: ProductModel[];
-  brochure?: string;
-};
-
-const brochureMap: Record<string, string> = {
-  'digital-tyre-inflator': '/brochures/1. Digital Tyre Inflator/Digital Tyre Inflator.pdf',
-  'digital-nitrogen-tyre-inflator': '/brochures/2. Digital Nitrogen Tyre Inflator/Digital Nitrogen Tyre Inflator.pdf',
-  'air-compressor': '/brochures/3. Air Compressor/Reciprocating Air Compressor.pdf',
-  'garage-equipment': '/brochures/6. Garage Equipment/Hydraulic Two Wheeler Ramp.pdf',
-  'digital-def-adblue-dispenser': '/brochures/9. Digital DEF/Digital DEF- AdBlue Despenser.pdf',
-  'digital-engine-oil-dispenser': '/brochures/10. Digital Engine Oil Dispenser/Digital Engine Oil Dispenser.pdf',
-  'engine-oil-changer': '/brochures/11. Engine Oil Changer/Engine Oil Changer.pdf',
-  'digital-tyre-inflator-pedestal': '/brochures/1. Digital Tyre Inflator/Digital Tyre Inflator.pdf',
-};
-
-const AccordionItem = ({
-  title,
-  isOpen,
-  onClick,
-  children
-}: {
-  title: string;
-  isOpen: boolean;
-  onClick: () => void;
-  children: React.ReactNode;
-}) => {
-  return (
-    <div className="border border-border rounded-[20px] overflow-hidden mb-4 bg-card shadow-lg">
-      <button
-        className={`w-full px-6 py-4 flex items-center justify-between transition-colors ${isOpen ? 'bg-primary text-white' : 'bg-transparent text-primary hover:bg-primary/5'
-          }`}
-        onClick={onClick}
-      >
-        <div className="flex items-center gap-3">
-          <div className={`flex items-center justify-center w-7 h-7 rounded-full border-2 transition-colors ${isOpen ? 'border-white bg-white/10' : 'border-primary bg-primary/5'
-            }`}>
-            <span className="text-lg leading-none font-bold" style={{ marginTop: '-2px' }}>{isOpen ? '-' : '+'}</span>
-          </div>
-          <span className="font-semibold text-base">{title}</span>
-        </div>
-        <svg
-          className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
-      <div
-        className={`transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
-          }`}
-      >
-        <div className="p-6 text-foreground border-t border-border bg-card/50">
-          {children}
-        </div>
-      </div>
-    </div>
-  );
-};
+export async function generateStaticParams() {
+  const products = await getProducts();
+  return products.map((product) => ({
+    id: product.id,
+  }));
+}
 
 export default function ProductDetail() {
   const { id } = useParams<{ id: string }>();
@@ -206,33 +135,10 @@ export default function ProductDetail() {
   return (
     <div className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth bg-background">
       {models.map((model, index) => {
-        const modelImages =
-          model.images && model.images.length > 0
-            ? model.images
-            : model.image
-              ? [model.image]
-              : product.images || ["/images/placeholder.svg"];
-        const currentImageIdx = imageIndex[index] ?? 0;
-        const currentImage = modelImages[currentImageIdx];
+        const currentImage = model.images?.[0] || model.image || product.images?.[0] || '/images/placeholder.svg';
         const features = model.features || product.features || [];
         const applications = model.applications || product.applications || [];
-        const specifications =
-          model.specifications || product.specifications || {};
-
-        const handleNextImage = () => {
-          setImageIndex((prev) => ({
-            ...prev,
-            [index]: (prev[index] ?? 0 + 1) % modelImages.length,
-          }));
-        };
-
-        const handlePrevImage = () => {
-          setImageIndex((prev) => ({
-            ...prev,
-            [index]:
-              (prev[index] ?? 0 - 1 + modelImages.length) % modelImages.length,
-          }));
-        };
+        const specifications = model.specifications || product.specifications || {};
 
         return (
           <section
@@ -240,87 +146,17 @@ export default function ProductDetail() {
             className="h-screen w-full snap-start flex flex-col pt-12 overflow-hidden relative"
           >
             <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col lg:flex-row gap-8 lg:gap-12 py-4 lg:py-8">
-              {/* Left Column: Image Carousel */}
+
+              {/* Left Column: Image */}
               <div className="w-full lg:w-1/2 h-[40vh] lg:h-full flex items-center justify-center relative">
                 <div className="relative w-full h-full max-h-[600px] lg:max-h-none bg-white rounded-[40px] p-8 shadow-sm flex items-center justify-center">
                   <Image
                     src={currentImage}
-                    alt={`${model.model || product.title} - Image ${currentImageIdx + 1}`}
+                    alt={model.model || product.title}
                     fill
                     className="object-contain p-4"
                     priority={index === 0}
                   />
-
-                  {/* Image Navigation */}
-                  {modelImages.length > 1 && (
-                    <>
-                      <button
-                        onClick={handlePrevImage}
-                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-primary/80 hover:bg-primary text-white p-2 rounded-full transition-colors z-10"
-                        aria-label="Previous image"
-                      >
-                        <svg
-                          className="w-5 h-5"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M15 19l-7-7 7-7"
-                          />
-                        </svg>
-                      </button>
-
-                      <button
-                        onClick={handleNextImage}
-                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-primary/80 hover:bg-primary text-white p-2 rounded-full transition-colors z-10"
-                        aria-label="Next image"
-                      >
-                        <svg
-                          className="w-5 h-5"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 5l7 7-7 7"
-                          />
-                        </svg>
-                      </button>
-
-                      {/* Image Counter */}
-                      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-sm font-medium">
-                        {currentImageIdx + 1} / {modelImages.length}
-                      </div>
-
-                      {/* Image Indicators */}
-                      <div className="absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-2">
-                        {modelImages.map((_, idx) => (
-                          <button
-                            key={idx}
-                            onClick={() =>
-                              setImageIndex((prev) => ({
-                                ...prev,
-                                [index]: idx,
-                              }))
-                            }
-                            className={`w-2 h-2 rounded-full transition-all ${
-                              idx === currentImageIdx
-                                ? "bg-primary w-6"
-                                : "bg-primary/40 hover:bg-primary/60"
-                            }`}
-                            aria-label={`Go to image ${idx + 1}`}
-                          />
-                        ))}
-                      </div>
-                    </>
-                  )}
                 </div>
               </div>
 
@@ -332,34 +168,26 @@ export default function ProductDetail() {
                       {model.model}
                     </h2>
                     {model.type && (
-                      <p className="text-base md:text-lg text-accent font-medium">
-                        {model.type}
-                      </p>
+                      <p className="text-base md:text-lg text-accent font-medium">{model.type}</p>
                     )}
                   </div>
 
                   <p className="text-foreground/90 text-sm md:text-base leading-relaxed">
-                    {model.fullDescription ||
-                      model.description ||
-                      product.fullDescription}
+                    {model.fullDescription || model.description || product.fullDescription}
                   </p>
 
                   <div className="space-y-4">
                     {features.length > 0 && (
                       <AccordionItem
                         title="Key Features"
-                        isOpen={openSections[index] === "features"}
-                        onClick={() => toggleSection(index, "features")}
+                        isOpen={openSections[index] === 'features'}
+                        onClick={() => toggleSection(index, 'features')}
                       >
                         <ul className="space-y-3">
                           {features.map((feature, idx) => (
                             <li key={idx} className="flex items-start">
-                              <span className="mr-3 text-accent font-bold text-lg">
-                                •
-                              </span>
-                              <span className="text-sm text-foreground/90">
-                                {feature}
-                              </span>
+                              <span className="mr-3 text-accent font-bold text-lg">•</span>
+                              <span className="text-sm text-foreground/90">{feature}</span>
                             </li>
                           ))}
                         </ul>
@@ -369,27 +197,14 @@ export default function ProductDetail() {
                     {applications.length > 0 && (
                       <AccordionItem
                         title="Applications"
-                        isOpen={openSections[index] === "applications"}
-                        onClick={() => toggleSection(index, "applications")}
+                        isOpen={openSections[index] === 'applications'}
+                        onClick={() => toggleSection(index, 'applications')}
                       >
                         <ul className="space-y-3">
                           {applications.map((app, idx) => (
-                            <li
-                              key={idx}
-                              className="flex items-center text-sm text-foreground/90"
-                            >
-                              <svg
-                                className="w-4 h-4 mr-3 text-accent"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M9 5l7 7-7 7"
-                                />
+                            <li key={idx} className="flex items-center text-sm text-foreground/90">
+                              <svg className="w-4 h-4 mr-3 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                               </svg>
                               {app}
                             </li>
@@ -401,25 +216,16 @@ export default function ProductDetail() {
                     {Object.keys(specifications).length > 0 && (
                       <AccordionItem
                         title="Technical Specifications"
-                        isOpen={openSections[index] === "specifications"}
-                        onClick={() => toggleSection(index, "specifications")}
+                        isOpen={openSections[index] === 'specifications'}
+                        onClick={() => toggleSection(index, 'specifications')}
                       >
                         <div className="space-y-2">
-                          {Object.entries(specifications).map(
-                            ([key, value]) => (
-                              <div
-                                key={key}
-                                className="grid grid-cols-2 gap-4 py-3 border-b border-border/30 last:border-0"
-                              >
-                                <span className="font-semibold text-sm text-muted capitalize">
-                                  {key.replace(/([A-Z])/g, " $1").trim()}
-                                </span>
-                                <span className="text-sm text-foreground">
-                                  {String(value)}
-                                </span>
-                              </div>
-                            )
-                          )}
+                          {Object.entries(specifications).map(([key, value]) => (
+                            <div key={key} className="grid grid-cols-2 gap-4 py-3 border-b border-border/30 last:border-0">
+                              <span className="font-semibold text-sm text-muted capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
+                              <span className="text-sm text-foreground">{String(value)}</span>
+                            </div>
+                          ))}
                         </div>
                       </AccordionItem>
                     )}
@@ -441,23 +247,15 @@ export default function ProductDetail() {
                         rel="noopener noreferrer"
                         className="flex-1 py-3 px-6 text-center border-2 border-primary text-primary rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2"
                       >
-                        <svg
-                          className="w-5 h-5"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                          />
+                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                         </svg>
                         Download Brochure
                       </a>
                     )}
                   </div>
+
+
                 </div>
               </div>
             </div>
@@ -465,18 +263,8 @@ export default function ProductDetail() {
             {/* Scroll Indicator (only show if not last item) */}
             {index < models.length - 1 && (
               <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-primary/50 hidden lg:block">
-                <svg
-                  className="w-8 h-8"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 14l-7 7-7-7m14-8l-7 7-7-7"
-                  />
+                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7-7-7m14-8l-7 7-7-7" />
                 </svg>
               </div>
             )}

@@ -1,15 +1,15 @@
 'use client';
 
 import { useSearchParams } from 'next/navigation';
-import { useState, Suspense } from 'react';
+import { useState, Suspense, useEffect } from 'react';
 import Link from 'next/link';
-import Image from "next/image";
-import { countryCodes } from "@/data/countryCodes";
+import { countryCodes } from '@/data/countryCodes';
 
 function ProductEnquiryForm() {
   const searchParams = useSearchParams();
   const productName = searchParams.get("product");
 
+  const [productImage, setProductImage] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,9 +17,6 @@ function ProductEnquiryForm() {
     phone: "",
     message: "",
   });
-  const [contactMethod, setContactMethod] = useState<"phone" | "email">(
-    "email"
-  );
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
@@ -129,17 +126,6 @@ function ProductEnquiryForm() {
         <div className="bg-card rounded-[40px] shadow-lg p-8 sm:p-12 lg:p-16">
           {/* Branding Header */}
           <div className="text-center mb-12">
-            <div className="flex justify-center mb-6">
-              <div className="relative h-16 w-auto">
-                <Image
-                  src="/images/lowres/Logos/logo.png"
-                  alt="Icon Embedded Controls"
-                  width={120}
-                  height={48}
-                  className="object-contain"
-                />
-              </div>
-            </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
               Product Enquiry
             </h1>

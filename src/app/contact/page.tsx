@@ -97,17 +97,6 @@ function ContactForm() {
         <div className="bg-card rounded-[40px] shadow-lg p-8 sm:p-12 lg:p-16">
           {/* Branding Header */}
           <div className="text-center mb-12">
-            <div className="flex justify-center mb-6">
-              <div className="relative h-16 w-auto">
-                <Image
-                  src="/images/lowres/Logos/logo.png"
-                  alt="Icon Embedded Controls"
-                  width={120}
-                  height={48}
-                  className="object-contain"
-                />
-              </div>
-            </div>
             <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
               Contact Us
             </h1>
