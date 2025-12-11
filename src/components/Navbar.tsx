@@ -55,7 +55,7 @@ export default function Navbar() {
             <Link href="/" className="flex items-center">
               <div className="relative h-9 w-auto">
                 <Image
-                  src="/images/lowres/Logos/logo.png"
+                  src="/images/highres/7. Extras/logo.png"
                   alt="Icon Embedded Controls"
                   width={80}
                   height={32}
@@ -69,10 +69,11 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-1">
             <Link
               href="/"
-              className={`px-3 py-1 rounded-full transition-all ${isActive("/")
-                ? "bg-white text-black"
-                : "bg-transparent text-white hover:bg-white hover:text-black"
-                }`}
+              className={`px-3 py-1 rounded-full transition-all ${
+                isActive("/")
+                  ? "bg-white text-black"
+                  : "bg-transparent text-white hover:bg-white hover:text-black"
+              }`}
             >
               Home
             </Link>
@@ -82,10 +83,11 @@ export default function Navbar() {
             >
               <Link
                 href="/products"
-                className={`bg-transparent px-2 py-1 rounded-none transition-all flex items-center gap-1 ${isActive("/products")
-                  ? "bg-primary text-white"
-                  : "text-white hover:bg-primary hover:text-white"
-                  }`}
+                className={`bg-transparent px-2 py-1 rounded-none transition-all flex items-center gap-1 ${
+                  isActive("/products")
+                    ? "bg-primary text-white"
+                    : "text-white hover:bg-primary hover:text-white"
+                }`}
               >
                 Products
                 <svg
@@ -221,7 +223,6 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden bg-gray-800/95 backdrop-blur-xl border-t border-white/20 h-[calc(100vh-48px)] overflow-y-auto pb-20">
           <div className="px-4 pt-4 pb-6 space-y-2">
-            
             {/* Theme Toggle - Mobile */}
             <button
               onClick={toggleTheme}

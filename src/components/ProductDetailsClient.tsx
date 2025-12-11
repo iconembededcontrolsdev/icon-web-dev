@@ -147,195 +147,282 @@ export default function ProductDetailsClient({ initialProduct }: ProductDetailsC
     const brochureLink = enrichedProduct.brochure || brochureMap[id as string];
 
     return (
-        <div className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth bg-background">
-            {models.map((model, index) => {
-                // Determine the list of images for this model
-                // Priority: 
-                // 1. model.images (if declared in JSON model)
-                // 2. enrichedProduct.images (if declared in JSON product or from image utils)
-                // 3. Fallback to single image logic
-                const modelImages = (model.images && model.images.length > 0)
-                    ? model.images
-                    : (enrichedProduct.images && enrichedProduct.images.length > 0)
-                        ? enrichedProduct.images
-                        : (model.image ? [model.image] : ['/images/placeholder.svg']);
-
-                // If images are missing entirely, ensure at least one placeholder
-                const displayImages = modelImages.length > 0 ? modelImages : ['/images/placeholder.svg'];
-
-                // Determine active image: state specific to this model index OR default to the first available image
-                const activeImage = activeImages[index] || displayImages[0];
-
-                const features = model.features || enrichedProduct.features || [];
-                const applications = model.applications || enrichedProduct.applications || [];
-                const specifications = model.specifications || enrichedProduct.specifications || {};
-
-                return (
-                    <section
-                        key={index}
-                        className="h-screen w-full snap-start flex flex-col pt-12 overflow-hidden relative"
-                    >
-                        <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col lg:flex-row gap-8 lg:gap-12 py-4 lg:py-8">
-
-                            {/* Left Column: Image Gallery */}
-                            <div className="w-full lg:w-1/2 h-[40vh] lg:h-full flex items-center justify-center relative">
-                                <div className="relative w-full h-full max-h-[600px] lg:max-h-none bg-white rounded-[40px] p-8 shadow-sm flex items-center">
-
-                                    {/* Main Image Area */}
-                                    <div className="relative flex-1 h-full flex items-center justify-center">
-                                        <Image
-                                            src={activeImage}
-                                            alt={model.model || enrichedProduct.title}
-                                            fill
-                                            className="object-contain p-4 transition-all duration-300"
-                                            priority={index === 0}
-                                        />
-                                    </div>
-
-                                    {/* Thumbnails Sidebar - Only if more than 1 image */}
-                                    {displayImages.length > 1 && (
-                                        <div className="w-20 lg:w-24 flex flex-col gap-3 ml-4 h-full overflow-y-auto pr-1 no-scrollbar py-2">
-                                            {displayImages.map((img, imgIdx) => (
-                                                <button
-                                                    key={imgIdx}
-                                                    onClick={() => setActiveImages(prev => ({ ...prev, [index]: img }))}
-                                                    className={`relative w-full aspect-square bg-transparent border-2 rounded-xl overflow-hidden shadow-sm transition-all flex-shrink-0 ${activeImage === img
-                                                        ? 'border-primary ring-2 ring-primary/20 scale-105'
-                                                        : 'border-gray-200 hover:border-primary/50 hover:scale-105'
-                                                        }`}
-                                                >
-                                                    <Image
-                                                        src={img}
-                                                        alt={`${model.model || enrichedProduct.title} view ${imgIdx + 1}`}
-                                                        fill
-                                                        className="object-contain p-1"
-                                                    />
-                                                </button>
-                                            ))}
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-
-                            {/* Right Column: Details */}
-                            <div className="w-full lg:w-1/2 h-full overflow-y-auto pr-2 custom-scrollbar pb-20">
-                                <div className="space-y-6">
-                                    <div>
-                                        <h2 className="text-2xl md:text-3xl font-bold text-primary mb-2">
-                                            {model.model}
-                                        </h2>
-                                        {model.type && (
-                                            <p className="text-base md:text-lg text-accent font-medium">{model.type}</p>
-                                        )}
-                                    </div>
-
-                                    <p className="text-foreground/90 text-sm md:text-base leading-relaxed">
-                                        {model.fullDescription || model.description || enrichedProduct.fullDescription}
-                                    </p>
-
-                                    <div className="space-y-4">
-                                        {features.length > 0 && (
-                                            <AccordionItem
-                                                title="Key Features"
-                                                isOpen={openSections[index] === 'features'}
-                                                onClick={() => toggleSection(index, 'features')}
-                                            >
-                                                <ul className="space-y-3">
-                                                    {features.map((feature, idx) => (
-                                                        <li key={idx} className="flex items-start">
-                                                            <span className="mr-3 text-accent font-bold text-lg">•</span>
-                                                            <span className="text-sm text-foreground/90">{feature}</span>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </AccordionItem>
-                                        )}
-
-                                        {applications.length > 0 && (
-                                            <AccordionItem
-                                                title="Applications"
-                                                isOpen={openSections[index] === 'applications'}
-                                                onClick={() => toggleSection(index, 'applications')}
-                                            >
-                                                <ul className="space-y-3">
-                                                    {applications.map((app, idx) => (
-                                                        <li key={idx} className="flex items-center text-sm text-foreground/90">
-                                                            <svg className="w-4 h-4 mr-3 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                                            </svg>
-                                                            {app}
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </AccordionItem>
-                                        )}
-
-                                        {Object.keys(specifications).length > 0 && (
-                                            <AccordionItem
-                                                title="Technical Specifications"
-                                                isOpen={openSections[index] === 'specifications'}
-                                                onClick={() => toggleSection(index, 'specifications')}
-                                            >
-                                                <div className="space-y-2">
-                                                    {Object.entries(specifications).map(([key, value]) => (
-                                                        <div key={key} className="grid grid-cols-2 gap-4 py-3 border-b border-border/30 last:border-0">
-                                                            <span className="font-semibold text-sm text-muted capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
-                                                            <span className="text-sm text-foreground">{String(value)}</span>
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            </AccordionItem>
-                                        )}
-                                    </div>
-
-                                    {/* Action Buttons */}
-                                    <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                                        <Link
-                                            href={`/products/enquiry?product=${encodeURIComponent(model.model || enrichedProduct.title)}`}
-                                            className="flex-1 py-3 px-6 text-center bg-primary text-white rounded-full text-sm font-medium hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                                        >
-                                            Product Enquiry
-                                        </Link>
-
-                                        {brochureLink && (
-                                            <a
-                                                href={brochureLink}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="flex-1 py-3 px-6 text-center border-2 border-primary text-primary rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2"
-                                            >
-                                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                                                </svg>
-                                                Download Brochure
-                                            </a>
-                                        )}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        {/* Scroll Indicator (Up) - Show if not first item */}
-                        {index > 0 && (
-                            <div className="absolute top-20 left-1/2 transform -translate-x-1/2 -ml-2.5 lg:ml-0 z-10 animate-bounce text-primary/50">
-                                <svg className="w-8 h-8 rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7-7-7m14-8l-7 7-7-7" />
-                                </svg>
-                            </div>
-                        )}
-
-                        {/* Scroll Indicator (Down) - Show if not last item */}
-                        {index < models.length - 1 && (
-                            <div className="absolute bottom-20 lg:bottom-8 left-1/2 transform -translate-x-1/2 -ml-2.5 lg:ml-0 animate-bounce text-primary/50">
-                                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7-7-7m14-8l-7 7-7-7" />
-                                </svg>
-                            </div>
-                        )}
-                    </section>
-                );
-            })}
+      <div className="pt-12 min-h-screen bg-background">
+        {/* Page Header with Product Title and Model Name */}
+        <div className="bg-white/50 border-b border-border">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <h1 className="text-3xl md:text-4xl font-bold text-primary">
+              {models.length === 1
+                ? enrichedProduct.title
+                : `${enrichedProduct.title} - ${models[0]?.model || ""}`}
+            </h1>
+          </div>
         </div>
+
+        {/* Models Gallery */}
+        <div className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth bg-background">
+          {models.map((model, index) => {
+            // Determine the list of images for this model
+            // Priority:
+            // 1. model.images (if declared in JSON model)
+            // 2. enrichedProduct.images (if declared in JSON product or from image utils)
+            // 3. Fallback to single image logic
+            const modelImages =
+              model.images && model.images.length > 0
+                ? model.images
+                : enrichedProduct.images && enrichedProduct.images.length > 0
+                  ? enrichedProduct.images
+                  : model.image
+                    ? [model.image]
+                    : ["/images/placeholder.svg"];
+
+            // If images are missing entirely, ensure at least one placeholder
+            const displayImages =
+              modelImages.length > 0
+                ? modelImages
+                : ["/images/placeholder.svg"];
+
+            // Determine active image: state specific to this model index OR default to the first available image
+            const activeImage = activeImages[index] || displayImages[0];
+
+            const features = model.features || enrichedProduct.features || [];
+            const applications =
+              model.applications || enrichedProduct.applications || [];
+            const specifications =
+              model.specifications || enrichedProduct.specifications || {};
+
+            return (
+              <section
+                key={index}
+                className="h-screen w-full snap-start flex flex-col pt-12 overflow-hidden relative"
+              >
+                <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col lg:flex-row gap-8 lg:gap-12 py-4 lg:py-8">
+                  {/* Left Column: Image Gallery */}
+                  <div className="w-full lg:w-1/2 h-[40vh] lg:h-full flex items-center justify-center relative">
+                    <div className="relative w-full h-full max-h-[600px] lg:max-h-none bg-white rounded-[40px] p-8 shadow-sm flex items-center">
+                      {/* Main Image Area */}
+                      <div className="relative flex-1 h-full flex items-center justify-center">
+                        <Image
+                          src={activeImage}
+                          alt={model.model || enrichedProduct.title}
+                          fill
+                          className="object-contain p-4 transition-all duration-300"
+                          priority={index === 0}
+                        />
+                      </div>
+
+                      {/* Thumbnails Sidebar - Only if more than 1 image */}
+                      {displayImages.length > 1 && (
+                        <div className="w-20 lg:w-24 flex flex-col gap-3 ml-4 h-full overflow-y-auto pr-1 no-scrollbar py-2">
+                          {displayImages.map((img, imgIdx) => (
+                            <button
+                              key={imgIdx}
+                              onClick={() =>
+                                setActiveImages((prev) => ({
+                                  ...prev,
+                                  [index]: img,
+                                }))
+                              }
+                              className={`relative w-full aspect-square bg-transparent border-2 rounded-xl overflow-hidden shadow-sm transition-all flex-shrink-0 ${
+                                activeImage === img
+                                  ? "border-primary ring-2 ring-primary/20 scale-105"
+                                  : "border-gray-200 hover:border-primary/50 hover:scale-105"
+                              }`}
+                            >
+                              <Image
+                                src={img}
+                                alt={`${model.model || enrichedProduct.title} view ${imgIdx + 1}`}
+                                fill
+                                className="object-contain p-1"
+                              />
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Right Column: Details */}
+                  <div className="w-full lg:w-1/2 h-full overflow-y-auto pr-2 custom-scrollbar pb-20">
+                    <div className="space-y-6">
+                      <div>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary mb-2">
+                          {model.model}
+                        </h2>
+                        {model.type && (
+                          <p className="text-base md:text-lg text-accent font-medium">
+                            {model.type}
+                          </p>
+                        )}
+                      </div>
+
+                      <p className="text-foreground/90 text-sm md:text-base leading-relaxed">
+                        {model.fullDescription ||
+                          model.description ||
+                          enrichedProduct.fullDescription}
+                      </p>
+
+                      <div className="space-y-4">
+                        {features.length > 0 && (
+                          <AccordionItem
+                            title="Key Features"
+                            isOpen={openSections[index] === "features"}
+                            onClick={() => toggleSection(index, "features")}
+                          >
+                            <ul className="space-y-3">
+                              {features.map((feature, idx) => (
+                                <li key={idx} className="flex items-start">
+                                  <span className="mr-3 text-accent font-bold text-lg">
+                                    •
+                                  </span>
+                                  <span className="text-sm text-foreground/90">
+                                    {feature}
+                                  </span>
+                                </li>
+                              ))}
+                            </ul>
+                          </AccordionItem>
+                        )}
+
+                        {applications.length > 0 && (
+                          <AccordionItem
+                            title="Applications"
+                            isOpen={openSections[index] === "applications"}
+                            onClick={() => toggleSection(index, "applications")}
+                          >
+                            <ul className="space-y-3">
+                              {applications.map((app, idx) => (
+                                <li
+                                  key={idx}
+                                  className="flex items-center text-sm text-foreground/90"
+                                >
+                                  <svg
+                                    className="w-4 h-4 mr-3 text-accent"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      strokeWidth={2}
+                                      d="M9 5l7 7-7 7"
+                                    />
+                                  </svg>
+                                  {app}
+                                </li>
+                              ))}
+                            </ul>
+                          </AccordionItem>
+                        )}
+
+                        {Object.keys(specifications).length > 0 && (
+                          <AccordionItem
+                            title="Technical Specifications"
+                            isOpen={openSections[index] === "specifications"}
+                            onClick={() =>
+                              toggleSection(index, "specifications")
+                            }
+                          >
+                            <div className="space-y-2">
+                              {Object.entries(specifications).map(
+                                ([key, value]) => (
+                                  <div
+                                    key={key}
+                                    className="grid grid-cols-2 gap-4 py-3 border-b border-border/30 last:border-0"
+                                  >
+                                    <span className="font-semibold text-sm text-muted capitalize">
+                                      {key.replace(/([A-Z])/g, " $1").trim()}
+                                    </span>
+                                    <span className="text-sm text-foreground">
+                                      {String(value)}
+                                    </span>
+                                  </div>
+                                )
+                              )}
+                            </div>
+                          </AccordionItem>
+                        )}
+                      </div>
+
+                      {/* Action Buttons */}
+                      <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                        <Link
+                          href={`/products/enquiry?product=${encodeURIComponent(model.model || enrichedProduct.title)}`}
+                          className="flex-1 py-3 px-6 text-center bg-primary text-white rounded-full text-sm font-medium hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                        >
+                          Product Enquiry
+                        </Link>
+
+                        {brochureLink && (
+                          <a
+                            href={brochureLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 py-3 px-6 text-center border-2 border-primary text-primary rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2"
+                          >
+                            <svg
+                              className="w-5 h-5"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                              />
+                            </svg>
+                            Download Brochure
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Scroll Indicator (Up) - Show if not first item */}
+                {index > 0 && (
+                  <div className="absolute top-20 left-1/2 transform -translate-x-1/2 -ml-2.5 lg:ml-0 z-10 animate-bounce text-primary/50">
+                    <svg
+                      className="w-8 h-8 rotate-180"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 14l-7 7-7-7m14-8l-7 7-7-7"
+                      />
+                    </svg>
+                  </div>
+                )}
+
+                {/* Scroll Indicator (Down) - Show if not last item */}
+                {index < models.length - 1 && (
+                  <div className="absolute bottom-20 lg:bottom-8 left-1/2 transform -translate-x-1/2 -ml-2.5 lg:ml-0 animate-bounce text-primary/50">
+                    <svg
+                      className="w-8 h-8"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 14l-7 7-7-7m14-8l-7 7-7-7"
+                      />
+                    </svg>
+                  </div>
+                )}
+              </section>
+            );
+          })}
+        </div>
+      </div>
     );
 }

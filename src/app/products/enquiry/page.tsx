@@ -10,6 +10,9 @@ function ProductEnquiryForm() {
   const productName = searchParams.get("product");
 
   const [productImage, setProductImage] = useState<string | null>(null);
+  const [contactMethod, setContactMethod] = useState<"phone" | "email">(
+    "email"
+  );
   const [formData, setFormData] = useState({
     name: "",
     email: "",
