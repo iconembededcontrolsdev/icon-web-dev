@@ -11,7 +11,7 @@ import {
     TyrePressureIcon
 } from './ProductBenefits';
 
-export default function NitrogenShowcase() {
+export default function NitrogenShowcase({ product }: { product?: any }) {
     const router = useRouter();
     const benefits = [
         'More Mileage',
@@ -22,16 +22,22 @@ export default function NitrogenShowcase() {
         'Consistent Tyre Pressure'
     ];
 
+    // Use product data if available, otherwise fallback (though fallback shouldn't be needed if parent passes it)
+    const title = product?.title || 'Digital Nitrogen Tyre Inflator';
+    const description = product?.subtitle || product?.description || 'Reliable and accurate electronic digital nitrogen tyre inflators. Nitrogen production based on cost-efficient PSA technology with 95-99% purity suitable for vehicle nitrogen inflation.';
+    const img = product?.mainImage || product?.images?.[0] || '/images/highres/Digital Nitrogen Tyre Inflator/nitrojet-1000-lcv-p.jpg';
+    const link = product?.id ? `/products/${product?.id}` : '/products/digital-nitrogen-tyre-inflator';
+
     const ctaButtons = [
-        { text: 'Learn more', link: '/products/digital-nitrogen-tyre-inflator', variant: 'primary' },
-        { text: 'Buy', link: '/products/digital-nitrogen-tyre-inflator', variant: 'outline' }
+        { text: 'Learn more', link: link, variant: 'primary' },
+        { text: 'Product Enquiry', link: `/products/enquiry?product=${encodeURIComponent(title)}`, variant: 'outline' }
     ];
 
     return (
         <section className="w-full mb-4">
             <div className="w-full mx-auto">
                 <div
-                    onClick={() => router.push('/products/digital-nitrogen-tyre-inflator')}
+                    onClick={() => router.push(link)}
                     className="relative bg-card rounded-[12px] overflow-hidden shadow-sm w-full flex flex-col lg:flex-row min-h-screen lg:h-screen cursor-pointer transition-transform hover:scale-[1.01] duration-300"
                 >
 
@@ -66,8 +72,8 @@ export default function NitrogenShowcase() {
                     <div className="w-full lg:w-1/2 relative bg-white flex items-center justify-center p-8 lg:p-12 h-[50vh] lg:h-full lg:order-2">
                         <div className="relative w-full h-full">
                             <Image
-                                src="/images/highres/2. Digital Nitrogen Tyre Inflator/2C.jpg"
-                                alt="Digital Nitrogen Tyre Inflator"
+                                src={img}
+                                alt={title}
                                 fill
                                 className="object-contain" // removed hover scale for cleanliness
                                 priority
@@ -88,7 +94,7 @@ export default function NitrogenShowcase() {
                                 />
                             </div>
                             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">
-                                Digital Nitrogen Tyre Inflator
+                                {title}
                             </h3>
                         </div>
 
@@ -129,7 +135,7 @@ export default function NitrogenShowcase() {
                         </div>
 
                         <p className="text-base md:text-lg text-muted mb-8">
-                            Reliable and accurate electronic digital nitrogen tyre inflators. Nitrogen production based on cost-efficient PSA technology with 95-99% purity suitable for vehicle nitrogen inflation.
+                            {description}
                         </p>
 
                         <div className="flex flex-wrap gap-4 mt-auto">
@@ -137,6 +143,7 @@ export default function NitrogenShowcase() {
                                 <a
                                     key={btnIndex}
                                     href={button.link}
+                                    onClick={(e) => e.stopPropagation()}
                                     className={`inline-flex items-center px-6 py-3 text-base font-medium rounded-full transition-all duration-200 ${button.variant === 'primary' // eslint-disable-next-line
                                         ? 'bg-primary text-white hover:opacity-90 shadow-lg hover:shadow-xl transform hover:-translate-y-1'
                                         : 'border-2 border-accent text-accent hover:bg-accent hover:text-white shadow-md'

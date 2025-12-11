@@ -200,8 +200,8 @@ export default function ProductDetailsClient({ initialProduct }: ProductDetailsC
                                                     key={imgIdx}
                                                     onClick={() => setActiveImages(prev => ({ ...prev, [index]: img }))}
                                                     className={`relative w-full aspect-square bg-transparent border-2 rounded-xl overflow-hidden shadow-sm transition-all flex-shrink-0 ${activeImage === img
-                                                            ? 'border-primary ring-2 ring-primary/20 scale-105'
-                                                            : 'border-gray-200 hover:border-primary/50 hover:scale-105'
+                                                        ? 'border-primary ring-2 ring-primary/20 scale-105'
+                                                        : 'border-gray-200 hover:border-primary/50 hover:scale-105'
                                                         }`}
                                                 >
                                                     <Image
@@ -315,9 +315,19 @@ export default function ProductDetailsClient({ initialProduct }: ProductDetailsC
                             </div>
                         </div>
 
-                        {/* Scroll Indicator (only show if not last item) */}
+
+                        {/* Scroll Indicator (Up) - Show if not first item */}
+                        {index > 0 && (
+                            <div className="absolute top-20 left-1/2 transform -translate-x-1/2 -ml-2.5 lg:ml-0 z-10 animate-bounce text-primary/50">
+                                <svg className="w-8 h-8 rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7-7-7m14-8l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        )}
+
+                        {/* Scroll Indicator (Down) - Show if not last item */}
                         {index < models.length - 1 && (
-                            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-primary/50 hidden lg:block">
+                            <div className="absolute bottom-20 lg:bottom-8 left-1/2 transform -translate-x-1/2 -ml-2.5 lg:ml-0 animate-bounce text-primary/50">
                                 <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7-7-7m14-8l-7 7-7-7" />
                                 </svg>

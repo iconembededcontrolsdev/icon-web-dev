@@ -1,10 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Hero from '@/components/Hero';
 import DynamicGrid from '@/components/DynamicGrid';
 import NitrogenShowcase from '@/components/NitrogenShowcase';
-import ClientLogos from '@/components/ClientLogos';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -13,127 +12,77 @@ import { generateOrganizationSchema, organizationData } from '@/utils/seo';
 
 interface Block {
   type: 'hero' | 'grid-2' | 'grid-3' | 'hero-product' | 'nitrogen-showcase';
+  items?: any[];
+  product?: any;
   [key: string]: any;
 }
 
-const showcaseData: Block[] = [
-  // Hero Section - Full Width
-  {
-    type: 'hero',
-    // title: 'Welcome to Icon Embeded Controls',
-    // subtitle: 'With some brilliant products and splendid services, we have carved a niche for ourselves in both domestic as well as international markets. Our range includes Digital Tyre Inflator, Digital Nitrogen Tyre Inflator, Nitrogen Generator, Air Compressor, and many more.',
-    img: '/images/highres/8. Logos/logo.png',
-    // ctaButtons: [
-    //   { text: 'Learn more', link: '/about', variant: 'primary' },
-    //   { text: 'View Products', link: '/products', variant: 'outline' }
-    // ]
-  },
-
-  // Nitrogen Showcase
-  {
-    type: 'nitrogen-showcase'
-  },
-
-  // Product Categories Grid
-  {
-    type: 'grid-3',
-    items: [
-      {
-        id: 'digital-tyre-inflator-pedestal',
-        title: 'Digital Tyre Inflator (Pedestal)',
-        subtitle: 'Pedestal mounted digital tyre inflators suitable for fuel stations and heavy duty applications.',
-        img: '/images/highres/1. Digital Tyre Inflator/1E.jpg',
-        ctaButtons: [
-          { text: 'Learn more', link: '/products/digital-tyre-inflator-pedestal', variant: 'primary' },
-          { text: 'Buy', link: '/products/digital-tyre-inflator-pedestal', variant: 'outline' }
-        ]
-      },
-      {
-        id: 'digital-engine-oil-dispenser',
-        title: 'Digital Engine Oil Dispenser',
-        subtitle: 'Digital engine oil dispenser with secure preset operation and precise oil measurement in litres and millilitres.',
-        img: '/images/highres/10. Digital Engine Oil Dispenser/10A.png',
-        ctaButtons: [
-          { text: 'Learn more', link: '/products/digital-engine-oil-dispenser', variant: 'primary' },
-          { text: 'Buy', link: '/products/digital-engine-oil-dispenser', variant: 'outline' }
-        ]
-      },
-      {
-        id: 'engine-oil-changer',
-        title: 'Engine Oil Changer',
-        subtitle: 'Pump based suction oil changer for 2T/4T engine oil removal.',
-        img: '/images/highres/11. Engine Oil Changer/11A.png',
-        ctaButtons: [
-          { text: 'Learn more', link: '/products/engine-oil-changer', variant: 'primary' },
-          { text: 'Buy', link: '/products/engine-oil-changer', variant: 'outline' }
-        ]
-      },
-      {
-        id: 'digital-tyre-inflator',
-        title: 'Digital Tyre Inflator (Wall Mountable)',
-        subtitle: 'Reliable and accurate electronic digital tyre inflators for fuel stations and garages. Features automatic tyre sensing and high-speed inflation.',
-        img: '/images/highres/1. Digital Tyre Inflator/1A.jpg',
-        ctaButtons: [
-          { text: 'Learn more', link: '/products/digital-tyre-inflator', variant: 'primary' },
-          { text: 'Buy', link: '/products/digital-tyre-inflator', variant: 'outline' }
-        ]
-      },
-      {
-        id: 'digital-def-adblue-dispenser',
-        title: 'Digital DEF/AdBlue Dispenser',
-        subtitle: 'Digital diesel exhaust fluid dispenser with precise measurement and secure dispensing.',
-        img: '/images/highres/9. Digital DEF/9a.png',
-        ctaButtons: [
-          { text: 'Learn more', link: '/products/digital-def-adblue-dispenser', variant: 'primary' },
-          { text: 'Buy', link: '/products/digital-def-adblue-dispenser', variant: 'outline' }
-        ]
-      },
-      {
-        id: 'air-compressor',
-        title: 'Air Compressor',
-        subtitle: 'Single and two-stage oil lubricated reciprocating air compressors designed for low maintenance and high efficiency.',
-        img: '/images/highres/3. Air Compressor/3A.jpg',
-        ctaButtons: [
-          { text: 'Learn more', link: '/products/air-compressor', variant: 'primary' },
-          { text: 'Buy', link: '/products/air-compressor', variant: 'outline' }
-        ]
-      },
-      {
-        id: 'nitrogen-generator',
-        title: 'Nitrogen Generator',
-        subtitle: 'Industrial grade nitrogen generators using PSA technology for high purity nitrogen production.',
-        img: '/images/highres/4. Nitrogen Generator/4A.jpg',
-        ctaButtons: [
-          { text: 'Learn more', link: '/products/nitrogen-generator', variant: 'primary' },
-          { text: 'Buy', link: '/products/nitrogen-generator', variant: 'outline' }
-        ]
-      },
-      {
-        id: 'panel-board',
-        title: 'Panel Boards',
-        subtitle: 'Custom designed PLC Control Panels, APFC Panels, and Switch Gear Panels for industrial automation.',
-        img: '/images/highres/5. Panel Board/5A.jpg',
-        ctaButtons: [
-          { text: 'Learn more', link: '/products/panel-board', variant: 'primary' },
-          { text: 'Buy', link: '/products/panel-board', variant: 'outline' }
-        ]
-      },
-      {
-        id: 'garage-equipment',
-        title: 'Garage Equipment',
-        subtitle: 'Essential garage equipment including two wheeler ramps, pneumatic grease pumps, and manual oil dispensers.',
-        img: '/images/highres/6. Garage Equipment/6A.jpg',
-        ctaButtons: [
-          { text: 'Learn more', link: '/products/garage-equipment', variant: 'primary' },
-          { text: 'Buy', link: '/products/garage-equipment', variant: 'outline' }
-        ]
-      }
-    ]
-  }
-];
-
 export default function Home() {
   const router = useRouter();
+  const [allProducts, setAllProducts] = useState<any[]>([]);
+  const [blocks, setBlocks] = useState<Block[]>([
+    {
+      type: 'hero',
+      img: '/images/highres/8. Logos/logo.png',
+    },
+    {
+      type: 'nitrogen-showcase'
+    },
+    {
+      type: 'grid-3',
+      items: []
+    }
+  ]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('/content/products.json');
+        if (!response.ok) throw new Error('Failed to fetch products');
+        const data = await response.json();
+        const products = data.products || [];
+        setAllProducts(products);
+
+        // Identify the Nitrogen product for the showcase
+        const nitrogenProduct = products.find((p: any) => p.id === 'digital-nitrogen-tyre-inflator');
+
+        // Filter out the nitrogen product from the grid if it's shown in the showcase
+        const gridProducts = products.filter((p: any) => p.id !== 'digital-nitrogen-tyre-inflator');
+
+        const gridItems = gridProducts.map((p: any) => ({
+          id: p.id,
+          title: p.title,
+          subtitle: p.subtitle || p.description,
+          description: p.fullDescription || p.description,
+          img: p.mainImage || p.images?.[0] || '/images/placeholder.svg',
+          ctaButtons: [
+            { text: 'Learn more', link: `/products/${p.id}`, variant: 'primary' },
+            { text: 'Product Enquiry', link: `/products/enquiry?product=${encodeURIComponent(p.title)}`, variant: 'outline' }
+          ]
+        }));
+
+        setBlocks([
+          {
+            type: 'hero',
+            img: '/images/highres/8. Logos/logo.png',
+          },
+          {
+            type: 'nitrogen-showcase',
+            product: nitrogenProduct
+          },
+          {
+            type: 'grid-3',
+            items: gridItems
+          }
+        ]);
+
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
 
   const navigateToProduct = (product: any) => {
     const productId = product.id || product.title.toLowerCase().replace(/\s+/g, '-');
@@ -167,6 +116,7 @@ export default function Home() {
         );
       case 'grid-2':
       case 'grid-3':
+        if (!block.items || block.items.length === 0) return null;
         return <DynamicGrid
           key={index}
           title={block.title}
@@ -175,7 +125,7 @@ export default function Home() {
           onItemClick={(item) => navigateToProduct(item)}
         />;
       case 'nitrogen-showcase':
-        return <NitrogenShowcase key={index} />;
+        return <NitrogenShowcase key={index} product={block.product} />;
       default:
         return null;
     }
@@ -185,18 +135,18 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       {/* SEO Structured Data */}
       <StructuredData data={generateOrganizationSchema(organizationData)} />
-      
+
       {/* Main Content */}
       <main className="pt-12 bg-background">
         {/* Hero Section */}
-        {renderBlock(showcaseData[0], 0)}
+        {renderBlock(blocks[0], 0)}
 
         {/* Client Logos Carousel */}
 
 
         {/* Remaining Blocks */}
         <div className="mt-1">
-          {showcaseData.slice(1).map((block, index) => (
+          {blocks.slice(1).map((block, index) => (
             <div key={index + 1} className="mt-0">
               {renderBlock(block, index + 1)}
             </div>
@@ -212,16 +162,20 @@ export default function Home() {
               <div>
                 <h3 className="text-lg font-semibold text-primary mb-4">Products</h3>
                 <ul className="space-y-1">
-                  <li><Link href="/products/digital-nitrogen-tyre-inflator" className="text-muted hover:text-accent transition-colors">Digital Nitrogen Tyre Inflator</Link></li>
-                  <li><Link href="/products/digital-tyre-inflator-pedestal" className="text-muted hover:text-accent transition-colors">Digital Tyre Inflator (Pedestal)</Link></li>
-                  <li><Link href="/products/digital-engine-oil-dispenser" className="text-muted hover:text-accent transition-colors">Digital Engine Oil Dispenser</Link></li>
-                  <li><Link href="/products/engine-oil-changer" className="text-muted hover:text-accent transition-colors">Engine Oil Changer</Link></li>
-                  <li><Link href="/products/digital-tyre-inflator" className="text-muted hover:text-accent transition-colors">Digital Tyre Inflator (Wall Mountable)</Link></li>
-                  <li><Link href="/products/digital-def-adblue-dispenser" className="text-muted hover:text-accent transition-colors">Digital DEF/AdBlue Dispenser</Link></li>
-                  <li><Link href="/products/air-compressor" className="text-muted hover:text-accent transition-colors">Air Compressor</Link></li>
-                  <li><Link href="/products/nitrogen-generator" className="text-muted hover:text-accent transition-colors">Nitrogen Generator</Link></li>
-                  <li><Link href="/products/panel-board" className="text-muted hover:text-accent transition-colors">Panel Boards</Link></li>
-                  <li><Link href="/products/garage-equipment" className="text-muted hover:text-accent transition-colors">Garage Equipment</Link></li>
+                  {allProducts.map((product) => (
+                    <li key={product.id}>
+                      <Link
+                        href={`/products/${product.id}`}
+                        className="text-muted hover:text-accent transition-colors"
+                      >
+                        {product.title}
+                      </Link>
+                    </li>
+                  ))}
+                  {allProducts.length === 0 && (
+                    // Fallback or skeleton if needed, but client component handles it
+                    <li className="text-muted italic">Loading products...</li>
+                  )}
                 </ul>
               </div>
 
