@@ -77,7 +77,7 @@ export default function Home() {
         ]);
 
       } catch (error) {
-        console.error('Error fetching products:', error);
+        // Silently fail if products can't be fetched
       }
     };
 
@@ -211,7 +211,7 @@ export default function Home() {
                 <h3 className="text-lg font-semibold text-primary mb-4">Address</h3>
                 <ul className="space-y-1 text-muted text-sm">
                   <li className="font-semibold text-primary">Icon Embedded Controls</li>
-                  <li>No. 374/2, Jyothi Nagar,<br />2nd Street, Ramanuja Nagar Extension,<br />Uppilipalayam Post,<br />Coimbatore - 641015,<br />Tamil Nadu, India</li>
+                  <li>No. 374/2, Jyothi Nagar 2nd Street,<br />Ramanuja Nagar Extension,<br />Uppilipalayam Post,<br />Coimbatore - 641015,<br />Tamil Nadu, India</li>
                   <li className="pt-2">
                     <Link href="/contact" className="text-accent hover:text-accent-hover transition-colors font-medium">View Full Details →</Link>
                   </li>
