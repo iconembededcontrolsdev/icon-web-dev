@@ -132,7 +132,7 @@ function ContactForm() {
               <div className="relative h-24 w-64 md:w-80">
                 <Image
                   src="/images/highres/7. Extras/logo.png"
-                  alt="Icon Embedded Controls"
+                  alt="Icon Embeded Controls"
                   fill
                   className="object-contain"
                 />

@@ -191,7 +191,7 @@ function ProductEnquiryForm() {
                   <div className={`relative h-full ${productImage ? 'flex-1' : 'w-48 flex-none'}`}>
                     <Image
                       src="/images/highres/8. Logos/logo.png"
-                      alt="Icon Embedded Controls"
+                      alt="Icon Embeded Controls"
                       fill
                       className={`object-contain ${productImage ? 'object-left' : 'object-center'}`}
                     />

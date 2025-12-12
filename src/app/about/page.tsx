@@ -5,9 +5,9 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "About Us - Leading Digital Tyre Inflator Manufacturer",
-  description: "Icon Embedded Controls has been manufacturing reliable digital tyre inflators since 2007. Trusted by major companies like IOCL, BPCL, HPCL, MRF, and Michelin across India.",
+  description: "Icon Embeded Controls has been manufacturing reliable digital tyre inflators since 2007. Trusted by major companies like IOCL, BPCL, HPCL, MRF, and Michelin across India.",
   keywords: [
-    "about Icon Embedded Controls",
+    "about Icon Embeded Controls",
     "digital tyre inflator manufacturer",
     "tyre inflator since 2007",
     "IOCL supplier",
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     "industrial equipment manufacturer India"
   ],
   openGraph: {
-    title: "About Icon Embedded Controls - Digital Tyre Inflator Manufacturer Since 2007",
+    title: "About Icon Embeded Controls - Digital Tyre Inflator Manufacturer Since 2007",
     description: "Leading manufacturer of digital tyre inflators and industrial equipment. Trusted by major companies across India since 2007.",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "About Icon Embedded Controls - Digital Tyre Inflator Manufacturer",
+    title: "About Icon Embeded Controls - Digital Tyre Inflator Manufacturer",
     description: "Leading manufacturer of digital tyre inflators and industrial equipment since 2007.",
   },
   alternates: {

@@ -30,14 +30,14 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://iconembededcontrols.com"),
+  metadataBase: new URL("https://www.iconembededcontrols.com"),
   title: {
     default:
-      "Icon Embedded Controls - Industrial Equipment & Digital Tyre Inflators",
-    template: "%s | Icon Embedded Controls",
+      "Icon Embeded Controls - Industrial Equipment",
+    template: "%s | Icon Embeded Controls",
   },
   description:
-    "Leading manufacturer of digital tyre inflators, nitrogen generators, air compressors, and industrial equipment. Serving fuel stations, garages, and industries across India and internationally.",
+    "Manufacturer of digital tyre inflators, nitrogen generators, and industrial equipment. Serving fuel stations and industries worldwide.",
   keywords: [
     "digital tyre inflator",
     "nitrogen tyre inflator",
@@ -52,9 +52,9 @@ export const metadata: Metadata = {
     "industrial equipment India",
     "Coimbatore industrial equipment",
   ],
-  authors: [{ name: "Icon Embedded Controls" }],
-  creator: "Icon Embedded Controls",
-  publisher: "Icon Embedded Controls",
+  authors: [{ name: "Icon Embeded Controls" }],
+  creator: "Icon Embeded Controls",
+  publisher: "Icon Embeded Controls",
   formatDetection: {
     email: false,
     address: false,
@@ -63,25 +63,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://iconembededcontrols.com",
-    siteName: "Icon Embedded Controls",
+    url: "https://www.iconembededcontrols.com",
+    siteName: "Icon Embeded Controls",
     title:
-      "Icon Embedded Controls - Industrial Equipment & Digital Tyre Inflators",
+      "Icon Embeded Controls - Industrial Equipment",
     description:
-      "Leading manufacturer of digital tyre inflators, nitrogen generators, air compressors, and industrial equipment. Serving fuel stations, garages, and industries.",
+      "Manufacturer of digital tyre inflators, nitrogen generators, and industrial equipment. Serving fuel stations and industries worldwide.",
     images: [
       {
         url: "/images/highres/8. Logos/logo.png",
         width: 1200,
         height: 630,
-        alt: "Icon Embedded Controls Logo",
+        alt: "Icon Embeded Controls Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Icon Embedded Controls - Industrial Equipment & Digital Tyre Inflators",
+      "Icon Embeded Controls - Industrial Equipment & Digital Tyre Inflators",
     description:
       "Leading manufacturer of digital tyre inflators, nitrogen generators, air compressors, and industrial equipment.",
     images: ["/images/highres/8. Logos/logo.png"],
@@ -103,8 +103,9 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "/",
+    canonical: "https://www.iconembededcontrols.com",
     languages: {
+      "en": "/",
       "en-IN": "/en-IN",
     },
   },

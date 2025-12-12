@@ -42,11 +42,10 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-50 shadow-sm transition-all duration-300 ${
-        isScrolled
-          ? "bg-gray-800/90 backdrop-blur-md border-b border-white/10"
-          : "bg-gray-800 border-b border-gray-700"
-      }`}
+      className={`fixed w-full z-50 shadow-sm transition-all duration-300 ${isScrolled
+        ? "bg-gray-800/90 backdrop-blur-md border-b border-white/10"
+        : "bg-gray-800 border-b border-gray-700"
+        }`}
       onMouseLeave={() => setIsProductsOpen(false)}
     >
       <div className="max-w-5xl mx-auto px-2">
@@ -56,7 +55,7 @@ export default function Navbar() {
               <div className="relative h-9 w-auto">
                 <Image
                   src="/images/highres/7. Extras/logo.png"
-                  alt="Icon Embedded Controls"
+                  alt="Icon Embeded Controls"
                   width={80}
                   height={32}
                   className="object-contain"
@@ -69,11 +68,10 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-1">
             <Link
               href="/"
-              className={`px-3 py-1 rounded-full transition-all ${
-                isActive("/")
-                  ? "bg-white text-black"
-                  : "bg-transparent text-white hover:bg-white hover:text-black"
-              }`}
+              className={`px-3 py-1 rounded-full transition-all ${isActive("/")
+                ? "bg-white text-black"
+                : "bg-transparent text-white hover:bg-white hover:text-black"
+                }`}
             >
               Home
             </Link>
@@ -83,11 +81,10 @@ export default function Navbar() {
             >
               <Link
                 href="/products"
-                className={`bg-transparent px-2 py-1 rounded-none transition-all flex items-center gap-1 ${
-                  isActive("/products")
-                    ? "bg-primary text-white"
-                    : "text-white hover:bg-primary hover:text-white"
-                }`}
+                className={`px-3 py-1 rounded-full transition-all flex items-center gap-1 ${isActive("/products")
+                  ? "bg-white text-black"
+                  : "bg-transparent text-white hover:bg-white hover:text-black"
+                  }`}
               >
                 Products
                 <svg
@@ -129,21 +126,19 @@ export default function Navbar() {
 
             <Link
               href="/about"
-              className={`px-3 py-1 rounded-full transition-all ${
-                isActive("/about")
-                  ? "bg-white text-black"
-                  : "bg-transparent text-white hover:bg-white hover:text-black"
-              }`}
+              className={`px-3 py-1 rounded-full transition-all ${isActive("/about")
+                ? "bg-white text-black"
+                : "bg-transparent text-white hover:bg-white hover:text-black"
+                }`}
             >
               About Us
             </Link>
             <Link
               href="/contact"
-              className={`px-3 py-1 rounded-full transition-all ${
-                isActive("/contact")
-                  ? "bg-white text-black"
-                  : "bg-transparent text-white hover:bg-white hover:text-black"
-              }`}
+              className={`px-3 py-1 rounded-full transition-all ${isActive("/contact")
+                ? "bg-white text-black"
+                : "bg-transparent text-white hover:bg-white hover:text-black"
+                }`}
             >
               Contact Us
             </Link>
