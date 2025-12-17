@@ -74,15 +74,13 @@ export default function DynamicGrid({
             return (
               <div
                 key={item.id || index}
-                className={`group w-full cursor-pointer ${shouldCenter ? "lg:col-span-2 lg:max-w-[50%] lg:mx-auto" : ""} ${item.benefits ? "lg:col-span-2" : ""}`}
+                className={`group w-full cursor-pointer ${shouldCenter ? 'lg:col-span-2 lg:max-w-[50%] lg:mx-auto' : ''} ${item.benefits ? 'lg:col-span-2' : ''}`}
                 onMouseEnter={() => setHoveredItem(index)}
                 onMouseLeave={() => setHoveredItem(null)}
                 onClick={() => onItemClick && onItemClick(item)}
               >
                 {/* Card container */}
-                <div
-                  className={`relative bg-card rounded-[12px] overflow-hidden shadow-sm w-full flex flex-col ${item.benefits ? "h-screen" : "h-full"}`}
-                >
+                <div className={`relative bg-card rounded-[12px] overflow-hidden shadow-sm w-full flex flex-col ${item.benefits ? 'h-screen' : 'h-full'}`}>
                   {item.benefits ? (
                     // Split Layout for items with benefits - Full Screen
                     <div className="flex flex-col lg:flex-row h-full">
@@ -91,7 +89,6 @@ export default function DynamicGrid({
                         <div className="flex items-center gap-4 mb-8">
                           <div className="relative w-16 h-16 lg:w-20 lg:h-20 flex-shrink-0 flex items-center justify-center">
                             <Image
-                              unoptimized
                               src="/images/lowres/logo.png"
                               alt="Icon Logo"
                               width={80}
@@ -106,12 +103,9 @@ export default function DynamicGrid({
 
                         <div className="mb-8 flex-grow">
                           <div className="flex items-center justify-start gap-1 mb-6 flex-wrap leading-none">
-                            <h4 className="text-sm md:text-base font-bold text-accent uppercase tracking-wider whitespace-nowrap">
-                              BENEFITS OF
-                            </h4>
+                            <h4 className="text-sm md:text-base font-bold text-accent uppercase tracking-wider whitespace-nowrap">BENEFITS OF</h4>
                             <div className="relative w-16 h-6">
                               <Image
-                                unoptimized
                                 src="/images/highres/8. Logos/logo.png"
                                 alt="Icon Logo"
                                 fill
@@ -119,31 +113,20 @@ export default function DynamicGrid({
                                 sizes="64px"
                               />
                             </div>
-                            <h4 className="text-sm md:text-base font-bold text-accent uppercase tracking-wider whitespace-nowrap">
-                              NITROGEN
-                            </h4>
+                            <h4 className="text-sm md:text-base font-bold text-accent uppercase tracking-wider whitespace-nowrap">NITROGEN</h4>
                           </div>
                           <ul className="grid grid-cols-2 gap-x-2 gap-y-4">
                             {item.benefits.map((benefit, idx) => {
                               let Icon = null;
-                              if (benefit.includes("Mileage"))
-                                Icon = MileageIcon;
-                              else if (benefit.includes("Heat"))
-                                Icon = TyreHeatIcon;
-                              else if (benefit.includes("Maintenance"))
-                                Icon = MaintenanceIcon;
-                              else if (benefit.includes("Life"))
-                                Icon = TyreLifeIcon;
-                              else if (benefit.includes("Dry"))
-                                Icon = CleanIcon;
-                              else if (benefit.includes("Pressure"))
-                                Icon = TyrePressureIcon;
+                              if (benefit.includes('Mileage')) Icon = MileageIcon;
+                              else if (benefit.includes('Heat')) Icon = TyreHeatIcon;
+                              else if (benefit.includes('Maintenance')) Icon = MaintenanceIcon;
+                              else if (benefit.includes('Life')) Icon = TyreLifeIcon;
+                              else if (benefit.includes('Dry')) Icon = CleanIcon;
+                              else if (benefit.includes('Pressure')) Icon = TyrePressureIcon;
 
                               return (
-                                <li
-                                  key={idx}
-                                  className="flex items-start text-xs sm:text-sm md:text-base text-muted group leading-tight"
-                                >
+                                <li key={idx} className="flex items-start text-xs sm:text-sm md:text-base text-muted group leading-tight">
                                   <div className="w-6 h-6 sm:w-8 sm:h-8 mr-2 text-accent flex-shrink-0 mt-0.5">
                                     {Icon && <Icon />}
                                   </div>
@@ -168,27 +151,16 @@ export default function DynamicGrid({
                                 key={btnIndex}
                                 href={button.link}
                                 onClick={(e) => e.stopPropagation()}
-                                className={`inline-flex items-center px-6 py-3 text-base font-medium rounded-full transition-all duration-200 ${
-                                  button.variant === "primary"
-                                    ? "bg-primary text-white hover:opacity-90 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                                    : button.variant === "outline"
-                                      ? "border-2 border-accent text-accent hover:bg-accent hover:text-white shadow-md"
-                                      : "bg-accent text-primary hover:bg-accent-hover hover:text-white shadow-md"
-                                }`}
+                                className={`inline-flex items-center px-6 py-3 text-base font-medium rounded-full transition-all duration-200 ${button.variant === 'primary'
+                                  ? 'bg-primary text-white hover:opacity-90 shadow-lg hover:shadow-xl transform hover:-translate-y-1'
+                                  : button.variant === 'outline'
+                                    ? 'border-2 border-accent text-accent hover:bg-accent hover:text-white shadow-md'
+                                    : 'bg-accent text-primary hover:bg-accent-hover hover:text-white shadow-md'
+                                  }`}
                               >
                                 {button.text}
-                                <svg
-                                  className="w-5 h-5 ml-2"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                  stroke="currentColor"
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M9 5l7 7-7 7"
-                                  />
+                                <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                 </svg>
                               </a>
                             ))}
@@ -200,7 +172,6 @@ export default function DynamicGrid({
                       <div className="w-full lg:w-1/2 relative h-full bg-white flex items-center justify-center p-12">
                         <div className="relative w-full h-full">
                           <Image
-                            unoptimized
                             src={item.img}
                             alt={item.title}
                             fill
@@ -217,7 +188,6 @@ export default function DynamicGrid({
                       {/* Image - Top section */}
                       <div className="relative w-full aspect-[4/3] bg-white">
                         <Image
-                          unoptimized
                           src={item.img}
                           alt={item.title}
                           fill
@@ -257,27 +227,16 @@ export default function DynamicGrid({
                                 key={btnIndex}
                                 href={button.link}
                                 onClick={(e) => e.stopPropagation()}
-                                className={`inline-flex items-center px-4 py-2 text-sm md:text-base font-medium rounded-full transition-all duration-200 ${
-                                  button.variant === "primary"
-                                    ? "bg-primary text-white hover:opacity-90 shadow-md"
-                                    : button.variant === "outline"
-                                      ? "border-2 border-accent text-accent hover:bg-accent hover:text-white shadow-sm"
-                                      : "bg-accent text-primary hover:bg-accent-hover hover:text-white shadow-sm"
-                                }`}
+                                className={`inline-flex items-center px-4 py-2 text-sm md:text-base font-medium rounded-full transition-all duration-200 ${button.variant === 'primary'
+                                  ? 'bg-primary text-white hover:opacity-90 shadow-md'
+                                  : button.variant === 'outline'
+                                    ? 'border-2 border-accent text-accent hover:bg-accent hover:text-white shadow-sm'
+                                    : 'bg-accent text-primary hover:bg-accent-hover hover:text-white shadow-sm'
+                                  }`}
                               >
                                 {button.text}
-                                <svg
-                                  className="w-4 h-4 ml-2"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                  stroke="currentColor"
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M9 5l7 7-7 7"
-                                  />
+                                <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                 </svg>
                               </a>
                             ))}

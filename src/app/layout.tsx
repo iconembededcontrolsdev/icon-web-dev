@@ -87,9 +87,9 @@ export const metadata: Metadata = {
     images: ["/images/highres/8. Logos/logo.png"],
   },
   icons: {
-    icon: "/site_icon.svg",
-    shortcut: "/site_icon.svg",
-    apple: "/site_icon.svg",
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
   },
   robots: {
     index: true,

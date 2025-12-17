@@ -131,7 +131,6 @@ function ContactForm() {
             <div className="flex justify-center mb-6">
               <div className="relative h-24 w-64 md:w-80">
                 <Image
-                  unoptimized
                   src="/images/highres/7. Extras/logo.png"
                   alt="Icon Embeded Controls"
                   fill
@@ -171,23 +170,20 @@ function ContactForm() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
+
               {/* Row 1: Phone and Email with Dynamic Resize */}
               <div className="flex flex-col md:flex-row gap-4 h-auto">
+
                 {/* Phone Container */}
                 <div
-                  className={`relative transition-all duration-500 ease-in-out flex flex-col ${
-                    focusedField === "phone"
-                      ? "md:flex-[3]"
-                      : focusedField === "email"
-                        ? "md:flex-[1]"
-                        : "md:flex-[1]"
-                  }`}
+                  className={`relative transition-all duration-500 ease-in-out flex flex-col ${focusedField === 'phone' ? 'md:flex-[3]' : focusedField === 'email' ? 'md:flex-[1]' : 'md:flex-[1]'
+                    }`}
                 >
-                  {focusedField === "email" ? (
+                  {focusedField === 'email' ? (
                     // Collapsed State (Button lookalike, aligned with input)
                     <div
                       className="w-full cursor-pointer group"
-                      onClick={() => setFocusedField("phone")}
+                      onClick={() => setFocusedField('phone')}
                     >
                       {/* Spacer to match label height */}
                       <div className="h-[28px] mb-2"></div>
@@ -202,10 +198,7 @@ function ContactForm() {
                   ) : (
                     // Expanded State
                     <div className="w-full">
-                      <label
-                        htmlFor="phone"
-                        className="block text-sm font-semibold text-primary mb-2 whitespace-nowrap overflow-hidden text-ellipsis h-[28px] leading-[28px]"
-                      >
+                      <label htmlFor="phone" className="block text-sm font-semibold text-primary mb-2 whitespace-nowrap overflow-hidden text-ellipsis h-[28px] leading-[28px]">
                         Phone Number
                       </label>
                       <div className="flex h-[54px] relative bg-card rounded-xl">
@@ -224,10 +217,7 @@ function ContactForm() {
                             }}
                           >
                             {countryCodes.map((country) => (
-                              <option
-                                key={country.code}
-                                value={country.dial_code}
-                              >
+                              <option key={country.code} value={country.dial_code}>
                                 {country.dial_code}
                               </option>
                             ))}
@@ -239,7 +229,7 @@ function ContactForm() {
                           name="phone"
                           value={formData.phone}
                           onChange={handlePhoneChange}
-                          onFocus={() => setFocusedField("phone")}
+                          onFocus={() => setFocusedField('phone')}
                           onClick={(e) => e.stopPropagation()}
                           className="h-full w-full px-4 border-2 border-border rounded-r-xl bg-card text-foreground focus:ring-2 focus:ring-primary focus:border-primary transition-all shadow-sm placeholder:text-muted min-w-0"
                           placeholder="Enter phone number"
@@ -251,19 +241,14 @@ function ContactForm() {
 
                 {/* Email Container */}
                 <div
-                  className={`relative transition-all duration-500 ease-in-out flex flex-col ${
-                    focusedField === "email"
-                      ? "md:flex-[3]"
-                      : focusedField === "phone"
-                        ? "md:flex-[1]"
-                        : "md:flex-[1]"
-                  }`}
+                  className={`relative transition-all duration-500 ease-in-out flex flex-col ${focusedField === 'email' ? 'md:flex-[3]' : focusedField === 'phone' ? 'md:flex-[1]' : 'md:flex-[1]'
+                    }`}
                 >
-                  {focusedField === "phone" ? (
+                  {focusedField === 'phone' ? (
                     // Collapsed State (Button lookalike, aligned with input)
                     <div
                       className="w-full cursor-pointer group"
-                      onClick={() => setFocusedField("email")}
+                      onClick={() => setFocusedField('email')}
                     >
                       {/* Spacer to match label height */}
                       <div className="h-[28px] mb-2"></div>
@@ -278,10 +263,7 @@ function ContactForm() {
                   ) : (
                     // Expanded State
                     <div className="w-full">
-                      <label
-                        htmlFor="email"
-                        className="block text-sm font-semibold text-primary mb-2 whitespace-nowrap overflow-hidden text-ellipsis h-[28px] leading-[28px]"
-                      >
+                      <label htmlFor="email" className="block text-sm font-semibold text-primary mb-2 whitespace-nowrap overflow-hidden text-ellipsis h-[28px] leading-[28px]">
                         Email
                       </label>
                       <input
@@ -290,7 +272,7 @@ function ContactForm() {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        onFocus={() => setFocusedField("email")}
+                        onFocus={() => setFocusedField('email')}
                         onClick={(e) => e.stopPropagation()}
                         className="w-full h-[54px] px-4 border-2 border-border rounded-xl bg-card text-foreground focus:ring-2 focus:ring-primary focus:border-primary transition-all shadow-sm placeholder:text-muted min-w-0"
                         placeholder="Enter your email"
@@ -298,6 +280,7 @@ function ContactForm() {
                     </div>
                   )}
                 </div>
+
               </div>
 
               {/* Row 2: Name */}

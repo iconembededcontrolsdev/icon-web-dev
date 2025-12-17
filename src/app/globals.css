@@ -105,7 +105,21 @@ body {
   transition: background 0.2s;
 }
 
+
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: var(--accent);
+}
+
+/* Hide H1 tags visually as requested */
+h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 

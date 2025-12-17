@@ -13,12 +13,15 @@ interface ProductCardProps {
 
 export default function ProductCard({ id, title, description, image }: ProductCardProps) {
   return (
-    <div className="group relative overflow-hidden bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+    <div 
+      className="group relative overflow-hidden bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col"
+    >
       <Link href={`/products/${id}`} className="block h-full">
         <div className="h-64 relative overflow-hidden">
-          <div className="h-full w-full">
+          <div
+            className="h-full w-full"
+          >
             <Image
-              unoptimized
               src={image}
               alt={title}
               fill
@@ -32,7 +35,6 @@ export default function ProductCard({ id, title, description, image }: ProductCa
           <div className="flex items-center gap-3 mb-3">
             <div className="relative w-10 h-10 flex-shrink-0 flex items-center justify-center">
               <Image
-                unoptimized
                 src="/images/lowres/logo.png"
                 alt="Icon Logo"
                 width={40}
@@ -44,22 +46,14 @@ export default function ProductCard({ id, title, description, image }: ProductCa
               {title}
             </h3>
           </div>
-          <p className="mt-2 text-gray-600 line-clamp-2">{description}</p>
+          <p className="mt-2 text-gray-600 line-clamp-2">
+            {description}
+          </p>
           <div className="mt-4">
             <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800 group-hover:bg-blue-200 transition-colors">
               View details
-              <svg
-                className="ml-1 w-4 h-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
+              <svg className="ml-1 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </span>
           </div>

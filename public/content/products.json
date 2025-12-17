@@ -334,7 +334,7 @@
         "/images/highres/Digital Nitrogen Tyre Inflator/nitrojet-2000-lcv-p.jpg",
         "/images/highres/Digital Nitrogen Tyre Inflator/nitrojet-6000-lcv-4h.jpg"
       ],
-      "mainImage": "/images/highres/Digital Nitrogen Tyre Inflator/nitrojet-6000-lcv-4h.jpg"
+      "mainImage": "/images/highres/Digital Nitrogen Tyre Inflator/nitrojet-1000-lcv-h.jpg"
     },
     {
       "id": "digital-tyre-inflator-pedestal",
@@ -608,11 +608,12 @@
         }
       ],
       "images": [
-        "/images/highres/Digital Tyre Inflator/airojet-1000-lcv-w.jpg",
-        "/images/highres/Digital Tyre Inflator/airojet-2000-lcv-w.jpg",
-        "/images/highres/Digital Tyre Inflator/airojet-6000-lcv-w.jpg"
+        "/images/highres/Digital Tyre Inflator Pedestal/airojet-1000-lcv-p.jpg",
+        "/images/highres/Digital Tyre Inflator Pedestal/airojet-1000-lcv-hp.jpg",
+        "/images/highres/Digital Tyre Inflator Pedestal/airojet-6000-lcv-p.jpg",
+        "/images/highres/Digital Tyre Inflator Pedestal/airojet-6000-lcv-hp.jpg"
       ],
-      "mainImage": "/images/highres/Digital Tyre Inflator/airojet-6000-lcv-w.jpg"
+      "mainImage": "/images/highres/Digital Tyre Inflator Pedestal/airojet-1000-lcv-p.jpg"
     },
     {
       "id": "digital-engine-oil-dispenser",
@@ -848,10 +849,7 @@
           ]
         }
       ],
-      "mainImage": "/images/highres/Engine Oil Changer/engine-oil-changer.png",
-      "images": [
-        "/images/highres/Engine Oil Changer/engine-oil-changer.png"
-      ]
+      "mainImage": "/images/highres/Engine Oil Changer/engine-oil-changer.png"
     },
     {
       "id": "digital-tyre-inflator",
@@ -1061,10 +1059,10 @@
       ],
       "images": [
         "/images/highres/Digital Tyre Inflator/airojet-1000-lcv-w.jpg",
-        "/images/highres/Digital Tyre Inflator/airojet-2000-lcv-w.jpg",
-        "/images/highres/Digital Tyre Inflator/airojet-6000-lcv-w.jpg"
+        "/images/highres/Digital Tyre Inflator/airojet-6000-lcv-w.jpg",
+        "/images/highres/Digital Tyre Inflator/airojet-2000-lcv-w.jpg"
       ],
-      "mainImage": "/images/highres/Digital Tyre Inflator/airojet-6000-lcv-w.jpg"
+      "mainImage": "/images/highres/Digital Tyre Inflator/airojet-1000-lcv-w.jpg"
     },
     {
       "id": "digital-def-adblue-dispenser",
@@ -1170,9 +1168,9 @@
         }
       ],
       "images": [
-        "/images/highres/Digital DEF/adu-501-bpcl.png",
+        "/images/highres/Digital DEF/adu-501-indianoil.png",
         "/images/highres/Digital DEF/adu-501-hp.png",
-        "/images/highres/Digital DEF/adu-501-indianoil.png"
+        "/images/highres/Digital DEF/adu-501-bpcl.png"
       ],
       "mainImage": "/images/highres/Digital DEF/adu-501-indianoil.png"
     },
@@ -1432,8 +1430,8 @@
         "Service Centers"
       ],
       "images": [
-        "/images/highres/Air Compressor/ic-109.jpg",
-        "/images/highres/Air Compressor/ic-209.jpg"
+        "/images/highres/Air Compressor/ic-209.jpg",
+        "/images/highres/Air Compressor/ic-109.jpg"
       ],
       "mainImage": "/images/highres/Air Compressor/ic-209.jpg"
     },
@@ -1685,13 +1683,13 @@
         }
       ],
       "images": [
+        "/images/highres/Panel Board/plc-control-panel.jpg",
+        "/images/highres/Panel Board/auto-power-factor-control-panel.jpg",
+        "/images/highres/Panel Board/electrical-control-panel.jpeg",
         "/images/highres/Panel Board/5C1.jpg",
         "/images/highres/Panel Board/5C2.jpg",
         "/images/highres/Panel Board/5C3.jpg",
-        "/images/highres/Panel Board/5D.jpg",
-        "/images/highres/Panel Board/automatic-power-factor-control-panel.jpg",
-        "/images/highres/Panel Board/electrical-control-panel.jpeg",
-        "/images/highres/Panel Board/plc-control-panel.jpg"
+        "/images/highres/Panel Board/5D.jpg"
       ],
       "mainImage": "/images/highres/Panel Board/plc-control-panel.jpg"
     },
@@ -1855,9 +1853,9 @@
         "Motorcycle Repair Shops"
       ],
       "images": [
-        "/images/highres/Garage Equipment/manual-2t-oil-dispenser.jpg",
+        "/images/highres/Garage Equipment/two-wheeler-ramp.jpg",
         "/images/highres/Garage Equipment/pneumatic-grease-pump.jpg",
-        "/images/highres/Garage Equipment/two-wheeler-ramp.jpg"
+        "/images/highres/Garage Equipment/manual-2T-oil-dispenser.jpg"
       ],
       "mainImage": "/images/highres/Garage Equipment/two-wheeler-ramp.jpg"
     }
