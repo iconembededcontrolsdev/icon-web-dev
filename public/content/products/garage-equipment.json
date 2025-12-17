@@ -35,7 +35,11 @@
       ]
     },
     "pneumaticGreasePump": {
-      "capacities": ["15kg", "25kg", "50kg"],
+      "capacities": [
+        "15kg",
+        "25kg",
+        "50kg"
+      ],
       "output": "320 - 390 Grams/minute (Gm/min)",
       "workingPressureRange": "4 to 10 bar",
       "outputDeliveryHoseLength": "2.2 Meters (mtrs)",
@@ -60,9 +64,9 @@
     "Motorcycle Repair Shops"
   ],
   "images": [
-    "/images/6. Garage Equipment/6a.jpeg",
-    "/images/6. Garage Equipment/6b.jpeg",
-    "/images/6. Garage Equipment/6c.jpeg"
+    "/images/highres/Garage Equipment/manual-2t-oil-dispenser.jpg",
+    "/images/highres/Garage Equipment/pneumatic-grease-pump.jpg",
+    "/images/highres/Garage Equipment/two-wheeler-ramp.jpg"
   ],
-  "mainImage": "/images/6. Garage Equipment/6a.jpeg"
+  "mainImage": "/images/highres/Garage Equipment/two-wheeler-ramp.jpg"
 }

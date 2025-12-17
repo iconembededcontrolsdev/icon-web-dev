@@ -93,13 +93,13 @@
     }
   ],
   "images": [
-    "/images/5. Panel Board/5a.jpeg",
-    "/images/5. Panel Board/5b.jpeg",
-    "/images/5. Panel Board/5b2.jpeg",
-    "/images/5. Panel Board/5c1.jpeg",
-    "/images/5. Panel Board/5c2.jpeg",
-    "/images/5. Panel Board/5c3.jpeg",
-    "/images/5. Panel Board/5d.jpeg"
+    "/images/highres/Panel Board/5C1.jpg",
+    "/images/highres/Panel Board/5C2.jpg",
+    "/images/highres/Panel Board/5C3.jpg",
+    "/images/highres/Panel Board/5D.jpg",
+    "/images/highres/Panel Board/automatic-power-factor-control-panel.jpg",
+    "/images/highres/Panel Board/electrical-control-panel.jpeg",
+    "/images/highres/Panel Board/plc-control-panel.jpg"
   ],
-  "mainImage": "/images/5. Panel Board/5a.jpeg"
+  "mainImage": "/images/highres/Panel Board/plc-control-panel.jpg"
 }

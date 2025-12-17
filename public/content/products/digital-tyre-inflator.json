@@ -98,18 +98,9 @@
     }
   ],
   "images": [
-    "/images/1. Digital Tyre Inflator/1A.jpeg",
-    "/images/1. Digital Tyre Inflator/1B.jpeg",
-    "/images/1. Digital Tyre Inflator/1C.jpeg",
-    "/images/1. Digital Tyre Inflator/1D.jpeg",
-    "/images/1. Digital Tyre Inflator/1E.jpeg",
-    "/images/1. Digital Tyre Inflator/1F.jpeg",
-    "/images/1. Digital Tyre Inflator/1G.jpeg",
-    "/images/1. Digital Tyre Inflator/1H.jpeg",
-    "/images/1. Digital Tyre Inflator/1I.jpeg",
-    "/images/1. Digital Tyre Inflator/1J.jpeg",
-    "/images/1. Digital Tyre Inflator/1K.jpeg",
-    "/images/1. Digital Tyre Inflator/1L.jpeg"
+    "/images/highres/Digital Tyre Inflator/airojet-1000-lcv-w.jpg",
+    "/images/highres/Digital Tyre Inflator/airojet-2000-lcv-w.jpg",
+    "/images/highres/Digital Tyre Inflator/airojet-6000-lcv-w.jpg"
   ],
-  "mainImage": "/images/1. Digital Tyre Inflator/1A.jpeg"
+  "mainImage": "/images/highres/Digital Tyre Inflator/airojet-6000-lcv-w.jpg"
 }
