@@ -9,7 +9,7 @@
   "about": {
     "title": "About Us",
     "content": "With some brilliant products and splendid services, We - Icon Embeded Controls - have carved a niche for ourselves in both domestic as well as international markets. The range of our products includes Digital Tyre Inflator, Digital Nitrogen Tyre Inflator, Nitrogen Generator (N2), Air Compressor, Two Wheeler Ramp, Fuel level Indicator/controller, Pressure monitor, Fuel tank automation and APFC and power distribution panels and many more. We take utmost care in maintaining levels of quality in the raw materials procured, which leads to finished products of unsurpassed quality.",
-    "image": "/images/highres/7. Extras/logo.png"
+    "image": "/images/highres/extras/logo.png"
   },
   "clients": {
     "title": "Our Valued Clients",
@@ -92,15 +92,15 @@
       },
       {
         "name": "Digital DEF/AdBlue Dispenser",
-        "image": "/images/highres/9. Digital DEF/9a.png"
+        "image": "/images/highres/digital-def/adu-501-indianoil.png"
       },
       {
         "name": "Digital Engine Oil Dispenser",
-        "image": "/images/highres/10. Digital Engine Oil Dispenser/10A.png"
+        "image": "/images/highres/digital-engine-oil-dispenser/digital-engine-oil-dispenser.png"
       },
       {
         "name": "Engine Oil Changer",
-        "image": "/images/highres/11. Engine Oil Changer/11A.png"
+        "image": "/images/highres/engine-oil-changer/engine-oil-changer.png"
       }
     ]
   }

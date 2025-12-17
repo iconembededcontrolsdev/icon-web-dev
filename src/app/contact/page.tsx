@@ -131,7 +131,7 @@ function ContactForm() {
             <div className="flex justify-center mb-6">
               <div className="relative h-24 w-64 md:w-80">
                 <Image
-                  src="/images/highres/7. Extras/logo.png"
+                  src="/images/highres/extras/logo.png"
                   alt="Icon Embeded Controls"
                   fill
                   className="object-contain"

@@ -106,7 +106,7 @@ export default function DynamicGrid({
                             <h4 className="text-sm md:text-base font-bold text-accent uppercase tracking-wider whitespace-nowrap">BENEFITS OF</h4>
                             <div className="relative w-16 h-6">
                               <Image
-                                src="/images/highres/8. Logos/logo.png"
+                                src="/images/highres/logos/logo.png"
                                 alt="Icon Logo"
                                 fill
                                 className="object-contain"

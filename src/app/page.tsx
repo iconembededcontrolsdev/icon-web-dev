@@ -231,7 +231,7 @@ export default function Home() {
               <div className="flex flex-col items-center md:items-end">
                 <div className="relative w-40 h-16 mb-4">
                   <Image
-                    src="/images/highres/8. Logos/logo.png"
+                    src="/images/highres/logos/logo.png"
                     alt="Icon Embeded Controls"
                     fill
                     className="object-contain"

@@ -41,8 +41,29 @@ export default function Navbar() {
     return pathname.startsWith(path);
   };
 
+  // Track Google Translate banner height
+  const [bannerOffset, setBannerOffset] = useState(0);
+
+  useEffect(() => {
+    // Function to update offset based on body style (Google Translate sets top on body)
+    const updateOffset = () => {
+      const top = parseInt(document.body.style.top || '0', 10);
+      setBannerOffset(top);
+    };
+
+    // Check immediately
+    updateOffset();
+
+    // Observe body for style changes
+    const observer = new MutationObserver(updateOffset);
+    observer.observe(document.body, { attributes: true, attributeFilter: ['style'] });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <nav
+      style={{ top: bannerOffset ? `${bannerOffset}px` : '0px' }}
       className={`fixed w-full z-50 shadow-sm transition-all duration-300 ${isScrolled
         ? "bg-gray-800/90 backdrop-blur-md border-b border-white/10"
         : "bg-gray-800 border-b border-gray-700"
@@ -55,7 +76,7 @@ export default function Navbar() {
             <Link href="/" className="flex items-center">
               <div className="relative h-9 w-auto">
                 <Image
-                  src="/images/highres/7. Extras/logo.png"
+                  src="/images/highres/extras/logo.png"
                   alt="Icon Embeded Controls"
                   width={80}
                   height={32}
@@ -146,7 +167,7 @@ export default function Navbar() {
 
             {/* Google Translate - Desktop */}
             <div className="hidden md:block">
-              <GoogleTranslate id="google_translate_desktop" />
+              <GoogleTranslate id="google_translate_desktop" variant="icon" />
             </div>
 
             {/* Theme Toggle Button */}
@@ -269,7 +290,7 @@ export default function Navbar() {
 
             {/* Google Translate - Mobile */}
             <div className="px-4 mb-4">
-              <GoogleTranslate id="google_translate_mobile" />
+              <GoogleTranslate id="google_translate_mobile" variant="full" />
             </div>
 
             {/* Products Dropdown - Mobile */}

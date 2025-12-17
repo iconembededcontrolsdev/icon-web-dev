@@ -3,17 +3,17 @@
 import Image from 'next/image';
 
 const LOGOS = [
-  '/images/highres/8. Logos/1.svg',
-  '/images/highres/8. Logos/2.svg',
-  '/images/highres/8. Logos/3.svg',
-  '/images/highres/8. Logos/4.svg',
-  '/images/highres/8. Logos/5.svg',
-  '/images/highres/8. Logos/6.svg',
-  '/images/highres/8. Logos/7.svg',
-  '/images/highres/8. Logos/8.svg',
-  '/images/highres/8. Logos/9.svg',
-  '/images/highres/8. Logos/10.svg',
-  '/images/highres/8. Logos/11.png',
+  '/images/highres/logos/1.svg',
+  '/images/highres/logos/2.svg',
+  '/images/highres/logos/3.svg',
+  '/images/highres/logos/4.svg',
+  '/images/highres/logos/5.svg',
+  '/images/highres/logos/6.svg',
+  '/images/highres/logos/7.svg',
+  '/images/highres/logos/8.svg',
+  '/images/highres/logos/9.svg',
+  '/images/highres/logos/10.svg',
+  '/images/highres/logos/11.png',
 ];
 
 export default function ClientLogos() {

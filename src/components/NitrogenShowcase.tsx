@@ -25,7 +25,7 @@ export default function NitrogenShowcase({ product }: { product?: any }) {
     // Use product data if available, otherwise fallback (though fallback shouldn't be needed if parent passes it)
     const title = product?.title || 'Digital Nitrogen Tyre Inflator';
     const description = product?.subtitle || product?.description || 'Reliable and accurate electronic digital nitrogen tyre inflators. Nitrogen production based on cost-efficient PSA technology with 95-99% purity suitable for vehicle nitrogen inflation.';
-    const img = product?.mainImage || product?.images?.[0] || '/images/highres/Digital Nitrogen Tyre Inflator/nitrojet-1000-lcv-p.jpg';
+    const img = product?.mainImage || product?.images?.[0] || '/images/highres/digital-nitrogen-tyre-inflator/nitrojet-1000-lcv-p.jpg';
     const link = product?.id ? `/products/${product?.id}` : '/products/digital-nitrogen-tyre-inflator';
 
     const ctaButtons = [
@@ -103,7 +103,7 @@ export default function NitrogenShowcase({ product }: { product?: any }) {
                                 <h4 className="text-sm md:text-base font-bold text-accent uppercase tracking-wider whitespace-nowrap">BENEFITS OF</h4>
                                 <div className="relative w-16 h-6">
                                     <Image
-                                        src="/images/highres/8. Logos/logo.png"
+                                        src="/images/highres/logos/logo.png"
                                         alt="Icon Logo"
                                         fill
                                         className="object-contain"

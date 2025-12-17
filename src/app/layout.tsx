@@ -71,7 +71,7 @@ export const metadata: Metadata = {
       "Manufacturer of digital tyre inflators, nitrogen generators, and industrial equipment. Serving fuel stations and industries worldwide.",
     images: [
       {
-        url: "/images/highres/8. Logos/logo.png",
+        url: "/images/highres/logos/logo.png",
         width: 1200,
         height: 630,
         alt: "Icon Embeded Controls Logo",
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
       "Icon Embeded Controls - Industrial Equipment & Digital Tyre Inflators",
     description:
       "Leading manufacturer of digital tyre inflators, nitrogen generators, air compressors, and industrial equipment.",
-    images: ["/images/highres/8. Logos/logo.png"],
+    images: ["/images/highres/logos/logo.png"],
   },
   icons: {
     icon: "/icon.svg",

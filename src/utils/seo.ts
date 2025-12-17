@@ -106,7 +106,7 @@ export const organizationData: Organization = {
   name: 'Icon Embeded Controls',
   description: 'Leading manufacturer of digital tyre inflators, nitrogen generators, air compressors, and industrial equipment. Serving fuel stations, garages, and industries across India and internationally.',
   url: 'https://iconembededcontrols.com',
-  logo: 'https://iconembededcontrols.com/images/highres/8. Logos/logo.png',
+  logo: 'https://iconembededcontrols.com/images/highres/logos/logo.png',
   contactPoint: {
     telephone: '+91-422-2596032',
     contactType: 'Customer Service',
