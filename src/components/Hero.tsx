@@ -54,16 +54,17 @@ export default function Hero({
                   <Link
                     key={index}
                     href={button.link}
-                    className={`px-4 py-2 rounded-full text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 ${button.variant === "primary"
-                      ? "bg-primary text-white hover:opacity-90"
-                      : button.variant === "secondary"
-                        ? "bg-accent text-primary hover:bg-accent-hover hover:text-white"
-                        : button.variant === "outline"
-                          ? "border-2 border-accent text-accent hover:bg-accent hover:text-white"
-                          : button.variant === "soft"
-                            ? "bg-gray-100 text-gray-900 hover:bg-gray-200"
-                            : "bg-primary text-white hover:opacity-90"
-                      }`}
+                    className={`px-4 py-2 rounded-full text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 ${
+                      button.variant === "primary"
+                        ? "bg-primary text-white hover:opacity-90"
+                        : button.variant === "secondary"
+                          ? "bg-accent text-primary hover:bg-accent-hover hover:text-white"
+                          : button.variant === "outline"
+                            ? "border-2 border-accent text-accent hover:bg-accent hover:text-white"
+                            : button.variant === "soft"
+                              ? "bg-gray-100 text-gray-900 hover:bg-gray-200"
+                              : "bg-primary text-white hover:opacity-90"
+                    }`}
                   >
                     {button.text}
                   </Link>
@@ -77,8 +78,9 @@ export default function Hero({
                 // Logo with fixed height
                 <div className="relative w-full h-[200px] md:h-[300px] lg:h-[400px] rounded-[30px] overflow-hidden bg-transparent flex items-center justify-center">
                   <Image
+                    unoptimized
                     src={img}
-                    alt={title || 'Icon Logo'}
+                    alt={title || "Icon Logo"}
                     width={600}
                     height={600}
                     className="object-contain w-auto h-full transition-transform duration-300 hover:scale-[1.02]"
@@ -89,6 +91,7 @@ export default function Hero({
                 // Product image with aspect-square
                 <div className="relative aspect-square w-full rounded-[30px] overflow-hidden bg-transparent">
                   <Image
+                    unoptimized
                     src={img}
                     alt={title}
                     fill

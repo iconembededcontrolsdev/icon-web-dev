@@ -160,6 +160,7 @@ export default function ProductDetailsClient({ initialProduct }: ProductDetailsC
                       {/* Main Image Area */}
                       <div className="relative flex-1 h-full flex items-center justify-center">
                         <Image
+                          unoptimized
                           src={activeImage}
                           alt={model.model || enrichedProduct.title}
                           fill
@@ -187,6 +188,7 @@ export default function ProductDetailsClient({ initialProduct }: ProductDetailsC
                               }`}
                             >
                               <Image
+                                unoptimized
                                 src={img}
                                 alt={`${model.model || enrichedProduct.title} view ${imgIdx + 1}`}
                                 fill
