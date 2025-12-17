@@ -25,7 +25,7 @@ export default function Home() {
       type: 'hero',
       title: 'Icon Embeded Controls',
       subtitle: 'Industrial Equipment & Digital Tyre Inflators',
-      img: '/images/highres/8. Logos/logo.png',
+      img: '/images/highres/logos/logo.png',
     },
     {
       type: 'nitrogen-showcase'
@@ -66,7 +66,7 @@ export default function Home() {
         setBlocks([
           {
             type: 'hero',
-            img: '/images/highres/8. Logos/logo.png',
+            img: '/images/highres/logos/logo.png',
           },
           {
             type: 'nitrogen-showcase',
