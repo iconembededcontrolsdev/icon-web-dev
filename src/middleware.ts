@@ -29,7 +29,9 @@ export function middleware(request: NextRequest) {
                     'www.iconembededcontrols.com',
                     'localhost',
                     '127.0.0.1',
-                    '192.168.'
+                    '192.168.',
+                    'iconembeddedcontrolsdev.netlify.app',
+                    'netlify.app'
                 ];
 
                 // Check if hostname matches any allowed domain/IP
