@@ -46,51 +46,7 @@ const brochureMap: Record<string, string> = {
     'digital-tyre-inflator-pedestal': '/brochures/1. Digital Tyre Inflator/Digital Tyre Inflator.pdf',
 };
 
-const AccordionItem = ({
-    title,
-    isOpen,
-    onClick,
-    children
-}: {
-    title: string;
-    isOpen: boolean;
-    onClick: () => void;
-    children: React.ReactNode;
-}) => {
-    return (
-        <div className="border border-border rounded-[20px] overflow-hidden mb-4 bg-card shadow-lg">
-            <button
-                className={`w-full px-6 py-4 flex items-center justify-between transition-colors ${isOpen ? 'bg-primary text-white' : 'bg-transparent text-primary hover:bg-primary/5'
-                    }`}
-                onClick={onClick}
-            >
-                <div className="flex items-center gap-3">
-                    <div className={`flex items-center justify-center w-7 h-7 rounded-full border-2 transition-colors ${isOpen ? 'border-white bg-white/10' : 'border-primary bg-primary/5'
-                        }`}>
-                        <span className="text-lg leading-none font-bold" style={{ marginTop: '-2px' }}>{isOpen ? '-' : '+'}</span>
-                    </div>
-                    <span className="font-semibold text-base">{title}</span>
-                </div>
-                <svg
-                    className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-            </button>
-            <div
-                className={`transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
-                    }`}
-            >
-                <div className="p-6 text-foreground border-t border-border bg-card/50">
-                    {children}
-                </div>
-            </div>
-        </div>
-    );
-};
+
 
 interface ProductDetailsClientProps {
     initialProduct: ProductData | null;
@@ -103,46 +59,47 @@ export default function ProductDetailsClient({ initialProduct }: ProductDetailsC
     const product = initialProduct;
 
     // State for gallery images: map of model index -> active image URL
-    const [activeImages, setActiveImages] = useState<Record<number, string>>({});
-    const [openSections, setOpenSections] = useState<Record<string, string>>({});
-
-    const toggleSection = (modelIndex: number, section: string) => {
-        setOpenSections(prev => ({
-            ...prev,
-            [modelIndex]: prev[modelIndex] === section ? '' : section
-        }));
-    };
+    const [activeImages, setActiveImages] = useState<Record<number, string>>(
+      {}
+    );
 
     if (!product) {
-        return (
-            <div className="min-h-screen flex items-center justify-center bg-background">
-                <div className="text-center">
-                    <h2 className="text-2xl font-bold text-primary mb-4">Product not found</h2>
-                    <Link href="/products" className="text-primary hover:underline">
-                        ← Back to Products
-                    </Link>
-                </div>
-            </div>
-        );
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-background">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold text-primary mb-4">
+              Product not found
+            </h2>
+            <Link href="/products" className="text-primary hover:underline">
+              ← Back to Products
+            </Link>
+          </div>
+        </div>
+      );
     }
 
     // Enrich images
     const images = getProductImages(product.id);
     const enrichedProduct = {
-        ...product,
-        images: (images && images.length > 0) ? images : (product.images || [])
+      ...product,
+      images: images && images.length > 0 ? images : product.images || [],
     };
 
-    const models = enrichedProduct.models && enrichedProduct.models.length > 0 ? enrichedProduct.models : [{
-        model: enrichedProduct.title,
-        type: '',
-        description: enrichedProduct.description,
-        fullDescription: enrichedProduct.fullDescription,
-        features: enrichedProduct.features,
-        specifications: enrichedProduct.specifications,
-        applications: enrichedProduct.applications,
-        images: enrichedProduct.images
-    }];
+    const models =
+      enrichedProduct.models && enrichedProduct.models.length > 0
+        ? enrichedProduct.models
+        : [
+            {
+              model: enrichedProduct.title,
+              type: "",
+              description: enrichedProduct.description,
+              fullDescription: enrichedProduct.fullDescription,
+              features: enrichedProduct.features,
+              specifications: enrichedProduct.specifications,
+              applications: enrichedProduct.applications,
+              images: enrichedProduct.images,
+            },
+          ];
 
     const brochureLink = enrichedProduct.brochure || brochureMap[id as string];
 
@@ -151,10 +108,10 @@ export default function ProductDetailsClient({ initialProduct }: ProductDetailsC
         {/* Page Header with Product Title and Model Name */}
         <div className="bg-white/50 border-b border-border">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <h1 className="text-3xl md:text-4xl font-bold text-primary">
+            <h1 className="text-3xl md:text-4xl font-bold text-primary items-center justify-center">
               {models.length === 1
                 ? enrichedProduct.title
-                : `${enrichedProduct.title} - ${models[0]?.model || ""}`}
+                : `${enrichedProduct.title}`}
             </h1>
           </div>
         </div>
@@ -262,87 +219,82 @@ export default function ProductDetailsClient({ initialProduct }: ProductDetailsC
                           enrichedProduct.fullDescription}
                       </p>
 
-                      <div className="space-y-4">
-                        {features.length > 0 && (
-                          <AccordionItem
-                            title="Key Features"
-                            isOpen={openSections[index] === "features"}
-                            onClick={() => toggleSection(index, "features")}
-                          >
-                            <ul className="space-y-3">
-                              {features.map((feature, idx) => (
-                                <li key={idx} className="flex items-start">
-                                  <span className="mr-3 text-accent font-bold text-lg">
-                                    •
-                                  </span>
-                                  <span className="text-sm text-foreground/90">
-                                    {feature}
-                                  </span>
-                                </li>
-                              ))}
-                            </ul>
-                          </AccordionItem>
-                        )}
+                      <div className="mt-4">
+                        <h3 className="text-lg font-semibold text-primary mb-3">
+                          Details
+                        </h3>
 
-                        {applications.length > 0 && (
-                          <AccordionItem
-                            title="Applications"
-                            isOpen={openSections[index] === "applications"}
-                            onClick={() => toggleSection(index, "applications")}
-                          >
-                            <ul className="space-y-3">
-                              {applications.map((app, idx) => (
-                                <li
-                                  key={idx}
-                                  className="flex items-center text-sm text-foreground/90"
-                                >
-                                  <svg
-                                    className="w-4 h-4 mr-3 text-accent"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
+                        <div className="space-y-0">
+                          {features.length > 0 && (
+                            <div>
+                              <ul className="list-none">
+                                {features.map((feature, idx) => (
+                                  <li
+                                    key={idx}
+                                    className="flex items-start py-1"
                                   >
-                                    <path
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                      strokeWidth={2}
-                                      d="M9 5l7 7-7 7"
-                                    />
-                                  </svg>
-                                  {app}
-                                </li>
-                              ))}
-                            </ul>
-                          </AccordionItem>
-                        )}
-
-                        {Object.keys(specifications).length > 0 && (
-                          <AccordionItem
-                            title="Technical Specifications"
-                            isOpen={openSections[index] === "specifications"}
-                            onClick={() =>
-                              toggleSection(index, "specifications")
-                            }
-                          >
-                            <div className="space-y-2">
-                              {Object.entries(specifications).map(
-                                ([key, value]) => (
-                                  <div
-                                    key={key}
-                                    className="grid grid-cols-2 gap-4 py-3 border-b border-border/30 last:border-0"
-                                  >
-                                    <span className="font-semibold text-sm text-muted capitalize">
-                                      {key.replace(/([A-Z])/g, " $1").trim()}
+                                    <span className="mr-3 text-accent font-bold text-lg">
+                                      •
                                     </span>
-                                    <span className="text-sm text-foreground">
-                                      {String(value)}
+                                    <span className="text-sm text-foreground/90">
+                                      {feature}
                                     </span>
-                                  </div>
-                                )
-                              )}
+                                  </li>
+                                ))}
+                              </ul>
                             </div>
-                          </AccordionItem>
-                        )}
+                          )}
+
+                          {applications.length > 0 && (
+                            <div>
+                              <ul className="list-none">
+                                {applications.map((app, idx) => (
+                                  <li
+                                    key={idx}
+                                    className="flex items-center text-sm text-foreground/90 py-1"
+                                  >
+                                    <svg
+                                      className="w-4 h-4 mr-3 text-accent"
+                                      fill="none"
+                                      viewBox="0 0 24 24"
+                                      stroke="currentColor"
+                                    >
+                                      <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M9 5l7 7-7 7"
+                                      />
+                                    </svg>
+                                    {app}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+
+                          {Object.keys(specifications).length > 0 && (
+                            <div>
+                              <div className="grid gap-0">
+                                {Object.entries(specifications).map(
+                                  ([key, value]) => (
+                                    <div
+                                      key={key}
+                                      className="grid grid-cols-2 gap-4 py-1"
+                                    >
+                                      <span className="font-semibold text-sm text-muted capitalize">
+                                        {key.replace(/([A-Z])/g, " $1").trim()}
+                                      </span>
+                                      <span className="text-sm text-foreground">
+                                        {String(value)}
+                                      </span>
+                                    </div>
+                                  )
+                                )}
+                              </div>
+                            </div>
+                          )}
+                        </div>
                       </div>
 
                       {/* Action Buttons */}
