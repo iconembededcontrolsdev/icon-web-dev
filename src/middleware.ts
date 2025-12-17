@@ -5,8 +5,8 @@ export function middleware(request: NextRequest) {
     // Only intercept requests to the /images/ directory
     if (request.nextUrl.pathname.startsWith('/images/')) {
 
-        // EXCEPTION: Allow access to the specific logo used in emails
-        if (request.nextUrl.pathname === '/images/lowres/logo.png') {
+        // EXCEPTION: Allow access to the specific logo used in emails and the main logo
+        if (request.nextUrl.pathname === '/images/lowres/logo.png' || request.nextUrl.pathname === '/images/highres/logos/logo.png') {
             return NextResponse.next();
         }
 
