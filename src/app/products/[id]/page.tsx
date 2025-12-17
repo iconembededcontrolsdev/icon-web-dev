@@ -20,7 +20,6 @@ async function getProducts(): Promise<ProductData[]> {
     const data = await JSON.parse(fileContent);
     return data.products || [];
   } catch (error) {
-    console.error("Error reading products.json:", error);
     return [];
   }
 }

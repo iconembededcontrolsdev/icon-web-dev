@@ -1,12 +1,13 @@
 import React from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "About Us - Leading Digital Tyre Inflator Manufacturer",
-  description: "Icon Embedded Controls has been manufacturing reliable digital tyre inflators since 2007. Trusted by major companies like IOCL, BPCL, HPCL, MRF, and Michelin across India.",
+  description: "Icon Embeded Controls has been manufacturing reliable digital tyre inflators since 2007. Trusted by major companies like IOCL, BPCL, HPCL, MRF, and Michelin across India.",
   keywords: [
-    "about Icon Embedded Controls",
+    "about Icon Embeded Controls",
     "digital tyre inflator manufacturer",
     "tyre inflator since 2007",
     "IOCL supplier",
@@ -16,13 +17,13 @@ export const metadata: Metadata = {
     "industrial equipment manufacturer India"
   ],
   openGraph: {
-    title: "About Icon Embedded Controls - Digital Tyre Inflator Manufacturer Since 2007",
+    title: "About Icon Embeded Controls - Digital Tyre Inflator Manufacturer Since 2007",
     description: "Leading manufacturer of digital tyre inflators and industrial equipment. Trusted by major companies across India since 2007.",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "About Icon Embedded Controls - Digital Tyre Inflator Manufacturer",
+    title: "About Icon Embeded Controls - Digital Tyre Inflator Manufacturer",
     description: "Leading manufacturer of digital tyre inflators and industrial equipment since 2007.",
   },
   alternates: {
@@ -33,14 +34,37 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-background pt-12 pb-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen bg-background pt-12">
+      {/* Back Button */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <Link
+          href="/"
+          className="inline-flex items-center text-primary hover:text-accent transition-colors font-medium"
+        >
+          <svg
+            className="w-5 h-5 mr-2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+          Back to Home
+        </Link>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
             About Us
           </h1>
           <p className="text-xl text-muted max-w-3xl mx-auto">
-            Leading the way in embeded control solutions since 2007.
+            Leading the way in embedded control solutions since 2007.
           </p>
         </div>
 

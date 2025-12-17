@@ -15,13 +15,13 @@ export const metadata: Metadata = {
     "engine oil dispenser"
   ],
   openGraph: {
-    title: "Industrial Equipment Products - Icon Embedded Controls",
+    title: "Industrial Equipment Products - Icon Embeded Controls",
     description: "Complete range of digital tyre inflators, nitrogen generators, air compressors, and industrial equipment for fuel stations and industries.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Industrial Equipment Products - Icon Embedded Controls",
+    title: "Industrial Equipment Products - Icon Embeded Controls",
     description: "Browse our complete range of industrial equipment and solutions.",
   },
   alternates: {

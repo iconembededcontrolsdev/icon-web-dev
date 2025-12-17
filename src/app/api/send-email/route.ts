@@ -39,9 +39,6 @@ export async function POST(request: NextRequest) {
 
     // Validate environment variables
     if (!process.env.SMTP_USER || !process.env.SMTP_PASSWORD) {
-      console.error(
-        "SMTP credentials not configured. Please set SMTP_USER and SMTP_PASSWORD in your environment variables."
-      );
       return NextResponse.json(
         {
           error:
@@ -95,19 +92,19 @@ export async function POST(request: NextRequest) {
           <body>
             <div class="container">
               <div class="header">
+                 <img src="https://iconembededcontrols.com/images/lowres/logo.png" alt="Icon Embeded Controls" style="max-width: 200px; margin-bottom: 20px;">
                 <h1>${product ? "🎯 Product Enquiry!" : "New Enquiry Received"}</h1>
               </div>
               <div class="content">
-                ${
-                  product
-                    ? `
+                ${product
+          ? `
                   <div class="product-highlight">
                     <h2 style="margin: 0; font-size: 24px;">📦 ${product}</h2>
                     <p style="margin: 5px 0 0 0; opacity: 0.9;">Customer is interested in this product</p>
                   </div>
                 `
-                    : ""
-                }
+          : ""
+        }
                 <div class="field">
                   <div class="label">From:</div>
                   <div class="value">${name}</div>
@@ -165,9 +162,10 @@ export async function POST(request: NextRequest) {
             </head>
             <body>
               <div class="container">
-                <div class="header">
-                  <h1>Thank You for Reaching Out!</h1>
-                </div>
+              <div class="header">
+                <img src="https://iconembededcontrols.com/images/lowres/logo.png" alt="Icon Embeded Controls" style="max-width: 200px; margin-bottom: 20px;">
+                <h1>Thank You for Reaching Out!</h1>
+              </div>
                 <div class="content">
                   <p>Dear ${name},</p>
                   <p>We have received your ${product ? "product enquiry" : "enquiry"} and appreciate you taking the time to contact us.</p>
@@ -200,18 +198,16 @@ export async function POST(request: NextRequest) {
     }
 
     return NextResponse.json(
-      { 
-        success: true, 
-        message: 'Email sent successfully! We\'ll get back to you soon.' 
+      {
+        success: true,
+        message: 'Email sent successfully! We\'ll get back to you soon.'
       },
       { status: 200 }
     );
 
   } catch (error) {
-    console.error('Error sending email:', error);
-    
     return NextResponse.json(
-      { 
+      {
         error: 'Failed to send email. Please try again later.',
         details: error instanceof Error ? error.message : 'Unknown error'
       },

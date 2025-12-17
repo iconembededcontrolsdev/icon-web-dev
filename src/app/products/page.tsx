@@ -28,19 +28,18 @@ export default function ProductsPage() {
       try {
         // Fetch from the consolidated products.json file
         const response = await fetch('/content/products.json');
-        
+
         if (!response.ok) {
-          console.error('Failed to fetch products.json');
           setLoading(false);
           return;
         }
 
         const data = await response.json();
         const productsData = data.products || [];
-        
+
         setProducts(productsData);
       } catch (error) {
-        console.error('Error fetching products:', error);
+        // Silently fail or use a toast notification service if implemented
       } finally {
         setLoading(false);
       }
@@ -51,23 +50,23 @@ export default function ProductsPage() {
 
   const filteredProducts = products.filter(product => {
     const query = searchQuery.toLowerCase();
-    
+
     // Search in basic product fields
-    const matchesBasicFields = 
+    const matchesBasicFields =
       product.title.toLowerCase().includes(query) ||
       product.description.toLowerCase().includes(query) ||
       (product.subtitle && product.subtitle.toLowerCase().includes(query)) ||
-      (product.features && product.features.some(feature => 
+      (product.features && product.features.some(feature =>
         feature.toLowerCase().includes(query)
       ));
-    
+
     // Search in models array if it exists
     const matchesModels = product.models && product.models.some((model: any) =>
       (model.model && model.model.toLowerCase().includes(query)) ||
       (model.type && model.type.toLowerCase().includes(query)) ||
       (model.description && model.description.toLowerCase().includes(query))
     );
-    
+
     return matchesBasicFields || matchesModels;
   });
 
@@ -76,7 +75,7 @@ export default function ProductsPage() {
     return products.map(product => {
       // Use subtitle if available, otherwise use description, with fallback
       const displayDescription = product.subtitle || product.description || product.fullDescription || '';
-      
+
       return {
         title: product.title,
         subtitle: displayDescription,

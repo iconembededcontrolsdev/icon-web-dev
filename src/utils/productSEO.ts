@@ -27,12 +27,12 @@ export function generateProductMetadata(product: any): ProductSEO {
   // Auto-generate from product data
   const keywords = [
     product.title,
-    ...( product.features?.slice(0, 5) || []),
+    ...(product.features?.slice(0, 5) || []),
     ...(product.applications?.slice(0, 3) || []),
   ].filter(Boolean);
 
   return {
-    title: `${product.title} - Icon Embedded Controls`,
+    title: `${product.title} - Icon Embeded Controls`,
     description: product.subtitle || product.description || '',
     keywords,
     ogTitle: product.title,
@@ -56,7 +56,7 @@ export function generateModelMetadata(model: any, productTitle: string): ModelSE
   ].filter(Boolean);
 
   return {
-    title: `${model.model} - ${productTitle} - Icon Embedded Controls`,
+    title: `${model.model} - ${productTitle} - Icon Embeded Controls`,
     description: model.subtitle || model.description || '',
     keywords,
   };
@@ -65,7 +65,7 @@ export function generateModelMetadata(model: any, productTitle: string): ModelSE
 export function getProductSEOById(productId: string, productsData: any): ProductSEO | null {
   const product = productsData.products?.find((p: any) => p.id === productId);
   if (!product) return null;
-  
+
   return generateProductMetadata(product);
 }
 
@@ -73,10 +73,10 @@ export function getModelSEO(productId: string, modelId: string, productsData: an
   const product = productsData.products?.find((p: any) => p.id === productId);
   if (!product) return null;
 
-  const model = product.models?.find((m: any) => 
+  const model = product.models?.find((m: any) =>
     m.model === modelId || m.model.toLowerCase().replace(/\s+/g, '-') === modelId
   );
-  
+
   if (!model) return null;
 
   return generateModelMetadata(model, product.title);

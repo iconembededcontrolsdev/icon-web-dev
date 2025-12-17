@@ -18,7 +18,7 @@ const LOGOS = [
 
 export default function ClientLogos() {
   return (
-    <div className="w-full max-w-7xl mx-auto py-8 overflow-hidden pointer-events-none">
+    <div className="w-full mx-auto py-8 overflow-hidden pointer-events-none">
       <div className="text-center mb-6 pointer-events-auto">
         <h2 className="text-2xl font-bold text-primary">Our Trusted Clients</h2>
         <p className="text-muted mt-1 text-sm">Partnering with industry leaders across the globe</p>

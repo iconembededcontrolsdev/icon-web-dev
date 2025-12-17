@@ -388,114 +388,6 @@
       "models": [
         {
           "model": "AIROJET 6000 LCV P",
-          "type": "Pedestal - Normal (IOCL/BPCL)",
-          "description": "Pedestal mounted digital tyre inflator for IOCL/BPCL fuel stations with 5 in 1 switch box.",
-          "subtitle": "Pedestal - Normal (IOCL/BPCL)",
-          "fullDescription": "Pedestal mounted digital tyre inflator for fuel stations. Features two digital readouts, LCD display with LED backlight, 5 in 1 switch box with fuse protection and indicator, and can be used for vehicle tyre ranging from two wheeler, car, SUV and mini truck.",
-          "features": [
-            "Two digital readouts one for set pressure and other for tyre pressure",
-            "LCD display with LED back light to provide good visibility",
-            "Display remain at same set pressure value even after power on-off cycle",
-            "Audible and visual end of the cycle signal indicators",
-            "LED indication for the status of operation",
-            "Soft touch and durable membrane keys suitable for outdoor",
-            "Automatic tyre sensing system",
-            "Separate keys for set pressure increment and decrement",
-            "Flat key for empty or puncture tyre",
-            "25/35 key for easy front and back tyre pressure setting",
-            "Reset key to exit out of operation at any time",
-            "5 in 1 switch box with fuse protection and indicator",
-            "Can use for vehicle tyre ranging from two wheeler, car, SUV and mini truck"
-          ],
-          "specifications": {
-            "system": "Digital microcontroller based",
-            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
-            "airInputSupply": "87 - 145 psi / 6 - 10 bar / 6.1 - 10.2 kg/cm2",
-            "sensorAccuracy": "± 0.5% of full scale",
-            "inputAirHose": "6mm x 2mtrs Black braider Hose with suitable fittings",
-            "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
-            "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head foot connector",
-            "maximumOverPressure": "185 psi (13 kg/cm2)",
-            "pressureSettingRange": "6 to 100 psi",
-            "workingPressureRange": "0 to 100 psi",
-            "displayResolution": "1 psi",
-            "measuringResolution": "0.25 psi",
-            "keypad": "Membrane Keypad suitable for outdoor application",
-            "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
-            "dimensions": "415 x 210 x 1390 mm (pedestal), 425 x 250 x 1420 mm (Packing)"
-          },
-          "applications": [
-            "Fuel Station (for IOCL, BPCL, HPCL, ESSAR, RELIANCE and other leading companies)",
-            "Wheel Alignment Shop",
-            "Automotive Garage",
-            "Depot",
-            "Puncture Shop",
-            "Apartments",
-            "Commercial Parking Lot",
-            "Educational Institution",
-            "Companies"
-          ],
-          "images": [
-            "/images/highres/Digital Tyre Inflator Pedestal/airojet-6000-lcv-p.jpg",
-            "/images/highres/Digital Tyre Inflator Pedestal/airojet-6000-lcv-p.jpg"
-          ]
-        },
-        {
-          "model": "AIROJET 6000 LCV HP",
-          "type": "HPCL Pedestal - Normal",
-          "description": "HPCL canopy model pedestal mounted digital tyre inflator with 5 in 1 switch box.",
-          "subtitle": "HPCL Pedestal - Normal",
-          "fullDescription": "HPCL canopy model pedestal mounted digital tyre inflator for fuel stations. Features two digital readouts, LCD display with LED backlight, 5 in 1 switch box with fuse protection and indicator, and can be used for vehicle tyre ranging from two wheeler, car, SUV and mini truck.",
-          "features": [
-            "Two digital readouts one for set pressure and other for tyre pressure",
-            "LCD display with LED back light to provide good visibility",
-            "Display remain at same set pressure value even after power on-off cycle",
-            "Audible and visual end of the cycle signal indicators",
-            "LED indication for the status of operation",
-            "Soft touch and durable membrane keys suitable for outdoor",
-            "Automatic tyre sensing system",
-            "Separate keys for set pressure increment and decrement",
-            "Flat key for empty or puncture tyre",
-            "25/35 key for easy front and back tyre pressure setting",
-            "Reset key to exit out of operation at any time",
-            "5 in 1 switch box with fuse protection and indicator",
-            "Can use for vehicle tyre ranging from two wheeler, car, SUV and mini truck"
-          ],
-          "specifications": {
-            "system": "Digital microcontroller based",
-            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
-            "airInputSupply": "87 - 145 psi / 6 - 10 bar / 6.1 - 10.2 kg/cm2",
-            "sensorAccuracy": "± 0.5% of full scale",
-            "inputAirHose": "6mm x 2mtrs Black braider Hose with suitable fittings",
-            "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
-            "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head foot connector",
-            "maximumOverPressure": "185 psi (13 kg/cm2)",
-            "pressureSettingRange": "6 to 100 psi",
-            "workingPressureRange": "0 to 100 psi",
-            "displayResolution": "1 psi",
-            "measuringResolution": "0.25 psi",
-            "keypad": "Membrane Keypad suitable for outdoor application",
-            "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
-            "dimensions": "415 x 210 x 1390 mm (pedestal), 425 x 250 x 1420 mm (Packing)"
-          },
-          "applications": [
-            "Fuel Station (for HPCL)",
-            "Wheel Alignment Shop",
-            "Automotive Garage",
-            "Depot",
-            "Puncture Shop",
-            "Apartments",
-            "Commercial Parking Lot",
-            "Educational Institution",
-            "Companies"
-          ],
-          "images": [
-            "/images/highres/Digital Tyre Inflator Pedestal/airojet-6000-lcv-hp.jpg",
-            "/images/highres/Digital Tyre Inflator Pedestal/airojet-6000-lcv-hp.jpg"
-          ]
-        },
-        {
-          "model": "AIROJET 1000 LCV HP",
           "type": "Pedestal - Heavy (IOCL/BPCL)",
           "description": "Heavy duty pedestal mounted digital tyre inflator for IOCL/BPCL fuel stations with big LCD display.",
           "subtitle": "Pedestal - Heavy (IOCL/BPCL)",
@@ -546,12 +438,12 @@
             "Companies"
           ],
           "images": [
-            "/images/highres/Digital Tyre Inflator Pedestal/airojet-1000-lcv-hp.jpg",
-            "/images/highres/Digital Tyre Inflator Pedestal/airojet-1000-lcv-hp.jpg"
+            "/images/highres/Digital Tyre Inflator Pedestal/airojet-6000-lcv-p.jpg",
+            "/images/highres/Digital Tyre Inflator Pedestal/airojet-6000-lcv-p.jpg"
           ]
         },
         {
-          "model": "AIROJET 1000 LCV P",
+          "model": "AIROJET 6000 LCV HP",
           "type": "HPCL Pedestal - Heavy",
           "description": "HPCL canopy model heavy duty pedestal mounted digital tyre inflator with big LCD display.",
           "subtitle": "HPCL Pedestal - Heavy",
@@ -595,6 +487,114 @@
             "Wheel Alignment Shop",
             "Automotive Garage",
             "Bus Depot / All vehicle depot",
+            "Puncture Shop",
+            "Apartments",
+            "Commercial Parking Lot",
+            "Educational Institution",
+            "Companies"
+          ],
+          "images": [
+            "/images/highres/Digital Tyre Inflator Pedestal/airojet-6000-lcv-hp.jpg",
+            "/images/highres/Digital Tyre Inflator Pedestal/airojet-6000-lcv-hp.jpg"
+          ]
+        },
+        {
+          "model": "AIROJET 1000 LCV HP",
+          "type": "HPCL Pedestal - Normal",
+          "description": "HPCL canopy model pedestal mounted digital tyre inflator with 5 in 1 switch box.",
+          "subtitle": "HPCL Pedestal - Normal",
+          "fullDescription": "HPCL canopy model pedestal mounted digital tyre inflator for fuel stations. Features two digital readouts, LCD display with LED backlight, 5 in 1 switch box with fuse protection and indicator, and can be used for vehicle tyre ranging from two wheeler, car, SUV and mini truck.",
+          "features": [
+            "Two digital readouts one for set pressure and other for tyre pressure",
+            "LCD display with LED back light to provide good visibility",
+            "Display remain at same set pressure value even after power on-off cycle",
+            "Audible and visual end of the cycle signal indicators",
+            "LED indication for the status of operation",
+            "Soft touch and durable membrane keys suitable for outdoor",
+            "Automatic tyre sensing system",
+            "Separate keys for set pressure increment and decrement",
+            "Flat key for empty or puncture tyre",
+            "25/35 key for easy front and back tyre pressure setting",
+            "Reset key to exit out of operation at any time",
+            "5 in 1 switch box with fuse protection and indicator",
+            "Can use for vehicle tyre ranging from two wheeler, car, SUV and mini truck"
+          ],
+          "specifications": {
+            "system": "Digital microcontroller based",
+            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+            "airInputSupply": "87 - 145 psi / 6 - 10 bar / 6.1 - 10.2 kg/cm2",
+            "sensorAccuracy": "± 0.5% of full scale",
+            "inputAirHose": "6mm x 2mtrs Black braider Hose with suitable fittings",
+            "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
+            "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head foot connector",
+            "maximumOverPressure": "185 psi (13 kg/cm2)",
+            "pressureSettingRange": "6 to 100 psi",
+            "workingPressureRange": "0 to 100 psi",
+            "displayResolution": "1 psi",
+            "measuringResolution": "0.25 psi",
+            "keypad": "Membrane Keypad suitable for outdoor application",
+            "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
+            "dimensions": "415 x 210 x 1390 mm (pedestal), 425 x 250 x 1420 mm (Packing)"
+          },
+          "applications": [
+            "Fuel Station (for HPCL)",
+            "Wheel Alignment Shop",
+            "Automotive Garage",
+            "Depot",
+            "Puncture Shop",
+            "Apartments",
+            "Commercial Parking Lot",
+            "Educational Institution",
+            "Companies"
+          ],
+          "images": [
+            "/images/highres/Digital Tyre Inflator Pedestal/airojet-1000-lcv-hp.jpg",
+            "/images/highres/Digital Tyre Inflator Pedestal/airojet-1000-lcv-hp.jpg"
+          ]
+        },
+        {
+          "model": "AIROJET 1000 LCV P",
+          "type": "Pedestal - Normal (IOCL/BPCL)",
+          "description": "Pedestal mounted digital tyre inflator for IOCL/BPCL fuel stations with 5 in 1 switch box.",
+          "subtitle": "Pedestal - Normal (IOCL/BPCL)",
+          "fullDescription": "Pedestal mounted digital tyre inflator for fuel stations. Features two digital readouts, LCD display with LED backlight, 5 in 1 switch box with fuse protection and indicator, and can be used for vehicle tyre ranging from two wheeler, car, SUV and mini truck.",
+          "features": [
+            "Two digital readouts one for set pressure and other for tyre pressure",
+            "LCD display with LED back light to provide good visibility",
+            "Display remain at same set pressure value even after power on-off cycle",
+            "Audible and visual end of the cycle signal indicators",
+            "LED indication for the status of operation",
+            "Soft touch and durable membrane keys suitable for outdoor",
+            "Automatic tyre sensing system",
+            "Separate keys for set pressure increment and decrement",
+            "Flat key for empty or puncture tyre",
+            "25/35 key for easy front and back tyre pressure setting",
+            "Reset key to exit out of operation at any time",
+            "5 in 1 switch box with fuse protection and indicator",
+            "Can use for vehicle tyre ranging from two wheeler, car, SUV and mini truck"
+          ],
+          "specifications": {
+            "system": "Digital microcontroller based",
+            "electricSupply": "220 +/- 10VAC, 1Phase, 50 Hz, 5A",
+            "airInputSupply": "87 - 145 psi / 6 - 10 bar / 6.1 - 10.2 kg/cm2",
+            "sensorAccuracy": "± 0.5% of full scale",
+            "inputAirHose": "6mm x 2mtrs Black braider Hose with suitable fittings",
+            "inputFilter": "1/4 x 5 micron air filter with suitable fittings",
+            "outputAirHose": "PVC braided hose suitable for 14K g/cm2 pressure with round head foot connector",
+            "maximumOverPressure": "185 psi (13 kg/cm2)",
+            "pressureSettingRange": "6 to 100 psi",
+            "workingPressureRange": "0 to 100 psi",
+            "displayResolution": "1 psi",
+            "measuringResolution": "0.25 psi",
+            "keypad": "Membrane Keypad suitable for outdoor application",
+            "display": "4 Digit 7 Segment LCD with Automatic LED backlight ON & OFF",
+            "dimensions": "415 x 210 x 1390 mm (pedestal), 425 x 250 x 1420 mm (Packing)"
+          },
+          "applications": [
+            "Fuel Station (for IOCL, BPCL, HPCL, ESSAR, RELIANCE and other leading companies)",
+            "Wheel Alignment Shop",
+            "Automotive Garage",
+            "Depot",
             "Puncture Shop",
             "Apartments",
             "Commercial Parking Lot",
@@ -1168,11 +1168,11 @@
         }
       ],
       "images": [
-        "/images/highres/9. Digital DEF/9a.png",
-        "/images/highres/9. Digital DEF/9b.png",
-        "/images/highres/9. Digital DEF/9c.png"
+        "/images/highres/Digital DEF/adu-501-indianoil.png",
+        "/images/highres/Digital DEF/adu-501-hp.png",
+        "/images/highres/Digital DEF/adu-501-bpcl.png"
       ],
-      "mainImage": "/images/highres/9. Digital DEF/9a.png"
+      "mainImage": "/images/highres/Digital DEF/adu-501-indianoil.png"
     },
     {
       "id": "air-compressor",

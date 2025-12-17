@@ -35,7 +35,7 @@ export default function Hero({
         <div className="bg-white rounded-[12px] p-8 sm:p-5 lg:p-1 shadow-md">
           {/* Vertical Flex Layout: Text Block at Top */}
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-            {/* <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-6">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-6">
               {title}
             </h1>
 
@@ -48,29 +48,28 @@ export default function Hero({
             {ctaButtons.length > 0 && (
               <div
                 className="flex flex-wrap justify-center gap-4 mb-8"
-                onClick={(e) => e.stopPropagation()}
+                onClick={(e: React.MouseEvent) => e.stopPropagation()}
               >
                 {ctaButtons.map((button, index) => (
                   <Link
                     key={index}
                     href={button.link}
-                    className={`px-4 py-2 rounded-full text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 ${
-                      button.variant === "primary"
-                        ? "bg-primary text-white hover:opacity-90"
-                        : button.variant === "secondary"
+                    className={`px-4 py-2 rounded-full text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 ${button.variant === "primary"
+                      ? "bg-primary text-white hover:opacity-90"
+                      : button.variant === "secondary"
                         ? "bg-accent text-primary hover:bg-accent-hover hover:text-white"
                         : button.variant === "outline"
-                        ? "border-2 border-accent text-accent hover:bg-accent hover:text-white"
-                        : button.variant === "soft"
-                        ? "bg-gray-100 text-gray-900 hover:bg-gray-200"
-                        : "bg-primary text-white hover:opacity-90"
-                    }`}
+                          ? "border-2 border-accent text-accent hover:bg-accent hover:text-white"
+                          : button.variant === "soft"
+                            ? "bg-gray-100 text-gray-900 hover:bg-gray-200"
+                            : "bg-primary text-white hover:opacity-90"
+                      }`}
                   >
                     {button.text}
                   </Link>
                 ))}
               </div>
-            )} */}
+            )}
 
             {/* Large Image Area - Below buttons */}
             <div className="w-full max-w-5xl mx-auto mt-2">
@@ -100,11 +99,11 @@ export default function Hero({
                 </div>
               )}
             </div>
+          </div>
 
-            {/* Client Logos Section - Merged into Hero */}
-            <div className="w-full mt-8 border-t border-gray-100">
-              <ClientLogos />
-            </div>
+          {/* Client Logos Section - Merged into Hero but full width */}
+          <div className="w-full mt-8 border-t border-gray-100">
+            <ClientLogos />
           </div>
         </div>
       </div>
