@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 
 export async function POST(request: NextRequest) {
   try {
-    const { name, email, phone, category, product, message } =
+    const { name, email, phone, category, product, message, recaptchaToken } =
       await request.json();
 
     // Validate required fields (name, category, message) and at least one contact method
@@ -33,6 +33,61 @@ export async function POST(request: NextRequest) {
         {
           error: "Invalid phone number format. Use digits only (7-15 digits).",
         },
+        { status: 400 }
+      );
+    }
+
+    if (!recaptchaToken) {
+      return NextResponse.json(
+        { error: "reCAPTCHA verification is required." },
+        { status: 400 }
+      );
+    }
+
+    const recaptchaProjectId = process.env.RECAPTCHA_PROJECT_ID;
+    const recaptchaApiKey = process.env.RECAPTCHA_API_KEY;
+    const recaptchaSiteKey = process.env.RECAPTCHA_SITE_KEY;
+    const expectedAction = process.env.RECAPTCHA_EXPECTED_ACTION || "submit";
+    const minScore = Number(process.env.RECAPTCHA_MIN_SCORE || "0.5");
+
+    if (!recaptchaProjectId || !recaptchaApiKey || !recaptchaSiteKey) {
+      return NextResponse.json(
+        {
+          error:
+            "reCAPTCHA service not configured. Please contact the administrator.",
+          details:
+            "RECAPTCHA_PROJECT_ID, RECAPTCHA_API_KEY, or RECAPTCHA_SITE_KEY is missing",
+        },
+        { status: 500 }
+      );
+    }
+
+    const recaptchaResponse = await fetch(
+      `https://recaptchaenterprise.googleapis.com/v1/projects/${recaptchaProjectId}/assessments?key=${recaptchaApiKey}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          event: {
+            token: recaptchaToken,
+            expectedAction,
+            siteKey: recaptchaSiteKey,
+          },
+        }),
+      }
+    );
+
+    const recaptchaResult = await recaptchaResponse.json();
+
+    const isTokenValid = recaptchaResult?.tokenProperties?.valid;
+    const tokenAction = recaptchaResult?.tokenProperties?.action;
+    const score = recaptchaResult?.riskAnalysis?.score ?? 0;
+
+    if (!isTokenValid || tokenAction !== expectedAction || score < minScore) {
+      return NextResponse.json(
+        { error: "reCAPTCHA verification failed. Please try again." },
         { status: 400 }
       );
     }

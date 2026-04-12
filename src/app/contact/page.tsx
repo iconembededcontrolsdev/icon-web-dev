@@ -3,7 +3,17 @@
 import { useState, Suspense } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Script from 'next/script';
 import { countryCodes } from '@/data/countryCodes';
+
+type RecaptchaWindow = Window & {
+  grecaptcha?: {
+    enterprise?: {
+      ready: (callback: () => void) => void;
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
+  };
+};
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -28,13 +38,13 @@ function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const recaptchaSiteKey = process.env.RECAPTCHA_SITE_KEY || '';
+
+  const submitForm = async (token: string) => {
     setIsSubmitting(true);
     setError('');
 
-    // Logic: If user provides phone but no email, use company email
-    let submissionData = { ...formData };
+    const submissionData = { ...formData };
 
     // Check if phone or email is provided. At least one is usually required.
     if (!formData.phone && !formData.email) {
@@ -55,13 +65,28 @@ function ContactForm() {
       return;
     }
 
+    if (!recaptchaSiteKey) {
+      setError('reCAPTCHA is not configured. Please contact the administrator.');
+      setIsSubmitting(false);
+      return;
+    }
+
+    if (!token) {
+      setError('reCAPTCHA token is missing. Please try again.');
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
       const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(submissionData),
+        body: JSON.stringify({
+          ...submissionData,
+          recaptchaToken: token,
+        }),
       });
 
       const data = await response.json();
@@ -83,6 +108,43 @@ function ContactForm() {
     }
   };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!recaptchaSiteKey) {
+      setError('reCAPTCHA is not configured. Please contact the administrator.');
+      return;
+    }
+
+    const win = window as RecaptchaWindow;
+    if (!win.grecaptcha?.enterprise?.ready || !win.grecaptcha.enterprise.execute) {
+      setError('reCAPTCHA script is not loaded yet. Please try again.');
+      return;
+    }
+
+    setIsSubmitting(true);
+    setError('');
+
+    try {
+      const token = await new Promise<string>((resolve, reject) => {
+        win.grecaptcha?.enterprise?.ready(async () => {
+          try {
+            const responseToken = await win.grecaptcha!.enterprise!.execute(recaptchaSiteKey, {
+              action: 'submit',
+            });
+            resolve(responseToken);
+          } catch (error) {
+            reject(error);
+          }
+        });
+      });
+      await submitForm(token);
+    } catch {
+      setError('reCAPTCHA verification failed. Please try again.');
+      setIsSubmitting(false);
+    }
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -100,6 +162,14 @@ function ContactForm() {
 
   return (
     <div className="min-h-screen bg-background pt-12">
+      {recaptchaSiteKey && (
+        <Script
+          id="recaptcha-enterprise"
+          src={`https://www.google.com/recaptcha/enterprise.js?render=${recaptchaSiteKey}`}
+          strategy="afterInteractive"
+        />
+      )}
+
       {/* Back Button */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <Link
@@ -129,12 +199,14 @@ function ContactForm() {
           {/* Branding Header */}
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
-              <div className="relative h-24 w-64 md:w-80">
+              <div className="w-64 md:w-80">
                 <Image
                   src="/images/highres/extras/logo.png"
                   alt="Icon Embeded Controls"
-                  fill
-                  className="object-contain"
+                  width={320}
+                  height={120}
+                  sizes="(min-width: 768px) 320px, 256px"
+                  className="w-full h-auto object-contain"
                 />
               </div>
             </div>
@@ -376,8 +448,8 @@ function ContactForm() {
               <div className="pt-4">
                 <button
                   type="submit"
-                  disabled={isSubmitting}
                   className="w-full px-8 py-4 bg-primary text-white font-semibold rounded-full hover:opacity-90 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                  disabled={isSubmitting || !recaptchaSiteKey}
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </button>

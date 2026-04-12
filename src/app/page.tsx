@@ -25,7 +25,7 @@ export default function Home() {
       type: 'hero',
       title: 'Icon Embeded Controls',
       subtitle: 'Industrial Equipment & Digital Tyre Inflators',
-      img: '/images/highres/logos/logo.png',
+      img: '/images/lowres/logo.png',
     },
     {
       type: 'nitrogen-showcase'
@@ -66,7 +66,7 @@ export default function Home() {
         setBlocks([
           {
             type: 'hero',
-            img: '/images/highres/logos/logo.png',
+            img: '/images/lowres/logo.png',
           },
           {
             type: 'nitrogen-showcase',
@@ -231,22 +231,24 @@ export default function Home() {
               <div className="flex flex-col items-center md:items-end">
                 <div className="relative w-40 h-16 mb-4">
                   <Image
-                    src="/images/highres/logos/logo.png"
+                    src="/images/lowres/logo.png"
                     alt="Icon Embeded Controls"
                     fill
+                    sizes="160px"
                     className="object-contain"
                   />
                 </div>
                 <div className="w-full h-48 rounded-xl overflow-hidden shadow-sm border border-gray-200">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.284721862546!2d77.02629303656019!3d11.019608060235385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85765ea8ff1e3%3A0x297b424b515ef933!2sIcon%20Embeded%20Controls!5e0!3m2!1sen!2sin!4v1765110091224!5m2!1sen!2sin"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  ></iframe>
+                    <iframe
+                      title="Icon Embeded Controls Location on Google Maps"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.284721862546!2d77.02629303656019!3d11.019608060235385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85765ea8ff1e3%3A0x297b424b515ef933!2sIcon%20Embeded%20Controls!5e0!3m2!1sen!2sin!4v1765110091224!5m2!1sen!2sin"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
                 </div>
               </div>
             </div>

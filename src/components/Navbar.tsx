@@ -74,13 +74,14 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-12">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <div className="relative h-9 w-auto">
+              <div>
                 <Image
-                  src="/images/highres/extras/logo.png"
+                  src="/images/lowres/logo.png"
                   alt="Icon Embeded Controls"
                   width={80}
                   height={32}
-                  className="object-contain"
+                  sizes="80px"
+                  className="h-9 w-auto object-contain"
                 />
               </div>
             </Link>
@@ -218,6 +219,7 @@ export default function Navbar() {
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-white hover:text-gray-300 focus:outline-none"
+                aria-label="Toggle navigation menu"
               >
                 <svg
                   className="h-6 w-6"

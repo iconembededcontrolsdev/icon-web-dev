@@ -104,7 +104,7 @@ export default function GoogleTranslate({ id = 'google_translate_element', varia
       </div>
 
       <Script
-        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
         strategy="lazyOnload"
       />
       <style jsx global>{`
