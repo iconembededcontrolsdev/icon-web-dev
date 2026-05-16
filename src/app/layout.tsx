@@ -51,6 +51,12 @@ export const metadata: Metadata = {
     "DEF AdBlue dispenser",
     "industrial equipment India",
     "Coimbatore industrial equipment",
+    // Additional SEO keywords requested
+    "N2 inflator",
+    "tyre inflator India",
+    "IOCL approved inflator",
+    "BPCL approved inflator",
+    "tyre inflator export",
   ],
   authors: [{ name: "Icon Embeded Controls" }],
   creator: "Icon Embeded Controls",

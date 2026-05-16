@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import LogoFrame from '@/components/LogoFrame';
 
 import Link from 'next/link';
 import ClientLogos from '@/components/ClientLogos';
@@ -74,15 +75,15 @@ export default function Hero({
             {/* Large Image Area - Below buttons */}
             <div className="w-full max-w-5xl mx-auto mt-2">
               {img.includes("logo.png") ? (
-                // Logo with fixed height
-                <div className="relative w-full h-[200px] md:h-[300px] lg:h-[400px] rounded-[30px] overflow-hidden bg-transparent flex items-center justify-center">
-                  <Image
+                // Logo with fixed height wrapped in rounded white rect
+                <div className="relative w-full h-[200px] md:h-[300px] lg:h-[400px] flex items-center justify-center">
+                  <LogoFrame
                     src={img}
                     alt={title || 'Icon Logo'}
                     width={600}
                     height={600}
-                    className="object-contain w-auto h-full transition-transform duration-300 hover:scale-[1.02]"
-                    priority
+                    imgClassName="object-contain w-auto h-full transition-transform duration-300 hover:scale-[1.02]"
+                    wrapperClassName="p-6 rounded-[30px]"
                   />
                 </div>
               ) : (

@@ -3,6 +3,7 @@
 import { useState, Suspense } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import LogoFrame from '@/components/LogoFrame';
 import Script from 'next/script';
 import { countryCodes } from '@/data/countryCodes';
 
@@ -200,13 +201,13 @@ function ContactForm() {
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
               <div className="w-64 md:w-80">
-                <Image
+                <LogoFrame
                   src="/images/highres/extras/logo.png"
                   alt="Icon Embeded Controls"
                   width={320}
                   height={120}
-                  sizes="(min-width: 768px) 320px, 256px"
-                  className="w-full h-auto object-contain"
+                  wrapperClassName="p-2"
+                  imgClassName="w-full h-auto object-contain"
                 />
               </div>
             </div>

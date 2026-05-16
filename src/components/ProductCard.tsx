@@ -3,6 +3,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import LogoFrame from './LogoFrame';
 
 interface ProductCardProps {
   id: string;
@@ -33,12 +34,13 @@ export default function ProductCard({ id, title, description, image }: ProductCa
         <div className="p-6 flex-1 flex flex-col">
           <div className="flex items-center gap-3 mb-3">
             <div className="relative w-10 h-10 flex-shrink-0 flex items-center justify-center">
-              <Image
+              <LogoFrame
                 src="/images/lowres/logo.png"
                 alt="Icon Logo"
                 width={40}
                 height={40}
-                className="object-contain"
+                wrapperClassName="w-10 h-10 p-1"
+                imgClassName="object-contain"
               />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors flex-1">

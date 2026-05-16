@@ -6,6 +6,7 @@ import DynamicGrid from '@/components/DynamicGrid';
 import NitrogenShowcase from '@/components/NitrogenShowcase';
 import Link from 'next/link';
 import Image from 'next/image';
+import LogoFrame from '@/components/LogoFrame';
 import { useRouter } from 'next/navigation';
 import StructuredData from '@/components/StructuredData';
 import { generateOrganizationSchema, organizationData } from '@/utils/seo';
@@ -230,12 +231,13 @@ export default function Home() {
 
               <div className="flex flex-col items-center md:items-end">
                 <div className="relative w-40 h-16 mb-4">
-                  <Image
+                  <LogoFrame
                     src="/images/lowres/logo.png"
                     alt="Icon Embeded Controls"
                     fill
+                    wrapperClassName="w-40 h-16 p-3"
+                    imgClassName="object-contain"
                     sizes="160px"
-                    className="object-contain"
                   />
                 </div>
                 <div className="w-full h-48 rounded-xl overflow-hidden shadow-sm border border-gray-200">

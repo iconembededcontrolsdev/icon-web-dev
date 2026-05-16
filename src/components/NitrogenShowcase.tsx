@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import LogoFrame from './LogoFrame';
 import { useRouter } from 'next/navigation';
 import {
     MileageIcon,
@@ -85,12 +86,13 @@ export default function NitrogenShowcase({ product }: { product?: any }) {
                     <div className="w-full lg:w-1/2 p-8 lg:p-16 flex flex-col justify-center bg-card z-10 lg:order-1">
                         <div className="flex items-center gap-4 mb-8">
                             <div className="relative w-16 h-16 lg:w-20 lg:h-20 flex-shrink-0 flex items-center justify-center">
-                                <Image
+                                <LogoFrame
                                     src="/images/lowres/logo.png"
                                     alt="Icon Logo"
                                     width={80}
                                     height={80}
-                                    className="object-contain"
+                                    wrapperClassName="w-16 h-16 lg:w-20 lg:h-20 p-2"
+                                    imgClassName="object-contain"
                                 />
                             </div>
                             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">
@@ -102,11 +104,12 @@ export default function NitrogenShowcase({ product }: { product?: any }) {
                             <div className="flex items-center justify-start gap-1 mb-6 flex-wrap leading-none">
                                 <h4 className="text-sm md:text-base font-bold text-accent uppercase tracking-wider whitespace-nowrap">BENEFITS OF</h4>
                                 <div className="relative w-16 h-6">
-                                    <Image
+                                    <LogoFrame
                                         src="/images/lowres/logo.png"
                                         alt="Icon Logo"
                                         fill
-                                        className="object-contain"
+                                        wrapperClassName="w-16 h-6 p-0"
+                                        imgClassName="object-contain"
                                         sizes="64px"
                                     />
                                 </div>

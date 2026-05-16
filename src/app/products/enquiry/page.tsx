@@ -4,6 +4,7 @@ import { useSearchParams } from 'next/navigation';
 import { useState, Suspense, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import LogoFrame from '@/components/LogoFrame';
 import { countryCodes } from '@/data/countryCodes';
 
 function ProductEnquiryForm() {
@@ -189,11 +190,13 @@ function ProductEnquiryForm() {
                   {productImage && <div className="h-12 md:h-20 w-[1px] bg-border/50"></div>}
 
                   <div className={`relative h-full ${productImage ? 'flex-1' : 'w-48 flex-none'}`}>
-                    <Image
+                    <LogoFrame
                       src="/images/highres/logos/logo.png"
                       alt="Icon Embeded Controls"
                       fill
-                      className={`object-contain ${productImage ? 'object-left' : 'object-center'}`}
+                      wrapperClassName={productImage ? 'flex-1 p-4' : 'w-48 p-4'}
+                      imgClassName={`object-contain ${productImage ? 'object-left' : 'object-center'}`}
+                      sizes="(max-width: 768px) 100vw, 48vw"
                     />
                   </div>
                 </div>

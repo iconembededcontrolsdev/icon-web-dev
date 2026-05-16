@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import LogoFrame from '@/components/LogoFrame';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -15,6 +16,13 @@ export const metadata: Metadata = {
     "MRF partner",
     "Michelin partner",
     "industrial equipment manufacturer India"
+    ,
+    // Additional SEO keywords
+    "N2 inflator",
+    "tyre inflator India",
+    "IOCL approved inflator",
+    "BPCL approved inflator",
+    "tyre inflator export",
   ],
   openGraph: {
     title: "About Icon Embeded Controls - Digital Tyre Inflator Manufacturer Since 2007",
@@ -87,12 +95,13 @@ export default function AboutPage() {
           </div>
           <div className="relative h-[400px] rounded-[40px] overflow-hidden shadow-lg bg-white p-8 flex items-center justify-center">
             {/* Placeholder for an about image or logo */}
-            <Image
+            <LogoFrame
               src="/images/highres/logos/logo.png"
               alt="Icon Embeded Controls"
               width={400}
               height={400}
-              className="object-contain"
+              wrapperClassName="p-8 rounded-[40px]"
+              imgClassName="object-contain"
             />
           </div>
         </div>

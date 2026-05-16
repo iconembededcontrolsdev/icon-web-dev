@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import LogoFrame from './LogoFrame';
 import { usePathname } from 'next/navigation';
 import { useTheme } from '@/contexts/ThemeContext';
 import GoogleTranslate from './GoogleTranslate';
@@ -74,13 +74,13 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-12">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <Image
+              <LogoFrame
                 src="/images/lowres/logo.png"
                 alt="Icon Embeded Controls"
                 width={80}
                 height={32}
-                sizes="80px"
-                className="h-9 w-auto object-contain"
+                imgClassName="h-9 w-auto object-contain"
+                wrapperClassName="p-1"
               />
             </Link>
           </div>
