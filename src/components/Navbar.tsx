@@ -79,8 +79,8 @@ export default function Navbar() {
                 alt="Icon Embeded Controls"
                 width={80}
                 height={32}
-                imgClassName="h-9 w-auto object-contain"
-                wrapperClassName="p-1"
+                imgClassName="object-contain h-full w-auto"
+                wrapperClassName="w-20 h-8 sm:w-24 sm:h-10 p-2 rounded-[12px]"
               />
             </Link>
           </div>

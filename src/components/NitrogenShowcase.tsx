@@ -85,13 +85,13 @@ export default function NitrogenShowcase({ product }: { product?: any }) {
                     {/* Content Section - Second on Mobile, Left on Desktop */}
                     <div className="w-full lg:w-1/2 p-8 lg:p-16 flex flex-col justify-center bg-card z-10 lg:order-1">
                         <div className="flex items-center gap-4 mb-8">
-                            <div className="relative w-16 h-16 lg:w-20 lg:h-20 flex-shrink-0 flex items-center justify-center">
+                            <div className="relative w-20 h-8 lg:w-24 lg:h-10 flex-shrink-0 flex items-center justify-center">
                                 <LogoFrame
                                     src="/images/lowres/logo.png"
                                     alt="Icon Logo"
-                                    width={80}
-                                    height={80}
-                                    wrapperClassName="w-16 h-16 lg:w-20 lg:h-20 p-2"
+                                    width={96}
+                                    height={32}
+                                    wrapperClassName="w-20 h-8 lg:w-24 lg:h-10 p-2"
                                     imgClassName="object-contain"
                                 />
                             </div>
@@ -103,12 +103,13 @@ export default function NitrogenShowcase({ product }: { product?: any }) {
                         <div className="mb-8 flex-grow">
                             <div className="flex items-center justify-start gap-1 mb-6 flex-wrap leading-none">
                                 <h4 className="text-sm md:text-base font-bold text-accent uppercase tracking-wider whitespace-nowrap">BENEFITS OF</h4>
-                                <div className="relative w-16 h-6">
+                                <div className="relative w-20 h-8">
                                     <LogoFrame
                                         src="/images/lowres/logo.png"
                                         alt="Icon Logo"
-                                        fill
-                                        wrapperClassName="w-16 h-6 p-0"
+                                        width={64}
+                                        height={24}
+                                        wrapperClassName="w-20 h-8 p-2 rounded-[12px]"
                                         imgClassName="object-contain"
                                         sizes="64px"
                                     />
