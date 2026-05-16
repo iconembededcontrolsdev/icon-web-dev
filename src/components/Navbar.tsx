@@ -74,16 +74,14 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-12">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <div>
-                <Image
-                  src="/images/lowres/logo.png"
-                  alt="Icon Embeded Controls"
-                  width={80}
-                  height={32}
-                  sizes="80px"
-                  className="h-9 w-auto object-contain"
-                />
-              </div>
+              <Image
+                src="/images/lowres/logo.png"
+                alt="Icon Embeded Controls"
+                width={80}
+                height={32}
+                sizes="80px"
+                className="h-9 w-auto object-contain"
+              />
             </Link>
           </div>
 

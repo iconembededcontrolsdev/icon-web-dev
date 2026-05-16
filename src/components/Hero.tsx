@@ -99,6 +99,52 @@ export default function Hero({
                 </div>
               )}
             </div>
+
+            {img.includes("logo.png") && (
+              <div className="mt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+                <a
+                  href="https://www.msme.gov.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-3 py-2 shadow-sm transition-transform hover:scale-105"
+                  aria-label="Visit MSME website"
+                >
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-gray-50">
+                    <Image
+                      src="/images/highres/logos/MSME.jpeg"
+                      alt="MSME certified"
+                      width={40}
+                      height={40}
+                      className="h-8 w-8 rounded-full object-contain"
+                    />
+                  </span>
+                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gray-700">
+                    MSME
+                  </span>
+                </a>
+
+                <a
+                  href="https://www.nsic.co.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-3 py-2 shadow-sm transition-transform hover:scale-105"
+                  aria-label="Visit NSIC website"
+                >
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-gray-50">
+                    <Image
+                      src="/images/highres/logos/NSIC.png"
+                      alt="NSIC certified"
+                      width={40}
+                      height={40}
+                      className="h-8 w-8 rounded-full object-contain"
+                    />
+                  </span>
+                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gray-700">
+                    NSIC
+                  </span>
+                </a>
+              </div>
+            )}
           </div>
 
           {/* Client Logos Section - Merged into Hero but full width */}
