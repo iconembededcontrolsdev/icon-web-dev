@@ -35,7 +35,7 @@ export default function ProductCard({ id, title, description, image }: ProductCa
           <div className="flex items-center gap-3 mb-3">
             <div className="relative w-10 h-10 flex-shrink-0 flex items-center justify-center">
               <LogoFrame
-                src="/images/lowres/logo.png"
+                src="/images/lowres/7.%20Extras/logo-low.png"
                 alt="Icon Logo"
                 width={40}
                 height={40}
