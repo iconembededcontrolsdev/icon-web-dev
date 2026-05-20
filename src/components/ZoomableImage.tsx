@@ -70,6 +70,7 @@ export default function ZoomableImage({ src, alt, priority = false, className }:
                     transform: isZoomed ? 'scale(2)' : 'scale(1)',
                 }}
                 priority={priority}
+                sizes="100vw"
             />
 
             {/* Zoom Icon (The [+]) - Hides when zoomed to avoid obstruction */}

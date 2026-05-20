@@ -147,7 +147,7 @@ export async function POST(request: NextRequest) {
           <body>
             <div class="container">
               <div class="header">
-                 <img src="https://iconembededcontrols.com/images/lowres/logo.png" alt="Icon Embeded Controls" style="max-width: 200px; margin-bottom: 20px;">
+                 <img src="https://iconembededcontrols.com/images/lowres/logo-low.png" alt="Icon Embeded Controls" style="max-width: 200px; margin-bottom: 20px;">
                 <h1>${product ? "🎯 Product Enquiry!" : "New Enquiry Received"}</h1>
               </div>
               <div class="content">
@@ -218,7 +218,7 @@ export async function POST(request: NextRequest) {
             <body>
               <div class="container">
               <div class="header">
-                <img src="https://iconembededcontrols.com/images/lowres/logo.png" alt="Icon Embeded Controls" style="max-width: 200px; margin-bottom: 20px;">
+                <img src="https://iconembededcontrols.com/images/lowres/logo-low.png" alt="Icon Embeded Controls" style="max-width: 200px; margin-bottom: 20px;">
                 <h1>Thank You for Reaching Out!</h1>
               </div>
                 <div class="content">

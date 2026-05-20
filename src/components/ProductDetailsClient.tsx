@@ -226,6 +226,7 @@ export default function ProductDetailsClient({ initialProduct }: ProductDetailsC
                                 } view ${imgIdx + 1}`}
                               fill
                               className="object-contain p-1"
+                              sizes="(max-width: 1024px) 100vw, 50vw"
                             />
                           </button>
                         ))}

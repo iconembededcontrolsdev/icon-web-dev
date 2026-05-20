@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar"; // eslint-disable-line
 import { ThemeProvider } from "@/contexts/ThemeContext"; // eslint-disable-line
 import FloatingCallButton from "@/components/FloatingCallButton";
 import DisableRightClick from "@/components/DisableRightClick";
+import SwapLowToHigh from "@/components/SwapLowToHigh";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -77,7 +78,7 @@ export const metadata: Metadata = {
       "Manufacturer of digital tyre inflators, nitrogen generators, and industrial equipment. Serving fuel stations and industries worldwide.",
     images: [
       {
-        url: "/images/highres/logos/logo.png",
+        url: "/images/highres/logos/logo-low.png",
         width: 1200,
         height: 630,
         alt: "Icon Embeded Controls Logo",
@@ -90,7 +91,7 @@ export const metadata: Metadata = {
       "Icon Embeded Controls - Industrial Equipment & Digital Tyre Inflators",
     description:
       "Leading manufacturer of digital tyre inflators, nitrogen generators, air compressors, and industrial equipment.",
-    images: ["/images/highres/logos/logo.png"],
+    images: ["/images/highres/logos/logo-low.png"],
   },
 
   robots: {
@@ -144,6 +145,7 @@ export default function RootLayout({
           <FloatingCallButton />
         </ThemeProvider>
         <DisableRightClick />
+        <SwapLowToHigh />
       </body>
     </html>
   );

@@ -95,6 +95,7 @@ export default function ProductDetailModal({ product, isOpen, onClose }: Product
                       fill
                       className="object-contain transition-opacity duration-300"
                       priority
+                      sizes="(max-width: 1024px) 100vw, 80vw"
                     />
                   </div>
 

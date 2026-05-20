@@ -31,6 +31,23 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      // Serve logo-low.png by rewriting to existing logo.png files
+      {
+        source: '/images/lowres/logo-low.png',
+        destination: '/images/lowres/logo.png',
+      },
+      {
+        source: '/images/highres/logos/logo-low.png',
+        destination: '/images/highres/logos/logo.png',
+      },
+      {
+        source: '/images/highres/extras/logo-low.png',
+        destination: '/images/highres/extras/logo.png',
+      },
+    ];
+  },
 };
 
 export default nextConfig;
