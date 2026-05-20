@@ -191,7 +191,7 @@ function ProductEnquiryForm() {
 
                   <div className={`relative h-full ${productImage ? 'flex-1' : 'w-48 flex-none'}`}>
                     <LogoFrame
-                      src="/images/highres/logos/logo-low.png"
+                      src="/images/highres/logos/logo.png"
                       alt="Icon Embeded Controls"
                       fill
                       wrapperClassName={productImage ? 'flex-1 p-4' : 'w-48 p-4'}

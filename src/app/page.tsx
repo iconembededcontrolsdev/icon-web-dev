@@ -26,7 +26,7 @@ export default function Home() {
       type: 'hero',
       title: 'Icon Embeded Controls',
       subtitle: 'Industrial Equipment & Digital Tyre Inflators',
-      img: '/images/lowres/logo-low.png',
+      img: '/images/lowres/logo.png',
     },
     {
       type: 'nitrogen-showcase'
@@ -67,7 +67,7 @@ export default function Home() {
         setBlocks([
           {
             type: 'hero',
-            img: '/images/lowres/logo-low.png',
+            img: '/images/lowres/logo.png',
           },
           {
             type: 'nitrogen-showcase',
@@ -232,7 +232,7 @@ export default function Home() {
               <div className="flex flex-col items-center md:items-end">
                 <div className="relative w-40 h-16 mb-4">
                   <LogoFrame
-                    src="/images/lowres/logo-low.png"
+                    src="/images/lowres/logo.png"
                     alt="Icon Embeded Controls"
                     fill
                     wrapperClassName="w-40 h-16 p-3"

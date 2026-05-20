@@ -39,6 +39,10 @@ const nextConfig: NextConfig = {
         destination: '/images/lowres/logo.png',
       },
       {
+        source: '/images/highres/logo-low.png',
+        destination: '/images/highres/logos/logo.png',
+      },
+      {
         source: '/images/highres/logos/logo-low.png',
         destination: '/images/highres/logos/logo.png',
       },

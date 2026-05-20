@@ -75,7 +75,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <LogoFrame
-                src="/images/lowres/logo-low.png"
+                src="/images/lowres/logo.png"
                 alt="Icon Embeded Controls"
                 width={80}
                 height={32}

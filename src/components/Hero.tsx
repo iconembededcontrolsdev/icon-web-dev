@@ -73,7 +73,7 @@ export default function Hero({
 
             {/* Large Image Area - Below buttons */}
             <div className="w-full max-w-5xl mx-auto mt-2">
-              {img.includes("logo-low.png") ? (
+              {img.includes("logo.png") ? (
                 // Logo with fixed height (no rounded white frame)
                 <div className="relative w-full h-[200px] md:h-[300px] lg:h-[400px] rounded-[30px] overflow-hidden bg-transparent flex items-center justify-center">
                   <Image
@@ -100,7 +100,7 @@ export default function Hero({
               )}
             </div>
 
-            {img.includes("logo-low.png") && (
+            {img.includes("logo.png") && (
               <div className="mt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
                 <a
                   href="https://www.msme.gov.in/"

@@ -202,7 +202,7 @@ function ContactForm() {
             <div className="flex justify-center mb-6">
               <div className="w-64 md:w-80">
                 <LogoFrame
-                  src="/images/highres/extras/logo-low.png"
+                  src="/images/highres/extras/logo.png"
                   alt="Icon Embeded Controls"
                   width={320}
                   height={120}

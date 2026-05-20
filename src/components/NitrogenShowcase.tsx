@@ -88,7 +88,7 @@ export default function NitrogenShowcase({ product }: { product?: any }) {
                         <div className="flex items-center gap-4 mb-8">
                             <div className="relative w-20 h-8 lg:w-24 lg:h-10 flex-shrink-0 flex items-center justify-center">
                                 <LogoFrame
-                                    src="/images/lowres/logo-low.png"
+                                    src="/images/lowres/logo.png"
                                     alt="Icon Logo"
                                     width={96}
                                     height={32}
@@ -106,7 +106,7 @@ export default function NitrogenShowcase({ product }: { product?: any }) {
                                 <h4 className="text-sm md:text-base font-bold text-accent uppercase tracking-wider whitespace-nowrap">BENEFITS OF</h4>
                                 <div className="relative w-20 h-8">
                                     <LogoFrame
-                                        src="/images/lowres/logo-low.png"
+                                        src="/images/lowres/logo.png"
                                         alt="Icon Logo"
                                         width={64}
                                         height={24}
