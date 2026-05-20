@@ -14,6 +14,20 @@ const LOGOS = [
   '/images/highres/logos/9.svg',
   '/images/highres/logos/10.svg',
   '/images/highres/logos/11.png',
+  '/images/highres/logos/12.jpg',
+  '/images/highres/logos/13.png',
+  '/images/highres/logos/14.png',
+  '/images/highres/logos/15.jpeg',
+  '/images/highres/logos/16.jpg',
+  '/images/highres/logos/17.png',
+  '/images/highres/logos/18.jpeg',
+  '/images/highres/logos/19.png',
+  '/images/highres/logos/20.png',
+  '/images/highres/logos/21.webp',
+  '/images/highres/logos/22.jpg',
+  '/images/highres/logos/23.png',
+  '/images/highres/logos/MSME.jpeg',
+  '/images/highres/logos/NSIC.png',
 ];
 
 export default function ClientLogos() {

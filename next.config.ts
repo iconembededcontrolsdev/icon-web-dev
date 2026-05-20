@@ -50,6 +50,10 @@ const nextConfig: NextConfig = {
         source: '/images/highres/extras/logo-low.png',
         destination: '/images/highres/extras/logo.png',
       },
+      {
+        source: '/images/highres/7.%20Extras/logo-low.png',
+        destination: '/images/lowres/7.%20Extras/logo-low.png',
+      },
     ];
   },
 };
