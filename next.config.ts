@@ -33,6 +33,11 @@ const nextConfig: NextConfig = {
   },
   async rewrites() {
     return [
+      // Map any highres logo-low paths to their lowres counterparts (handles encoded spaces)
+      {
+        source: '/images/highres/:rest*/logo-low.png',
+        destination: '/images/lowres/:rest*/logo-low.png',
+      },
       // Serve logo-low.png by rewriting to existing logo.png files
       {
         source: '/images/lowres/logo-low.png',
