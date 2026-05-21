@@ -129,6 +129,10 @@ export default function RootLayout({
           name="google-site-verification"
           content="tofT2lz_IlPj6f9JUhMGBuirdokA3CKcacWDEp4q4IM"
         />
+        <meta
+          name="description"
+          content="Manufacturer of digital tyre inflators, nitrogen generators, and industrial equipment. Serving fuel stations and industries worldwide."
+        />
         <meta name="theme-color" content="#2563eb" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="mobile-web-app-capable" content="yes" />

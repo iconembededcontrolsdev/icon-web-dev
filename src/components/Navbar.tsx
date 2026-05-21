@@ -82,6 +82,7 @@ export default function Navbar() {
                 imgClassName="object-contain h-full w-auto"
                 wrapperClassName="w-36 h-10 sm:w-40 sm:h-11 rounded-[12px]"
                 paddingClassName="p-0"
+                priority
                 unoptimized
               />
             </Link>

@@ -30,7 +30,7 @@
     --card: #141b2d;
     --card-light: #f5f7fa;
     --card-foreground: #f0f4f8;
-    --primary: #4f8fff;
+    --primary: #1d4ed8;
     --primary-foreground: #ffffff;
     --accent: #ff6b35;
     --accent-hover: #ff5722;
@@ -110,16 +110,4 @@ body {
   background: var(--accent);
 }
 
-/* Hide H1 tags visually as requested */
-h1 {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
 

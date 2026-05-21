@@ -30,7 +30,7 @@ export default function NitrogenShowcase({ product }: { product?: any }) {
     const link = product?.id ? `/products/${product?.id}` : '/products/digital-nitrogen-tyre-inflator';
 
     const ctaButtons = [
-        { text: 'Learn More', link: link, variant: 'primary' },
+        { text: product?.ctaText || `View ${title}`, link: link, variant: 'primary' },
         { text: 'Product Enquiry', link: `/products/enquiry?product=${encodeURIComponent(title)}`, variant: 'outline' }
     ];
 
@@ -96,7 +96,7 @@ export default function NitrogenShowcase({ product }: { product?: any }) {
                                     imgClassName="object-contain"
                                 />
                             </div>
-                            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">
+                            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-card-foreground">
                                 {title}
                             </h3>
                         </div>

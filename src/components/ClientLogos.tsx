@@ -19,11 +19,11 @@ const LOGOS = [
   '/images/highres/logos/14.png',
   '/images/highres/logos/15.jpeg',
   '/images/highres/logos/16.jpg',
-  '/images/highres/logos/17.png',
-  '/images/highres/logos/18.jpeg',
-  '/images/highres/logos/19.png',
-  '/images/highres/logos/20.webp',
-  '/images/highres/logos/21.jpg',
+  '/images/highres/logos/17.jpeg',
+  '/images/highres/logos/18.png',
+  '/images/highres/logos/19.webp',
+  '/images/highres/logos/20.jpg',
+  '/images/highres/logos/21.png',
   '/images/highres/logos/22.png',
 ];
 
@@ -31,7 +31,7 @@ export default function ClientLogos() {
   return (
     <div className="w-full mx-auto py-8 overflow-hidden pointer-events-none">
       <div className="text-center mb-6 pointer-events-auto">
-        <h2 className="text-2xl font-bold text-primary">Our Trusted Clients</h2>
+        <h2 className="text-2xl font-bold text-card-foreground">Our Trusted Clients</h2>
         <p className="text-muted mt-1 text-sm">Partnering with industry leaders across the globe</p>
       </div>
 

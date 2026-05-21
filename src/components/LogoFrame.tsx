@@ -11,6 +11,7 @@ type Props = {
   paddingClassName?: string;
   unoptimized?: boolean;
   fill?: boolean;
+  priority?: boolean;
 };
 
 export default function LogoFrame({
@@ -24,6 +25,7 @@ export default function LogoFrame({
   paddingClassName = '',
   unoptimized = false,
   fill = false,
+  priority = false,
 }: Props) {
   const fillPaddingClassName = paddingClassName || 'px-2 py-2';
   const framePaddingClassName = paddingClassName || 'px-3 py-2';
@@ -31,15 +33,15 @@ export default function LogoFrame({
   // For next/image with fill, the parent must be position:relative and have explicit size.
   if (fill) {
     return (
-      <div className={`relative overflow-hidden bg-white rounded-[12px] shadow-sm ${fillPaddingClassName} ${wrapperClassName}`}>
-        <Image src={src} alt={alt} fill className={imgClassName + ' object-contain'} sizes={sizes} unoptimized={unoptimized} />
+      <div className={`relative overflow-hidden bg-white rounded-[12px] shadow-sm border border-border ${fillPaddingClassName} ${wrapperClassName}`}>
+        <Image src={src} alt={alt} fill className={imgClassName + ' object-contain'} sizes={sizes} unoptimized={unoptimized} priority={priority} />
       </div>
     );
   }
 
   return (
-    <div className={`inline-flex items-center justify-center bg-white rounded-[12px] shadow-sm ${framePaddingClassName} ${wrapperClassName}`}>
-      <Image src={src} alt={alt} width={width} height={height} sizes={sizes} className={imgClassName} unoptimized={unoptimized} />
+    <div className={`inline-flex items-center justify-center bg-white rounded-[12px] shadow-sm border border-border ${framePaddingClassName} ${wrapperClassName}`}>
+      <Image src={src} alt={alt} width={width} height={height} sizes={sizes} className={imgClassName} unoptimized={unoptimized} priority={priority} />
     </div>
   );
 }

@@ -53,7 +53,7 @@ export default function DynamicGrid({
         {(title || subtitle) && (
           <div className="text-center max-w-3xl mx-auto mb-[60px]">
             {title && (
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-card-foreground mb-4">
                 {title}
               </h2>
             )}
@@ -98,7 +98,7 @@ export default function DynamicGrid({
                               imgClassName="object-contain"
                             />
                           </div>
-                          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">
+                          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-card-foreground">
                             {item.title}
                           </h3>
                         </div>
@@ -213,7 +213,7 @@ export default function DynamicGrid({
                               imgClassName="object-contain"
                             />
                           </div>
-                          <h3 className="text-xl lg:text-2xl font-bold text-primary">
+                          <h3 className="text-xl lg:text-2xl font-bold text-card-foreground">
                             {item.title}
                           </h3>
                         </div>

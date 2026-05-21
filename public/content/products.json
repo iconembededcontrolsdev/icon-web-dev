@@ -3,6 +3,7 @@
     {
       "id": "digital-nitrogen-tyre-inflator",
       "title": "Digital Nitrogen Tyre Inflator",
+      "ctaText": "View Digital Nitrogen Tyre Inflator",
       "description": "Reliable and accurate electronic digital nitrogen tyre inflators. Nitrogen production based on cost-efficient PSA technology with 95-99% purity suitable for vehicle nitrogen inflation.",
       "subtitle": "Reliable and accurate electronic digital nitrogen tyre inflators. Nitrogen production based on cost-efficient PSA technology with 95-99% purity suitable for vehicle nitrogen inflation.",
       "fullDescription": "We are the leading Manufacturer and supplier for Electronic Digital Nitrogen Tyre Inflator all over India since the year 2007. Our Electronic Digital Nitrogen Tyre Inflator is reliable, durable and accurate, thus meet the requirement of each and every horizon related to vehicle tyre pressure inflation. Nitrogen production is based on reliable and cost efficient PSA technology. Nitrogen Purity may vary from 95-99% suitable for vehicle nitrogen purity suggestions. Our Electronic Digital Nitrogen Tyre Inflator meets the accuracy suggested by tyre manufacturer's pressure standards. Our control panel Enclosure meets the Ingress Protection standard IP65.",
@@ -339,6 +340,7 @@
     {
       "id": "digital-tyre-inflator-pedestal",
       "title": "Digital Tyre Inflator Pedestals",
+      "ctaText": "View Digital Tyre Inflator Pedestals",
       "description": "Pedestal mounted digital tyre inflators suitable for fuel stations and heavy duty applications.",
       "subtitle": "Pedestal mounted digital tyre inflators",
       "fullDescription": "Our Pedestal Digital Tyre Inflators are designed for durability and ease of use in fuel stations and commercial environments. They feature large displays and robust construction.",
@@ -443,6 +445,7 @@
           ]
         },
         {
+            "ctaText": "View Digital Engine Oil Dispenser",
           "model": "AIROJET 6000 LCV HP",
           "type": "HPCL Pedestal - Heavy",
           "description": "HPCL canopy model heavy duty pedestal mounted digital tyre inflator with big LCD display.",
@@ -499,6 +502,7 @@
           ]
         },
         {
+            "ctaText": "View Engine Oil Changer",
           "model": "AIROJET 1000 LCV HP",
           "type": "HPCL Pedestal - Normal",
           "description": "HPCL canopy model pedestal mounted digital tyre inflator with 5 in 1 switch box.",
@@ -553,6 +557,7 @@
           ]
         },
         {
+            "ctaText": "View Digital Tyre Inflator",
           "model": "AIROJET 1000 LCV P",
           "type": "Pedestal - Normal (IOCL/BPCL)",
           "description": "Pedestal mounted digital tyre inflator for IOCL/BPCL fuel stations with 5 in 1 switch box.",
@@ -607,6 +612,7 @@
           ]
         }
       ],
+            "ctaText": "View Digital DEF AdBlue Dispenser",
       "images": [
         "/images/highres/digital-tyre-inflator-pedestal/airojet-1000-lcv-p.jpg",
         "/images/highres/digital-tyre-inflator-pedestal/airojet-1000-lcv-hp.jpg",
@@ -678,6 +684,7 @@
           ]
         },
         {
+            "ctaText": "View Air Compressor",
           "model": "Digital 4T Engine Oil Dispenser with thermal printers",
           "type": "Engine Oil Dispenser",
           "description": "Preset model digital engine oil dispenser with accurate measurement display.",
@@ -716,6 +723,7 @@
           ]
         },
         {
+            "ctaText": "View Nitrogen Generator",
           "model": "Digital 2T Engine Oil Dispenser single side operation",
           "type": "Engine Oil Dispenser",
           "description": "Preset model digital engine oil dispenser with accurate measurement display.",
@@ -754,6 +762,7 @@
           ]
         },
         {
+            "ctaText": "View Panel Boards",
           "model": "Digital 2T Engine Oil Dispenser double side operation",
           "type": "Engine Oil Dispenser",
           "description": "Preset model digital engine oil dispenser with accurate measurement display.",
@@ -792,6 +801,7 @@
           ]
         }
       ],
+            "ctaText": "View Garage Equipment",
       "images": [
         "/images/highres/digital-engine-oil-dispenser/digital-engine-oil-dispenser.png"
       ],

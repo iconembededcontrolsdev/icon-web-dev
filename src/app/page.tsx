@@ -59,7 +59,7 @@ export default function Home() {
           description: p.fullDescription || p.description,
           img: p.mainImage || p.images?.[0] || '/images/placeholder.svg',
           ctaButtons: [
-            { text: 'Learn More', link: `/products/${p.id}`, variant: 'primary' },
+            { text: p.ctaText || `View ${p.title}`, link: `/products/${p.id}`, variant: 'primary' },
             { text: 'Product Enquiry', link: `/products/enquiry?product=${encodeURIComponent(p.title)}`, variant: 'outline' }
           ]
         }));
@@ -163,7 +163,7 @@ export default function Home() {
           <div className="w-full px-4 sm:px-6 lg:px-8 py-16 border-t border-gray-200">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div>
-                <h3 className="text-lg font-semibold text-primary mb-4">Products</h3>
+                <h3 className="text-lg font-semibold text-card-foreground mb-4">Products</h3>
                 <ul className="space-y-1">
                   {allProducts.map((product) => (
                     <li key={product.id}>
@@ -183,7 +183,7 @@ export default function Home() {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-primary mb-4">Contact</h3>
+                <h3 className="text-lg font-semibold text-card-foreground mb-4">Contact</h3>
                 <ul className="space-y-2 text-muted">
                   <li>
                     <a href="tel:+914222596032" className="hover:text-accent transition-colors flex items-center gap-2">
@@ -219,9 +219,9 @@ export default function Home() {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-primary mb-4">Address</h3>
+                <h3 className="text-lg font-semibold text-card-foreground mb-4">Address</h3>
                 <ul className="space-y-1 text-muted text-sm">
-                  <li className="font-semibold text-primary">Icon Embeded Controls</li>
+                  <li className="font-semibold text-card-foreground">Icon Embeded Controls</li>
                   <li>No. 374/2, Jyothi Nagar 2nd Street,<br />Ramanuja Nagar Extension,<br />Uppilipalayam Post,<br />Coimbatore - 641015,<br />Tamil Nadu, India</li>
                   <li className="pt-2">
                     <Link href="/contact" className="text-accent hover:text-accent-hover transition-colors font-medium">View Full Details →</Link>

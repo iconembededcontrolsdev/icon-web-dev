@@ -8,6 +8,7 @@ type ProductPreview = {
   id: string;
   title: string;
   description: string;
+  ctaText?: string;
   subtitle?: string;
   fullDescription?: string;
   features?: string[];
@@ -82,7 +83,7 @@ export default function ProductsPage() {
         description: product.fullDescription || product.description || product.subtitle || '',
         img: product.mainImage || product.images?.[0] || '/images/placeholder.svg',
         ctaButtons: [
-          { text: 'Learn more', link: `/products/${product.id}`, variant: 'primary' as const },
+          { text: product.ctaText || `View ${product.title}`, link: `/products/${product.id}`, variant: 'primary' as const },
           { text: 'Product Enquiry', link: `/products/enquiry?product=${encodeURIComponent(product.title)}`, variant: 'outline' as const }
         ],
         // Store id for navigation
