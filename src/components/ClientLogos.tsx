@@ -22,9 +22,9 @@ const LOGOS = [
   '/images/highres/logos/17.png',
   '/images/highres/logos/18.jpeg',
   '/images/highres/logos/19.png',
-  '/images/highres/logos/20.png',
-  '/images/highres/logos/21.webp',
-  '/images/highres/logos/22.jpg',
+  '/images/highres/logos/20.webp',
+  '/images/highres/logos/21.jpg',
+  '/images/highres/logos/22.png',
 ];
 
 export default function ClientLogos() {

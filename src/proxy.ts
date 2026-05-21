@@ -2,12 +2,23 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 export function proxy(request: NextRequest) {
-    // Only intercept requests to the /images/ directory
-    if (request.nextUrl.pathname.startsWith('/images/')) {
-        // TEMPORARILY PERMISSIVE MIDDLEWARE FOR DEBUGGING
-        // We are allowing all requests to pass through to verify if images load on Netlify.
-        // Once confirmed, we can re-enable the referer checks.
-        return NextResponse.next();
+    const decodedPath = decodeURIComponent(request.nextUrl.pathname);
+
+    if (decodedPath.startsWith('/images/')) {
+        const siteUrl = request.nextUrl.origin;
+        const referer = request.headers.get('referer') || '';
+        const origin = request.headers.get('origin') || '';
+        const secFetchSite = request.headers.get('sec-fetch-site') || '';
+
+        const isSameSite =
+            referer.startsWith(siteUrl) ||
+            origin.startsWith(siteUrl) ||
+            secFetchSite === 'same-origin' ||
+            secFetchSite === 'same-site';
+
+        if (!isSameSite) {
+            return new NextResponse('Forbidden', { status: 403 });
+        }
     }
 
     return NextResponse.next()
