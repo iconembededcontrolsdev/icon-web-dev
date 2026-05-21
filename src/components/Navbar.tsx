@@ -77,10 +77,12 @@ export default function Navbar() {
               <LogoFrame
                 src="/images/lowres/7.%20Extras/logo-low.png"
                 alt="Icon Embeded Controls"
-                width={80}
-                height={32}
+                width={144}
+                height={40}
                 imgClassName="object-contain h-full w-auto"
-                wrapperClassName="w-20 h-8 sm:w-24 sm:h-10 p-2 rounded-[12px]"
+                wrapperClassName="w-36 h-10 sm:w-40 sm:h-11 rounded-[12px]"
+                paddingClassName="p-0"
+                unoptimized
               />
             </Link>
           </div>

@@ -3,7 +3,7 @@
 import { useSearchParams } from 'next/navigation';
 import { useState, Suspense, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import Script from 'next/script';
 import LogoFrame from '@/components/LogoFrame';
 import { countryCodes } from '@/data/countryCodes';
 
@@ -24,13 +24,51 @@ function ProductEnquiryForm() {
 
         const data = await response.json();
         const products = data.products || [];
+        const query = productName.trim().toLowerCase();
 
-        // Find product by title
-        const product = products.find((p: any) => p.title === productName);
+        const matchesText = (value?: string) =>
+          Boolean(value && value.toLowerCase().includes(query));
+
+        const matchesProduct = (product: any) => {
+          if (
+            matchesText(product.title) ||
+            matchesText(product.subtitle) ||
+            matchesText(product.description) ||
+            matchesText(product.fullDescription)
+          ) {
+            return true;
+          }
+
+          return Array.isArray(product.models) && product.models.some((model: any) =>
+            matchesText(model.model) ||
+            matchesText(model.type) ||
+            matchesText(model.description) ||
+            matchesText(model.subtitle) ||
+            matchesText(model.fullDescription)
+          );
+        };
+
+        // Match by product metadata or nested model metadata so model-name URLs resolve too.
+        const product = products.find(matchesProduct);
 
         if (product) {
-          // Use mainImage or first image
-          const image = product.mainImage || (product.images && product.images.length > 0 ? product.images[0] : null);
+          const matchingModel = Array.isArray(product.models)
+            ? product.models.find((model: any) =>
+                matchesText(model.model) ||
+                matchesText(model.type) ||
+                matchesText(model.description) ||
+                matchesText(model.subtitle) ||
+                matchesText(model.fullDescription)
+              )
+            : null;
+
+          // Prefer the exact model image, then product image fallbacks.
+          const image =
+            matchingModel?.images?.[0] ||
+            matchingModel?.image ||
+            product.mainImage ||
+            (product.images && product.images.length > 0 ? product.images[0] : null);
+
           if (image) {
             setProductImage(image);
           }
@@ -53,6 +91,16 @@ function ProductEnquiryForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const recaptchaSiteKey = process.env.RECAPTCHA_SITE_KEY || '';
+
+  type RecaptchaWindow = Window & {
+    grecaptcha?: {
+      enterprise?: {
+        ready: (callback: () => void) => void;
+        execute: (siteKey: string, options: { action: string }) => Promise<string>;
+      };
+    };
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -79,6 +127,33 @@ function ProductEnquiryForm() {
     }
 
     try {
+      // Ensure reCAPTCHA is configured and available
+      if (!recaptchaSiteKey) {
+        setError('reCAPTCHA is not configured. Please contact the administrator.');
+        setIsSubmitting(false);
+        return;
+      }
+
+      const win = window as RecaptchaWindow;
+      if (!win.grecaptcha?.enterprise?.ready || !win.grecaptcha.enterprise.execute) {
+        setError('reCAPTCHA script is not loaded yet. Please try again.');
+        setIsSubmitting(false);
+        return;
+      }
+
+      const token = await new Promise<string>((resolve, reject) => {
+        win.grecaptcha?.enterprise?.ready(async () => {
+          try {
+            const responseToken = await win.grecaptcha!.enterprise!.execute(recaptchaSiteKey, {
+              action: 'submit',
+            });
+            resolve(responseToken);
+          } catch (error) {
+            reject(error);
+          }
+        });
+      });
+
       const response = await fetch("/api/send-email", {
         method: "POST",
         headers: {
@@ -88,6 +163,7 @@ function ProductEnquiryForm() {
           ...formData,
           category: "product",
           product: productName || "General Product Enquiry",
+          recaptchaToken: token,
         }),
       });
 
@@ -142,6 +218,13 @@ function ProductEnquiryForm() {
 
   return (
     <div className="min-h-screen bg-background pt-12">
+      {recaptchaSiteKey && (
+        <Script
+          id="recaptcha-enterprise"
+          src={`https://www.google.com/recaptcha/enterprise.js?render=${recaptchaSiteKey}`}
+          strategy="afterInteractive"
+        />
+      )}
       {/* Back Button */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <Link
@@ -177,26 +260,30 @@ function ProductEnquiryForm() {
               <>
                 <div className="flex items-center justify-center gap-4 md:gap-8 mb-8 h-32 md:h-48 w-full">
                   {productImage && (
-                    <div className="relative flex-1 h-full">
-                      <Image
+                    <div className="relative flex-1 h-full min-w-0">
+                      <LogoFrame
                         src={productImage}
                         alt={productName}
                         fill
-                        className="object-contain object-right"
+                        wrapperClassName="w-full h-full"
+                        paddingClassName="p-2"
+                        imgClassName="object-contain object-center"
+                        sizes="(max-width: 768px) 100vw, 48vw"
                       />
                     </div>
                   )}
 
                   {productImage && <div className="h-12 md:h-20 w-[1px] bg-border/50"></div>}
 
-                  <div className={`relative h-full ${productImage ? 'flex-1' : 'w-48 flex-none'}`}>
+                  <div className={`relative h-full ${productImage ? 'flex-1 min-w-0' : 'w-48 flex-none'}`}>
                     <LogoFrame
                       src="/images/lowres/7.%20Extras/logo-low.png"
                       alt="Icon Embeded Controls"
                       fill
-                      wrapperClassName={productImage ? 'flex-1 p-4' : 'w-48 p-4'}
+                      wrapperClassName={productImage ? 'w-full h-full' : 'w-48 h-full'}
+                      paddingClassName="p-0"
                       imgClassName={`object-contain ${productImage ? 'object-left' : 'object-center'}`}
-                      sizes="(max-width: 768px) 100vw, 48vw"
+                      sizes="(max-width: 768px) 100vw, 40vw"
                     />
                   </div>
                 </div>

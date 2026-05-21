@@ -25,9 +25,6 @@ const LOGOS = [
   '/images/highres/logos/20.png',
   '/images/highres/logos/21.webp',
   '/images/highres/logos/22.jpg',
-  '/images/highres/logos/23.png',
-  '/images/highres/logos/MSME.jpeg',
-  '/images/highres/logos/NSIC.png',
 ];
 
 export default function ClientLogos() {
