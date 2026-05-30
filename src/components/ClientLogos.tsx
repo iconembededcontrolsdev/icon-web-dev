@@ -31,8 +31,8 @@ export default function ClientLogos() {
   return (
     <div className="w-full mx-auto py-8 overflow-hidden pointer-events-none">
       <div className="text-center mb-6 pointer-events-auto">
-        <h2 className="text-2xl font-bold text-card-foreground">Our Trusted Clients</h2>
-        <p className="text-muted mt-1 text-sm">Partnering with industry leaders across the globe</p>
+        <h2 className="text-2xl font-bold text-slate-900">Our Trusted Clients</h2>
+        <p className="text-slate-600 mt-1 text-sm">Partnering with industry leaders across the globe</p>
       </div>
 
       <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_128px,black_calc(100%-128px),transparent)]">

@@ -5,11 +5,13 @@ import Hero from '@/components/Hero';
 import DynamicGrid from '@/components/DynamicGrid';
 import NitrogenShowcase from '@/components/NitrogenShowcase';
 import Link from 'next/link';
-import Image from 'next/image';
 import LogoFrame from '@/components/LogoFrame';
 import { useRouter } from 'next/navigation';
 import StructuredData from '@/components/StructuredData';
 import { generateOrganizationSchema, organizationData } from '@/utils/seo';
+import bannerImage from '../../public/images/highres/extras/banner-front.jpg';
+import LandingCertificationStrip from '@/components/LandingCertificationStrip';
+import ClientLogos from '@/components/ClientLogos';
 
 interface Block {
   type: 'hero' | 'grid-2' | 'grid-3' | 'hero-product' | 'nitrogen-showcase';
@@ -26,7 +28,8 @@ export default function Home() {
       type: 'hero',
       title: 'Icon Embeded Controls',
       subtitle: 'Industrial Equipment & Digital Tyre Inflators',
-      img: '/images/lowres/7.%20Extras/logo-low.png',
+      img: bannerImage,
+      variant: 'landing',
     },
     {
       type: 'nitrogen-showcase'
@@ -59,7 +62,7 @@ export default function Home() {
           description: p.fullDescription || p.description,
           img: p.mainImage || p.images?.[0] || '/images/placeholder.svg',
           ctaButtons: [
-            { text: p.ctaText || `View ${p.title}`, link: `/products/${p.id}`, variant: 'primary' },
+            { text: 'Learn More', link: `/products/${p.id}`, variant: 'primary' },
             { text: 'Product Enquiry', link: `/products/enquiry?product=${encodeURIComponent(p.title)}`, variant: 'outline' }
           ]
         }));
@@ -67,7 +70,10 @@ export default function Home() {
         setBlocks([
           {
             type: 'hero',
-            img: '/images/lowres/7.%20Extras/logo-low.png',
+            title: 'Icon Embeded Controls',
+            subtitle: 'Industrial Equipment & Digital Tyre Inflators',
+            img: bannerImage,
+            variant: 'landing',
           },
           {
             type: 'nitrogen-showcase',
@@ -101,6 +107,7 @@ export default function Home() {
           subtitle={block.subtitle}
           img={block.img}
           ctaButtons={block.ctaButtons}
+          variant={block.variant}
         />;
       case 'hero-product':
         return (
@@ -144,8 +151,12 @@ export default function Home() {
         {/* Hero Section */}
         {renderBlock(blocks[0], 0)}
 
-        {/* Client Logos Carousel */}
+        <LandingCertificationStrip />
 
+        {/* Client Logos Section */}
+        <section className="w-full bg-white dark:bg-slate-100 border-y border-slate-200">
+          <ClientLogos />
+        </section>
 
         {/* Remaining Blocks */}
         <div className="mt-1">

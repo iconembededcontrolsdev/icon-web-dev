@@ -1,9 +1,8 @@
 'use client';
 
-import Image from 'next/image';
+import Image, { type StaticImageData } from 'next/image';
 
 import Link from 'next/link';
-import ClientLogos from '@/components/ClientLogos';
 
 export interface CTAButton {
   text: string;
@@ -15,9 +14,10 @@ export interface CTAButton {
 export interface HeroProps {
   title: string;
   subtitle?: string;
-  img: string;
+  img: string | StaticImageData;
   ctaButtons?: CTAButton[];
   className?: string;
+  variant?: 'default' | 'landing';
 }
 
 export default function Hero({
@@ -25,8 +25,28 @@ export default function Hero({
   subtitle,
   img,
   ctaButtons = [],
-  className = ''
+  className = '',
+  variant = 'default'
 }: HeroProps) {
+  if (variant === 'landing') {
+    return (
+      <section className={`w-full ${className}`}>
+        <div className="w-full overflow-hidden bg-[#eaf2fb]">
+          <div className="relative aspect-[16/5] w-full">
+            <Image
+              src={img}
+              alt={title || 'Icon Embeded Controls banner'}
+              fill
+              priority
+              className="object-cover"
+              sizes="100vw"
+            />
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className={`w-full ${className}`}>
       {/* Container with premium padding - Full width hero with max-width centered */}
@@ -73,7 +93,7 @@ export default function Hero({
 
             {/* Large Image Area - Below buttons */}
             <div className="w-full max-w-5xl mx-auto mt-2">
-              {img.includes("logo-low.png") ? (
+              {typeof img === 'string' && img.includes("logo-low.png") ? (
                 // Logo with fixed height (no rounded white frame)
                 <div className="relative w-full h-[200px] md:h-[300px] lg:h-[400px] rounded-[30px] overflow-hidden bg-white flex items-center justify-center">
                   <Image
@@ -99,55 +119,6 @@ export default function Hero({
                 </div>
               )}
             </div>
-
-            {img.includes("logo-low.png") && (
-              <div className="mt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
-                <a
-                  href="https://www.msme.gov.in/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-2 shadow-sm transition-transform hover:scale-105"
-                >
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background">
-                    <Image
-                      src="/images/highres/logos/MSME.jpeg"
-                      alt="MSME certified"
-                      width={40}
-                      height={40}
-                      className="h-8 w-8 rounded-full object-contain"
-                    />
-                  </span>
-                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
-                    MSME
-                  </span>
-                </a>
-
-                <a
-                  href="https://www.nsic.co.in/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-2 shadow-sm transition-transform hover:scale-105"
-                >
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background">
-                    <Image
-                      src="/images/highres/logos/NSIC.png"
-                      alt="NSIC certified"
-                      width={40}
-                      height={40}
-                      className="h-8 w-8 rounded-full object-contain"
-                    />
-                  </span>
-                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
-                    NSIC
-                  </span>
-                </a>
-              </div>
-            )}
-          </div>
-
-          {/* Client Logos Section - Merged into Hero but full width */}
-          <div className="w-full mt-8 border-t border-gray-100">
-            <ClientLogos />
           </div>
         </div>
       </div>
