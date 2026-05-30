@@ -24,6 +24,16 @@ interface Block {
 export default function Home() {
   const router = useRouter();
   const [allProducts, setAllProducts] = useState<any[]>([]);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const [blocks, setBlocks] = useState<Block[]>([
     {
       type: 'hero',
@@ -148,7 +158,7 @@ export default function Home() {
       <StructuredData data={generateOrganizationSchema(organizationData)} />
 
       {/* Main Content */}
-      <main className="pt-12 bg-background">
+      <main className={`bg-background transition-all duration-300 ${isScrolled ? "pt-12" : "pt-[84px]"}`}>
         {/* Hero Section */}
         {renderBlock(blocks[0], 0)}
 
