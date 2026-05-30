@@ -14,6 +14,7 @@ export default function ZoomableImage({ src, alt, priority = false, className }:
     const [isZoomed, setIsZoomed] = useState(false);
     const [position, setPosition] = useState({ x: 50, y: 50 });
     const containerRef = useRef<HTMLDivElement>(null);
+    const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null);
 
     const handleMove = (clientX: number, clientY: number) => {
         if (!containerRef.current) return;
@@ -34,31 +35,74 @@ export default function ZoomableImage({ src, alt, priority = false, className }:
     const onMouseLeave = () => setIsZoomed(false);
     const onMouseMove = (e: MouseEvent) => handleMove(e.clientX, e.clientY);
 
+    // Mobile touch handling
     const onTouchStart = (e: TouchEvent) => {
-        // Prevent scrolling when touching the image to zoom
-        // Note: This might block scrolling if the user just wants to scroll past the image. 
-        // Usually standard mobile behavior is: tap to open lightbox/zoom, or pinch. 
-        // But user asked for "zoom where it is touched".
-        setIsZoomed(true);
-        handleMove(e.touches[0].clientX, e.touches[0].clientY);
+        const touch = e.touches[0];
+        touchStartRef.current = {
+            x: touch.clientX,
+            y: touch.clientY,
+            time: Date.now()
+        };
+
+        if (isZoomed) {
+            handleMove(touch.clientX, touch.clientY);
+        }
     };
 
     const onTouchMove = (e: TouchEvent) => {
-        handleMove(e.touches[0].clientX, e.touches[0].clientY);
+        if (isZoomed) {
+            // Prevent scrolling when panning a zoomed image
+            if (e.cancelable) e.preventDefault();
+            handleMove(e.touches[0].clientX, e.touches[0].clientY);
+        }
     };
 
-    const onTouchEnd = () => setIsZoomed(false);
+    const onTouchEnd = (e: TouchEvent) => {
+        const start = touchStartRef.current;
+        if (!start) return;
+
+        const touch = e.changedTouches[0];
+        const dist = Math.sqrt(
+            Math.pow(touch.clientX - start.x, 2) + Math.pow(touch.clientY - start.y, 2)
+        );
+        const duration = Date.now() - start.time;
+
+        // If it was a quick tap (moved less than 12px and took less than 250ms)
+        if (dist < 12 && duration < 250) {
+            if (isZoomed) {
+                setIsZoomed(false);
+            } else {
+                setIsZoomed(true);
+                handleMove(touch.clientX, touch.clientY);
+            }
+        }
+
+        touchStartRef.current = null;
+    };
+
+    const onClick = (e: MouseEvent) => {
+        // Toggle zoom on click/tap for desktop/backup
+        if (isZoomed) {
+            setIsZoomed(false);
+        } else {
+            setIsZoomed(true);
+            handleMove(e.clientX, e.clientY);
+        }
+    };
 
     return (
         <div
             ref={containerRef}
-            className="relative w-full h-full overflow-hidden cursor-crosshair touch-none select-none"
+            className={`relative w-full h-full overflow-hidden select-none ${
+                isZoomed ? 'cursor-zoom-out touch-none' : 'cursor-zoom-in touch-pan-x'
+            }`}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
             onMouseMove={onMouseMove}
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
+            onClick={onClick}
         >
             <Image
                 src={src}
@@ -67,7 +111,7 @@ export default function ZoomableImage({ src, alt, priority = false, className }:
                 className={`object-contain transition-transform duration-200 ease-out ${className || ''}`}
                 style={{
                     transformOrigin: `${position.x}% ${position.y}%`,
-                    transform: isZoomed ? 'scale(2)' : 'scale(1)',
+                    transform: isZoomed ? 'scale(2.5)' : 'scale(1)',
                 }}
                 priority={priority}
                 sizes="100vw"
@@ -75,12 +119,13 @@ export default function ZoomableImage({ src, alt, priority = false, className }:
 
             {/* Zoom Icon (The [+]) - Hides when zoomed to avoid obstruction */}
             <div
-                className={`absolute bottom-0 right-0 p-3 bg-[#333] text-white transition-opacity duration-300 pointer-events-none ${isZoomed ? 'opacity-0' : 'opacity-100'
-                    }`}
+                className={`absolute bottom-3 right-3 p-2 rounded-full bg-black/60 text-white transition-opacity duration-300 pointer-events-none ${
+                    isZoomed ? 'opacity-0' : 'opacity-100'
+                }`}
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
+                    className="h-5 w-5"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -88,7 +133,7 @@ export default function ZoomableImage({ src, alt, priority = false, className }:
                     <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth={2}
+                        strokeWidth={2.5}
                         d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
                     />
                 </svg>

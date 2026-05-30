@@ -59,21 +59,21 @@ const AccordionItem = ({
   children: React.ReactNode;
 }) => {
   return (
-    <div className="border border-border rounded-[20px] overflow-hidden mb-4 bg-card shadow-lg">
+    <div className="border border-border rounded-[20px] overflow-hidden mb-4 landscape:mb-2 lg:mb-4 bg-card shadow-lg">
       <button
-        className={`w-full px-6 py-4 flex items-center justify-between transition-colors ${isOpen ? 'bg-primary text-white' : 'bg-transparent text-primary hover:bg-primary/5'
+        className={`w-full px-6 py-4 landscape:px-4 landscape:py-2.5 lg:px-6 lg:py-4 flex items-center justify-between transition-colors ${isOpen ? 'bg-primary text-white' : 'bg-transparent text-primary hover:bg-primary/5'
           }`}
         onClick={onClick}
       >
         <div className="flex items-center gap-3">
-          <div className={`flex items-center justify-center w-7 h-7 rounded-full border-2 transition-colors ${isOpen ? 'border-white bg-white/10' : 'border-primary bg-primary/5'
+          <div className={`flex items-center justify-center w-7 h-7 landscape:w-5 landscape:h-5 rounded-full border-2 transition-colors ${isOpen ? 'border-white bg-white/10' : 'border-primary bg-primary/5'
             }`}>
-            <span className="text-lg leading-none font-bold" style={{ marginTop: '-2px' }}>{isOpen ? '-' : '+'}</span>
+            <span className="text-lg landscape:text-xs leading-none font-bold" style={{ marginTop: '-2px' }}>{isOpen ? '-' : '+'}</span>
           </div>
-          <span className="font-semibold text-base">{title}</span>
+          <span className="font-semibold text-base landscape:text-sm lg:text-base">{title}</span>
         </div>
         <svg
-          className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-5 h-5 landscape:w-4 landscape:h-4 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -85,7 +85,7 @@ const AccordionItem = ({
         className={`transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
           }`}
       >
-        <div className="p-6 text-foreground border-t border-border bg-card/50">
+        <div className="p-6 landscape:p-4 text-foreground border-t border-border bg-card/50">
           {children}
         </div>
       </div>
@@ -106,12 +106,26 @@ export default function ProductDetailsClient({ initialProduct }: ProductDetailsC
   // State for gallery images: map of model index -> active image URL
   const [activeImages, setActiveImages] = useState<Record<number, string>>({});
   const [openSections, setOpenSections] = useState<Record<string, string>>({});
+  const [mobileActiveIndices, setMobileActiveIndices] = useState<Record<number, number>>({});
 
   const toggleSection = (modelIndex: number, section: string) => {
     setOpenSections(prev => ({
       ...prev,
       [modelIndex]: prev[modelIndex] === section ? '' : section
     }));
+  };
+
+  const handleMobileScroll = (modelIdx: number, e: React.UIEvent<HTMLDivElement>) => {
+    const container = e.currentTarget;
+    const scrollLeft = container.scrollLeft;
+    const width = container.clientWidth;
+    if (width > 0) {
+      const activeIdx = Math.round(scrollLeft / width);
+      setMobileActiveIndices(prev => ({
+        ...prev,
+        [modelIdx]: activeIdx
+      }));
+    }
   };
 
   if (!product) {
@@ -148,7 +162,7 @@ export default function ProductDetailsClient({ initialProduct }: ProductDetailsC
   const brochureLink = enrichedProduct.brochure || brochureMap[id as string];
 
   return (
-    <div className="pt-12 min-h-screen bg-background">
+    <div className="min-h-screen bg-background">
       {/* Page Header Removed */}
 
       {/* Models Gallery */}
@@ -188,11 +202,11 @@ export default function ProductDetailsClient({ initialProduct }: ProductDetailsC
               key={index}
               className="h-screen w-full snap-start flex flex-col pt-12 overflow-hidden relative"
             >
-              <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col lg:flex-row gap-8 lg:gap-12 py-4 lg:py-8">
+              <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col landscape:flex-row lg:flex-row gap-4 sm:gap-8 lg:gap-12 py-4 lg:py-8">
                 {/* Left Column: Image Gallery */}
-                {/* Left Column: Image Gallery */}
-                <div className="w-full lg:w-1/2 h-[50vh] lg:h-[70vh] flex items-center justify-center p-4">
-                  <div className="w-full max-w-2xl h-full flex flex-row gap-4">
+                <div className="w-full landscape:w-1/2 lg:w-1/2 h-[45vh] landscape:h-[80vh] lg:h-[70vh] flex-shrink-0 flex items-center justify-center p-2 sm:p-4">
+                  {/* Desktop Layout (Main Image + Thumbnails Sidebar) */}
+                  <div className="hidden lg:flex w-full max-w-2xl h-full flex-row gap-4">
                     {/* Main Image Area */}
                     <div className="relative flex-1 bg-white border border-gray-300 shadow-sm flex items-center justify-center overflow-hidden">
                       <ZoomableImage
@@ -233,42 +247,81 @@ export default function ProductDetailsClient({ initialProduct }: ProductDetailsC
                       </div>
                     )}
                   </div>
+
+                  {/* Mobile/Tablet/Landscape swiper */}
+                  <div className="lg:hidden w-full h-full relative flex flex-col">
+                    <div 
+                      className="w-full flex-1 flex flex-row overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide bg-white border border-gray-300 shadow-sm relative rounded-lg"
+                      onScroll={(e) => handleMobileScroll(index, e)}
+                    >
+                      {displayImages.map((img, imgIdx) => (
+                        <div 
+                          key={imgIdx} 
+                          className="w-full h-full flex-shrink-0 snap-center relative flex items-center justify-center p-2"
+                        >
+                          <ZoomableImage
+                            src={img}
+                            alt={`${model.model || enrichedProduct.title} view ${imgIdx + 1}`}
+                            priority={index === 0 && imgIdx === 0}
+                            className="p-2"
+                          />
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Mobile Dot Indicators */}
+                    {displayImages.length > 1 && (
+                      <div className="flex justify-center gap-1.5 mt-2 z-10">
+                        {displayImages.map((_, dotIdx) => {
+                          const isActive = (mobileActiveIndices[index] || 0) === dotIdx;
+                          return (
+                            <span
+                              key={dotIdx}
+                              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                                isActive ? 'bg-primary w-3.5' : 'bg-gray-300'
+                              }`}
+                            />
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
                 </div>
 
                 {/* Right Column: Details */}
-                <div className="w-full lg:w-1/2 h-full overflow-y-auto pr-2 custom-scrollbar pb-20">
-                  <div className="space-y-6">
+                <div className="w-full landscape:w-1/2 lg:w-1/2 flex-1 min-h-0 landscape:h-full lg:h-full overflow-y-auto pr-2 custom-scrollbar pb-20 landscape:pb-8">
+                  <div className="space-y-6 landscape:space-y-3 lg:space-y-6">
                     <div>
-                      <h2 className="text-2xl md:text-3xl font-bold text-primary mb-2">
+                      <h2 className="text-2xl landscape:text-xl md:text-3xl font-bold text-primary mb-2 landscape:mb-1">
                         {model.model}
                       </h2>
                       {model.type && (
-                        <p className="text-base md:text-lg text-accent font-medium">
+                        <p className="text-base landscape:text-xs md:text-lg text-accent font-medium">
                           {model.type}
                         </p>
                       )}
                     </div>
 
-                    <p className="text-foreground/90 text-sm md:text-base leading-relaxed">
+                    <p className="text-foreground/90 text-sm landscape:text-xs md:text-base leading-relaxed">
                       {model.fullDescription ||
                         model.description ||
                         enrichedProduct.fullDescription}
                     </p>
 
-                    <div className="space-y-4">
+                    <div className="space-y-4 landscape:space-y-2 lg:space-y-4">
                       {features.length > 0 && (
                         <AccordionItem
                           title="Key Features"
                           isOpen={openSections[index] === "features"}
                           onClick={() => toggleSection(index, "features")}
                         >
-                          <ul className="space-y-3">
+                          <ul className="space-y-3 landscape:space-y-1.5 lg:space-y-3">
                             {features.map((feature, idx) => (
                               <li key={idx} className="flex items-start">
-                                <span className="mr-3 text-accent font-bold text-lg">
+                                <span className="mr-3 text-accent font-bold text-lg landscape:text-sm">
                                   •
                                 </span>
-                                <span className="text-sm text-foreground/90">
+                                <span className="text-sm landscape:text-xs text-foreground/90">
                                   {feature}
                                 </span>
                               </li>
@@ -283,14 +336,14 @@ export default function ProductDetailsClient({ initialProduct }: ProductDetailsC
                           isOpen={openSections[index] === "applications"}
                           onClick={() => toggleSection(index, "applications")}
                         >
-                          <ul className="space-y-3">
+                          <ul className="space-y-3 landscape:space-y-1.5 lg:space-y-3">
                             {applications.map((app, idx) => (
                               <li
                                 key={idx}
-                                className="flex items-center text-sm text-foreground/90"
+                                className="flex items-center text-sm landscape:text-xs text-foreground/90"
                               >
                                 <svg
-                                  className="w-4 h-4 mr-3 text-accent"
+                                  className="w-4 h-4 landscape:w-3.5 landscape:h-3.5 mr-3 text-accent"
                                   fill="none"
                                   viewBox="0 0 24 24"
                                   stroke="currentColor"
@@ -317,17 +370,17 @@ export default function ProductDetailsClient({ initialProduct }: ProductDetailsC
                             toggleSection(index, "specifications")
                           }
                         >
-                          <div className="space-y-2">
+                          <div className="space-y-2 landscape:space-y-1 lg:space-y-2">
                             {Object.entries(specifications).map(
                               ([key, value]) => (
                                 <div
                                   key={key}
-                                  className="grid grid-cols-2 gap-4 py-3 border-b border-border/30 last:border-0"
+                                  className="grid grid-cols-2 gap-4 py-3 landscape:py-1.5 border-b border-border/30 last:border-0"
                                 >
-                                  <span className="font-semibold text-sm text-muted capitalize">
+                                  <span className="font-semibold text-sm landscape:text-xs text-muted capitalize">
                                     {key.replace(/([A-Z])/g, " $1").trim()}
                                   </span>
-                                  <span className="text-sm text-foreground">
+                                  <span className="text-sm landscape:text-xs text-foreground">
                                     {String(value)}
                                   </span>
                                 </div>
@@ -339,12 +392,12 @@ export default function ProductDetailsClient({ initialProduct }: ProductDetailsC
                     </div>
 
                     {/* Action Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                    <div className="flex flex-col sm:flex-row gap-4 landscape:gap-2.5 pt-4 landscape:pt-2 lg:pt-4">
                       <Link
                         href={`/products/enquiry?product=${encodeURIComponent(model.model || enrichedProduct.title)}`}
-                        className="flex-1 py-3 px-6 text-center bg-primary text-white rounded-full text-sm font-medium hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                        className="flex-1 py-3 landscape:py-2 px-6 bg-primary text-white rounded-full text-sm landscape:text-xs font-medium hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center text-center"
                       >
-                        Product Enquiry
+                        <span className="text-center">Product Enquiry</span>
                       </Link>
 
                       {brochureLink && (
@@ -352,10 +405,10 @@ export default function ProductDetailsClient({ initialProduct }: ProductDetailsC
                           href={brochureLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex-1 py-3 px-6 text-center border-2 border-primary text-primary rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2"
+                          className="flex-1 py-3 landscape:py-2 px-6 border-2 border-primary text-primary rounded-full text-sm landscape:text-xs font-medium hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2 text-center"
                         >
                           <svg
-                            className="w-5 h-5"
+                            className="w-5 h-5 landscape:w-4 landscape:h-4 flex-shrink-0"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -367,7 +420,7 @@ export default function ProductDetailsClient({ initialProduct }: ProductDetailsC
                               d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
                             />
                           </svg>
-                          Download Brochure
+                          <span className="text-center">Download Brochure</span>
                         </a>
                       )}
                     </div>

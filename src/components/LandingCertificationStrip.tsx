@@ -44,14 +44,14 @@ export default function LandingCertificationStrip() {
             </div>
 
             {/* Logo 2: MSME Block Logo */}
-            <div className="relative w-32 h-16 sm:w-36 sm:h-20 flex items-center justify-center">
+            <div className="relative w-36 h-18 sm:w-44 sm:h-22 lg:w-48 lg:h-24 flex items-center justify-center">
               <Image
-                src="/images/highres/logos/MSME_govt.svg"
+                src="/images/highres/logos/msme-registration.png"
                 alt="Ministry of MSME"
                 fill
                 priority
                 className="object-contain"
-                sizes="(max-width: 768px) 120px, 144px"
+                sizes="(max-width: 768px) 144px, 192px"
               />
             </div>
 
@@ -79,15 +79,13 @@ export default function LandingCertificationStrip() {
           </div>
 
           {/* Right: Registered ICON Logo */}
-          <div className="flex-shrink-0">
-            <div className="rounded-[18px] border border-slate-300 bg-white px-5 py-3.5 shadow-sm flex items-center justify-center">
-              <Image
-                src={iecLogo}
-                alt="ICON Embeded Controls Logo"
-                priority
-                className="h-auto w-[180px] sm:w-[220px]"
-              />
-            </div>
+          <div className="flex-shrink-0 flex items-center justify-center">
+            <Image
+              src={iecLogo}
+              alt="ICON Embeded Controls Logo"
+              priority
+              className="h-auto w-[180px] sm:w-[220px]"
+            />
           </div>
 
         </div>

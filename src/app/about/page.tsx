@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import LogoFrame from '@/components/LogoFrame';
+import Footer from '@/components/Footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -44,7 +45,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background pt-12">
       {/* Back Button */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3 pb-6">
         <Link
           href="/"
           className="inline-flex items-center text-primary hover:text-accent transition-colors font-medium"
@@ -67,7 +68,7 @@ export default function AboutPage() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
             About Us
           </h1>
@@ -93,14 +94,14 @@ export default function AboutPage() {
               manufacturer's pressure standards.
             </p>
           </div>
-          <div className="relative h-[400px] rounded-[40px] overflow-hidden shadow-lg bg-white p-8 flex items-center justify-center">
+          <div className="relative h-[400px] flex items-center justify-center">
             {/* Placeholder for an about image or logo */}
             <LogoFrame
               src="/images/lowres/7.%20Extras/logo-low.png"
               alt="Icon Embeded Controls"
               width={400}
               height={400}
-              wrapperClassName="p-8 rounded-[40px]"
+              wrapperClassName="rounded-[40px]"
               imgClassName="object-contain"
             />
           </div>
@@ -179,6 +180,7 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

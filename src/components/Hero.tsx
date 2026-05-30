@@ -29,19 +29,32 @@ export default function Hero({
   variant = 'default'
 }: HeroProps) {
   if (variant === 'landing') {
+    const isStatic = typeof img === 'object';
     return (
       <section className={`w-full ${className}`}>
         <div className="w-full overflow-hidden bg-[#eaf2fb]">
-          <div className="relative aspect-[16/5] w-full">
+          {isStatic ? (
             <Image
               src={img}
               alt={title || 'Icon Embeded Controls banner'}
-              fill
+              width={(img as StaticImageData).width}
+              height={(img as StaticImageData).height}
               priority
-              className="object-cover"
+              className="w-full h-auto object-contain block"
               sizes="100vw"
             />
-          </div>
+          ) : (
+            <div className="relative aspect-[16/5] w-full">
+              <Image
+                src={img}
+                alt={title || 'Icon Embeded Controls banner'}
+                fill
+                priority
+                className="object-contain"
+                sizes="100vw"
+              />
+            </div>
+          )}
         </div>
       </section>
     );

@@ -254,87 +254,14 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden bg-gray-800/95 backdrop-blur-xl border-t border-white/20 h-[calc(100vh-48px)] overflow-y-auto pb-20">
           <div className="px-4 pt-4 pb-6 space-y-2">
-            {/* Theme Toggle - Mobile */}
-            <button
-              onClick={toggleTheme}
-              className="w-full flex items-center justify-between px-4 py-3 text-white hover:bg-white/10 active:bg-white/20 rounded-xl font-medium border border-white/20 mb-4 transition-colors"
-              aria-label="Toggle theme"
+            {/* Home link */}
+            <Link
+              href="/"
+              className="block px-4 py-3 text-white hover:bg-white/10 active:bg-white/20 rounded-xl font-medium text-base transition-colors"
+              onClick={() => setIsMenuOpen(false)}
             >
-              <span className="text-base font-medium">Theme</span>
-              <div className="flex items-center gap-2">
-                <span className="text-sm text-gray-300">
-                  {theme === "light" ? "Light" : "Dark"}
-                </span>
-                {theme === "light" ? (
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-                    />
-                  </svg>
-                )}
-              </div>
-            </button>
-
-            {/* Google Translate - Mobile Fake Trigger */}
-            <div className="px-4 mb-4">
-              {/* 
-                  This is a fake button that looks like the "variant=full" widget.
-                  On click, it closes the menu and clicks the hidden persistent widget.
-               */}
-              <button
-                className="w-full flex items-center justify-between px-4 py-3 text-white bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 active:bg-white/20 transition-colors"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  // Trigger the persistent widget click
-                  // Use timeout to ensure menu closing logic implies DOM updates/re-renders are handled
-                  // although since persistent widget is outside this block, it should be fine immediately.
-                  setTimeout(() => {
-                    const widget = document.getElementById('google_translate_widget');
-                    if (widget) {
-                      // The widget ID is on the overlay DIV which is clickable
-                      widget.click();
-                    }
-                  }, 50);
-                }}
-              >
-                <span className="text-base font-medium">Language</span>
-                <div className="flex items-center gap-2 text-gray-300">
-                  <span className="text-sm">Select</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-5 h-5"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802" />
-                  </svg>
-                </div>
-              </button>
-            </div>
+              Home
+            </Link>
 
             {/* Products Dropdown - Mobile */}
             <div className="space-y-1">
@@ -360,6 +287,19 @@ export default function Navbar() {
 
               {isProductsOpen && (
                 <div className="ml-4 space-y-1 pl-4 border-l border-white/10">
+                  {/* All Products link at top of dropdown list */}
+                  <Link
+                    href="/products"
+                    className="block px-4 py-2.5 text-sm font-semibold text-accent hover:text-accent-hover transition-colors border-b border-white/10 mb-2 flex items-center justify-between"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      setIsProductsOpen(false);
+                    }}
+                  >
+                    <span>All Products</span>
+                    <span className="text-xs opacity-75">View main list →</span>
+                  </Link>
+
                   {PRODUCTS.map((product) => (
                     <Link
                       key={product.id}
@@ -377,6 +317,7 @@ export default function Navbar() {
               )}
             </div>
 
+            {/* About Us link */}
             <Link
               href="/about"
               className="block px-4 py-3 text-white hover:bg-white/10 active:bg-white/20 rounded-xl font-medium text-base transition-colors"
@@ -385,23 +326,84 @@ export default function Navbar() {
               About Us
             </Link>
 
-            <Link
-              href="/"
-              className="block px-4 py-3 text-white hover:bg-white/10 active:bg-white/20 rounded-xl font-medium text-base transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Home
-            </Link>
+            {/* Google Translate - Mobile Fake Trigger (Language Toggle) */}
+            <div className="pt-2">
+              <button
+                className="w-full flex items-center justify-between px-4 py-3 text-white bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 active:bg-white/20 transition-colors"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  // Trigger the persistent widget click
+                  setTimeout(() => {
+                    const widget = document.getElementById('google_translate_widget');
+                    if (widget) {
+                      widget.click();
+                    }
+                  }, 50);
+                }}
+              >
+                <span className="text-base font-medium">Language</span>
+                <div className="flex items-center gap-2 text-gray-300">
+                  <span className="text-sm">Select</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-5 h-5"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802" />
+                  </svg>
+                </div>
+              </button>
+            </div>
 
-            <Link
-              href="/about"
-              className="block px-4 py-3 text-white hover:bg-white/10 active:bg-white/20 rounded-xl font-medium text-base transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              About Us
-            </Link>
+            {/* Theme Toggle - Mobile */}
+            <div className="pt-1 pb-2">
+              <button
+                onClick={toggleTheme}
+                className="w-full flex items-center justify-between px-4 py-3 text-white hover:bg-white/10 active:bg-white/20 rounded-xl font-medium border border-white/20 transition-colors"
+                aria-label="Toggle theme"
+              >
+                <span className="text-base font-medium">Theme</span>
+                <div className="flex items-center gap-2">
+                  <span className="text-sm text-gray-300">
+                    {theme === "light" ? "Light" : "Dark"}
+                  </span>
+                  {theme === "light" ? (
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                      />
+                    </svg>
+                  ) : (
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                      />
+                    </svg>
+                  )}
+                </div>
+              </button>
+            </div>
 
-            <div className="pt-4">
+            <div className="pt-2">
               <Link
                 href="/contact"
                 className="block w-full text-center bg-white text-black px-6 py-4 rounded-xl font-bold hover:bg-gray-100 active:scale-95 transition-all text-base shadow-lg"

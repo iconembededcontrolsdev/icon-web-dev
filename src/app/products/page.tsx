@@ -2,7 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import DynamicGrid from '@/components/DynamicGrid';
+import Footer from '@/components/Footer';
 
 type ProductPreview = {
   id: string;
@@ -120,8 +122,31 @@ export default function ProductsPage() {
 
   return (
     <div className="min-h-screen bg-background pt-12">
+      {/* Back Button */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3 pb-6">
+        <Link
+          href="/"
+          className="inline-flex items-center text-primary hover:text-accent transition-colors font-medium"
+        >
+          <svg
+            className="w-5 h-5 mr-2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+          Back to Home
+        </Link>
+      </div>
+
       {/* Header */}
-      <div className="w-full max-w-[1920px] mx-auto px-[40px] sm:px-[60px] lg:px-[80px] xl:px-[100px] py-[40px] sm:py-[50px] lg:py-[60px]">
+      <div className="w-full max-w-[1920px] mx-auto px-[40px] sm:px-[60px] lg:px-[80px] xl:px-[100px] pt-[16px] pb-[32px] sm:pt-[24px] sm:pb-[40px] lg:pt-[32px] lg:pb-[48px]">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4">
             Our Products
@@ -188,6 +213,7 @@ export default function ProductsPage() {
           </div>
         </div>
       )}
+      <Footer />
     </div>
   );
 }

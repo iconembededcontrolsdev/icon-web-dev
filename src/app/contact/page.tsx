@@ -6,6 +6,7 @@ import Image from 'next/image';
 import LogoFrame from '@/components/LogoFrame';
 import Script from 'next/script';
 import { countryCodes } from '@/data/countryCodes';
+import Footer from '@/components/Footer';
 
 type RecaptchaWindow = Window & {
   grecaptcha?: {
@@ -172,7 +173,7 @@ function ContactForm() {
       )}
 
       {/* Back Button */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3 pb-6">
         <Link
           href="/"
           className="inline-flex items-center text-primary hover:text-accent transition-colors font-medium"
@@ -198,7 +199,7 @@ function ContactForm() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="bg-card rounded-[40px] shadow-lg p-8 sm:p-12 lg:p-16">
           {/* Branding Header */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-6 sm:mb-8">
             <div className="flex justify-center mb-6">
               <div className="w-64 md:w-80">
                 <LogoFrame
@@ -459,6 +460,7 @@ function ContactForm() {
           )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
